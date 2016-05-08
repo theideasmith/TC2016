@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<link href="assets/logos/favicon-q-9ba6cb893a620560ab734fe26a5bef5f.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<title>
+Quantopian Lectures
+</title>
+<link href="assets/quanto-base-bundle-b524a8864168203acdb8ea6f8202e97b.css" media="all" rel="stylesheet" type="text/css" />
+<link href="assets/application_new-039c7fe7fe2730066a8dcb040084bc2f.css" media="all" rel="stylesheet" type="text/css" />
+<script src="assets/quanto_global-44e85c6fa95d3651757ab8e426751f17.js" type="text/javascript"></script>
+<script src="assets/learn_bundle-f42625830d122bff73c1591c7f81acd9.js" type="text/javascript"></script>
+<script src="https://use.typekit.com/uvj7txo.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+try{Typekit.load()}catch(e){}
+//]]>
+</script>
+<script src="https://js.stripe.com/v2/" type="text/javascript"></script>
+<meta content='pk_live_qyEzgiIO9PIT9AEbwiX8qw6g' name='stripe-key'>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="XIZmvJvBSDp8R371BFoxbTfU5NJRO3ZTtXciYR83l3c=" name="csrf-token" />
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+
+<input id="quanto-env" name="env" type="hidden" value="production" />
+</head>
+<body class='' ontouchstart=''>
+<div id='fb-root'></div>
+<div class='wrapper' id='learn-lectures'>
+<div class='navbar navbar-dark navbar-default navbar-static-top' id='app-navbar'>
+<div class='container-fluid'>
+<div class='navbar-header'>
+<button class='navbar-toggle collapsed' data-target='#app-navbar-collapse' data-toggle='collapse'>
+<span class='icon hamburger-menu'></span>
+</button>
+<a class='navbar-brand' href='home.html'>
+<div class='logo-image'></div>
+</a>
+</div>
+<div class='collapse navbar-collapse' id='app-navbar-collapse'>
+<ul class='nav navbar-nav navbar-right'>
+<li class='dropdown hidden unconfirmed-user-header'>
+<a class='header' data-toggle='dropdown' href='lectures.html#'>
+<span class='icon icon-warning'></span>
+Unconfirmed Account
+</a>
+<ul class='dropdown-menu no-close-on-click'>
+<div class='confirm-dropdown'>
+<div>
+Click on the confirmation link in the email that Quantopian sent to <strong class="confirm-email-address">
+</strong>.
+</div>
+<div class='margin_10t'>
+<button class='btn resend-confirmation' id='resend-confirmation-email-button'>Resend Confirmation Email</button>
+</div>
+</div>
+</ul>
+</li>
+<li>
+<a class='header' href='fund.html'>Capital</a>
+</li>
+<li>
+<a class='header' href='data.html'>Data</a>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='lectures.html#'>
+My Code
+</a>
+<ul class='dropdown-menu quanto-dropdown-new'>
+<li>
+<a href='research/survey.html'>Notebooks</a>
+</li>
+<li>
+<a href='algorithms.html'>Algorithms</a>
+</li>
+</ul>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='lectures.html#'>
+Community
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a class='' href='posts.html' id='community-header-link'>Forums</a>
+</li>
+<li>
+<a href='open.html'>Contest</a>
+</li>
+<li>
+<a href='http://www.quantcon.com'>QuantCon</a>
+</li>
+</ul>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='lectures.html#'>
+Learn & Support
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href='learn.html'>Learn</a>
+</li>
+<li>
+<a class='open-feedback-link' href='lectures.html#'>Contact Support</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="signin.html" class="header unregistered-user-action">Log In</a>
+</li>
+<li>
+<a href="users/sign_up.html" class="header unregistered-user-action">Sign Up</a>
+</li>
+
+</ul>
+</div>
+</div>
+</div>
+<script>
+  //<![CDATA[
+    $(document).ready(function () {
+      quanto.instances.fm = new quanto.FeedbackManager();
+      quanto.instances.hm = new quanto.headerManager();
+    })
+  //]]>
+</script>
+
+
+<div class='content content-area new-style'>
+<div class='learn-nav'>
+<div class='pane no-border'>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-xs-14'>
+<div class='title'>Learn</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-14'>
+<div class='fixed-width-wrapper'>
+<div class='nav-container' id='wrapper'>
+<div id='scroller'>
+<a class='help-tile-wrapper-small' href='tutorials/getting-started.html'>
+<div class='help-tile'>
+<div class='help-tile-image' id='get-started-image'></div>
+<div class='help-tile-title hidden'>Getting Started</div>
+</div>
+</a>
+<a class='help-tile-wrapper-small' href='faq.html'>
+<div class='help-tile'>
+<div class='help-tile-image' id='answers-image'></div>
+<div class='help-tile-title hidden'>FAQ</div>
+</div>
+</a>
+<a class='help-tile-wrapper-small' href='help.html'>
+<div class='help-tile'>
+<div class='help-tile-image' id='help-docs-image'></div>
+<div class='help-tile-title hidden'>API</div>
+</div>
+</a>
+<a class='help-tile-wrapper-small' href='tutorials.html'>
+<div class='help-tile'>
+<div class='help-tile-image' id='tutorials-image'></div>
+<div class='help-tile-title hidden'>Tutorials</div>
+</div>
+</a>
+<a class='active help-tile-wrapper-small visible-title' href='lectures.html'>
+<div class='help-tile'>
+<div class='help-tile-image' id='lectures-image'></div>
+<div class='help-tile-title'>Lectures</div>
+</div>
+</a>
+</div>
+<div class='clear'></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class='lectures'>
+<div class='pane lectures-pane no-border'>
+<div class='container-fluid'>
+<div class='content-wrappper'>
+<div class='title-wrapper'>
+<div class='row'>
+<div class='col-xs-14'>
+<h1 class='page-title'>Lectures</h1>
+<div class='read-more-wrapper hidden-xs' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Lectures sourced from top-tier university curriculums.'>
+<div class='read-more-text'>Lectures sourced from top-tier university curriculums.</div>
+<div class='read-more-icon'></div>
+</div>
+<div class='clear'></div>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-xs-14'>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Introduction to Research notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=570561ffcd12d4446400002c' title='Notebook'></div>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 1</span> <span class='lecture-title'>Introduction to Research</span><span class='lecture-info'>A simple tutorial to help you get up to speed in the research environment.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Linear Regression notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=57054cf5f3b71df975000556' title='Notebook'></div>
+<a class='get-content video mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Linear Regression video' data-placement='top' data-toggle='tooltip' data-trigger='hover' href='http://r2---sn-8xgp1vo-xfgl.googlevideo.com/videoplayback?ipbits=0&initcwndbps=2155000&mv=m&pl=24&dur=3476.329&ms=au&source=youtube&sver=3&mm=31&mime=video/mp4&signature=5A732224494C74A482FC31C58B9FA4A8B7654350.A703FA47D91F0A5821670B2FE6F09E451D76B669&key=yt6&id=o-ANzkyg8swHfGyd8C4f3CtP8T0IGFaqf7gJkyL7qr3Cd5&mn=sn-8xgp1vo-xfgl&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&mt=1462594973&itag=18&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&upn=jOFF6IsLeO0&ratebypass=yes&lmt=1440405181725993&expire=1462616657&ip=100.38.230.156&name=Af0l3TQJ3h8' title='Watch'></a>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 2</span> <span class='lecture-title'>Linear Regression</span><span class='lecture-info'>An explanation of the technique and implementation in Python.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Multiple Linear Regression notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=571a8e24dd906fef7f000578' title='Notebook'></div>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 3</span> <span class='lecture-title'>Multiple Linear Regression</span><span class='lecture-info'>Expanding from one to many variables.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Linear Correlation Analysis notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=57054f1aa14fa0ddbb0001c1' title='Notebook'></div>
+<a class='get-content video mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Linear Correlation Analysis video' data-placement='top' data-toggle='tooltip' data-trigger='hover' href='http://r6---sn-8xgp1vo-xfgs.googlevideo.com/videoplayback?ms=au&key=yt6&mime=video/mp4&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&mv=m&mt=1462594973&ip=100.38.230.156&signature=C729BC37FB55B0B201FC3842101282285B2E82E0.6973FC73988659D6602D7F09EB42B707F3A24B8C&pl=24&id=o-AGB6Imm2Nq3kJ8VixUkMCijViH1QH8L3eBlUIVuktfC4&mn=sn-8xgp1vo-xfgs&mm=31&upn=vP0HhsOhHj0&source=youtube&lmt=1437200831562045&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&expire=1462616657&ratebypass=yes&sver=3&itag=18&dur=3414.889&initcwndbps=2155000&ipbits=0&name=GM76JkrVmRk' title='Watch'></a>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 4</span> <span class='lecture-title'>Linear Correlation Analysis</span><span class='lecture-info'>A basic primer on correlation and how it relates to variance.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Random Variables notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=571a8ba2feca738b3a000503' title='Notebook'></div>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 5</span> <span class='lecture-title'>Random Variables</span><span class='lecture-info'>Theory and sample use cases.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Skewness and Kurtosis notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=57056203a14fa0ddbb0002d2' title='Notebook'></div>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 6</span> <span class='lecture-title'>Skewness and Kurtosis</span><span class='lecture-info'>Ways to think about distributions.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Confidence Intervals notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=5705500e5aa708598c00000f' title='Notebook'></div>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 7</span> <span class='lecture-title'>Confidence Intervals</span><span class='lecture-info'>A primer in collaboration with Jeremiah Johnson at UNH.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Maximum Likelihood Estimation notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=57055ba88848385f42000553' title='Notebook'></div>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 8</span> <span class='lecture-title'>Maximum Likelihood Estimation</span><span class='lecture-info'>A basic intro developed in collaboration with Andrei Kirilenko at MIT Sloan.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Spearman Rank Correlation notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=570550b38848385f420004b0' title='Notebook'></div>
+<a class='get-content video mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Spearman Rank Correlation video' data-placement='top' data-toggle='tooltip' data-trigger='hover' href='http://r6---sn-8xgp1vo-xfgs.googlevideo.com/videoplayback?ms=au&id=o-AEEbUYSOahG0dqmmhQqnRtcwgpcOng6fMEK0ZnqKvjX7&mv=m&mt=1462594973&expire=1462616657&sver=3&initcwndbps=2155000&ip=100.38.230.156&mime=video/mp4&dur=3414.889&mn=sn-8xgp1vo-xfgs&pl=24&signature=E155B10F091AD4D639DAD1EDDB27C635E8433C1D.79F538DB43A93BF11D3EE5284D461FD519846A14&mm=31&itag=18&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&upn=3NDDuayO2sw&source=youtube&key=yt6&ipbits=0&ratebypass=yes&lmt=1437200831562045&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&name=GM76JkrVmRk' title='Watch'></a>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 9</span> <span class='lecture-title'>Spearman Rank Correlation</span><span class='lecture-info'>What to do when the relationship in your data is not necessarily linear.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Beta Hedging notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=5705516337e62f7261000028' title='Notebook'></div>
+<a class='get-content video mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Beta Hedging video' data-placement='top' data-toggle='tooltip' data-trigger='hover' href='http://r2---sn-8xgp1vo-xfgl.googlevideo.com/videoplayback?ip=100.38.230.156&lmt=1440405181725993&itag=18&id=o-AD_hh35GU4FN5S909x2pI8JGTQtCTabR_D8pFq5vBWLS&dur=3476.329&pcm2cms=yes&source=youtube&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&key=yt6&mn=sn-8xgp1vo-xfgl&mm=31&ms=au&pl=24&mv=m&mt=1462594973&signature=07356AAE37FD45AE2D336537A2B0E4514276BAE3.0E0B195EC0E14F8D788A6BE1B486E8E2EBBEEF1B&sver=3&upn=PHE5068HYfg&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pcm2cms,pl,ratebypass,source,upn,expire&mime=video/mp4&ratebypass=yes&ipbits=0&initcwndbps=2155000&expire=1462616657&name=Af0l3TQJ3h8' title='Watch'></a>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 10</span> <span class='lecture-title'>Beta Hedging</span><span class='lecture-info'>How to hedge your algorithm against risk factors.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Introduction to Pairs Trading notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=570552508848385f420004c8' title='Notebook'></div>
+<div class='get-content backtest clone-sample-algo-link mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Introduction to Pairs Trading backtest' data-placement='top' data-sampletype='lecture_pairs_trading' data-toggle='tooltip' data-trigger='hover' title='Backtest'></div>
+<a class='get-content video mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Introduction to Pairs Trading video' data-placement='top' data-toggle='tooltip' data-trigger='hover' href='http://r4---sn-8xgp1vo-xfgz.googlevideo.com/videoplayback?upn=vyrO6g5oHBg&key=yt6&ratebypass=yes&ipbits=0&lmt=1424969657809858&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&itag=18&signature=B60C2EE9419C610E183F56EA0662FB0FA9E7BEE4.762C4B91AC6AB55E6136CB6E6765A90764D7D690&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&initcwndbps=2155000&mime=video/mp4&ip=100.38.230.156&dur=3525.137&pl=24&mn=sn-8xgp1vo-xfgz&mm=31&source=youtube&ms=au&id=o-AK7hAaWgh7eCTG0mp1VPYnHfH68tTMU8aU-OUnlQyB2y&mv=m&mt=1462594973&sver=3&expire=1462616658&name=bqkqh0xd3qg' title='Watch'></a>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 11</span> <span class='lecture-title'>Introduction to Pairs Trading</span><span class='lecture-info'>A complete workflow to building a basic pairs trading strategy on Quantopian.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Position Concentration Risk notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=5705629df3b71d20970005d5' title='Notebook'></div>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 12</span> <span class='lecture-title'>Position Concentration Risk</span><span class='lecture-info'>Why investing in few assets is very risky.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='The Dangers of Overfitting notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=5705538e37e62fd388000045' title='Notebook'></div>
+<a class='get-content video mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='The Dangers of Overfitting video' data-placement='top' data-toggle='tooltip' data-trigger='hover' href='http://r6---sn-8xgp1vo-xfg6.googlevideo.com/videoplayback?mv=m&pl=24&mt=1462594973&ms=au&lmt=1438352493163707&signature=4763D45FC5ED364DDDF4027F65FFA47AECB65F0B.A403EBFF2E48055823F62EE5D449FC4912501F92&sver=3&initcwndbps=2155000&ratebypass=yes&mn=sn-8xgp1vo-xfg6&mm=31&dur=1083.652&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&upn=vHxCJE9wyBk&id=o-AAz0CpNVcLEyfl86BaMT72tEJdU1dBZK0I0GMSlSrvfR&itag=18&expire=1462616658&ip=100.38.230.156&key=yt6&ipbits=0&mime=video/mp4&source=youtube&name=KNCgvjyKrcw' title='Watch'></a>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 13</span> <span class='lecture-title'>The Dangers of Overfitting</span><span class='lecture-info'>How overfitting can trick you into thinking your algorithm is good.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Instability of Estimates notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=570554305aa708598c000052' title='Notebook'></div>
+<a class='get-content video mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Instability of Estimates video' data-placement='top' data-toggle='tooltip' data-trigger='hover' href='http://r6---sn-8xgp1vo-xfgs.googlevideo.com/videoplayback?ip=100.38.230.156&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&ipbits=0&ratebypass=yes&expire=1462616658&signature=D80D029B0B9A275DF999CD8C0BD3A19B2B31E80E.233C4AF884F72C681EC932976A0CD2E0927FDE1D&lmt=1438352901126874&sver=3&initcwndbps=2155000&source=youtube&mime=video/mp4&itag=18&key=yt6&upn=2AIr-8vXiaM&mv=m&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&ms=au&mm=31&mn=sn-8xgp1vo-xfgs&pl=24&id=o-AFwuWKYML3KNowZwmXE5UDp4DpBpxJD1kGgFmlMVmaFp&dur=975.261&mt=1462594973&name=2pbu3_6lF40' title='Watch'></a>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 14</span> <span class='lecture-title'>Instability of Estimates</span><span class='lecture-info'>How estimates can lie and ways to deal with that.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Model Misspecification notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=570554ed8848385f420004e1' title='Notebook'></div>
+<a class='get-content video mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Model Misspecification video' data-placement='top' data-toggle='tooltip' data-trigger='hover' href='http://r2---sn-8xgp1vo-xfgy.googlevideo.com/videoplayback?ipbits=0&pcm2cms=yes&signature=697E7F38BA260AE5017F0057764004C4802F1474.0BE68B49578F95BFC1B31E3571DF4A115789356F&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&ip=100.38.230.156&sver=3&id=o-AAtZbE7SeFSL2HtSB0ICq8i_NoAMdcqKzOqjZ-puM_vu&mn=sn-8xgp1vo-xfgy&mm=31&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pcm2cms,pl,ratebypass,source,upn,expire&upn=ROB4K52ENfc&mv=m&mt=1462594973&ms=au&itag=18&initcwndbps=2155000&pl=24&mime=video/mp4&expire=1462616658&key=yt6&dur=1652.657&ratebypass=yes&source=youtube&lmt=1439219594441343&name=t4peS8Ak-sY' title='Watch'></a>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 15</span> <span class='lecture-title'>Model Misspecification</span><span class='lecture-info'>Violation of assumptions can cause a model to falsely look good.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Violations of Regression Models notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=570555aca14fa0ddbb00020d' title='Notebook'></div>
+<a class='get-content video mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Violations of Regression Models video' data-placement='top' data-toggle='tooltip' data-trigger='hover' href='http://r7---sn-8xgp1vo-xfgy.googlevideo.com/videoplayback?ratebypass=yes&itag=18&sver=3&dur=1209.063&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&pl=24&expire=1462616659&mm=31&ip=100.38.230.156&mn=sn-8xgp1vo-xfgy&ms=au&mt=1462594973&upn=cENTAECM68s&mv=m&id=o-ADaLbz56k7fgjJNsm7uFPO8CfOa7drgXIWUV7Cm5RJ4g&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&signature=A52C051B24CC3441766AE9D5EE90DD4ED9A3435A.5B33CD985D3957EBD4E77F1CF0C6E22B923A0EBB&mime=video/mp4&ipbits=0&key=yt6&lmt=1439219975550974&source=youtube&initcwndbps=2155000&name=xM94MRs8U3M' title='Watch'></a>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 16</span> <span class='lecture-title'>Violations of Regression Models</span><span class='lecture-info'>What happens when regression assumptions are violated.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Regression Model Instability notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=570556af37e62fd388000069' title='Notebook'></div>
+<a class='get-content video mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Regression Model Instability video' data-placement='top' data-toggle='tooltip' data-trigger='hover' href='http://r8---sn-8xgp1vo-xfgl.googlevideo.com/videoplayback?ipbits=0&initcwndbps=2155000&signature=17EA98F0498245756D6305139F473BBF3DE1180F.18854AA78B2C29CD64A54C6C56D81AAD4D92A329&sver=3&ratebypass=yes&mn=sn-8xgp1vo-xfgl&mm=31&id=o-APkRwIn1zP-bLtPOmwyQxwOnYvW6g1PukcwFmc16KiBH&upn=EGoyeh608H8&ip=100.38.230.156&key=yt6&mv=m&mt=1462594973&pcm2cms=yes&ms=au&lmt=1439219768502749&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pcm2cms,pl,ratebypass,source,upn,expire&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&expire=1462616659&mime=video/mp4&itag=18&pl=24&dur=291.456&source=youtube&name=HMQ34PfhzGE' title='Watch'></a>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 17</span> <span class='lecture-title'>Regression Model Instability</span><span class='lecture-info'>Why your regression coefficients can change.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Arbitrage Pricing Theory notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=57055843884838343c000530' title='Notebook'></div>
+<a class='get-content video mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Arbitrage Pricing Theory video' data-placement='top' data-toggle='tooltip' data-trigger='hover' href='http://r1---sn-8xgp1vo-xfgz.googlevideo.com/videoplayback?fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&key=yt6&ip=100.38.230.156&lmt=1441218892831891&ms=au&source=youtube&mv=m&dur=1369.861&id=o-AH22B_LFC7sUeyYIrKOM0hiDMbna7gTJpuHu-KvskprW&expire=1462616659&mm=31&signature=3805DCD373086F401C820F3A09BE04C8BD06AA70.62BDB2F04A87B3EB81ECE5AF963552C8161591D5&upn=escaFUczLw8&mn=sn-8xgp1vo-xfgz&mt=1462594858&initcwndbps=2171250&mime=video/mp4&itag=18&sver=3&ratebypass=yes&pl=24&ipbits=0&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&name=ZvqO4jDun3E' title='Watch'></a>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 18</span> <span class='lecture-title'>Arbitrage Pricing Theory</span><span class='lecture-info'>How factor models can be used to predict returns.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Fundamental Factor Models notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=570559ed5aa708598c0000a5' title='Notebook'></div>
+<a class='get-content video mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Fundamental Factor Models video' data-placement='top' data-toggle='tooltip' data-trigger='hover' href='http://r7---sn-8xgp1vo-xfgy.googlevideo.com/videoplayback?source=youtube&lmt=1441218962100664&dur=526.651&sver=3&expire=1462616659&mt=1462594858&mv=m&pl=24&ms=au&id=o-AFQA3re2C2wxMD5vOSC1BUCtLwiUwdqSwAHcxauzDBLs&mm=31&mime=video/mp4&mn=sn-8xgp1vo-xfgy&ratebypass=yes&ipbits=0&key=yt6&ip=100.38.230.156&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&signature=280D9DD8C5B2E4437ECEAA68734A946A71CC6F43.CE53F6A818D1A23D642B63E26E496CDCB2A34A3D&initcwndbps=2171250&itag=18&upn=cVeYXkLEQtI&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&name=P16zDtf0CE0' title='Watch'></a>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 19</span> <span class='lecture-title'>Fundamental Factor Models</span><span class='lecture-info'>How fundamental data can be used in factor models.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Factor Risk Exposure notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=570558f95aa708598c00009c' title='Notebook'></div>
+<a class='get-content video mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Factor Risk Exposure video' data-placement='top' data-toggle='tooltip' data-trigger='hover' href='http://r3---sn-8xgp1vo-cvne.googlevideo.com/videoplayback?sver=3&ratebypass=yes&id=o-ALPsMu3CPYLQLB4x1Dm0u45YiiljYyNFz31IRDpPUAJn&mime=video/mp4&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&upn=5_PFR70YLpQ&signature=3C87E0FB0A77C32A2B0518FA68D7EEB9848ECA60.7068B5D78CE61FB6008C6EBF326D3FF0D6EB38CF&ip=100.38.230.156&mv=m&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&ms=au&itag=18&pl=24&mt=1462594973&dur=1273.660&key=yt6&lmt=1441219064785173&source=youtube&ipbits=0&initcwndbps=1978750&mm=31&mn=sn-8xgp1vo-cvne&expire=1462616660&name=Ep8Y5JfQoRg' title='Watch'></a>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 20</span> <span class='lecture-title'>Factor Risk Exposure</span><span class='lecture-info'>Estimating exposure to risk factors using factor models.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Long-Short Equity notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=57055e10884838343c00057b' title='Notebook'></div>
+<a class='get-content video mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Long-Short Equity video' data-placement='top' data-toggle='tooltip' data-trigger='hover' href='http://r8---sn-ab5l6ns6.googlevideo.com/videoplayback?ipbits=0&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,nh,pl,ratebypass,source,upn,expire&ratebypass=yes&nh=IgpwcjAyLmxnYTI2KgkxMjcuMC4wLjE&itag=18&initcwndbps=2416250&mime=video/mp4&upn=MpNgLBS1dLc&signature=B7820253BA7D1048EBF8676DF2FFC7E9829A70B9.B43333206AB3BD2AA82B08F3680D1F3CC5777634&pl=24&mt=1462594973&expire=1462616660&sver=3&dur=1725.892&id=o-ABr77wyfNTzd_7msIIs9avxYhCN7dF24kWe6r4fwvhOG&mn=sn-ab5l6ns6&mm=31&ms=au&mv=m&source=youtube&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&lmt=1442964904635417&key=yt6&ip=100.38.230.156&name=O-j4UEm2GUY' title='Watch'></a>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 21</span> <span class='lecture-title'>Long-Short Equity</span><span class='lecture-info'>An overview of the long-short equity strategy and how it can be used.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Ranking Universes by Factors notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=57055f8437e62fd388000102' title='Notebook'></div>
+<a class='get-content video mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Ranking Universes by Factors video' data-placement='top' data-toggle='tooltip' data-trigger='hover' href='http://r8---sn-8xgp1vo-xfgz.googlevideo.com/videoplayback?expire=1462616660&source=youtube&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&ratebypass=yes&upn=BWr0VyMuBZw&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&signature=559B169BC51839B1922309FC534886967597C3F8.782B26E57CC4ABF829CD84F438CF98662F6F045A&itag=18&dur=1918.455&id=o-AJ48O1fVqoKNuoVoFCR6AU5PjzSoZB8g9YBHNFeY9u56&mn=sn-8xgp1vo-xfgz&key=yt6&mm=31&lmt=1442963742305317&sver=3&mime=video/mp4&mt=1462594973&ip=100.38.230.156&ms=au&mv=m&pl=24&ipbits=0&initcwndbps=2155000&name=gwEc3N05bQc' title='Watch'></a>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 22</span> <span class='lecture-title'>Ranking Universes by Factors</span><span class='lecture-info'>How to rank universes of assets and evaluate ranking systems.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Momentum Strategies notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=570560355aa70896f90000dd' title='Notebook'></div>
+<a class='get-content video mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Momentum Strategies video' data-placement='top' data-toggle='tooltip' data-trigger='hover' href='http://r8---sn-8xgp1vo-xfgz.googlevideo.com/videoplayback?mime=video/mp4&sver=3&expire=1462616660&lmt=1447312935735927&ratebypass=yes&ip=100.38.230.156&pl=24&signature=977191AC493BDB20C1E3D967CB5B9A59B1EC0D36.C25707E9D31088ED0DA680D82C61E4B355885FA9&mm=31&ipbits=0&mn=sn-8xgp1vo-xfgz&key=yt6&mt=1462594973&id=o-AAlDebgimFtkapmtJHWaPpojHfWX9cYRpQ4aNvxHQpdV&upn=7aeAlG3x2eI&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&initcwndbps=2155000&ms=au&itag=18&source=youtube&dur=1192.251&mv=m&name=__yYrzNbk6A' title='Watch'></a>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 23</span> <span class='lecture-title'>Momentum Strategies</span><span class='lecture-info'>A broad overview of momentum strategies and their rationale.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Measuring Momentum notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=570560e98848385f420005a0' title='Notebook'></div>
+<a class='get-content video mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Measuring Momentum video' data-placement='top' data-toggle='tooltip' data-trigger='hover' href='http://r2---sn-8xgp1vo-cvne.googlevideo.com/videoplayback?mime=video/mp4&lmt=1447109547788708&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&ipbits=0&initcwndbps=1978750&source=youtube&sver=3&ratebypass=yes&mn=sn-8xgp1vo-cvne&mm=31&ip=100.38.230.156&pl=24&itag=18&dur=1579.885&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&upn=lQ2o3gau4-g&mv=m&mt=1462594973&ms=au&expire=1462616661&signature=D6B0A0551AE132E0F29C1DFEEC1D519DF06F0E46.56F6E89DDED95198A52B1E89FC5DE61BE0640CA4&key=yt6&id=o-AAHwoS9xPKZCXuhnS1rA-voycRf_h-0mN2Zqe53It_qd&name=zP8372pcNZ0' title='Watch'></a>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 24</span> <span class='lecture-title'>Measuring Momentum</span><span class='lecture-info'>An introduction to how one might measure momentum quantitatively.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='ARCH, GARCH, and GMM notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=57055d2cf3b71d2097000573' title='Notebook'></div>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 25</span> <span class='lecture-title'>ARCH, GARCH, and GMM</span><span class='lecture-info'>A primer on volatility forecasting models developed with Andrei Kirilenko.</span></div>
+</div>
+</div>
+<div class='lecture-row'>
+<div class='lecture-content-wrapper'>
+<div class='get-content notebook mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Kalman Filters notebook' data-placement='top' data-toggle='tooltip' data-trigger='hover' data-url='https://www.quantopian.com/clone_notebook?id=570557b9a14fa0c6dc000288' title='Notebook'></div>
+<a class='get-content video mixpanel-button' data-animation='true' data-event='lecture content click' data-mixpanel='Kalman Filters video' data-placement='top' data-toggle='tooltip' data-trigger='hover' href='http://r3---sn-ab5l6nsy.googlevideo.com/videoplayback?nh=IgpwcjAyLmxnYTI2KgkxMjcuMC4wLjE&source=youtube&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,nh,pl,ratebypass,source,upn,expire&expire=1462616661&sver=3&initcwndbps=2416250&dur=692.465&ms=au&mv=m&mt=1462594973&ip=100.38.230.156&ipbits=0&pl=24&mime=video/mp4&id=o-AMsyjKXduoHHWmM89FqFYJyQa_28FqYLZdp5AUK0jMt1&mn=sn-ab5l6nsy&mm=31&itag=18&lmt=1438353276310227&key=yt6&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&ratebypass=yes&upn=eJ8wOFTdtrM&signature=83B0F43C8477BB444EA9CCF70FB2E129298F5B38.A190B6EFA57016034FA479706D6DB27BFF19241C&name=RxIdLu18SsE' title='Watch'></a>
+</div>
+<div class='lecture-wrapper'>
+<div class='lecture-name'><span class='lecture-number'>Lecture 26</span> <span class='lecture-title'>Kalman Filters</span><span class='lecture-info'>How to use Kalman filters to get a good signal out of noisy data.</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='pane workshop-pane no-border'>
+<div class='container'>
+<div class='row'>
+<div class='col-sm-7 col-xs-14'>
+<div class='workshop-pane-content-wrapper'>
+<h2 class='pane-title'>Join our next workshop</h2>
+<div class='body'>Quantopian offers hands-on training workshops that have been vetted by professors at schools including Harvard and Cornell Financial Engineering Manhattan.</div>
+<a class='btn new-btn blue dark' href='workshops.html'>Learn more</a>
+</div>
+</div>
+<div class='col-sm-7 col-xs-14'>
+<div class='workshop-image'></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  //<![CDATA[
+    $(document).ready(function() {
+      quanto.instances.lm = new quanto.LecturesManager();
+    })
+  //]]>
+</script>
+
+<div class='fade modal' id='error-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title'>Error</h4>
+</div>
+<div class='modal-body body-content'>
+<p>Sorry, something went wrong.  Try again or contact us by <a class='feedback-link'>sending feedback</a>.</p>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-primary' data-dismiss='modal' href='#'>Close</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='confirmation-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title'></h4>
+</div>
+<div class='modal-body body-content'></div>
+<div class='modal-footer'>
+<button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+<button class='btn btn-primary action-button' data-dismiss='modal'></button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='feedback-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'>Send Feedback</h3>
+</div>
+<div class='modal-body'>
+<div class='controls'>
+<div class='from'>
+<span class='valign-top'>From: </span>
+<div class='feedback-inputs'>
+<div class='form-group'>
+<input autofocus class='form-control' id='feedback-email-box' placeholder='Email address' type='email'>
+</div>
+<div class='form-group'>
+<input class='form-control' id='feedback-name-box' placeholder='Name' type='text'>
+</div>
+</div>
+</div>
+<textarea class='form-control input-xxlarge width_100pct' id='feedback-box' rows='10'></textarea>
+<div class='feedback-checkbox'>
+<div class='checkbox'>
+<label>
+<input id='anonymous-feedback-checkbox' type='checkbox'>I understand I will not receive a reply without providing a valid email address.</input>
+</label>
+</div>
+</div>
+</div>
+<div class='success hidden'>
+<span>Thank you!  We will be in touch soon.</span>
+</div>
+</div>
+<div class='modal-footer'>
+<div class='controls'>
+<button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+<button class='btn btn-primary' id='send-feedback-button'>Send</button>
+</div>
+<div class='success hidden'>
+<a class='btn btn-primary' data-dismiss='modal' href='lectures.html#'>Close</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='join-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'>Join Quantopian.  It's free!</h3>
+</div>
+<div class='modal-body'>
+<p class='large'>Once you join, you can:</p>
+<div class='margin_20t'>
+<div class='action'>
+<i class='icon icon-copy'></i>
+Create more algorithms
+</div>
+<div class='action'>
+<i class='icon icon-bar-chart'></i>
+Run full backtests, with detailed risk metrics and full transaction reports
+</div>
+<div class='action'>
+<i class='icon icon-comments-alt'></i>
+Post and share in our community
+</div>
+<div class='action'>
+<i class='icon icon-trophy'></i>
+Submit algorithms to the Quantopian Open
+</div>
+</div>
+<div class='margin_20t margin_20b large'>Don't worry, all your work is already saved.</div>
+</div>
+<div class='modal-footer'>
+<div class='pull-left'>
+<a class='btn btn-default btn-large' data-dismiss='modal' href='lectures.html#'>Close</a>
+</div>
+<a class='btn btn-primary btn-large font-14' href='users/sign_up.html'>Join Quantopian</a>
+<a class='btn btn-default btn-large font-14 login-button' href='users/sign_in.html'>Log In</a>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='message-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'></h3>
+</div>
+<div class='modal-body'></div>
+<div class='modal-footer'>
+<button class='btn btn-primary' data-dismiss='modal' id='message-modal-close'>Close</button>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class='footer new-style' id='quanto-footer-container'>
+<div class='row-fluid main-footer container'>
+<div class='left-space span1'></div>
+<div class='footer-content span11'>
+<div class='row-fluid footer-inner row'>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Company</div>
+<div class='footer-row'>
+<a href='about.html'>About</a>
+</div>
+<div class='footer-row'>
+<a href='academia.html'>Academia</a>
+</div>
+<div class='footer-row'>
+<a href='workshops.html'>Workshops</a>
+</div>
+<div class='footer-row'>
+<a href='about.html'>Careers</a>
+</div>
+<div class='footer-row'>
+<a href='posts.html'>Community</a>
+</div>
+<div class='footer-row'>
+<a href='prospective_investors.html'>Prospective Investors</a>
+</div>
+</div>
+</div>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Learn &amp; Support</div>
+<div class='footer-row'>
+<a href='tutorials/getting-started.html'>Getting Started</a>
+</div>
+<div class='footer-row'>
+<a href='faq.html'>FAQs</a>
+</div>
+<div class='footer-row'>
+<a href='help.html'>Help &amp; API docs</a>
+</div>
+<div class='footer-row'>
+<a href='tutorials.html'>Tutorials</a>
+</div>
+<div class='footer-row'>
+<a href='lectures.html'>Lectures</a>
+</div>
+<div class='footer-row'>
+<a href='http://status.quantopian.com'>Site Status</a>
+</div>
+<div class='footer-row'>
+<a href='security.html'>Security</a>
+</div>
+</div>
+</div>
+
+<div class='col-sm-6'>
+<div class='feedback-email pull-right'>
+Need Help?
+<a class='open-feedback-link' href='lectures.html#'>Contact Support</a>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Notices</div>
+<div class='footer-row'>
+<a href='policies/terms.html'>Terms of Use</a>
+</div>
+<div class='footer-row'>
+<a href='policies/privacy.html'>Privacy Policy</a>
+</div>
+<div class='footer-row'>
+<a href='policies/risks.html'>Trading Risk</a>
+</div>
+<div class='footer-row'>
+<a href='policies/live_trading.html'>Brokerage Terms</a>
+</div>
+</div>
+</div>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Follow Us</div>
+<div class='footer-row'>
+<a href='http://www.twitter.com/quantopian'>Twitter</a>
+</div>
+<div class='footer-row'>
+<a href='http://www.facebook.com/quantopian'>Facebook</a>
+</div>
+<div class='footer-row'>
+<a href='http://www.linkedin.com/company/quantopian'>LinkedIn</a>
+</div>
+<div class='footer-row'>
+<a href='http://blog.quantopian.com'>Blog</a>
+</div>
+</div>
+</div>
+
+</div>
+<div class='row'>
+<div class='col-sm-14'>
+<div class='pull-right copyright'>&copy; 2016 Quantopian, Inc.</div>
+</div>
+</div>
+</div>
+</div>
+<div class='mobile-footer'>
+<div class='mobile-nav-category main-links'>
+<div class='mobile-nav-row'>
+<a href='about.html'>About Quantopian</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='about.html'>Careers</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='posts.html'>Community</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='help.html'>Help</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='academia.html'>Academia</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='lectures.html'>Lectures</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='workshops.html'>Workshops</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://status.quantopian.com'>Status</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.facebook.com/quantopian'>Facebook</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.twitter.com/quantopian'>Twitter</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.linkedin.com/company/quantopian'>LinkedIn</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://blog.quantopian.com'>Blog</a>
+</div>
+</div>
+<div class='mobile-nav-category secondary-links'>
+<div class='mobile-nav-row'>
+<p>&copy; 2016 Quantopian</p>
+</div>
+<div class='mobile-nav-row'>
+<a href='policies/terms.html'>Terms of Use</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='policies/privacy.html'>Privacy Policy</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</body>
+</html>
+<script>
+  //<![CDATA[
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8519877-1']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_setDomainName', 'quantopian.com']);
+    _gaq.push(['_setCustomVar', 1, 'quanto_session_id', 'session_572d6deed42b61f8d200072e']);
+    
+    
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  //]]>
+</script>
+
+
+<input id="is_mac" name="is_mac" type="hidden" value="false" />
+<script>
+  //<![CDATA[
+    (function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js';
+    d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);
+    a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}
+    var g=a;"undefined"!==typeof f? g=a[f]=[]:f="mixpanel";g.people=g.people||[];
+    h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.identify people.set people.increment".split(" ");for(e=0;e<h.length;e++) d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1})(document,window.mixpanel||[]);mixpanel.init("75873953cd404bcc1da88a55ff51e3b4")
+  //]]>
+</script>
+
+<script>
+  //<![CDATA[
+    mixpanel.track("view page", {"page": window.location.pathname})
+  //]]>
+</script>
+<script type="text/javascript">if (typeof NREUMQ !== "undefined") { if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","bam.nr-data.net","59252e476d","984851","dAlXTUcKWFpQRBlbXFYUVxZZAFdCQERTRA==",8,50,new Date().getTime(),"","","","",""]);}</script>

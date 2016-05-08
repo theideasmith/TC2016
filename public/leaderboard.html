@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<link href="assets/logos/favicon-q-9ba6cb893a620560ab734fe26a5bef5f.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<title>
+Quantopian Open
+</title>
+<link href="assets/quanto-base-bundle-b524a8864168203acdb8ea6f8202e97b.css" media="all" rel="stylesheet" type="text/css" />
+<link href="assets/application_new-039c7fe7fe2730066a8dcb040084bc2f.css" media="all" rel="stylesheet" type="text/css" />
+<script src="assets/quanto_global-44e85c6fa95d3651757ab8e426751f17.js" type="text/javascript"></script>
+<script src="assets/contest_bundle-66025e1ad7a29702cdba879fd73a9f8e.js" type="text/javascript"></script>
+<script src="https://use.typekit.com/uvj7txo.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+try{Typekit.load()}catch(e){}
+//]]>
+</script>
+<script src="https://js.stripe.com/v2/" type="text/javascript"></script>
+<meta content='pk_live_qyEzgiIO9PIT9AEbwiX8qw6g' name='stripe-key'>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="XIZmvJvBSDp8R371BFoxbTfU5NJRO3ZTtXciYR83l3c=" name="csrf-token" />
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+
+<input id="quanto-env" name="env" type="hidden" value="production" />
+</head>
+<body class='' ontouchstart=''>
+<div id='fb-root'></div>
+<div class='wrapper' id='leaderboard-index'>
+<div class='navbar navbar-default navbar-static-top no-border' id='app-navbar'>
+<div class='container-fluid'>
+<div class='navbar-header'>
+<button class='navbar-toggle collapsed' data-target='#app-navbar-collapse' data-toggle='collapse'>
+<span class='icon hamburger-menu'></span>
+</button>
+<a class='navbar-brand' href='home.html'>
+<div class='logo-image'></div>
+</a>
+</div>
+<div class='collapse navbar-collapse' id='app-navbar-collapse'>
+<ul class='nav navbar-nav navbar-right'>
+<li class='dropdown hidden unconfirmed-user-header'>
+<a class='header' data-toggle='dropdown' href='leaderboard.html#'>
+<span class='icon icon-warning'></span>
+Unconfirmed Account
+</a>
+<ul class='dropdown-menu no-close-on-click'>
+<div class='confirm-dropdown'>
+<div>
+Click on the confirmation link in the email that Quantopian sent to <strong class="confirm-email-address">
+</strong>.
+</div>
+<div class='margin_10t'>
+<button class='btn resend-confirmation' id='resend-confirmation-email-button'>Resend Confirmation Email</button>
+</div>
+</div>
+</ul>
+</li>
+<li>
+<a class='header' href='fund.html'>Capital</a>
+</li>
+<li>
+<a class='header' href='data.html'>Data</a>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='leaderboard.html#'>
+My Code
+</a>
+<ul class='dropdown-menu quanto-dropdown-new'>
+<li>
+<a href='research/survey.html'>Notebooks</a>
+</li>
+<li>
+<a href='algorithms.html'>Algorithms</a>
+</li>
+</ul>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='leaderboard.html#'>
+Community
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a class='' href='posts.html' id='community-header-link'>Forums</a>
+</li>
+<li>
+<a href='open.html'>Contest</a>
+</li>
+<li>
+<a href='http://www.quantcon.com'>QuantCon</a>
+</li>
+</ul>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='leaderboard.html#'>
+Learn & Support
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href='learn.html'>Learn</a>
+</li>
+<li>
+<a class='open-feedback-link' href='leaderboard.html#'>Contact Support</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="signin.html" class="header unregistered-user-action">Log In</a>
+</li>
+<li>
+<a href="users/sign_up.html" class="header unregistered-user-action">Sign Up</a>
+</li>
+
+</ul>
+</div>
+</div>
+</div>
+<script>
+  //<![CDATA[
+    $(document).ready(function () {
+      quanto.instances.fm = new quanto.FeedbackManager();
+      quanto.instances.hm = new quanto.headerManager();
+    })
+  //]]>
+</script>
+
+
+<div class='content content-area new-style'>
+<div class='contest-banner hidden-xs'>
+<div class='container'>
+<div class='row'>
+<div class='col-md-14'>
+<div class='banner-text'>
+<div class='pull-left'>Only 25 days until the next submission deadline.</div>
+<div class='pull-left margin_10l'><a href='open.html'>Learn More</a></div>
+</div>
+<div class='new-btn transparent small get-started-button pull-right clone-sample-algo-link' data-sampletype='sample_mean_reversion'>GET STARTED</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class='leaderboard-landing'>
+<div class='pane main-pane no-border'>
+<div class='container'>
+<div class='row'>
+<div class='col-xs-14'>
+<div class='title left'>
+<h1 class='black'>Select a leaderboard</h1>
+</div>
+</div>
+</div>
+<div class='row main-leaderboard-row'>
+<div class='col-md-7 col-sm-14'>
+<div class='contest-container placeholder-box hidden-xs'>
+<div class='placeholder-image'></div>
+<div class='placeholder-text'>Don't worry, new contest coming soon.</div>
+</div>
+</div>
+<div class='col-md-7 col-sm-14'>
+<div class='contest-container'>
+<div class='title-wrapper'>
+<a class='title' href='https://www.quantopian.com/leaderboard/18'>Contest 18</a>
+<div class='date-wrapper'>
+<div class='date-group'>
+<div class='contest-icon deadline-icon'></div>
+<div class='date deadline-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date contest begins'>Jun 1, 2016</div>
+</div>
+<div class='date-group'>
+<div class='contest-icon award-icon'></div>
+<div class='date award-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date prize will be awarded'>Dec 1, 2016</div>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+<div class='leaderboard-wrapper'>
+<div class='sample-leaderboard leaderboard-table'>
+<table>
+<thead>
+<th class='rank'>RANK</th>
+<th class='user'>NAME</th>
+<th class='score'>SCORE</th>
+</thead>
+<tbody>
+<div class='transparent-div'></div>
+<tr>
+<td class='rank'>1</td>
+<td class='user'>Jeff Coppola</td>
+<td class='score'>91.87</td>
+</tr>
+<tr>
+<td class='rank'>2</td>
+<td class='user'>Andy N</td>
+<td class='score'>90.00</td>
+</tr>
+<tr>
+<td class='rank'>3</td>
+<td class='user'>Alan Coppola</td>
+<td class='score'>85.95</td>
+</tr>
+<tr>
+<td class='rank'>4</td>
+<td class='user'>Thibauld S</td>
+<td class='score'>85.55</td>
+</tr>
+<tr>
+<td class='rank'>5</td>
+<td class='user'>Naoki Nagai</td>
+<td class='score'>85.28</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='clear'></div>
+<div class='new-btn blue medium in-progress enter-contest-button clone-sample-algo-link' data-sampletype='sample_mean_reversion'>ENTER THIS CONTEST</div>
+</div>
+
+</div>
+<div class='col-md-7 col-sm-14'>
+<div class='contest-container'>
+<div class='title-wrapper'>
+<a class='title' href='https://www.quantopian.com/leaderboard/17'>Contest 17</a>
+<div class='date-wrapper'>
+<div class='date-group'>
+<div class='contest-icon deadline-icon'></div>
+<div class='date deadline-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date contest begins'>May 2, 2016</div>
+</div>
+<div class='date-group'>
+<div class='contest-icon award-icon'></div>
+<div class='date award-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date prize will be awarded'>Nov 1, 2016</div>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+<div class='leaderboard-wrapper'>
+<div class='sample-leaderboard leaderboard-table'>
+<table>
+<thead>
+<th class='rank'>RANK</th>
+<th class='user'>NAME</th>
+<th class='score'>SCORE</th>
+</thead>
+<tbody>
+<div class='transparent-div'></div>
+<tr>
+<td class='rank'>1</td>
+<td class='user'>Jeff Coppola</td>
+<td class='score'>92.66</td>
+</tr>
+<tr>
+<td class='rank'>2</td>
+<td class='user'>Andy N</td>
+<td class='score'>90.81</td>
+</tr>
+<tr>
+<td class='rank'>3</td>
+<td class='user'>Alan Coppola</td>
+<td class='score'>86.41</td>
+</tr>
+<tr>
+<td class='rank'>4</td>
+<td class='user'>Thibauld S</td>
+<td class='score'>86.14</td>
+</tr>
+<tr>
+<td class='rank'>5</td>
+<td class='user'>Naoki Nagai</td>
+<td class='score'>86.03</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='clear'></div>
+<div class='new-btn blue medium enter-contest-button disabled' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='The deadline for this contest has passed'>ENTER THIS CONTEST</div>
+</div>
+
+</div>
+<div class='col-md-7 col-sm-14'>
+<div class='contest-container'>
+<div class='title-wrapper'>
+<a class='title' href='https://www.quantopian.com/leaderboard/16'>Contest 16</a>
+<div class='date-wrapper'>
+<div class='date-group'>
+<div class='contest-icon deadline-icon'></div>
+<div class='date deadline-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date contest begins'>Apr 1, 2016</div>
+</div>
+<div class='date-group'>
+<div class='contest-icon award-icon'></div>
+<div class='date award-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date prize will be awarded'>Oct 3, 2016</div>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+<div class='leaderboard-wrapper'>
+<div class='sample-leaderboard leaderboard-table'>
+<table>
+<thead>
+<th class='rank'>RANK</th>
+<th class='user'>NAME</th>
+<th class='score'>SCORE</th>
+</thead>
+<tbody>
+<div class='transparent-div'></div>
+<tr>
+<td class='rank'>1</td>
+<td class='user'>Albert R.</td>
+<td class='score'>88.31</td>
+</tr>
+<tr>
+<td class='rank'>2</td>
+<td class='user'>T. Mardi</td>
+<td class='score'>86.80</td>
+</tr>
+<tr>
+<td class='rank'>3</td>
+<td class='user'>Juan Ignacio Herrero</td>
+<td class='score'>86.18</td>
+</tr>
+<tr>
+<td class='rank'>4</td>
+<td class='user'>Timothy Fletcher</td>
+<td class='score'>85.61</td>
+</tr>
+<tr>
+<td class='rank'>5</td>
+<td class='user'>André Pajak</td>
+<td class='score'>84.60</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='clear'></div>
+<div class='new-btn blue medium enter-contest-button disabled' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='The deadline for this contest has passed'>ENTER THIS CONTEST</div>
+</div>
+
+</div>
+<div class='col-md-7 col-sm-14'>
+<div class='contest-container'>
+<div class='title-wrapper'>
+<a class='title' href='https://www.quantopian.com/leaderboard/15'>Contest 15</a>
+<div class='date-wrapper'>
+<div class='date-group'>
+<div class='contest-icon deadline-icon'></div>
+<div class='date deadline-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date contest begins'>Mar 1, 2016</div>
+</div>
+<div class='date-group'>
+<div class='contest-icon award-icon'></div>
+<div class='date award-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date prize will be awarded'>Sep 1, 2016</div>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+<div class='leaderboard-wrapper'>
+<div class='sample-leaderboard leaderboard-table'>
+<table>
+<thead>
+<th class='rank'>RANK</th>
+<th class='user'>NAME</th>
+<th class='score'>SCORE</th>
+</thead>
+<tbody>
+<div class='transparent-div'></div>
+<tr>
+<td class='rank'>1</td>
+<td class='user'>Albert R.</td>
+<td class='score'>88.52</td>
+</tr>
+<tr>
+<td class='rank'>2</td>
+<td class='user'>Timothy Fletcher</td>
+<td class='score'>86.15</td>
+</tr>
+<tr>
+<td class='rank'>3</td>
+<td class='user'>Shiv Chawla</td>
+<td class='score'>85.71</td>
+</tr>
+<tr>
+<td class='rank'>4</td>
+<td class='user'>Shiv Chawla</td>
+<td class='score'>85.62</td>
+</tr>
+<tr>
+<td class='rank'>5</td>
+<td class='user'>André Pajak</td>
+<td class='score'>84.70</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='clear'></div>
+<div class='new-btn blue medium enter-contest-button disabled' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='The deadline for this contest has passed'>ENTER THIS CONTEST</div>
+</div>
+
+</div>
+<div class='col-md-7 col-sm-14'>
+<div class='contest-container'>
+<div class='title-wrapper'>
+<a class='title' href='https://www.quantopian.com/leaderboard/14'>Contest 14</a>
+<div class='date-wrapper'>
+<div class='date-group'>
+<div class='contest-icon deadline-icon'></div>
+<div class='date deadline-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date contest begins'>Feb 1, 2016</div>
+</div>
+<div class='date-group'>
+<div class='contest-icon award-icon'></div>
+<div class='date award-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date prize will be awarded'>Aug 1, 2016</div>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+<div class='leaderboard-wrapper'>
+<div class='sample-leaderboard leaderboard-table'>
+<table>
+<thead>
+<th class='rank'>RANK</th>
+<th class='user'>NAME</th>
+<th class='score'>SCORE</th>
+</thead>
+<tbody>
+<div class='transparent-div'></div>
+<tr>
+<td class='rank'>1</td>
+<td class='user'>Albert R.</td>
+<td class='score'>90.30</td>
+</tr>
+<tr>
+<td class='rank'>2</td>
+<td class='user'>Timothy Fletcher</td>
+<td class='score'>87.46</td>
+</tr>
+<tr>
+<td class='rank'>3</td>
+<td class='user'>André Pajak</td>
+<td class='score'>86.81</td>
+</tr>
+<tr>
+<td class='rank'>4</td>
+<td class='user'>Albert R.</td>
+<td class='score'>85.65</td>
+</tr>
+<tr>
+<td class='rank'>5</td>
+<td class='user'>Vladimir Yevtushenko</td>
+<td class='score'>84.49</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='clear'></div>
+<div class='new-btn blue medium enter-contest-button disabled' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='The deadline for this contest has passed'>ENTER THIS CONTEST</div>
+</div>
+
+</div>
+<div class='col-md-7 col-sm-14'>
+<div class='contest-container'>
+<div class='title-wrapper'>
+<a class='title' href='https://www.quantopian.com/leaderboard/13'>Contest 13</a>
+<div class='date-wrapper'>
+<div class='date-group'>
+<div class='contest-icon deadline-icon'></div>
+<div class='date deadline-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date contest begins'>Jan 4, 2016</div>
+</div>
+<div class='date-group'>
+<div class='contest-icon award-icon'></div>
+<div class='date award-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date prize will be awarded'>Jul 1, 2016</div>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+<div class='leaderboard-wrapper'>
+<div class='sample-leaderboard leaderboard-table'>
+<table>
+<thead>
+<th class='rank'>RANK</th>
+<th class='user'>NAME</th>
+<th class='score'>SCORE</th>
+</thead>
+<tbody>
+<div class='transparent-div'></div>
+<tr>
+<td class='rank'>1</td>
+<td class='user'>Albert R.</td>
+<td class='score'>92.48</td>
+</tr>
+<tr>
+<td class='rank'>2</td>
+<td class='user'>André Pajak</td>
+<td class='score'>89.94</td>
+</tr>
+<tr>
+<td class='rank'>3</td>
+<td class='user'>Timothy Fletcher</td>
+<td class='score'>88.84</td>
+</tr>
+<tr>
+<td class='rank'>4</td>
+<td class='user'>Albert R.</td>
+<td class='score'>87.91</td>
+</tr>
+<tr>
+<td class='rank'>5</td>
+<td class='user'>Qiao Wang</td>
+<td class='score'>85.88</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='clear'></div>
+<div class='new-btn blue medium enter-contest-button disabled' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='The deadline for this contest has passed'>ENTER THIS CONTEST</div>
+</div>
+
+</div>
+<div class='col-md-7 col-sm-14'>
+<div class='contest-container'>
+<div class='title-wrapper'>
+<a class='title' href='https://www.quantopian.com/leaderboard/12'>Contest 12</a>
+<div class='date-wrapper'>
+<div class='date-group'>
+<div class='contest-icon deadline-icon'></div>
+<div class='date deadline-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date contest begins'>Dec 1, 2015</div>
+</div>
+<div class='date-group'>
+<div class='contest-icon award-icon'></div>
+<div class='date award-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date prize will be awarded'>Jun 1, 2016</div>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+<div class='leaderboard-wrapper'>
+<div class='sample-leaderboard leaderboard-table'>
+<table>
+<thead>
+<th class='rank'>RANK</th>
+<th class='user'>NAME</th>
+<th class='score'>SCORE</th>
+</thead>
+<tbody>
+<div class='transparent-div'></div>
+<tr>
+<td class='rank'>1</td>
+<td class='user'>Albert R.</td>
+<td class='score'>94.19</td>
+</tr>
+<tr>
+<td class='rank'>2</td>
+<td class='user'>Albert R.</td>
+<td class='score'>89.48</td>
+</tr>
+<tr>
+<td class='rank'>3</td>
+<td class='user'>Stan Keller</td>
+<td class='score'>87.44</td>
+</tr>
+<tr>
+<td class='rank'>4</td>
+<td class='user'>Kevin Quilliam</td>
+<td class='score'>86.50</td>
+</tr>
+<tr>
+<td class='rank'>5</td>
+<td class='user'>Richard Prokopyshen</td>
+<td class='score'>85.24</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='clear'></div>
+<div class='new-btn blue medium enter-contest-button disabled' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='The deadline for this contest has passed'>ENTER THIS CONTEST</div>
+</div>
+
+</div>
+<div class='col-md-7 col-sm-14 hidden old-leaderboards'>
+<div class='contest-container'>
+<div class='title-wrapper'>
+<a class='title' href='https://www.quantopian.com/leaderboard/11'>Contest 11</a>
+<div class='date-wrapper'>
+<div class='date-group'>
+<div class='contest-icon deadline-icon'></div>
+<div class='date deadline-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date contest begins'>Nov 2, 2015</div>
+</div>
+<div class='date-group'>
+<div class='contest-icon award-icon'></div>
+<div class='date award-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date prize will be awarded'>May 2, 2016</div>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+<div class='leaderboard-wrapper'>
+<div class='sample-leaderboard leaderboard-table'>
+<table>
+<thead>
+<th class='rank'>RANK</th>
+<th class='user'>NAME</th>
+<th class='score'>SCORE</th>
+</thead>
+<tbody>
+<div class='transparent-div'></div>
+<tr>
+<td class='rank'>1</td>
+<td class='user'>Kevin Quilliam</td>
+<td class='score'>93.70</td>
+</tr>
+<tr>
+<td class='rank'>2</td>
+<td class='user'>Timothy Fletcher</td>
+<td class='score'>90.53</td>
+</tr>
+<tr>
+<td class='rank'>3</td>
+<td class='user'>Eric M. Morris</td>
+<td class='score'>89.29</td>
+</tr>
+<tr>
+<td class='rank'>4</td>
+<td class='user'>Anh Nguyen</td>
+<td class='score'>89.19</td>
+</tr>
+<tr>
+<td class='rank'>5</td>
+<td class='user'>Richard Prokopyshen</td>
+<td class='score'>89.01</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='clear'></div>
+<div class='new-btn blue medium enter-contest-button disabled' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='The deadline for this contest has passed'>ENTER THIS CONTEST</div>
+</div>
+
+</div>
+<div class='col-md-7 col-sm-14 hidden old-leaderboards'>
+<div class='contest-container'>
+<div class='title-wrapper'>
+<a class='title' href='https://www.quantopian.com/leaderboard/10'>Contest 10</a>
+<div class='date-wrapper'>
+<div class='date-group'>
+<div class='contest-icon deadline-icon'></div>
+<div class='date deadline-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date contest begins'>Oct 1, 2015</div>
+</div>
+<div class='date-group'>
+<div class='contest-icon award-icon'></div>
+<div class='date award-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date prize will be awarded'>Apr 1, 2016</div>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+<div class='leaderboard-wrapper'>
+<div class='sample-leaderboard leaderboard-table'>
+<table>
+<thead>
+<th class='rank'>RANK</th>
+<th class='user'>NAME</th>
+<th class='score'>SCORE</th>
+</thead>
+<tbody>
+<div class='transparent-div'></div>
+<tr>
+<td class='rank'>1</td>
+<td class='user'>Taylor Smith</td>
+<td class='score'>95.52</td>
+</tr>
+<tr>
+<td class='rank'>2</td>
+<td class='user'>Kevin Quilliam</td>
+<td class='score'>92.50</td>
+</tr>
+<tr>
+<td class='rank'>3</td>
+<td class='user'>Nathan King</td>
+<td class='score'>91.42</td>
+</tr>
+<tr>
+<td class='rank'>4</td>
+<td class='user'>Eric M. Morris</td>
+<td class='score'>91.23</td>
+</tr>
+<tr>
+<td class='rank'>5</td>
+<td class='user'>Bayle Shanks</td>
+<td class='score'>90.38</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='clear'></div>
+<div class='new-btn blue medium enter-contest-button disabled' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='The deadline for this contest has passed'>ENTER THIS CONTEST</div>
+</div>
+
+</div>
+<div class='col-md-7 col-sm-14 hidden old-leaderboards'>
+<div class='contest-container'>
+<div class='title-wrapper'>
+<a class='title' href='https://www.quantopian.com/leaderboard/8'>Contest 8</a>
+<div class='date-wrapper'>
+<div class='date-group'>
+<div class='contest-icon deadline-icon'></div>
+<div class='date deadline-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date contest begins'>Aug 17, 2015</div>
+</div>
+<div class='date-group'>
+<div class='contest-icon award-icon'></div>
+<div class='date award-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date prize will be awarded'>Feb 16, 2016</div>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+<div class='leaderboard-wrapper'>
+<div class='sample-leaderboard leaderboard-table'>
+<table>
+<thead>
+<th class='rank'>RANK</th>
+<th class='user'>NAME</th>
+<th class='score'>SCORE</th>
+</thead>
+<tbody>
+<div class='transparent-div'></div>
+<tr>
+<td class='rank'>1</td>
+<td class='user'>Robert Shanks</td>
+<td class='score'>92.86</td>
+</tr>
+<tr>
+<td class='rank'>2</td>
+<td class='user'>Naoki Nagai</td>
+<td class='score'>92.26</td>
+</tr>
+<tr>
+<td class='rank'>3</td>
+<td class='user'>Eric M. Morris</td>
+<td class='score'>91.31</td>
+</tr>
+<tr>
+<td class='rank'>4</td>
+<td class='user'>Jamie Lunn</td>
+<td class='score'>90.96</td>
+</tr>
+<tr>
+<td class='rank'>5</td>
+<td class='user'>Anh Nguyen</td>
+<td class='score'>90.67</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='clear'></div>
+<div class='new-btn blue medium enter-contest-button disabled' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='The deadline for this contest has passed'>ENTER THIS CONTEST</div>
+</div>
+
+</div>
+<div class='col-md-7 col-sm-14 hidden old-leaderboards'>
+<div class='contest-container'>
+<div class='title-wrapper'>
+<a class='title' href='https://www.quantopian.com/leaderboard/9'>Contest 9</a>
+<div class='date-wrapper'>
+<div class='date-group'>
+<div class='contest-icon deadline-icon'></div>
+<div class='date deadline-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date contest begins'>Sep 1, 2015</div>
+</div>
+<div class='date-group'>
+<div class='contest-icon award-icon'></div>
+<div class='date award-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date prize will be awarded'>Oct 1, 2015</div>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+<div class='leaderboard-wrapper'>
+<div class='sample-leaderboard leaderboard-table'>
+<table>
+<thead>
+<th class='rank'>RANK</th>
+<th class='user'>NAME</th>
+<th class='score'>SCORE</th>
+</thead>
+<tbody>
+<div class='transparent-div'></div>
+<tr>
+<td class='rank'>1</td>
+<td class='user'>Andreas R</td>
+<td class='score'>92.76</td>
+</tr>
+<tr>
+<td class='rank'>2</td>
+<td class='user'>Andreas R</td>
+<td class='score'>92.70</td>
+</tr>
+<tr>
+<td class='rank'>3</td>
+<td class='user'>Eric M. Morris</td>
+<td class='score'>92.51</td>
+</tr>
+<tr>
+<td class='rank'>4</td>
+<td class='user'>Andreas R</td>
+<td class='score'>92.20</td>
+</tr>
+<tr>
+<td class='rank'>5</td>
+<td class='user'>Alain Brown</td>
+<td class='score'>92.14</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='clear'></div>
+<div class='new-btn blue medium enter-contest-button disabled' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='The deadline for this contest has passed'>ENTER THIS CONTEST</div>
+</div>
+
+</div>
+<div class='col-md-7 col-sm-14 hidden old-leaderboards'>
+<div class='contest-container'>
+<div class='title-wrapper'>
+<a class='title' href='https://www.quantopian.com/leaderboard/7'>Contest 7</a>
+<div class='date-wrapper'>
+<div class='date-group'>
+<div class='contest-icon deadline-icon'></div>
+<div class='date deadline-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date contest begins'>Aug 3, 2015</div>
+</div>
+<div class='date-group'>
+<div class='contest-icon award-icon'></div>
+<div class='date award-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date prize will be awarded'>Sep 1, 2015</div>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+<div class='leaderboard-wrapper'>
+<div class='sample-leaderboard leaderboard-table'>
+<table>
+<thead>
+<th class='rank'>RANK</th>
+<th class='user'>NAME</th>
+<th class='score'>SCORE</th>
+</thead>
+<tbody>
+<div class='transparent-div'></div>
+<tr>
+<td class='rank'>1</td>
+<td class='user'>Pravin Bezwada</td>
+<td class='score'>89.50</td>
+</tr>
+<tr>
+<td class='rank'>2</td>
+<td class='user'>Csaba Herpai</td>
+<td class='score'>89.14</td>
+</tr>
+<tr>
+<td class='rank'>3</td>
+<td class='user'>bc</td>
+<td class='score'>88.41</td>
+</tr>
+<tr>
+<td class='rank'>4</td>
+<td class='user'>Richard Prokopyshen</td>
+<td class='score'>88.29</td>
+</tr>
+<tr>
+<td class='rank'>5</td>
+<td class='user'>Tomas Lundström</td>
+<td class='score'>86.50</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='clear'></div>
+<div class='new-btn blue medium enter-contest-button disabled' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='The deadline for this contest has passed'>ENTER THIS CONTEST</div>
+</div>
+
+</div>
+<div class='col-md-7 col-sm-14 hidden old-leaderboards'>
+<div class='contest-container'>
+<div class='title-wrapper'>
+<a class='title' href='https://www.quantopian.com/leaderboard/6'>Contest 6</a>
+<div class='date-wrapper'>
+<div class='date-group'>
+<div class='contest-icon deadline-icon'></div>
+<div class='date deadline-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date contest begins'>Jul 1, 2015</div>
+</div>
+<div class='date-group'>
+<div class='contest-icon award-icon'></div>
+<div class='date award-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date prize will be awarded'>Aug 3, 2015</div>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+<div class='leaderboard-wrapper'>
+<div class='sample-leaderboard leaderboard-table'>
+<table>
+<thead>
+<th class='rank'>RANK</th>
+<th class='user'>NAME</th>
+<th class='score'>SCORE</th>
+</thead>
+<tbody>
+<div class='transparent-div'></div>
+<tr>
+<td class='rank'>1</td>
+<td class='user'>Spencer Singleton</td>
+<td class='score'>84.84</td>
+</tr>
+<tr>
+<td class='rank'>2</td>
+<td class='user'>Tomas Lundström</td>
+<td class='score'>83.23</td>
+</tr>
+<tr>
+<td class='rank'>3</td>
+<td class='user'>Rob Robinson</td>
+<td class='score'>82.60</td>
+</tr>
+<tr>
+<td class='rank'>4</td>
+<td class='user'>Singh G</td>
+<td class='score'>82.05</td>
+</tr>
+<tr>
+<td class='rank'>5</td>
+<td class='user'>Pravin Bezwada</td>
+<td class='score'>82.01</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='clear'></div>
+<div class='new-btn blue medium enter-contest-button disabled' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='The deadline for this contest has passed'>ENTER THIS CONTEST</div>
+</div>
+
+</div>
+<div class='col-md-7 col-sm-14 hidden old-leaderboards'>
+<div class='contest-container'>
+<div class='title-wrapper'>
+<a class='title' href='https://www.quantopian.com/leaderboard/5'>Contest 5</a>
+<div class='date-wrapper'>
+<div class='date-group'>
+<div class='contest-icon deadline-icon'></div>
+<div class='date deadline-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date contest begins'>Jun 1, 2015</div>
+</div>
+<div class='date-group'>
+<div class='contest-icon award-icon'></div>
+<div class='date award-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date prize will be awarded'>Jul 1, 2015</div>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+<div class='leaderboard-wrapper'>
+<div class='sample-leaderboard leaderboard-table'>
+<table>
+<thead>
+<th class='rank'>RANK</th>
+<th class='user'>NAME</th>
+<th class='score'>SCORE</th>
+</thead>
+<tbody>
+<div class='transparent-div'></div>
+<tr>
+<td class='rank'>1</td>
+<td class='user'>Michael Van Kleeck</td>
+<td class='score'>78.58</td>
+</tr>
+<tr>
+<td class='rank'>2</td>
+<td class='user'>Taylor Smith</td>
+<td class='score'>78.04</td>
+</tr>
+<tr>
+<td class='rank'>3</td>
+<td class='user'>Jonathan Ng Ching Kwang</td>
+<td class='score'>74.68</td>
+</tr>
+<tr>
+<td class='rank'>4</td>
+<td class='user'>Taylor Smith</td>
+<td class='score'>74.68</td>
+</tr>
+<tr>
+<td class='rank'>5</td>
+<td class='user'>Kevin Quilliam</td>
+<td class='score'>73.21</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='clear'></div>
+<div class='new-btn blue medium enter-contest-button disabled' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='The deadline for this contest has passed'>ENTER THIS CONTEST</div>
+</div>
+
+</div>
+<div class='col-md-7 col-sm-14 hidden old-leaderboards'>
+<div class='contest-container'>
+<div class='title-wrapper'>
+<a class='title' href='https://www.quantopian.com/leaderboard/4'>Contest 4</a>
+<div class='date-wrapper'>
+<div class='date-group'>
+<div class='contest-icon deadline-icon'></div>
+<div class='date deadline-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date contest begins'>May 1, 2015</div>
+</div>
+<div class='date-group'>
+<div class='contest-icon award-icon'></div>
+<div class='date award-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date prize will be awarded'>Jun 1, 2015</div>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+<div class='leaderboard-wrapper'>
+<div class='sample-leaderboard leaderboard-table'>
+<table>
+<thead>
+<th class='rank'>RANK</th>
+<th class='user'>NAME</th>
+<th class='score'>SCORE</th>
+</thead>
+<tbody>
+<div class='transparent-div'></div>
+<tr>
+<td class='rank'>1</td>
+<td class='user'>Szilvia Hegyi</td>
+<td class='score'>76.20</td>
+</tr>
+<tr>
+<td class='rank'>2</td>
+<td class='user'>Kevin Quilliam</td>
+<td class='score'>73.12</td>
+</tr>
+<tr>
+<td class='rank'>3</td>
+<td class='user'>Frederik Strikert</td>
+<td class='score'>71.70</td>
+</tr>
+<tr>
+<td class='rank'>4</td>
+<td class='user'>Michael Van Kleeck</td>
+<td class='score'>71.13</td>
+</tr>
+<tr>
+<td class='rank'>5</td>
+<td class='user'>DAGR</td>
+<td class='score'>68.90</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='clear'></div>
+<div class='new-btn blue medium enter-contest-button disabled' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='The deadline for this contest has passed'>ENTER THIS CONTEST</div>
+</div>
+
+</div>
+<div class='col-md-7 col-sm-14 hidden old-leaderboards'>
+<div class='contest-container'>
+<div class='title-wrapper'>
+<a class='title' href='https://www.quantopian.com/leaderboard/3'>Contest 3</a>
+<div class='date-wrapper'>
+<div class='date-group'>
+<div class='contest-icon deadline-icon'></div>
+<div class='date deadline-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date contest begins'>Apr 1, 2015</div>
+</div>
+<div class='date-group'>
+<div class='contest-icon award-icon'></div>
+<div class='date award-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date prize will be awarded'>May 1, 2015</div>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+<div class='leaderboard-wrapper'>
+<div class='sample-leaderboard leaderboard-table'>
+<table>
+<thead>
+<th class='rank'>RANK</th>
+<th class='user'>NAME</th>
+<th class='score'>SCORE</th>
+</thead>
+<tbody>
+<div class='transparent-div'></div>
+<tr>
+<td class='rank'>1</td>
+<td class='user'>Jeff Koch</td>
+<td class='score'>73.94</td>
+</tr>
+<tr>
+<td class='rank'>2</td>
+<td class='user'>Han Xiao</td>
+<td class='score'>71.85</td>
+</tr>
+<tr>
+<td class='rank'>3</td>
+<td class='user'>Kevin Quilliam</td>
+<td class='score'>71.67</td>
+</tr>
+<tr>
+<td class='rank'>4</td>
+<td class='user'>forex  fan</td>
+<td class='score'>68.61</td>
+</tr>
+<tr>
+<td class='rank'>5</td>
+<td class='user'>Frederik Strikert</td>
+<td class='score'>65.70</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='clear'></div>
+<div class='new-btn blue medium enter-contest-button disabled' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='The deadline for this contest has passed'>ENTER THIS CONTEST</div>
+</div>
+
+</div>
+<div class='col-md-7 col-sm-14 hidden old-leaderboards'>
+<div class='contest-container'>
+<div class='title-wrapper'>
+<a class='title' href='https://www.quantopian.com/leaderboard/2'>Contest 2</a>
+<div class='date-wrapper'>
+<div class='date-group'>
+<div class='contest-icon deadline-icon'></div>
+<div class='date deadline-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date contest begins'>Mar 2, 2015</div>
+</div>
+<div class='date-group'>
+<div class='contest-icon award-icon'></div>
+<div class='date award-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date prize will be awarded'>Apr 1, 2015</div>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+<div class='leaderboard-wrapper'>
+<div class='sample-leaderboard leaderboard-table'>
+<table>
+<thead>
+<th class='rank'>RANK</th>
+<th class='user'>NAME</th>
+<th class='score'>SCORE</th>
+</thead>
+<tbody>
+<div class='transparent-div'></div>
+<tr>
+<td class='rank'>1</td>
+<td class='user'>Simon Thornington</td>
+<td class='score'>89.35</td>
+</tr>
+<tr>
+<td class='rank'>2</td>
+<td class='user'>patriot</td>
+<td class='score'>88.73</td>
+</tr>
+<tr>
+<td class='rank'>3</td>
+<td class='user'>smartest one</td>
+<td class='score'>84.36</td>
+</tr>
+<tr>
+<td class='rank'>4</td>
+<td class='user'>Martin Clasen</td>
+<td class='score'>80.55</td>
+</tr>
+<tr>
+<td class='rank'>5</td>
+<td class='user'>Mike Thoun</td>
+<td class='score'>79.16</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='clear'></div>
+<div class='new-btn blue medium enter-contest-button disabled' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='The deadline for this contest has passed'>ENTER THIS CONTEST</div>
+</div>
+
+</div>
+<div class='col-md-7 col-sm-14 hidden old-leaderboards'>
+<div class='contest-container'>
+<div class='title-wrapper'>
+<a class='title' href='https://www.quantopian.com/leaderboard/1'>Contest 1</a>
+<div class='date-wrapper'>
+<div class='date-group'>
+<div class='contest-icon deadline-icon'></div>
+<div class='date deadline-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date contest begins'>Feb 2, 2015</div>
+</div>
+<div class='date-group'>
+<div class='contest-icon award-icon'></div>
+<div class='date award-date' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='Date prize will be awarded'>Mar 2, 2015</div>
+</div>
+</div>
+<div class='clear'></div>
+</div>
+<div class='leaderboard-wrapper'>
+<div class='sample-leaderboard leaderboard-table'>
+<table>
+<thead>
+<th class='rank'>RANK</th>
+<th class='user'>NAME</th>
+<th class='score'>SCORE</th>
+</thead>
+<tbody>
+<div class='transparent-div'></div>
+<tr>
+<td class='rank'>1</td>
+<td class='user'>Grant Kiehne</td>
+<td class='score'>83.54</td>
+</tr>
+<tr>
+<td class='rank'>2</td>
+<td class='user'>M. Schäfer</td>
+<td class='score'>81.66</td>
+</tr>
+<tr>
+<td class='rank'>3</td>
+<td class='user'>Kyu P</td>
+<td class='score'>81.58</td>
+</tr>
+<tr>
+<td class='rank'>4</td>
+<td class='user'>Matthieu Lestel</td>
+<td class='score'>80.47</td>
+</tr>
+<tr>
+<td class='rank'>5</td>
+<td class='user'>Grant Kiehne</td>
+<td class='score'>80.33</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class='clear'></div>
+<div class='new-btn blue medium enter-contest-button disabled' data-animation='false' data-placement='top' data-toggle='tooltip' data-trigger='hover' title='The deadline for this contest has passed'>ENTER THIS CONTEST</div>
+</div>
+
+</div>
+<div class='clear'></div>
+</div>
+<div class='row'>
+<div class='archives-link'>Show old leaderboards</div>
+</div>
+</div>
+</div>
+<div class='pane call-to-action-pane no-border'>
+<div class='container'>
+<div class='row'>
+<div class='col-xs-14'>
+<div class='title center'>
+<h2 class='white'>Win Cash Prizes</h2>
+</div>
+</div>
+</div>
+<div class='row btn-row'>
+<div class='col-xs-14'>
+<div class='btn new-btn blue mixpanel-button clone-sample-algo-link' data-event='contest page click' data-mixpanel='get started bottom' data-sampletype='sample_mean_reversion'>Get started</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  //<![CDATA[
+    quanto.instances.llm = new quanto.LeaderboardLandingManager();
+  //]]>
+</script>
+
+<div class='fade modal' id='error-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title'>Error</h4>
+</div>
+<div class='modal-body body-content'>
+<p>Sorry, something went wrong.  Try again or contact us by <a class='feedback-link'>sending feedback</a>.</p>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-primary' data-dismiss='modal' href='#'>Close</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='confirmation-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title'></h4>
+</div>
+<div class='modal-body body-content'></div>
+<div class='modal-footer'>
+<button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+<button class='btn btn-primary action-button' data-dismiss='modal'></button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='feedback-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'>Send Feedback</h3>
+</div>
+<div class='modal-body'>
+<div class='controls'>
+<div class='from'>
+<span class='valign-top'>From: </span>
+<div class='feedback-inputs'>
+<div class='form-group'>
+<input autofocus class='form-control' id='feedback-email-box' placeholder='Email address' type='email'>
+</div>
+<div class='form-group'>
+<input class='form-control' id='feedback-name-box' placeholder='Name' type='text'>
+</div>
+</div>
+</div>
+<textarea class='form-control input-xxlarge width_100pct' id='feedback-box' rows='10'></textarea>
+<div class='feedback-checkbox'>
+<div class='checkbox'>
+<label>
+<input id='anonymous-feedback-checkbox' type='checkbox'>I understand I will not receive a reply without providing a valid email address.</input>
+</label>
+</div>
+</div>
+</div>
+<div class='success hidden'>
+<span>Thank you!  We will be in touch soon.</span>
+</div>
+</div>
+<div class='modal-footer'>
+<div class='controls'>
+<button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+<button class='btn btn-primary' id='send-feedback-button'>Send</button>
+</div>
+<div class='success hidden'>
+<a class='btn btn-primary' data-dismiss='modal' href='leaderboard.html#'>Close</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='join-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'>Join Quantopian.  It's free!</h3>
+</div>
+<div class='modal-body'>
+<p class='large'>Once you join, you can:</p>
+<div class='margin_20t'>
+<div class='action'>
+<i class='icon icon-copy'></i>
+Create more algorithms
+</div>
+<div class='action'>
+<i class='icon icon-bar-chart'></i>
+Run full backtests, with detailed risk metrics and full transaction reports
+</div>
+<div class='action'>
+<i class='icon icon-comments-alt'></i>
+Post and share in our community
+</div>
+<div class='action'>
+<i class='icon icon-trophy'></i>
+Submit algorithms to the Quantopian Open
+</div>
+</div>
+<div class='margin_20t margin_20b large'>Don't worry, all your work is already saved.</div>
+</div>
+<div class='modal-footer'>
+<div class='pull-left'>
+<a class='btn btn-default btn-large' data-dismiss='modal' href='leaderboard.html#'>Close</a>
+</div>
+<a class='btn btn-primary btn-large font-14' href='users/sign_up.html'>Join Quantopian</a>
+<a class='btn btn-default btn-large font-14 login-button' href='users/sign_in.html'>Log In</a>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='message-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'></h3>
+</div>
+<div class='modal-body'></div>
+<div class='modal-footer'>
+<button class='btn btn-primary' data-dismiss='modal' id='message-modal-close'>Close</button>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class='footer new-style' id='quanto-footer-container'>
+<div class='row-fluid main-footer container'>
+<div class='left-space span1'></div>
+<div class='footer-content span11'>
+<div class='row-fluid footer-inner row'>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Company</div>
+<div class='footer-row'>
+<a href='about.html'>About</a>
+</div>
+<div class='footer-row'>
+<a href='academia.html'>Academia</a>
+</div>
+<div class='footer-row'>
+<a href='workshops.html'>Workshops</a>
+</div>
+<div class='footer-row'>
+<a href='about.html'>Careers</a>
+</div>
+<div class='footer-row'>
+<a href='posts.html'>Community</a>
+</div>
+<div class='footer-row'>
+<a href='prospective_investors.html'>Prospective Investors</a>
+</div>
+</div>
+</div>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Learn &amp; Support</div>
+<div class='footer-row'>
+<a href='tutorials/getting-started.html'>Getting Started</a>
+</div>
+<div class='footer-row'>
+<a href='faq.html'>FAQs</a>
+</div>
+<div class='footer-row'>
+<a href='help.html'>Help &amp; API docs</a>
+</div>
+<div class='footer-row'>
+<a href='tutorials.html'>Tutorials</a>
+</div>
+<div class='footer-row'>
+<a href='lectures.html'>Lectures</a>
+</div>
+<div class='footer-row'>
+<a href='http://status.quantopian.com'>Site Status</a>
+</div>
+<div class='footer-row'>
+<a href='security.html'>Security</a>
+</div>
+</div>
+</div>
+
+<div class='col-sm-6'>
+<div class='feedback-email pull-right'>
+Need Help?
+<a class='open-feedback-link' href='leaderboard.html#'>Contact Support</a>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Notices</div>
+<div class='footer-row'>
+<a href='policies/terms.html'>Terms of Use</a>
+</div>
+<div class='footer-row'>
+<a href='policies/privacy.html'>Privacy Policy</a>
+</div>
+<div class='footer-row'>
+<a href='policies/risks.html'>Trading Risk</a>
+</div>
+<div class='footer-row'>
+<a href='policies/live_trading.html'>Brokerage Terms</a>
+</div>
+</div>
+</div>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Follow Us</div>
+<div class='footer-row'>
+<a href='http://www.twitter.com/quantopian'>Twitter</a>
+</div>
+<div class='footer-row'>
+<a href='http://www.facebook.com/quantopian'>Facebook</a>
+</div>
+<div class='footer-row'>
+<a href='http://www.linkedin.com/company/quantopian'>LinkedIn</a>
+</div>
+<div class='footer-row'>
+<a href='http://blog.quantopian.com'>Blog</a>
+</div>
+</div>
+</div>
+
+</div>
+<div class='row'>
+<div class='col-sm-14'>
+<div class='pull-right copyright'>&copy; 2016 Quantopian, Inc.</div>
+</div>
+</div>
+</div>
+</div>
+<div class='mobile-footer'>
+<div class='mobile-nav-category main-links'>
+<div class='mobile-nav-row'>
+<a href='about.html'>About Quantopian</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='about.html'>Careers</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='posts.html'>Community</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='help.html'>Help</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='academia.html'>Academia</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='lectures.html'>Lectures</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='workshops.html'>Workshops</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://status.quantopian.com'>Status</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.facebook.com/quantopian'>Facebook</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.twitter.com/quantopian'>Twitter</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.linkedin.com/company/quantopian'>LinkedIn</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://blog.quantopian.com'>Blog</a>
+</div>
+</div>
+<div class='mobile-nav-category secondary-links'>
+<div class='mobile-nav-row'>
+<p>&copy; 2016 Quantopian</p>
+</div>
+<div class='mobile-nav-row'>
+<a href='policies/terms.html'>Terms of Use</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='policies/privacy.html'>Privacy Policy</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</body>
+</html>
+<script>
+  //<![CDATA[
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8519877-1']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_setDomainName', 'quantopian.com']);
+    _gaq.push(['_setCustomVar', 1, 'quanto_session_id', 'session_572d6deed42b61f8d200072e']);
+    
+    
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  //]]>
+</script>
+
+
+<input id="is_mac" name="is_mac" type="hidden" value="false" />
+<script>
+  //<![CDATA[
+    (function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js';
+    d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);
+    a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}
+    var g=a;"undefined"!==typeof f? g=a[f]=[]:f="mixpanel";g.people=g.people||[];
+    h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.identify people.set people.increment".split(" ");for(e=0;e<h.length;e++) d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1})(document,window.mixpanel||[]);mixpanel.init("75873953cd404bcc1da88a55ff51e3b4")
+  //]]>
+</script>
+
+<script>
+  //<![CDATA[
+    mixpanel.track("view page", {"page": window.location.pathname})
+  //]]>
+</script>
+<script type="text/javascript">if (typeof NREUMQ !== "undefined") { if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","bam.nr-data.net","59252e476d","984851","dAlXTUcKWFpQRBlbXFYCXEtXClVEURlfWV1SHg==",7,251,new Date().getTime(),"","","","",""]);}</script>

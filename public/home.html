@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<link href="assets/logos/favicon-q-9ba6cb893a620560ab734fe26a5bef5f.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<title>
+Quantopian
+</title>
+<link href="assets/quanto-base-bundle-b524a8864168203acdb8ea6f8202e97b.css" media="all" rel="stylesheet" type="text/css" />
+<link href="assets/application_new-039c7fe7fe2730066a8dcb040084bc2f.css" media="all" rel="stylesheet" type="text/css" />
+<script src="assets/quanto_global-44e85c6fa95d3651757ab8e426751f17.js" type="text/javascript"></script>
+<script src="https://use.typekit.com/uvj7txo.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+try{Typekit.load()}catch(e){}
+//]]>
+</script>
+<script src="https://js.stripe.com/v2/" type="text/javascript"></script>
+<meta content='pk_live_qyEzgiIO9PIT9AEbwiX8qw6g' name='stripe-key'>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="XIZmvJvBSDp8R371BFoxbTfU5NJRO3ZTtXciYR83l3c=" name="csrf-token" />
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+
+<input id="quanto-env" name="env" type="hidden" value="production" />
+</head>
+<body class='' ontouchstart=''>
+<div id='fb-root'></div>
+<div class='wrapper' id='main-home'>
+<div class='navbar navbar-default navbar-red navbar-static-top' id='app-navbar'>
+<div class='container-fluid'>
+<div class='navbar-header'>
+<button class='navbar-toggle collapsed' data-target='#app-navbar-collapse' data-toggle='collapse'>
+<span class='icon hamburger-menu'></span>
+</button>
+<a class='navbar-brand' href='home.html'>
+<div class='logo-image'></div>
+</a>
+</div>
+<div class='collapse navbar-collapse' id='app-navbar-collapse'>
+<ul class='nav navbar-nav navbar-right'>
+<li class='dropdown hidden unconfirmed-user-header'>
+<a class='header' data-toggle='dropdown' href='home.html#'>
+<span class='icon icon-warning'></span>
+Unconfirmed Account
+</a>
+<ul class='dropdown-menu no-close-on-click'>
+<div class='confirm-dropdown'>
+<div>
+Click on the confirmation link in the email that Quantopian sent to <strong class="confirm-email-address">
+</strong>.
+</div>
+<div class='margin_10t'>
+<button class='btn resend-confirmation' id='resend-confirmation-email-button'>Resend Confirmation Email</button>
+</div>
+</div>
+</ul>
+</li>
+<!--<li>
+<a class='header' href='fund.html'>Capital</a>
+</li>
+<li>
+<a class='header' href='data.html'>Data</a>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='home.html#'>
+My Code
+</a>
+<ul class='dropdown-menu quanto-dropdown-new'>
+<li>
+<a href='research/survey.html'>Notebooks</a>
+</li>
+<li>
+<a href='algorithms.html'>Algorithms</a>
+</li>
+</ul>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='home.html#'>
+Community
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a class='' href='posts.html' id='community-header-link'>Forums</a>
+</li>
+<li>
+<a href='open.html'>Contest</a>
+</li>
+<li>
+<a href='http://www.quantcon.com'>QuantCon</a>
+</li>
+</ul>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='home.html#'>
+Learn & Support
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href='learn.html'>Learn</a>
+</li>
+<li>
+<a class='open-feedback-link' href='home.html#'>Contact Support</a>
+</li>
+</ul>
+</li>-->
+<li>
+<a href="signin.html" class="header unregistered-user-action">Log In</a>
+</li>
+<li>
+<a href="users/sign_up.html" class="header unregistered-user-action">Sign Up</a>
+</li>
+
+</ul>
+</div>
+</div>
+</div>
+<script>
+  //<![CDATA[
+    $(document).ready(function () {
+      quanto.instances.fm = new quanto.FeedbackManager();
+      quanto.instances.hm = new quanto.headerManager();
+    })
+  //]]>
+</script>
+
+
+<div class='content content-area new-style'>
+<script src="assets/application_frontpage-009690eb3f9bd66173c31493d418e0b8.js" type="text/javascript"></script>
+<div class='homepage'>
+<div class='container'>
+<div class='background-numbers-container hidden'>
+<div class='price x-small layer' data-depth='0.30' id='l1'>
+<div class='value group1'>4.03</div>
+<div class='up'></div>
+</div>
+<div class='price small layer' data-depth='0.70' id='l2'>
+<div class='value group2'>6.68</div>
+<div class='up'></div>
+</div>
+<div class='price medium layer' data-depth='0.80' id='l3'>
+<div class='value group3'>44.63</div>
+<div class='up'></div>
+</div>
+<div class='price x-small layer' data-depth='0.30' id='l4'>
+<div class='value'>9.76</div>
+<div class='up'></div>
+</div>
+<div class='price large layer' data-depth='1.00' id='l5'>
+<div class='value group3'>11.71</div>
+<div class='up'></div>
+</div>
+<div class='price medium layer' data-depth='0.80' id='l6'>
+<div class='value group1'>2.72</div>
+<div class='up'></div>
+</div>
+<div class='price small layer' data-depth='0.70' id='l7'>
+<div class='value group3'>37.98</div>
+<div class='up'></div>
+</div>
+<div class='price x-small layer' data-depth='0.30' id='l8'>
+<div class='value'>7.06</div>
+<div class='up'></div>
+</div>
+<div class='price x-small layer' data-depth='0.50' id='r1'>
+<div class='value group1'>1.09</div>
+<div class='up'></div>
+</div>
+<div class='price medium layer' data-depth='0.80' id='r2'>
+<div class='value group2'>8.68</div>
+<div class='up'></div>
+</div>
+<div class='price x-small layer' data-depth='0.30' id='r3'>
+<div class='value'>9.76</div>
+<div class='up'></div>
+</div>
+<div class='price large layer' data-depth='1.00' id='r4'>
+<div class='value group1'>5.96</div>
+<div class='up'></div>
+</div>
+<div class='price x-small layer' data-depth='0.50' id='r5'>
+<div class='value group3'>1.11</div>
+<div class='up'></div>
+</div>
+<div class='price small layer' data-depth='0.7' id='r6'>
+<div class='value group1'>12.25</div>
+<div class='up'></div>
+</div>
+<div class='price large layer' data-depth='1.00' id='r7'>
+<div class='value group2'>63.22</div>
+<div class='up'></div>
+</div>
+<div class='price x-small layer' data-depth='0.5' id='r8'>
+<div class='value'>5.28</div>
+<div class='up'></div>
+</div>
+<div class='price x-small layer' data-depth='0.5' id='r9'>
+<div class='value'>5.76</div>
+<div class='up'></div>
+</div>
+</div>
+</div>
+<div class='title-pane'>
+<div class='container'>
+<div class='row page-title-row'>
+<div class='col-xs-14 antialias'>Bit - Homie - Quant </div>
+</div>
+<div class='row page-subtitle-row'>
+<div class='col-xs-14 antialias'>We back the best investment algorithms with investor capital, trading operations, and technology.</div>
+</div>
+<div class='row'>
+<div class='col-xs-14'>
+<div class='new-btn white-on-red mixpanel-button clone-sample-algo-link' data-event='new homepage click' data-mixpanel='start coding top' data-sampletype='sample_mean_reversion'>Start Coding</div>
+</div>
+</div>
+</div>
+</div>
+<div class='page-break-pane'>
+<a href='home.html#' id='down' name='maincontent'></a>
+</div>
+<div class='tile-pane'>
+<div class='container-fluid'>
+<div class='row tile-row'>
+<div class='col-md-7 tile' id='research'>
+<div class='padding-div'>
+<div class='tile-image' id='icon-research'></div>
+<div class='tile-title'>Research</div>
+<div class='tile-info'>Do your research in our hosted IPython environment using stock price history, corporate fundamental data, and other data sets.</div>
+<div class='tile-learn-more mixpanel-button' data-event='new homepage click' data-mixpanel='research tile'><a href="research/survey.html">LEARN MORE</a></div>
+</div>
+</div>
+<div class='col-md-7 tile' id='code'>
+<div class='padding-div'>
+<div class='tile-image' id='icon-code'></div>
+<div class='tile-title'>Develop</div>
+<div class='tile-info'>Write your algorithm in your browser. Then backtest it, for free, over 14 years of minute-level data.</div>
+<div class='tile-learn-more mixpanel-button clone-sample-algo-link' data-event='new homepage click' data-mixpanel='start coding tile' data-sampletype='sample_mean_reversion'>START CODING</div>
+</div>
+</div>
+</div>
+<div class='row tile-row'>
+<div class='col-md-7 tile' id='compete'>
+<div class='padding-div'>
+<div class='tile-image' id='icon-compete'></div>
+<div class='tile-title'>Compete</div>
+<div class='tile-info'>Every month we award prizes to winning algorithms. If you win, you earn $5000.</div>
+<div class='tile-learn-more mixpanel-button show-on-mobile' data-event='new homepage click' data-mixpanel='compete tile'><a href="open.html">LEARN MORE</a></div>
+</div>
+</div>
+<div class='col-md-7 tile' id='options'>
+<div class='padding-div' id='no-bottom-padding'>
+<div class='row learn-more-item mixpanel-button' data-event='new homepage click' data-mixpanel='the contest' data-target='contest' id='contest'>
+<div class='col-xs-2'>
+<div class='checkmark'></div>
+</div>
+<div class='col-xs-12'>
+<div class='header'>Capital</div>
+<div class='info'>The best algorithms receive capital allocations from Quantopian.</div>
+</div>
+</div>
+<div class='row learn-more-item mixpanel-button' data-event='new homepage click' data-mixpanel='the hedge fund' data-target='fund' id='hedgefund'>
+<div class='col-xs-2'>
+<div class='checkmark'></div>
+</div>
+<div class='col-xs-12'>
+<div class='header'>Compensation</div>
+<div class='info'>If your algorithm is selected for an allocation, you get a share of the gross returns.</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-xs-14 front'>
+<div class='new-btn transparent mixpanel-button clone-sample-algo-link margin_20t' data-event='new homepage click' data-mixpanel='start coding bottom' data-sampletype='sample_mean_reversion'>Start Coding</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='features-pane'>
+<div class='container'>
+<div class='row feature-header'>Perks of joining Quantopian</div>
+<div class='row feature-subheader'>It's not just technology and data. It's a community, and capital, and more.</div>
+<div class='row feature-row'>
+<div class='col-md-third col-sm-7 feature'>
+<div class='feature-image' id='ip-icon'></div>
+<div class='feature-title'>INTELLECTUAL PROPERTY</div>
+<div class='feature-info'>You own your algorithms. Your algorithms are kept secret.  Ideas are some of the most valuable assets anyone has.  We are committed to protecting your intellectual property and keeping it safe.</div>
+</div>
+<div class='col-md-third col-sm-7 feature'>
+<div class='feature-image' id='backtest-icon'></div>
+<div class='feature-title'>BACKTESTING</div>
+<div class='feature-info'>Once you've written your algorithm, you need to test it. Quantopian provides free backtesting with historical data and free paper trading (also called walk-forward testing).</div>
+</div>
+<div class='clearfix visible-sm-block'></div>
+<div class='col-md-third col-sm-7 feature'>
+<div class='feature-image' id='real-money-icon'></div>
+<div class='feature-title'>REAL MONEY TRADING</div>
+<div class='feature-info'>If you are selected for an allocation, Quantopian provides the trading capital.  You also can connect Quantopian to your brokerage account and trade with <a class='mixpanel-button' href='faq.html#live-trading' data-mixpanel='features-real money' data-event='new homepage click'>your own money</a>.</div>
+</div>
+<div class='col-md-third col-sm-7 feature'>
+<div class='feature-image' id='data-icon'></div>
+<div class='feature-title'>DATA</div>
+<div class='feature-info'>Quantopian provides free access to many <a class='mixpanel-button' href='help.html#overview-datasources' data-mixpanel='features-data sets' data-event='new homepage click'>data sets</a>. We include 14 years of minute-level prices on all US stocks and ETFs. Other data sets include corporate fundamentals with over 600+ metrics.</div>
+</div>
+<div class='clearfix visible-sm-block'></div>
+<div class='col-md-third col-sm-7 feature'>
+<div class='feature-image' id='research-icon'></div>
+<div class='feature-title'>RESEARCH</div>
+<div class='feature-info'>Before you write your algorithm, you probably need to do some research. Quantopian provides a hosted research environment with flexible data access and custom plotting in an IPython notebook.</div>
+</div>
+<div class='col-md-third col-sm-7 feature'>
+<div class='feature-image' id='community-icon'></div>
+<div class='feature-title'>COMMUNITY</div>
+<div class='feature-info'>Our <a class='mixpanel-button' href='posts.html' data-mixpanel='features-community' data-event='new homepage click'>community</a> &mdash; 70,000 members and growing &mdash; ranges from seasoned algorithmic traders to aspiring quants. We help each other with code problems and discuss ideas in algorithmic trading.</div>
+</div>
+</div>
+</div>
+</div>
+<div class='join-pane'>
+<div class='container'>
+<div class='row'>
+<div class='col-md-9 col-sm-14'>
+<div class='join'>Join Quantopian</div>
+<div class='details'>Code your algorithm.  Make money by trading our capital.</div>
+</div>
+<div class='col-md-5 col-sm-14'>
+<a class='new-btn red-on-white mixpanel-button' data-event='new homepage click' data-mixpanel='join now' href='users/sign_up.html'>Join Now</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  //<![CDATA[
+    $(document).ready(function() {
+      quanto.instances.hpm = new quanto.HomepageManager();
+    })
+  //]]>
+</script>
+
+<div class='fade modal' id='error-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title'>Error</h4>
+</div>
+<div class='modal-body body-content'>
+<p>Sorry, something went wrong.  Try again or contact us by <a class='feedback-link'>sending feedback</a>.</p>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-primary' data-dismiss='modal' href='#'>Close</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='confirmation-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title'></h4>
+</div>
+<div class='modal-body body-content'></div>
+<div class='modal-footer'>
+<button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+<button class='btn btn-primary action-button' data-dismiss='modal'></button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='feedback-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'>Send Feedback</h3>
+</div>
+<div class='modal-body'>
+<div class='controls'>
+<div class='from'>
+<span class='valign-top'>From: </span>
+<div class='feedback-inputs'>
+<div class='form-group'>
+<input autofocus class='form-control' id='feedback-email-box' placeholder='Email address' type='email'>
+</div>
+<div class='form-group'>
+<input class='form-control' id='feedback-name-box' placeholder='Name' type='text'>
+</div>
+</div>
+</div>
+<textarea class='form-control input-xxlarge width_100pct' id='feedback-box' rows='10'></textarea>
+<div class='feedback-checkbox'>
+<div class='checkbox'>
+<label>
+<input id='anonymous-feedback-checkbox' type='checkbox'>I understand I will not receive a reply without providing a valid email address.</input>
+</label>
+</div>
+</div>
+</div>
+<div class='success hidden'>
+<span>Thank you!  We will be in touch soon.</span>
+</div>
+</div>
+<div class='modal-footer'>
+<div class='controls'>
+<button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+<button class='btn btn-primary' id='send-feedback-button'>Send</button>
+</div>
+<div class='success hidden'>
+<a class='btn btn-primary' data-dismiss='modal' href='home.html#'>Close</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='join-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'>Join Quantopian.  It's free!</h3>
+</div>
+<div class='modal-body'>
+<p class='large'>Once you join, you can:</p>
+<div class='margin_20t'>
+<div class='action'>
+<i class='icon icon-copy'></i>
+Create more algorithms
+</div>
+<div class='action'>
+<i class='icon icon-bar-chart'></i>
+Run full backtests, with detailed risk metrics and full transaction reports
+</div>
+<div class='action'>
+<i class='icon icon-comments-alt'></i>
+Post and share in our community
+</div>
+<div class='action'>
+<i class='icon icon-trophy'></i>
+Submit algorithms to the Quantopian Open
+</div>
+</div>
+<div class='margin_20t margin_20b large'>Don't worry, all your work is already saved.</div>
+</div>
+<div class='modal-footer'>
+<div class='pull-left'>
+<a class='btn btn-default btn-large' data-dismiss='modal' href='home.html#'>Close</a>
+</div>
+<a class='btn btn-primary btn-large font-14' href='users/sign_up.html'>Join Quantopian</a>
+<a class='btn btn-default btn-large font-14 login-button' href='users/sign_in.html'>Log In</a>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='message-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'></h3>
+</div>
+<div class='modal-body'></div>
+<div class='modal-footer'>
+<button class='btn btn-primary' data-dismiss='modal' id='message-modal-close'>Close</button>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class='footer new-style' id='quanto-footer-container'>
+<div class='row-fluid main-footer container'>
+<div class='left-space span1'></div>
+<div class='footer-content span11'>
+<div class='row-fluid footer-inner row'>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Company</div>
+<div class='footer-row'>
+<a href='about.html'>About</a>
+</div>
+<div class='footer-row'>
+<a href='academia.html'>Academia</a>
+</div>
+<div class='footer-row'>
+<a href='workshops.html'>Workshops</a>
+</div>
+<div class='footer-row'>
+<a href='about.html'>Careers</a>
+</div>
+<div class='footer-row'>
+<a href='posts.html'>Community</a>
+</div>
+<div class='footer-row'>
+<a href='prospective_investors.html'>Prospective Investors</a>
+</div>
+</div>
+</div>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Learn &amp; Support</div>
+<div class='footer-row'>
+<a href='tutorials/getting-started.html'>Getting Started</a>
+</div>
+<div class='footer-row'>
+<a href='faq.html'>FAQs</a>
+</div>
+<div class='footer-row'>
+<a href='help.html'>Help &amp; API docs</a>
+</div>
+<div class='footer-row'>
+<a href='tutorials.html'>Tutorials</a>
+</div>
+<div class='footer-row'>
+<a href='lectures.html'>Lectures</a>
+</div>
+<div class='footer-row'>
+<a href='http://status.quantopian.com'>Site Status</a>
+</div>
+<div class='footer-row'>
+<a href='security.html'>Security</a>
+</div>
+</div>
+</div>
+
+<div class='col-sm-6'>
+<div class='feedback-email pull-right'>
+Need Help?
+<a class='open-feedback-link' href='home.html#'>Contact Support</a>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Notices</div>
+<div class='footer-row'>
+<a href='policies/terms.html'>Terms of Use</a>
+</div>
+<div class='footer-row'>
+<a href='policies/privacy.html'>Privacy Policy</a>
+</div>
+<div class='footer-row'>
+<a href='policies/risks.html'>Trading Risk</a>
+</div>
+<div class='footer-row'>
+<a href='policies/live_trading.html'>Brokerage Terms</a>
+</div>
+</div>
+</div>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Follow Us</div>
+<div class='footer-row'>
+<a href='http://www.twitter.com/quantopian'>Twitter</a>
+</div>
+<div class='footer-row'>
+<a href='http://www.facebook.com/quantopian'>Facebook</a>
+</div>
+<div class='footer-row'>
+<a href='http://www.linkedin.com/company/quantopian'>LinkedIn</a>
+</div>
+<div class='footer-row'>
+<a href='http://blog.quantopian.com'>Blog</a>
+</div>
+</div>
+</div>
+
+</div>
+<div class='row'>
+<div class='col-sm-14'>
+<div class='pull-right copyright'>&copy; 2016 Quantopian, Inc.</div>
+</div>
+</div>
+</div>
+</div>
+<div class='mobile-footer'>
+<div class='mobile-nav-category main-links'>
+<div class='mobile-nav-row'>
+<a href='about.html'>About Quantopian</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='about.html'>Careers</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='posts.html'>Community</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='help.html'>Help</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='academia.html'>Academia</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='lectures.html'>Lectures</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='workshops.html'>Workshops</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://status.quantopian.com'>Status</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.facebook.com/quantopian'>Facebook</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.twitter.com/quantopian'>Twitter</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.linkedin.com/company/quantopian'>LinkedIn</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://blog.quantopian.com'>Blog</a>
+</div>
+</div>
+<div class='mobile-nav-category secondary-links'>
+<div class='mobile-nav-row'>
+<p>&copy; 2016 Quantopian</p>
+</div>
+<div class='mobile-nav-row'>
+<a href='policies/terms.html'>Terms of Use</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='policies/privacy.html'>Privacy Policy</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</body>
+</html>
+<script>
+  //<![CDATA[
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8519877-1']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_setDomainName', 'quantopian.com']);
+    _gaq.push(['_setCustomVar', 1, 'quanto_session_id', 'session_572d6deed42b61f8d200072e']);
+    
+    
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  //]]>
+</script>
+
+
+<input id="is_mac" name="is_mac" type="hidden" value="false" />
+<script>
+  //<![CDATA[
+    (function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js';
+    d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);
+    a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}
+    var g=a;"undefined"!==typeof f? g=a[f]=[]:f="mixpanel";g.people=g.people||[];
+    h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.identify people.set people.increment".split(" ");for(e=0;e<h.length;e++) d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1})(document,window.mixpanel||[]);mixpanel.init("75873953cd404bcc1da88a55ff51e3b4")
+  //]]>
+</script>
+
+<script>
+  //<![CDATA[
+    mixpanel.track("view page", {"page": window.location.pathname})
+  //]]>
+</script>
+<script type="text/javascript">if (typeof NREUMQ !== "undefined") { if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","bam.nr-data.net","59252e476d","984851","dAlXTUcKWFpQRBlaWF4IFlFaCFE=",6,19,new Date().getTime(),"","","","",""]);}</script>

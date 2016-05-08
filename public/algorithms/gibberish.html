@@ -1,0 +1,1817 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<link href="../assets/logos/favicon-q-9ba6cb893a620560ab734fe26a5bef5f.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<title>
+Hello World Algorithm
+</title>
+<link href="../assets/application-d001ce6de06ac687a73896481c43ddda.css" media="all" rel="stylesheet" type="text/css" />
+<script src="../assets/application-269bf65687954fcb4ed430e74a738c6f.js" type="text/javascript"></script>
+<script src="https://use.typekit.com/uvj7txo.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+try{Typekit.load()}catch(e){}
+//]]>
+</script>
+<script src="https://js.stripe.com/v2/" type="text/javascript"></script>
+<meta content='pk_live_qyEzgiIO9PIT9AEbwiX8qw6g' name='stripe-key'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:300,400,' rel='stylesheet' type='text/css'>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="XIZmvJvBSDp8R371BFoxbTfU5NJRO3ZTtXciYR83l3c=" name="csrf-token" />
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<script src="../assets/application_charts-f034c27d6d9948072cf3bd6d99661587.js" type="text/javascript"></script>
+<script src="../assets/application_grids-449df302af2625d784d59005cd0e9bb9.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+window.quanto_data = {};quanto_data.talib_info={"ADOSC":["Chaikin A/D Oscillator (Volume Indicators)",["fastperiod","3"],["slowperiod","10"]],"ADX":["Average Directional Movement Index (Momentum Indicators)",["timeperiod","14"]],"ADXR":["Average Directional Movement Index Rating (Momentum Indicators)",["timeperiod","14"]],"APO":["Absolute Price Oscillator (Momentum Indicators)",["fastperiod","12"],["slowperiod","26"],["matype","0"]],"AROON":["Aroon (Momentum Indicators)",["timeperiod","14"]],"AROONOSC":["Aroon Oscillator (Momentum Indicators)",["timeperiod","14"]],"ATR":["Average True Range (Volatility Indicators)",["timeperiod","14"]],"BBANDS":["Bollinger Bands (Overlap Studies)",["timeperiod","5"],["nbdevup","2"],["nbdevdn","2"],["matype","0"]],"BETA":["Beta (Statistic Functions)",["timeperiod","5"]],"CCI":["Commodity Channel Index (Momentum Indicators)",["timeperiod","14"]],"CMO":["Chande Momentum Oscillator (Momentum Indicators)",["timeperiod","14"]],"CORREL":["Pearson's Correlation Coefficient (r) (Statistic Functions)",["timeperiod","30"]],"DEMA":["Double Exponential Moving Average (Overlap Studies)",["timeperiod","30"]],"DX":["Average Directional Movement Index (Momentum Indicators)",["timeperiod","14"]],"EMA":["Exponential Moving Average (Overlap Studies)",["timeperiod","30"]],"KAMA":["Kaufman Adaptive Moving Average (Overlap Studies)",["timeperiod","30"]],"LINEARREG":["Linear Regression (Statistic Functions)",["timeperiod","14"]],"LINEARREG_ANGLE":["Linear Regression Angle (Statistic Functions)",["timeperiod","14"]],"LINEARREG_INTERCEPT":["Linear Regression Intercept (Statistic Functions)",["timeperiod","14"]],"LINEARREG_SLOPE":["Linear Regression Slope (Statistic Functions)",["timeperiod","14"]],"MA":["Moving average (Overlap Studies)",["timeperiod","30"],["matype","0"]],"MACD":["Moving Average Convergence/Divergence (Momentum Indicators)",["fastperiod","12"],["slowperiod","26"],["signalperiod","9"]],"MACDEXT":["MACD with controllable MA type (Momentum Indicators)",["fastperiod","12"],["fastmatype","0"],["slowperiod","26"],["slowmatype","0"],["signalperiod","9"],["signalmatype","0"]],"MACDFIX":["Moving Average Convergence/Divergence Fix 12/26 (Momentum Indicators)",["signalperiod","9"]],"MAX":["Highest values over a specified period (Math Operators)",["timeperiod","30"]],"MAXINDEX":["Index of highest value over a specified period (Math Operators)",["timeperiod","30"]],"MFI":["Money Flow Index (Momentum Indicators)",["timeperiod","14"]],"MIDPOINT":["Midpoint over period (Overlap Studies)",["timeperiod","14"]],"MIDPRICE":["Midpoint Price over period (Overlap Studies)",["timeperiod","14"]],"MIN":["Lowest value over a specified period (Math Operators)",["timeperiod","30"]],"MININDEX":["Index of lowest value over a specified period (Math Operators)",["timeperiod","30"]],"MINMAX":["Lowest and highest values over a specified period (Math Operators)",["timeperiod","30"]],"MINMAXINDEX":["Indexes of lowest and highest values over a specified period (Math Operators)",["timeperiod","30"]],"MINUS_DI":["Minus Directional Indicator (Momentum Indicators)",["timeperiod","14"]],"MINUS_DM":["Minus Directional Movement (Momentum Indicators)",["timeperiod","14"]],"MOM":["Momentum (Momentum Indicators)",["timeperiod","10"]],"NATR":["Normalized Average True Range (Volatility Indicators)",["timeperiod","14"]],"PLUS_DI":["Plus Directional Indicator (Momentum Indicators)",["timeperiod","14"]],"PLUS_DM":["Plus Directional Movement (Momentum Indicators)",["timeperiod","14"]],"PPO":["Percentage Price Oscillator (Momentum Indicators)",["fastperiod","12"],["slowperiod","26"],["matype","0"]],"ROC":["Rate of change: ((price/prevPrice)-1)*100 (Momentum Indicators)",["timeperiod","10"]],"ROCP":["Rate of change Percentage: (price-prevPrice)/prevPrice (Momentum Indicators)",["timeperiod","10"]],"ROCR":["Rate of change ratio: (price/prevPrice) (Momentum Indicators)",["timeperiod","10"]],"ROCR100":["Rate of change ratio 100 scale: (price/prevPrice)*100 (Momentum Indicators)",["timeperiod","10"]],"RSI":["Relative Strength Index (Momentum Indicators)",["timeperiod","14"]],"SMA":["Simple Moving Average (Overlap Studies)",["timeperiod","30"]],"STDDEV":["Standard Deviation (Statistic Functions)",["timeperiod","5"],["nbdev","1"]],"STOCH":["Stochastic (Momentum Indicators)",["fastk_period","5"],["slowk_period","3"],["slowk_matype","0"],["slowd_period","3"],["slowd_matype","0"]],"STOCHF":["Stochastic Fast (Momentum Indicators)",["fastk_period","5"],["fastd_period","3"],["fastd_matype","0"]],"STOCHRSI":["Stochastic Relative Strength Index (Momentum Indicators)",["timeperiod","14"],["fastk_period","5"],["fastd_period","3"],["fastd_matype","0"]],"T3":["Triple Exponential Moving Average (T3) (Overlap Studies)",["timeperiod","5"],["vfactor","0.7"]],"TEMA":["Triple Exponential Moving Average (Overlap Studies)",["timeperiod","30"]],"TRIMA":["Triangular Moving Average (Overlap Studies)",["timeperiod","30"]],"TRIX":["1-day Rate-Of-Change (ROC) of a Triple Smooth EMA (Momentum Indicators)",["timeperiod","30"]],"TSF":["Time Series Forecast (Statistic Functions)",["timeperiod","14"]],"ULTOSC":["Ultimate Oscillator (Momentum Indicators)",["timeperiod1","7"],["timeperiod2","14"],["timeperiod3","28"]],"VAR":["Variance (Statistic Functions)",["timeperiod","5"],["nbdev","1"]],"WILLR":["Williams' %R (Momentum Indicators)",["timeperiod","14"]],"WMA":["Weighted Moving Average (Overlap Studies)",["timeperiod","30"]]};quanto_data.de=true;quanto_data.from_q2_migration=false;quanto_data.show_q2_welcome_message=false;
+//]]>
+</script>
+
+<input id="current_user_id" name="user_id" type="hidden" value="572d6deed42b61f8d200072f" />
+<input id="current_user_type" name="user_type" type="hidden" value="1" />
+<input id="quanto-env" name="env" type="hidden" value="production" />
+</head>
+<body class='no-scroll' ontouchstart=''>
+<div id='fb-root'></div>
+<div class='wrapper' id='algorithms-show'>
+<div class='app-navbar navbar navbar-default old-style small-nav'>
+<div class='app-header compact navbar-inner'>
+<div class='navbar-brand inline-block'>
+<a class='logo-image' href='../home.html'></a>
+</div>
+<div class='navbar-mobile navbar-mobile-trigger'>
+<div class='pull-right'>
+<a class='navbar-menu-anchor' id='navbar-menu-anchor'></a>
+</div>
+</div>
+<div class='navbar-fullscreen navbar-right'>
+<ul class='nav navbar-nav'>
+<li class='dropdown hidden unconfirmed-user-header'>
+<a class='header' data-toggle='dropdown' href='572d6defd42b61f8d2000730.html#'>
+<span class='icon icon-warning'></span>
+Unconfirmed Account
+</a>
+<ul class='dropdown-menu no-close-on-click'>
+<div class='confirm-dropdown'>
+<div>
+Click on the confirmation link in the email that Quantopian sent to <strong class="confirm-email-address">
+</strong>.
+</div>
+<div class='margin_10t'>
+<button class='btn resend-confirmation' id='resend-confirmation-email-button'>Resend Confirmation Email</button>
+</div>
+</div>
+</ul>
+</li>
+<li>
+<a class='header' href='../fund.html'>Capital</a>
+</li>
+<li>
+<a class='header' href='../data.html'>Data</a>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='572d6defd42b61f8d2000730.html#'>
+My Code
+</a>
+<ul class='dropdown-menu quanto-dropdown-new'>
+<li>
+<a href='../research/survey.html'>Notebooks</a>
+</li>
+<li>
+<a href='../algorithms.html'>Algorithms</a>
+</li>
+</ul>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='572d6defd42b61f8d2000730.html#'>
+Community
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a class='' href='../posts.html' id='community-header-link'>Forums</a>
+</li>
+<li>
+<a href='../open.html'>Contest</a>
+</li>
+<li>
+<a href='http://www.quantcon.com'>QuantCon</a>
+</li>
+</ul>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='572d6defd42b61f8d2000730.html#'>
+Learn & Support
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href='../learn.html'>Learn</a>
+</li>
+<li>
+<a class='open-feedback-link' href='572d6defd42b61f8d2000730.html#'>Contact Support</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="../signin.html" class="header unregistered-user-action">Log In</a>
+</li>
+<li>
+<a href="../users/sign_up.html" class="header unregistered-user-action">Sign Up</a>
+</li>
+
+</ul>
+</div>
+<div class='clear-fix'></div>
+</div>
+<div id='mobile-navbar-menu'>
+<div class='mobile-nav-category-title no-arrow'>
+<a href='../fund.html'>Capital</a>
+</div>
+<div class='mobile-nav-category-title no-arrow'>
+<a href='../data.html'>Data</a>
+</div>
+<div class='mobile-nav-category'>
+<div class='mobile-nav-category-title'>My Code</div>
+<div class='mobile-nav-rows'>
+<div class='mobile-nav-row'>
+<a href='../research/survey.html'>Notebooks</a>
+<a href='../algorithms.html'>Algorithms</a>
+</div>
+</div>
+</div>
+<div class='mobile-nav-category'>
+<div class='mobile-nav-category-title'>Community</div>
+<div class='mobile-nav-rows'>
+<div class='mobile-nav-row'>
+<a class='' href='../posts.html' id='community-header-link'>Forums</a>
+<a href='../open.html'>Contest</a>
+<a href='http://www.quantcon.com'>QuantCon</a>
+</div>
+</div>
+</div>
+<div class='mobile-nav-category'>
+<div class='mobile-nav-category-title'>Learn &amp; Support</div>
+<div class='mobile-nav-rows'>
+<div class='mobile-nav-row'>
+<a href='../learn.html'>Learn</a>
+<a class='open-feedback-link' href='572d6defd42b61f8d2000730.html#'>Contact Support</a>
+</div>
+</div>
+</div>
+<div class='mobile-nav-category-title no-arrow'>
+<a href='../users/sign_in.html'>Log In</a>
+</div>
+<div class='mobile-nav-category-title no-arrow sign-up-btn'>
+<a href='../users/sign_up.html'>Sign Up</a>
+</div>
+</div>
+</div>
+<script>
+  //<![CDATA[
+    $(document).ready(function () {
+      quanto.instances.fm = new quanto.FeedbackManager();
+      quanto.instances.hm = new quanto.headerManager();
+    })
+  //]]>
+</script>
+
+
+<div class='content content-area old-style'>
+<input id="algo-id" name="algo-id" type="hidden" value="572d6defd42b61f8d2000730" />
+<input id="page-id" name="page-id" type="hidden" value="algo" />
+<input id="last_end_day" name="last_end_day" type="hidden" value="5" />
+<input id="last_end_month" name="last_end_month" type="hidden" value="5" />
+<input id="last_end_year" name="last_end_year" type="hidden" value="2016" />
+<div class='notifications-area'>
+<div class='alert alert-error hidden' id='reconnecting-collab-notif'>
+<i class='icon icon-spinner icon-spin'></i>
+<span class='notif-message'>Retrying collaboration connection...</span>
+<div class='notif-description'>
+You can't edit this algorithm until your connection is restored.&nbsp&nbsp
+<span class='notif-description' id='notif-clone-algo'>
+<a class='alert-link notif-clone-algo-link' data-algo-id='572d6defd42b61f8d2000730'>Create your own copy</a>
+to continue working by yourself.
+</span>
+</div>
+</div>
+<div class='alert alert-info hidden' id='connecting-collab-notif'>
+<i class='icon icon-spinner icon-spin'></i>
+<span class='notif-message'>Starting collaboration...</span>
+</div>
+<div class='alert alert-error hidden' id='collab-connection-failed'>
+<span class='notif-message'>
+<p>Unable to connect to collaboration server.</p>
+<p><a class='reload-link'>Reload this page</a> to try again.</p>
+</span>
+</div>
+</div>
+<form accept-charset="UTF-8" action="/algorithms/572d6defd42b61f8d2000730" class="edit_algorithm" id="algo-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="XIZmvJvBSDp8R371BFoxbTfU5NJRO3ZTtXciYR83l3c=" /></div><div class='subnav' id='subnav'>
+<a class='algo-back' href='../algorithms.html'>
+<i class='icon icon-chevron-left no-decoration'></i>
+</a>
+<input class="algo-title-box medium disabled" data-backtest-number="null" id="title-box" name="algorithm[title]" size="30" type="text" value="Hello World Algorithm" />
+<div class='state-triangle'></div>
+<div class='state-triangle border'></div>
+<div class='pull-right mode-buttons'>
+<div class='mode-container'>
+<div class='btn hidden' id='manage-backtests-button'>
+<i class='icon icon-chevron-left'></i>
+All Backtests
+</div>
+<div class='btn-group inline-block toggle-buttons' data-toggle='buttons-radio' id='algo-toggle-buttons'>
+<a class='btn btn-primary active no-decoration' href='572d6defd42b61f8d2000730.html#algorithm' id='algo-button'>
+Algorithm
+<i class='icon icon-comments chat-count hidden'>
+<span class='comment-count'></span>
+</i>
+</a>
+<a class='btn no-decoration' href='572d6defd42b61f8d2000730.html#backtest' id='backtest-button'>
+Backtest
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class='main-pane' id='main-pane'>
+<div class='algorithm-area' id='algo-area'>
+<div class='box ide' id='ide-box'>
+<div class='toolbar'>
+<div class='toolbar-inner'>
+<div class='left inline-block'>
+<div class='btn' id='algo-save-button'>
+<img class='loading hidden' src='../assets/loader.gif'>
+<span class='button-label'>
+<span class='active-text'>
+<span class="underlined_char">S</span><span>ave</span>
+</span>
+<span class='busy-text'>Saving</span>
+<span class='done-text'>Saved</span>
+</span>
+</div>
+<div class='btn disabled with-events' data-animation='false' data-original-title='Sorry, your browser is too old to build and test this algorithm.' data-placement='top' rel='tooltip'>
+Build Algorithm
+</div>
+<div class='hidden'>
+<img class='loading'>
+</div>
+</div>
+<div class='right inline-block pull-right'>
+<div class='btn-group inline-block'>
+<a id='enter-contest-button'>
+<div class='btn btn-primary pull-right disabled with-events top_1' data-animation='false' data-original-title='Sorry, your browser is too old to enter the contest. Please try again on a different computer' data-placement='top' id='contest-submit-button-disabled' rel='tooltip'>
+Enter Contest
+</div>
+</a>
+</div>
+<div class='btn-group inline-block'>
+<a class='btn' href='../help.html#api-doco' target='_api'>
+API Reference
+</a>
+</div>
+<div class='btn-group inline-block' id='ide-options'>
+<input id="font-pref-field" name="fontpref" type="hidden" value="default" />
+<input id="theme-pref-field" name="themepref" type="hidden" value="ambiance" />
+<a class='btn dropdown-toggle dropdown-checked' data-toggle='dropdown' href='572d6defd42b61f8d2000730.html#' id='prefs-menu-trigger'>
+<i class='icon icon-cog large-icon'></i>
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu prefs-menu pull-right'>
+<div class='check-group' id='fontsize-pref'>
+<li class='wide-left' data-fontsize='small'>
+<a class='fontsize-pref-link' id='small-text-link'>
+<i class='icon icon-ok'></i>
+Small Text
+</a>
+</li>
+<li class='wide-left checked' data-fontsize='default'>
+<a class='font-size-pref-link' id='normal-text-link'>
+<i class='icon icon-ok'></i>
+Normal Text
+</a>
+</li>
+<li class='wide-left' data-fontsize='large'>
+<a id='large-text-link'>
+<i class='icon icon-ok'></i>
+Large Text
+</a>
+</li>
+</div>
+<li class='divider'></li>
+<div class='check-group' id='theme-pref'>
+<li class='wide-left checked' data-theme='default'>
+<a id='light-theme-link'>
+<i class='icon icon-ok'></i>
+Normal Theme
+</a>
+</li>
+<li class='wide-left' data-theme='ambiance'>
+<a id='dark-theme-link'>
+<i class='icon icon-ok'></i>
+Dark Theme
+</a>
+</li>
+</div>
+<li class='divider'></li>
+<li class='wide-left nocheck'>
+<a id='fullscreen-menu-link'>Go Fullscreen</a>
+</li>
+</ul>
+<a class='hidden btn btn-primary' id='fullscreen-button'>
+Exit Fullscreen
+</a>
+</div>
+</div>
+</div>
+</div>
+<div id='splitter-outer-container'>
+<div id='splitter-container'>
+<div id='code-area'>
+<div id='code-area-internal'>
+<div class='ide-search hidden'>
+<div class='input-append'>
+<input id='ide-searchbox' placeholder='Search code' type='text'>
+<div class='add-on hide-search'>
+<i class='icon icon-remove'></i>
+</div>
+</div>
+</div>
+<div class='ide-container' id='ide-container'>
+<textarea class="width_100pct" cols="40" id="codebox" name="algorithm[code]" rows="20">
+# Called once at the start of the simulation.&#x000A;def initialize(context):&#x000A;    # Reference to the AAPL security.&#x000A;    context.aapl = sid(24)&#x000A;&#x000A;    # Rebalance every day, an hour and a half after market open.&#x000A;    schedule_function(my_rebalance, date_rules.every_day(), time_rules.market_open())&#x000A;&#x000A;# This function was scheduled to run once per day at 11AM ET.&#x000A;def my_rebalance(context, data):&#x000A;    # Take a 100% long position in AAPL. Readjusts each day to &#x000A;    # account for price fluctuations.&#x000A;    if data.can_trade(context.aapl):&#x000A;        order_target_percent(context.aapl, 1.00)&#x000A;</textarea>
+</div>
+</div>
+<div class='hidden' id='debug-area'>
+<div class='debug-toolbar'>
+<div class='debug-toolbar-items-container'>
+<div class='debug-toolbar-item play disabled' data-delay='{"show": 500, "hide": 10}' data-original-title='Resume code execution' data-placement='top' rel='tooltip'>
+<i class='icon icon-play'></i>
+</div>
+<div class='debug-toolbar-item next disabled' data-delay='{"show": 500, "hide": 10}' data-original-title='Step over next function call' data-placement='top' rel='tooltip'>
+<i class='icon icon-step-forward'></i>
+</div>
+<div class='debug-toolbar-item down disabled' data-delay='{"show": 500, "hide": 10}' data-original-title='Step into next function call' data-placement='top' rel='tooltip'>
+<i class='icon icon-level-down'></i>
+</div>
+<div class='debug-toolbar-item up disabled' data-delay='{"show": 500, "hide": 10}' data-original-title='Step out of current function' data-placement='top' rel='tooltip'>
+<i class='icon icon-level-up'></i>
+</div>
+<div class='debug-toolbar-item separator'></div>
+<div class='debug-toolbar-item fastforward disabled' data-delay='{"show": 500, "hide": 10}' data-original-title='Disable breakpoints and finish backtest' data-placement='top' rel='tooltip'>
+<i class='icon icon-forward'></i>
+<span class='finish-label'>Finish backtest</span>
+</div>
+<div class='debug-toolbar-item separator'></div>
+<div class='debug-toolbar-item clear disabled' data-delay='{"show": 500, "hide": 10}' data-original-title='Clear console' data-placement='top' rel='tooltip'>
+<i class='icon icon-ban-circle'></i>
+</div>
+<div class='debug-toolbar-item help disabled' data-delay='{"show": 500, "hide": 10}' data-original-title='Show help' data-placement='top' rel='tooltip'>
+<i class='icon icon-question'></i>
+</div>
+</div>
+<div class='pull-right'>
+<div class='breakpoint-date-field hidden' data-delay='{"show": 500, "hide": 10}' data-original-title='This is the current time in the backtest.' data-placement='top' rel='tooltip'>
+<i class='icon icon-calendar'></i>
+<span class='date-display monospace'></span>
+</div>
+<div class='debugger-resizer'>
+<i class='icon icon-reorder'></i>
+</div>
+</div>
+</div>
+<div id='debug-mainpane'>
+<div class='debug-contents'>
+<div class='debug-results'></div>
+<div class='command-area'>
+<i class='icon icon-angle-right debug-input-caret'></i>
+<div class='debug-input-box collab-synch' contenteditable='true'>
+ 
+</div>
+<div class='command-area-spacer'></div>
+</div>
+</div>
+<div class='watchlist'>
+<div class='watchlist-header'>
+<span class='watchlist-title'>Watch Expressions</span>
+<div class='pull-right'>
+<i class='icon icon-plus' data-delay='{"show": 500, "hide": 10}' data-original-title='Add an expression' data-placement='top' id='watchlist-add-button' rel='tooltip'></i>
+</div>
+</div>
+<div class='watchlist-contents'></div>
+</div>
+</div>
+</div>
+</div>
+<div id='output-pane'>
+<div class='dailybars-output height_100pct'>
+<div class='hidden' id='dailybars-status'>
+<div class='loading-image' style='border:none'></div>
+<span class='loading-text'>Initializing backtest...</span>
+<div class='progress-pane hidden'>
+<span>Backtesting</span>
+<div class='progress progress-striped active'>
+<div class='paused-message hidden'>Paused at breakpoint</div>
+<div class='bar' id='dailybars-progressbar' style='width: 0%'></div>
+</div>
+<span class='progress-label' id='dailybars-progresslabel'></span>
+</div>
+<div class='btn btn-mini cancel-button' id='cancel-daily-backtest-button'>Cancel</div>
+</div>
+<div class='dailybars-nav'>
+<div class='btn-group inline-block dailybars-controls form-inline'>
+<div class='control-group'>
+<div class='controls inline-block'>
+<input class='datepicker' data-datetype='backtest_start_date' data-default='01/03/2002' id='daily_backtest_start_date_field' value='04/04/2015'>
+</div>
+<label class='inline-block margin_5l margin_5r to-label'> to </label>
+<div class='controls inline-block'>
+<input class='datepicker' data-datetype='backtest_end_date' data-default='05/05/2016' id='daily_backtest_end_date_field' value='05/05/2016'>
+</div>
+<div class='controls inline-block padding_5l capitalbase-container'>
+<div class='input-prepend'>
+<span class='add-on'>$</span>
+<input class='capitalbase' id='daily_backtest_capital_base_box' min='1000' step='1000' type='number' value='1000000'>
+</div>
+</div>
+</div>
+</div>
+<a id='full-backtest-button'>
+<div class='btn btn-primary pull-right disabled with-events top_1' data-animation='false' data-original-title='Sorry, your browser is too old to run a full backtest.' data-placement='top' id='daily-new-backtest-button-disabled' rel='tooltip'>
+Run Full Backtest
+<i class='icon icon-chevron-right padding_5l'></i>
+</div>
+</a>
+</div>
+<div class='dailybars-results'>
+<div id='dailybar-stats'>
+<div class='dailybar-stat'>
+<div class='title'>Returns</div>
+<div class='value' datafield='total_returns'>--</div>
+</div>
+<div class='dailybar-stat'>
+<div class='title'>Alpha</div>
+<div class='value' datafield='alpha'>--</div>
+</div>
+<div class='dailybar-stat'>
+<div class='title'>Beta</div>
+<div class='value' datafield='beta'>--</div>
+</div>
+<div class='dailybar-stat'>
+<div class='title'>Sharpe</div>
+<div class='value' datafield='sharpe'>--</div>
+</div>
+<div class='dailybar-stat'>
+<div class='title'>Drawdown</div>
+<div class='value' datafield='max_drawdown'>--</div>
+</div>
+</div>
+<div id='dailybar-chart-outer-container'>
+<div class='chart-label date'>
+<span id='dailybars-date-chart-label'></span>
+</div>
+<div class='chart-label portfolio-performance' id='dailybars-portfolio-perf-label'>
+<div class='payload hidden'>
+<div class='inline-block legend-item' data-key='Returns'>
+<span class='square blue'></span>
+<span class='blue'>Algorithm </span>
+<span class='chart-value' id='dailybars-performance-value'></span>
+</div>
+<div class='inline-block legend-item' data-key='Benchmark'>
+<span class='square red margin_15l'></span>
+<span class='red ide_benchmark'>Benchmark </span>
+<span class='chart-value' id='dailybars-benchmark-value'></span>
+</div>
+</div>
+</div>
+<div class='chart-border hidden' id='dailybars-chart-border'></div>
+<div class='chart-border custom-chart hidden' id='dailybars-custom-chart-border'></div>
+<div class='hidden custom-chart' id='custom-series-controls'></div>
+<div id='dailybar-chart-container'>
+<div id='dailybar-watermark'>
+<span>Build your algorithm (Ctrl-B) for a quick backtest,</span>
+<span>or run a Full Backtest for detailed metrics.</span>
+</div>
+</div>
+</div>
+</div>
+<div class='tabbable'>
+<div class='maxmin-button'>
+<btn class='btn' id='daily-toggle-logs-button'>
+More
+<i class='icon icon-chevron-up'></i>
+</btn>
+</div>
+<ul class='nav nav-tabs'>
+<li class='hidden' id='build-errors-link-container'>
+<a data-toggle='tab' href='572d6defd42b61f8d2000730.html#build-errors-tab' id='build-errors-tab-link'>Build Errors</a>
+</li>
+<li class='active'>
+<a data-toggle='tab' href='572d6defd42b61f8d2000730.html#daily-logs-tab' id='daily-logs-link'>Logs</a>
+</li>
+<li>
+<a data-toggle='tab' href='572d6defd42b61f8d2000730.html#daily-errors-tab' id='daily-error-tab-link'>Runtime Errors</a>
+</li>
+<li class='hidden' id='deprecation-warnings-link-container'>
+<a data-toggle='tab' href='572d6defd42b61f8d2000730.html#deprecation-warnings-tab' id='deprecation-warnings-tab-link'>Deprecation Warnings</a>
+</li>
+<li class='hidden' id='chat-window-link'>
+<a data-toggle='tab' href='572d6defd42b61f8d2000730.html#ide-chat-tab' id='ide-chat-link'>
+Chat
+<i class='icon icon-comments chat-count hidden'>
+<span class='comment-count'></span>
+</i>
+</a>
+</li>
+</ul>
+<div class='tab-content no-padding'>
+<div class='tab-pane' id='build-errors-tab'>
+<div id='output-box'>
+<div class='output-table-container'>
+<div class='go-to-backtest-message hidden' id='go-to-backtests'>
+<span class='gray'>No errors or warnings!</span>
+<div class='btn inline-block btn-primary backtest-link' id='backtest-link'>
+<span class="underlined_char">G</span><span>o to backtests</span>
+<i class='icon icon-arrow-right'></i>
+</div>
+</div>
+<table class='output-table table table-bordered table-condensed' id='output-table'>
+<thead>
+<tr>
+<td class='line-col'>Line</td>
+<td class='type-col'>Type</td>
+<td class='details-col'>Details</td>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+</div>
+</div>
+<div class='tab-pane active' id='daily-logs-tab'>
+<div class='logs-output' id='daily-logs-container'>
+<div class='logs-container position-relative'></div>
+<div class='logs-footer hidden'>
+<div class='loading-image'></div>
+<span class='message'>Loading more logs...</span>
+</div>
+<div class='logs-finished hidden'>
+End of logs.
+</div>
+</div>
+</div>
+<div class='tab-pane' id='daily-errors-tab'>
+<div class='error-info hidden' id='dailybars-errors'>
+<div class='error-title'>
+<span class='yourfault'>There was a runtime error.</span>
+<span class='ourfault hidden'>
+Something went wrong. Sorry for the inconvenience. Try using the built-in <a href='../help.html#debugger' target='_blank'>debugger</a> to analyze your code. If you would like help, send us an <a class='open-feedback-link'>email</a>.
+</span>
+</div>
+<div class='error-container'>
+<div class='error-message'></div>
+<div class='error-details'></div>
+</div>
+</div>
+</div>
+<div class='tab-pane' id='deprecation-warnings-tab'>
+<table class='output-table table table-bordered table-condensed' id='output-table'>
+<thead>
+<tr>
+<td class='lineno'>Line</td>
+<td class='details'>Details</td>
+</tr>
+</thead>
+<tbody>
+<!-- Generated dynamically in backtest_log_manager.coffee -->
+</tbody>
+</table>
+</div>
+<div class='tab-pane' id='ide-chat-tab'>
+<div id='ide-chat-container'>
+<div class='messages-list' id='chat-messages-list'>
+<div class='load-older-messages' id='load-older-messages'>
+<a class='load-older-messages-link'><i class='icon icon-chevron-up margin_5r'></i><span>Loading messages</span></a>
+</div>
+</div>
+<div class='new-message-row'>
+<textarea class='no-synch' id='new-message-textarea'></textarea>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='modal date-error-modal hide' id='date-error-modal'>
+<div class='modal-header'>
+<h3>Problem with the backtest dates</h3>
+</div>
+<div class='modal-body'>
+<input id="recommended-start-date-field" name="recommended_start_date" type="hidden" value="" />
+<input id="recommended-end-date-field" name="recommended_end_date" type="hidden" value="" />
+<div class='dailybars-date-error-message'></div>
+<div class='dates-overview padding_10t'>
+<div class='backtest-date-row'>
+<div class='date-label inline-block'>Backtest:</div>
+<div class='start-date inline-block date-error-backtest-start-date'></div>
+<span> to </span>
+<div class='end-date inline-block date-error-backtest-end-date'></div>
+</div>
+<div class='backtest-date-row padding_5t'>
+<div class='date-label inline-block'>Trade data:</div>
+<div class='start-date inline-block date-error-trade-start-date'></div>
+<span> to </span>
+<div class='end-date inline-block date-error-trade-end-date'></div>
+<div id='run-test-with-these-dates-container'>
+<div class='btn btn-small' id='use-these-dates-button'>Test with these dates</div>
+</div>
+</div>
+</div>
+<div class='table-area margin_20t margin_20b'>
+<table class='table table-condensed table-bordered'>
+<thead>
+<tr>
+<td>SID</td>
+<td>Ticker</td>
+<td>Start Date</td>
+<td>End Date</td>
+</tr>
+</thead>
+<tbody class='monospace'></tbody>
+</table>
+</div>
+<p>To turn off date checking, click 'Turn Off' below.  You'll probably need to use the <code>if data.can_trade(sid(#))</code> method (learn more <a href='../help.html#api-available' target='_blank'>here</a>).</p>
+</div>
+<div class='modal-footer'>
+<div class='pull-left'>
+<a class='btn' data-dismiss='modal' href='572d6defd42b61f8d2000730.html#'>Close</a>
+</div>
+<a class='btn btn-primary turn-off-date-mgmt-link'>Turn Off</a>
+</div>
+</div>
+<div class='modal hide' id='submission-problem-modal'>
+<div class='modal-header'>
+<h3>Problem with your algorithm</h3>
+</div>
+<div class='modal-body'>
+Your algorithm couldn't be submitted because it has some code problems. Run a backtest in minute mode before submitting.
+</div>
+<div class='modal-footer'>
+<a class='btn' id='contest-code-problem-button'>Close</a>
+</div>
+</div>
+<div class='modal hide' id='q1-deprecation-modal'>
+<div class='modal-header'>
+<h3>Deprecation Warning</h3>
+</div>
+<div class='modal-body'>
+Your algorithm uses APIs that have been deprecated in favor of newer, more powerful versions. For more information, go <a href='https://www.quantopian.com/q2' target='_blank'>here</a>.
+<div id='deprecation-list'></div>
+These deprecated APIs will stop working in the future.  Please switch to the new APIs as soon as possible.
+</div>
+<div class='modal-footer'>
+<a class='btn' data-dismiss='modal' href='572d6defd42b61f8d2000730.html#'>Close</a>
+</div>
+</div>
+<div class='modal hide' id='contest-modal'>
+<div class='modal-header'>
+<h3 class='validating'>One moment please</h3>
+<h3 class='terms hidden'>Quantopian Open</h3>
+</div>
+<div class='modal-body'>
+<div class='validating validating-body'>
+<i class='icon icon-spinner icon-spin icon-large'></i>
+<span>Validating Algorithm...</span>
+</div>
+<div class='terms hidden'>
+<p>In order to submit this algorithm to the <a href='../open.html' target='_blank'>Quantopian Open</a> you must agree to the following <a href='../open/rules.html' target='_blank'>terms and conditions</a>.</p>
+<p>As always on Quantopian, you own your algorithm. Your intellectual property will remain your secret; we will not look at your code.</p>
+</div>
+</div>
+<div class='modal-footer'>
+<a class='btn pull-left' data-dismiss='modal' href='572d6defd42b61f8d2000730.html#'>Cancel</a>
+<div class='btn btn-primary terms hidden' id='contest-agree-button'>Submit</div>
+</div>
+</div>
+<div class='modal hide cancel-backtest-popup'>
+<div class='modal-header'>
+<h3 class='inline-block cancel-title'>Cancel backtest</h3>
+</div>
+<div class='modal-body'>
+<div class='intro area'>
+<p class='cancel-body'>Are you sure you want to cancel this backtest?</p>
+</div>
+</div>
+<div class='modal-footer'>
+<div class='controls'>
+<div class='btn' data-dismiss='modal'>Don't Cancel</div>
+<div class='btn btn-danger danger confirm-cancel-backtest-button' data-dismiss='modal'>Cancel Backtest</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+<div class='hidden' id='dockzone'></div>
+<div class='dark hidden' id='rightdock'>
+<div class='dock-widget events'>
+<i class='fontello-icon fontello-icon-left-thin' id='undock-ide-link'></i>
+</div>
+<div class='dock-widget build-status'>
+<img class='building' src='../assets/loader.gif'>
+<i class='icon icon-ok' title='Build Succeeded!'></i>
+<i class='icon icon-remove' title='Build Errors'></i>
+</div>
+</div>
+</div>
+<div class='intellisense-box hidden' id='sid-intellisense-box'>
+<input type='text'>
+<div class='matchlist hidden'></div>
+</div>
+<div class='intellisense-box hidden' id='symbol-intellisense-box'>
+<input type='text'>
+<div class='matchlist hidden'></div>
+</div>
+<div class='intellisense-box fundamentals hidden' id='fd-intellisense-box'>
+<input type='text'>
+<div class='matchlist hidden'></div>
+</div>
+<div class='intellisense-box transforms hidden' id='log-intellisense-box'>
+<div class='matchlist'>
+<div class='match' data-match='debug'>debug</div>
+<div class='match' data-match='error'>error</div>
+<div class='match' data-match='info'>info</div>
+<div class='match' data-match='warn'>warn</div>
+</div>
+</div>
+<div class='intellisense-box transforms hidden' id='talib-intellisense-box'>
+<div class='matchlist'>
+<div class='match' data-match='ADOSC'>ADOSC</div>
+<div class='match' data-match='ADX'>ADX</div>
+<div class='match' data-match='ADXR'>ADXR</div>
+<div class='match' data-match='APO'>APO</div>
+<div class='match' data-match='AROON'>AROON</div>
+<div class='match' data-match='AROONOSC'>AROONOSC</div>
+<div class='match' data-match='ATR'>ATR</div>
+<div class='match' data-match='BBANDS'>BBANDS</div>
+<div class='match' data-match='BETA'>BETA</div>
+<div class='match' data-match='CCI'>CCI</div>
+<div class='match' data-match='CMO'>CMO</div>
+<div class='match' data-match='CORREL'>CORREL</div>
+<div class='match' data-match='DEMA'>DEMA</div>
+<div class='match' data-match='DX'>DX</div>
+<div class='match' data-match='EMA'>EMA</div>
+<div class='match' data-match='KAMA'>KAMA</div>
+<div class='match' data-match='LINEARREG'>LINEARREG</div>
+<div class='match' data-match='LINEARREG_ANGLE'>LINEARREG_ANGLE</div>
+<div class='match' data-match='LINEARREG_INTERCEPT'>LINEARREG_INTERCEPT</div>
+<div class='match' data-match='LINEARREG_SLOPE'>LINEARREG_SLOPE</div>
+<div class='match' data-match='MA'>MA</div>
+<div class='match' data-match='MACD'>MACD</div>
+<div class='match' data-match='MACDEXT'>MACDEXT</div>
+<div class='match' data-match='MACDFIX'>MACDFIX</div>
+<div class='match' data-match='MAX'>MAX</div>
+<div class='match' data-match='MAXINDEX'>MAXINDEX</div>
+<div class='match' data-match='MFI'>MFI</div>
+<div class='match' data-match='MIDPOINT'>MIDPOINT</div>
+<div class='match' data-match='MIDPRICE'>MIDPRICE</div>
+<div class='match' data-match='MIN'>MIN</div>
+<div class='match' data-match='MININDEX'>MININDEX</div>
+<div class='match' data-match='MINMAX'>MINMAX</div>
+<div class='match' data-match='MINMAXINDEX'>MINMAXINDEX</div>
+<div class='match' data-match='MINUS_DI'>MINUS_DI</div>
+<div class='match' data-match='MINUS_DM'>MINUS_DM</div>
+<div class='match' data-match='MOM'>MOM</div>
+<div class='match' data-match='NATR'>NATR</div>
+<div class='match' data-match='PLUS_DI'>PLUS_DI</div>
+<div class='match' data-match='PLUS_DM'>PLUS_DM</div>
+<div class='match' data-match='PPO'>PPO</div>
+<div class='match' data-match='ROC'>ROC</div>
+<div class='match' data-match='ROCP'>ROCP</div>
+<div class='match' data-match='ROCR'>ROCR</div>
+<div class='match' data-match='ROCR100'>ROCR100</div>
+<div class='match' data-match='RSI'>RSI</div>
+<div class='match' data-match='SMA'>SMA</div>
+<div class='match' data-match='STDDEV'>STDDEV</div>
+<div class='match' data-match='STOCH'>STOCH</div>
+<div class='match' data-match='STOCHF'>STOCHF</div>
+<div class='match' data-match='STOCHRSI'>STOCHRSI</div>
+<div class='match' data-match='T3'>T3</div>
+<div class='match' data-match='TEMA'>TEMA</div>
+<div class='match' data-match='TRIMA'>TRIMA</div>
+<div class='match' data-match='TRIX'>TRIX</div>
+<div class='match' data-match='TSF'>TSF</div>
+<div class='match' data-match='ULTOSC'>ULTOSC</div>
+<div class='match' data-match='VAR'>VAR</div>
+<div class='match' data-match='WILLR'>WILLR</div>
+<div class='match' data-match='WMA'>WMA</div>
+</div>
+</div>
+<div class='intellisense-box portfolio hidden' id='portfolio-intellisense-box'>
+<div class='matchlist'>
+<div class='match' data-match='capital_used'>capital_used</div>
+<div class='match' data-match='cash'>cash</div>
+<div class='match' data-match='pnl'>pnl</div>
+<div class='match' data-match='portfolio_value'>portfolio_value</div>
+<div class='match' data-match='positions'>positions</div>
+<div class='match' data-match='positions_value'>positions_value</div>
+<div class='match' data-match='returns'>returns</div>
+<div class='match' data-match='starting_cash'>starting_cash</div>
+<div class='match' data-match='start_date'>start_date</div>
+</div>
+</div>
+<div class='intellisense-box account hidden' id='account-intellisense-box'>
+<div class='matchlist'>
+<div class='match' data-match='accrued_interest'>accrued_interest</div>
+<div class='match' data-match='available_funds'>available_funds</div>
+<div class='match' data-match='buying_power'>buying_power</div>
+<div class='match' data-match='cushion'>cushion</div>
+<div class='match' data-match='day_trades_remaining'>day_trades_remaining</div>
+<div class='match' data-match='equity_with_loan'>equity_with_loan</div>
+<div class='match' data-match='excess_liquidity'>excess_liquidity</div>
+<div class='match' data-match='initial_margin_requirement'>initial_margin_requirement</div>
+<div class='match' data-match='leverage'>leverage</div>
+<div class='match' data-match='maintenance_margin_requirement'>maintenance_margin_requirement</div>
+<div class='match' data-match='net_leverage'>net_leverage</div>
+<div class='match' data-match='net_liquidation'>net_liquidation</div>
+<div class='match' data-match='regt_equity'>regt_equity</div>
+<div class='match' data-match='regt_margin'>regt_margin</div>
+<div class='match' data-match='settled_cash'>settled_cash</div>
+<div class='match' data-match='total_positions_value'>total_positions_value</div>
+</div>
+</div>
+<div class='intellisense-box context hidden' id='context-intellisense-box'>
+<div class='matchlist'>
+<div class='match' data-match='account'>account</div>
+<div class='match' data-match='portfolio'>portfolio</div>
+</div>
+</div>
+<div class='intellisense-box data hidden' id='data-intellisense-box'>
+<div class='matchlist'>
+<div class='match' data-match='current'>current</div>
+<div class='match' data-match='can_trade'>can_trade</div>
+<div class='match' data-match='is_stale'>is_stale</div>
+<div class='match' data-match='history'>history</div>
+<div class='match' data-match='fetcher_assets'>fetcher_assets</div>
+</div>
+</div>
+<div class='intellisense-box positions hidden' id='positions-intellisense-box'>
+<div class='matchlist'>
+<div class='match' data-match='amount'>amount</div>
+<div class='match' data-match='cost_basis'>cost_basis</div>
+<div class='match' data-match='last_sale_price'>last_sale_price</div>
+<div class='match' data-match='sid'>sid</div>
+</div>
+</div>
+<div class='intellisense-box maxordercount hidden' id='maxordercount-intellisense-box'></div>
+<div class='dark hidden intellisense-box maxordercount secondary-intellisense-box' id='maxordercount-intermediate-intellisense-box'></div>
+<div class='dark hidden intellisense-box secondary-intellisense-box universe' id='universe-intermediate-intellisense-box'></div>
+<div class='intellisense-box slippage hidden' id='slippage-intellisense-box'>
+<div class='matchlist'>
+<div class='match' data-match='slippage.FixedSlippage'>slippage.FixedSlippage</div>
+<div class='match' data-match='slippage.VolumeShareSlippage'>slippage.VolumeShareSlippage</div>
+</div>
+</div>
+<div class='dark hidden intellisense-box secondary-intellisense-box slippage' id='slippage-intermediate-intellisense-box'></div>
+<div class='intellisense-box style hidden' id='style-intellisense-box'>
+<div class='matchlist'>
+<div class='match' data-match='MarketOrder'>MarketOrder</div>
+<div class='match' data-match='LimitOrder'>LimitOrder</div>
+<div class='match' data-match='StopOrder'>StopOrder</div>
+<div class='match' data-match='StopLimitOrder'>StopLimitOrder</div>
+<div class='match' data-match='RelativeOrder'>RelativeOrder</div>
+<div class='match' data-match='VWAPBestEffort'>VWAPBestEffort</div>
+</div>
+</div>
+<div class='intellisense-box order hidden' id='order-intellisense-box'>
+<div class='matchlist'>
+<div class='match' data-match='order_percent'>order_percent</div>
+<div class='match' data-match='order_target'>order_target</div>
+<div class='match' data-match='order_target_value'>order_target_value</div>
+<div class='match' data-match='order_target_percent'>order_target_percent</div>
+<div class='match' data-match='order_value'>order_value</div>
+</div>
+</div>
+<div class='intellisense-box get hidden' id='get-intellisense-box'>
+<div class='matchlist'>
+<div class='match' data-match='get_datetime'>get_datetime</div>
+<div class='match' data-match='get_environment'>get_environment</div>
+<div class='match' data-match='get_fundamentals'>get_fundamentals</div>
+<div class='match' data-match='get_open_orders'>get_open_orders</div>
+<div class='match' data-match='get_order'>get_order</div>
+</div>
+</div>
+<div class='intellisense-box date-rule hidden' id='date-rule-intellisense-box'>
+<div class='matchlist'>
+<div class='match' data-match='date_rules.every_day'>date_rules.every_day</div>
+<div class='match' data-match='date_rules.week_start'>date_rules.week_start</div>
+<div class='match' data-match='date_rules.week_end'>date_rules.week_end</div>
+<div class='match' data-match='date_rules.month_start'>date_rules.month_start</div>
+<div class='match' data-match='date_rules.month_end'>date_rules.month_end</div>
+</div>
+</div>
+<div class='intellisense-box date-rules hidden' id='date-rules-intellisense-box'>
+<div class='matchlist'>
+<div class='match' data-match='every_day'>every_day</div>
+<div class='match' data-match='week_start'>week_start</div>
+<div class='match' data-match='week_end'>week_end</div>
+<div class='match' data-match='month_start'>month_start</div>
+<div class='match' data-match='month_end'>month_end</div>
+</div>
+</div>
+<div class='intellisense-box time-rule hidden' id='time-rule-intellisense-box'>
+<div class='matchlist'>
+<div class='match' data-match='time_rules.market_open'>time_rules.market_open</div>
+<div class='match' data-match='time_rules.market_close'>time_rules.market_close</div>
+</div>
+</div>
+<div class='intellisense-box time-rules hidden' id='time-rules-intellisense-box'>
+<div class='matchlist'>
+<div class='match' data-match='market_open'>market_open</div>
+<div class='match' data-match='market_close'>market_close</div>
+</div>
+</div>
+<div class='intellisense-box security-list hidden' id='security-list-intellisense-box'>
+<div class='matchlist'>
+<div class='match' data-match='leveraged_etf_list'>leveraged_etf_list</div>
+</div>
+</div>
+<div class='intellisense-box set hidden' id='set-intellisense-box'>
+<div class='matchlist'>
+<div class='match' data-match='set_benchmark'>set_benchmark</div>
+<div class='match' data-match='set_commission'>set_commission</div>
+<div class='match' data-match='set_do_not_order_list'>set_do_not_order_list</div>
+<div class='match' data-match='set_long_only'>set_long_only</div>
+<div class='match' data-match='set_max_order_count'>set_max_order_count</div>
+<div class='match' data-match='set_max_order_size'>set_max_order_size</div>
+<div class='match' data-match='set_max_position_size'>set_max_position_size</div>
+<div class='match' data-match='set_slippage'>set_slippage</div>
+<div class='match' data-match='set_symbol_lookup_date'>set_symbol_lookup_date</div>
+</div>
+</div>
+<div class='dark hidden intellisense-box secondary-intellisense-box set' id='set-intermediate-intellisense-box'></div>
+<div class='intellisense-box commission hidden' id='commission-intellisense-box'>
+<div class='matchlist'>
+<div class='match' data-match='commission.PerShare'>commission.PerShare</div>
+<div class='match' data-match='commission.PerTrade'>commission.PerTrade</div>
+</div>
+</div>
+<div class='commission dark hidden intellisense-box secondary-intellisense-box' id='commission-intermediate-intellisense-box'></div>
+<div class='tooltip-box quanto-tooltip normal-tooltip hidden' id='sid-tooltip'>
+<span class='ticker'></span><span class='longname'></span>
+</div>
+<div class='fetchcsv-tooltip hidden normal-tooltip quanto-tooltip' id='fetchcsv-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='hidden normal-tooltip quanto-tooltip toplevel-tooltip' id='toplevel-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='hidden log-tooltip normal-tooltip quanto-tooltip' id='log-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='hidden normal-tooltip quanto-tooltip transforms-tooltip' id='transforms-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='account-tooltip hidden normal-tooltip quanto-tooltip' id='account-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='hidden normal-tooltip portfolio-tooltip quanto-tooltip' id='portfolio-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='context-tooltip hidden normal-tooltip quanto-tooltip' id='context-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='hidden normal-tooltip position-tooltip quanto-tooltip' id='position-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='hidden normal-tooltip quanto-tooltip slippage-tooltip' id='slippage-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='commission-tooltip hidden normal-tooltip quanto-tooltip' id='commission-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='hidden normal-tooltip quanto-tooltip universe-tooltip' id='universe-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='hidden normal-tooltip quanto-tooltip sidinfo-tooltip' id='sidinfo-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='hidden normal-tooltip quanto-tooltip talib-tooltip' id='talib-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='hidden normal-tooltip notradedata-tooltip quanto-tooltip' id='notradedata-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='hidden normal-tooltip quanto-tooltip style-tooltip' id='style-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='hidden normal-tooltip order-tooltip quanto-tooltip' id='order-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='get-tooltip hidden normal-tooltip quanto-tooltip' id='get-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='hidden normal-tooltip quanto-tooltip set-tooltip' id='set-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='hidden normal-tooltip quanto-tooltip time-rule-tooltip' id='time-rule-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='hidden normal-tooltip quanto-tooltip time-rules-tooltip' id='time-rules-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='date-rule-tooltip hidden normal-tooltip quanto-tooltip' id='date-rule-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='date-rules-tooltip hidden normal-tooltip quanto-tooltip' id='date-rules-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='hidden maxordercount-tooltip normal-tooltip quanto-tooltip' id='maxordercount-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+<div class='data-tooltip hidden normal-tooltip quanto-tooltip' id='data-tooltip'>
+<div class='first-line'>
+<span class='method-sig'></span><span class='params'></span>
+</div>
+<div class='second-line'>
+<span class='info'></span>
+</div>
+</div>
+</div>
+</div>
+<div class='modal hide video-overlay' id='ide-video-modal'>
+<div class='modal-header'>
+<h3>Quantopian IDE Overview</h3>
+</div>
+<div class='modal-body'></div>
+<div class='modal-footer'>
+<a class='btn' data-dismiss='modal' href='572d6defd42b61f8d2000730.html#'>Close</a>
+</div>
+</div>
+<script>
+  //<![CDATA[
+    $(document).ready(function() {
+      $("#ide-video-modal").on("show", (function(e) {
+        if (window.location.href.indexOf("https") == 0) {
+          url_start = "https";
+        } else {
+          url_start = "http";
+        }
+    
+        var url = url_start + "://www.youtube.com/embed/YzeGT2KiGck?version=3&rel=0&showinfo=0&theme=light&autoplay=1";
+        var $iframe = $("<iframe id='ytplayer' type='text/html' width='640' height='393' src='" + url + "' frameborder='0'></iframe>");
+        
+        $("#ide-video-modal").find(".modal-body").html($iframe);
+      }));
+    
+      $("#ide-video-modal").on("hide", (function() {
+        $("#ide-video-modal").find(".modal-body").html("");
+      }));
+    })
+  //]]>
+</script>
+
+
+<div id='breakpoint-context-menu'>
+<ul class='dropdown-menu fat'>
+<li>
+<a class='edit-breakpoint-link'>Edit Breakpoint...</a>
+</li>
+<li class='divider'></li>
+<li>
+<a class='remove-breakpoint-link'>Remove Breakpoint</a>
+</li>
+</ul>
+</div>
+<div class='modal hide' id='conditional-breakpoint-modal'>
+<div class='modal-header'>
+<h3>Set conditional breakpoint</h3>
+</div>
+<div class='modal-body'>
+<p>This breakpoint will stop when the following expression is true:</p>
+<input class='large monospace breakpoint-condition-box' type='text'>
+<p class='margin_15t'>Some examples:</p>
+<ul class='monospace'>
+<li>context.foo == &quot;bar&quot;</li>
+<li>get_datetime().date() == date(2014, 7, 14)</li>
+</ul>
+</div>
+<div class='modal-footer'>
+<div class='pull-left'>
+<a class='btn' data-dismiss='modal' href='572d6defd42b61f8d2000730.html#'>Cancel</a>
+</div>
+<a class='btn btn-primary save-breakpoint'>Save Breakpoint</a>
+</div>
+</div>
+
+<div class='modal hide' id='add-watchlist-expression-modal'>
+<div class='modal-header'>
+<h3>Add watchlist expression</h3>
+</div>
+<div class='modal-body'>
+<p>Enter an expression to add it to the watchlist:</p>
+<input autofocus='autofocus' class='large monospace watchlist-expression-box width_100pct' type='text'>
+</div>
+<div class='modal-footer'>
+<div class='pull-left'>
+<a class='btn' data-dismiss='modal' href='572d6defd42b61f8d2000730.html#'>Cancel</a>
+</div>
+<a class='btn btn-primary add-expression'>Watch Expression</a>
+</div>
+</div>
+
+<div class='modal hide' id='whitelist-modal'>
+<div class='modal-header'>
+<h3>Allowed modules</h3>
+</div>
+<div class='modal-body'>
+<p>For security reasons, algorithms can only import the following modules:</p>
+<pre class='modulelist'><code>bisect</code>
+<code>brokers</code>
+<code>cmath</code>
+<code>collections</code>
+<code>copy</code>
+<code>datetime</code>
+<code>functools</code>
+<code>heapq</code>
+<code>itertools</code>
+<code>math</code>
+<code>numpy</code>
+<code>operator</code>
+<code>pandas</code>
+<code>pykalman</code>
+<code>pytz</code>
+<code>QSTK</code>
+<code>Queue</code>
+<code>random</code>
+<code>re</code>
+<code>scipy</code>
+<code>sklearn</code>
+<code>statsmodels</code>
+<code>talib</code>
+<code>time</code>
+<code>zipline</code>
+<code>zlib</code></pre>
+<div>
+If you need a module that isn't on this list, 
+<a class='open-feedback-link'>let us know.</a>
+</div>
+</div>
+<div class='modal-footer'>
+<a class='btn' data-dismiss='modal' href='572d6defd42b61f8d2000730.html#'>Close</a>
+</div>
+</div>
+<div class='modal hide' id='blacklist-modal'>
+<div class='modal-header'>
+<h3>Forbidden built-ins</h3>
+</div>
+<div class='modal-body'>
+<p>For security reasons, we block some specific libraries, methods, and keywords.  We apologize for any inconvenience.</p>
+<div>
+If you need to use one of these blocked items, 
+<a class='open-feedback-link'>let us know.</a>
+</div>
+</div>
+<div class='modal-footer'>
+<a class='btn' data-dismiss='modal' href='572d6defd42b61f8d2000730.html#'>Close</a>
+</div>
+</div>
+<div class='modal hide date-error-modal' id='date-adjustment-modal'>
+<div class='modal-header'>
+<h3>Automatic date adjustment for backtests</h3>
+</div>
+<div class='modal-body'>
+<p><strong>The backtest's date range was automatically modified.</strong></p>
+<p>To ensure that there are trading events for every security in your algorithm, the date range was changed to the first full trading day for a new security (usually the day after the IPO) and/or the last full trading day for a delisting security.</p>
+<div class='table-area margin_20t margin_20b'>
+<table class='table table-condensed table-bordered' id='date-adjustment-table'>
+<thead>
+<tr>
+<td>SID</td>
+<td>Ticker</td>
+<td>Start Date</td>
+<td>End Date</td>
+</tr>
+</thead>
+<tbody class='monospace'></tbody>
+</table>
+</div>
+<p>To turn off date checking, click 'Turn Off' below.  You'll probably need to use the <code>if data.can_trade(sid(#))</code> method (learn more <a href='../help.html#api-available' target='_blank'>here</a>).</p>
+</div>
+<div class='modal-footer'>
+<div class='pull-left'>
+<a class='btn' data-dismiss='modal' href='572d6defd42b61f8d2000730.html#'>Close</a>
+</div>
+<a class='btn btn-primary turn-off-date-mgmt-link'>Turn Off</a>
+</div>
+</div>
+<!-- begin olark code for chat box-->
+<script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+f[z]=function(){
+(a.s=a.s||[]).push(arguments)};var a=f[z]._={
+},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+0:+new Date};a.P=function(u){
+a.p[u]=new Date-a.p[0]};function s(){
+a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+b.contentWindow[g].open()}catch(w){
+c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+<!-- * custom configuration goes here (www.olark.com/documentation) */ -->
+olark.identify('1854-640-10-4011');/*]]>*/</script><noscript><a href="https://www.olark.com/site/1854-640-10-4011/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+<!-- end olark code for chat box -->
+<script type="text/javascript">
+olark('api.visitor.updateFullName',{fullName: "guest_14625950547960"}); // get the user's name
+olark('api.visitor.updateEmailAddress',{emailAddress: "guest_14625950547960@quantopian.com"}); // get the user's email address
+olark('api.chat.updateVisitorStatus',{snippet: "572d6deed42b61f8d200072f"});   // get the user's ID
+</script>
+
+
+<div class='backtest-area hidden' id='backtest-area'>
+<div class='' id='backtest-feed-container'>
+<div class='box'>
+<div class='backtest-toolbar'>
+<div class='title inline-block backtests-feed-title unselectable'>
+No backtests for this algorithm
+</div>
+<div class='btn-group inline-block margin_20l'>
+<div class='btn btn-primary inline-block margin_15l disabled with-events' data-animation='false' data-original-title='Sorry, your browser is too old to run a backtest.' data-placement='top' rel='tooltip'>
+New Backtest
+</div>
+</div>
+<div class='btn-group inline-block'>
+<btn class='btn diff-button disabled' id='diff-button'>
+<i class='icon icon-columns'></i>
+Compare
+</btn>
+<btn class='btn delete-button disabled' id='backtest-delete-button'>
+<i class='icon icon-trash'></i>
+Delete
+</btn>
+</div>
+</div>
+<table class='table margin_30t backtest-list checkbox-table' delete-button-id='backtest-delete-button' id='backtest-feed-table'>
+<thead>
+<tr>
+<td class='checkbox'>
+<div class='checkbox-container'>
+<div class='quanto-checkbox-header icon icon-check-empty'></div>
+</div>
+</td>
+<td class='backtest-index'>#</td>
+<td>Created</td>
+<td>
+Backtest Date Range
+</td>
+<td>
+Backtest Overall Return
+</td>
+<td>
+Status
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='empty' colspan='6'>No backtests.&nbsp;&nbsp;&nbsp;Create a new backtest above.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+<div class='hidden' id='backtest-atomic-container'>
+</div>
+</div>
+
+</div>
+</form>
+
+<div class='modal hide' id='diff-modal'>
+<div class='modal-header'>
+<h3>Compare Backtests</h3>
+</div>
+<div class='modal-body'>
+<table class='backtest-metadata-section'>
+<thead>
+<tr>
+<td></td>
+<td>Date Run</td>
+<td>Date Range</td>
+<td>Frequency</td>
+<td>Capital Base</td>
+<td>Returns</td>
+</tr>
+</thead>
+<tr class='backtest-metadata' id='first-backtest-metadata'></tr>
+<tr class='backtest-metadata' id='second-backtest-metadata'></tr>
+</table>
+<div class='diff-message hidden'></div>
+<div class='diff-table-container'>
+<table id='diff-table'>
+<tbody class='diff-result'></tbody>
+</table>
+</div>
+</div>
+<div class='modal-footer'>
+<div class='controls'>
+<a class='btn btn-primary' data-dismiss='modal' href='572d6defd42b61f8d2000730.html#'>Close</a>
+</div>
+</div>
+</div>
+<div class='modal hide' id='unauth-modal'>
+<div class='modal-header'>
+<h3 class='red'>Error Saving Algorithm</h3>
+</div>
+<div class='modal-body'>
+<p>There was a problem saving your algorithm.  You don't seem logged in anymore.</p>
+<p><strong>To avoid losing data, copy your algorithm code to a text editor and log back in to Quantopian.</strong></p>
+<p>To log back in, just reload this page.</p>
+</div>
+<div class='modal-footer'>
+<div class='controls'>
+<a class='btn' data-dismiss='modal' href='572d6defd42b61f8d2000730.html#'>Close</a>
+</div>
+</div>
+</div>
+<div class='modal hide' id='share-modal'>
+<div class='modal-header'>
+<h3>Reply or Create New Post?</h3>
+</div>
+<div class='modal-body'>
+<p>This algorithm was cloned from the post <a class='bold' id='share-post-name'></a>, by <a class='bold' id='share-post-author'></a>.</p>
+<p>Do you want to reply to the original post with this new backtest, or write a new post?</p>
+</div>
+<div class='modal-footer'>
+<div class='controls'>
+<a class='btn' id='share-modal-create-new-button'>Create New Post</a>
+<a class='btn btn-primary' id='share-modal-reply-button'>Reply to Post</a>
+</div>
+</div>
+</div>
+
+<script>
+  //<![CDATA[
+    $(document).ready(function() {
+      quanto.instances.algo_atomic_mgr = new quanto.AlgorithmAtomicManager();
+    });
+  //]]>
+</script>
+
+<div class='modal hide' id='error-modal'>
+<div class='modal-header'>
+<h4 class='modal-title'>Error</h4>
+</div>
+<div class='modal-body body-content'>
+<p>Sorry, something went wrong.  Try again or contact us by <a class='feedback-link'>sending feedback</a>.</p>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-primary' data-dismiss='modal' href='#'>Close</button>
+</div>
+
+</div>
+
+<div class='modal hide' id='confirmation-modal'>
+<div class='modal-header'>
+<h4 class='modal-title'></h4>
+</div>
+<div class='modal-body body-content'></div>
+<div class='modal-footer'>
+<button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+<button class='btn btn-primary action-button' data-dismiss='modal'></button>
+</div>
+
+</div>
+
+<div class='modal hide' id='feedback-modal'>
+<div class='modal-header'>
+<h3 class='modal-title'>Send Feedback</h3>
+</div>
+<div class='modal-body'>
+<div class='controls'>
+<div class='from'>
+<span class='valign-top'>From: </span>
+<div class='feedback-inputs'>
+<div class='form-group'>
+<input autofocus class='form-control' id='feedback-email-box' placeholder='Email address' type='email'>
+</div>
+<div class='form-group'>
+<input class='form-control' id='feedback-name-box' placeholder='Name' type='text'>
+</div>
+</div>
+</div>
+<textarea class='form-control input-xxlarge width_100pct' id='feedback-box' rows='10'></textarea>
+<div class='feedback-checkbox'>
+<form class='form-inline'>
+<label class='checkbox approve-support'>
+<input id='approve-support-checkbox' type='checkbox'></input>
+I give permission for Quantopian support to view this <span class='item-type'>algorithm</span>
+(<span class='item-title'>Hello World Algorithm</span>) for the purposes of debugging this issue.
+</label>
+</form>
+<div class='checkbox'>
+<label>
+<input id='anonymous-feedback-checkbox' type='checkbox'>I understand I will not receive a reply without providing a valid email address.</input>
+</label>
+</div>
+</div>
+</div>
+<div class='success hidden'>
+<span>Thank you!  We will be in touch soon.</span>
+</div>
+</div>
+<div class='modal-footer'>
+<div class='controls'>
+<button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+<button class='btn btn-primary' id='send-feedback-button'>Send</button>
+</div>
+<div class='success hidden'>
+<a class='btn btn-primary' data-dismiss='modal' href='572d6defd42b61f8d2000730.html#'>Close</a>
+</div>
+</div>
+
+</div>
+
+<div class='modal hide' id='join-modal'>
+<div class='modal-header'>
+<h3 class='modal-title'>Join Quantopian.  It's free!</h3>
+</div>
+<div class='modal-body'>
+<p class='large'>Once you join, you can:</p>
+<div class='margin_20t'>
+<div class='action'>
+<i class='icon icon-copy'></i>
+Create more algorithms
+</div>
+<div class='action'>
+<i class='icon icon-bar-chart'></i>
+Run full backtests, with detailed risk metrics and full transaction reports
+</div>
+<div class='action'>
+<i class='icon icon-comments-alt'></i>
+Post and share in our community
+</div>
+<div class='action'>
+<i class='icon icon-trophy'></i>
+Submit algorithms to the Quantopian Open
+</div>
+</div>
+<div class='margin_20t margin_20b large'>Don't worry, all your work is already saved.</div>
+</div>
+<div class='modal-footer'>
+<div class='pull-left'>
+<a class='btn btn-default btn-large' data-dismiss='modal' href='572d6defd42b61f8d2000730.html#'>Close</a>
+</div>
+<a class='btn btn-primary btn-large font-14' href='../users/sign_up.html'>Join Quantopian</a>
+<a class='btn btn-default btn-large font-14 login-button' href='../users/sign_in.html'>Log In</a>
+</div>
+
+</div>
+
+<div class='modal hide' id='message-modal'>
+<div class='modal-header'>
+<h3 class='modal-title'></h3>
+</div>
+<div class='modal-body'></div>
+<div class='modal-footer'>
+<button class='btn btn-primary' data-dismiss='modal' id='message-modal-close'>Close</button>
+</div>
+
+</div>
+
+</div>
+<div class='footer old-style' id='quanto-footer-container'>
+<div class='container'>
+<div class='row main-footer'>
+<div class='row footer-inner'>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Company</div>
+<div class='footer-row'>
+<a href='../about.html'>About</a>
+</div>
+<div class='footer-row'>
+<a href='../academia.html'>Academia</a>
+</div>
+<div class='footer-row'>
+<a href='../workshops.html'>Workshops</a>
+</div>
+<div class='footer-row'>
+<a href='../about.html'>Careers</a>
+</div>
+<div class='footer-row'>
+<a href='../posts.html'>Community</a>
+</div>
+<div class='footer-row'>
+<a href='../prospective_investors.html'>Prospective Investors</a>
+</div>
+</div>
+</div>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Learn &amp; Support</div>
+<div class='footer-row'>
+<a href='../tutorials/getting-started.html'>Getting Started</a>
+</div>
+<div class='footer-row'>
+<a href='../faq.html'>FAQs</a>
+</div>
+<div class='footer-row'>
+<a href='../help.html'>Help &amp; API docs</a>
+</div>
+<div class='footer-row'>
+<a href='../tutorials.html'>Tutorials</a>
+</div>
+<div class='footer-row'>
+<a href='../lectures.html'>Lectures</a>
+</div>
+<div class='footer-row'>
+<a href='http://status.quantopian.com'>Site Status</a>
+</div>
+<div class='footer-row'>
+<a href='../security.html'>Security</a>
+</div>
+</div>
+</div>
+
+<div class='span6'>
+<div class='feedback-email pull-right'>
+Need Help?
+<a class='open-feedback-link' href='572d6defd42b61f8d2000730.html#'>Contact Support</a>
+</div>
+</div>
+</div>
+<div class='row footer-inner'>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Notices</div>
+<div class='footer-row'>
+<a href='../policies/terms.html'>Terms of Use</a>
+</div>
+<div class='footer-row'>
+<a href='../policies/privacy.html'>Privacy Policy</a>
+</div>
+<div class='footer-row'>
+<a href='../policies/risks.html'>Trading Risk</a>
+</div>
+<div class='footer-row'>
+<a href='../policies/live_trading.html'>Brokerage Terms</a>
+</div>
+</div>
+</div>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Follow Us</div>
+<div class='footer-row'>
+<a href='http://www.twitter.com/quantopian'>Twitter</a>
+</div>
+<div class='footer-row'>
+<a href='http://www.facebook.com/quantopian'>Facebook</a>
+</div>
+<div class='footer-row'>
+<a href='http://www.linkedin.com/company/quantopian'>LinkedIn</a>
+</div>
+<div class='footer-row'>
+<a href='http://blog.quantopian.com'>Blog</a>
+</div>
+</div>
+</div>
+
+</div>
+<div class='row'>
+<div class='span12 copyright'>&copy; 2016 Quantopian, Inc.</div>
+</div>
+</div>
+</div>
+<div class='mobile-footer'>
+<div class='mobile-nav-category main-links'>
+<div class='mobile-nav-row'>
+<a href='../about.html'>About Quantopian</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../about.html'>Careers</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../posts.html'>Community</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../help.html'>Help</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../academia.html'>Academia</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../lectures.html'>Lectures</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../workshops.html'>Workshops</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://status.quantopian.com'>Status</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.facebook.com/quantopian'>Facebook</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.twitter.com/quantopian'>Twitter</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.linkedin.com/company/quantopian'>LinkedIn</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://blog.quantopian.com'>Blog</a>
+</div>
+</div>
+<div class='mobile-nav-category secondary-links'>
+<div class='mobile-nav-row'>
+<p>&copy; 2016 Quantopian</p>
+</div>
+<div class='mobile-nav-row'>
+<a href='../policies/terms.html'>Terms of Use</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../policies/privacy.html'>Privacy Policy</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</body>
+</html>
+<script>
+  //<![CDATA[
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8519877-1']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_setDomainName', 'quantopian.com']);
+    _gaq.push(['_setCustomVar', 1, 'quanto_session_id', 'session_572d6deed42b61f8d200072e']);
+    _gaq.push(['_setCustomVar', 2, 'quanto_user_id', '572d6deed42b61f8d200072f']);
+    
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  //]]>
+</script>
+
+
+<input id="is_mac" name="is_mac" type="hidden" value="false" />
+<script>
+  //<![CDATA[
+    (function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js';
+    d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);
+    a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}
+    var g=a;"undefined"!==typeof f? g=a[f]=[]:f="mixpanel";g.people=g.people||[];
+    h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.identify people.set people.increment".split(" ");for(e=0;e<h.length;e++) d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1})(document,window.mixpanel||[]);mixpanel.init("75873953cd404bcc1da88a55ff51e3b4")
+  //]]>
+</script>
+
+<script>
+  //<![CDATA[
+    mixpanel.register({"$email": "guest_14625950547960@quantopian.com"})
+    mixpanel.people.set({"$email": "guest_14625950547960@quantopian.com", "$name": "guest_14625950547960"})
+    mixpanel.identify("572d6deed42b61f8d200072f");
+  //]]>
+</script>
+
+<script>
+  //<![CDATA[
+    mixpanel.track("view page", {"page": window.location.pathname})
+  //]]>
+</script>
+<script type="text/javascript">if (typeof NREUMQ !== "undefined") { if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","bam.nr-data.net","59252e476d","984851","dAlXTUcKWFpQRBlWVVAJS1BBDVlFGkVeWE4=",177,674,new Date().getTime(),"","","","",""]);}</script>

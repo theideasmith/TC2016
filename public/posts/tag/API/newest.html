@@ -1,0 +1,2142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<link href="../../../assets/logos/favicon-q-9ba6cb893a620560ab734fe26a5bef5f.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<title>
+Quantopian Community
+</title>
+<link href="../../../assets/quanto-base-bundle-b524a8864168203acdb8ea6f8202e97b.css" media="all" rel="stylesheet" type="text/css" />
+<link href="../../../assets/quanto-posts-bundle-4d1829b92a81ea0c0075639b67664a5a.css" media="all" rel="stylesheet" type="text/css" />
+<script src="../../../assets/quanto_global-44e85c6fa95d3651757ab8e426751f17.js" type="text/javascript"></script>
+<script src="../../../assets/posts_bundle-8f06605d3f158235182f7d1018453be4.js" type="text/javascript"></script>
+<script src="https://use.typekit.com/uvj7txo.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+try{Typekit.load()}catch(e){}
+//]]>
+</script>
+<script src="https://js.stripe.com/v2/" type="text/javascript"></script>
+<meta content='pk_live_qyEzgiIO9PIT9AEbwiX8qw6g' name='stripe-key'>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="XIZmvJvBSDp8R371BFoxbTfU5NJRO3ZTtXciYR83l3c=" name="csrf-token" />
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<link href="../../../feed.txt" rel="alternate" title="ATOM" type="application/atom+xml" />
+<link href="../../../feed.rss" rel="alternate" title="RSS" type="application/rss+xml" />
+
+<input id="quanto-env" name="env" type="hidden" value="production" />
+</head>
+<body class='' ontouchstart=''>
+<div id='fb-root'></div>
+<div class='wrapper' id='posts-index'>
+<div class='navbar navbar-default navbar-static-top' id='app-navbar'>
+<div class='container-fluid'>
+<div class='navbar-header'>
+<button class='navbar-toggle collapsed' data-target='#app-navbar-collapse' data-toggle='collapse'>
+<span class='icon hamburger-menu'></span>
+</button>
+<a class='navbar-brand' href='../../../home.html'>
+<div class='logo-image'></div>
+</a>
+</div>
+<div class='collapse navbar-collapse' id='app-navbar-collapse'>
+<ul class='nav navbar-nav navbar-right'>
+<li class='dropdown hidden unconfirmed-user-header'>
+<a class='header' data-toggle='dropdown' href='newest.html#'>
+<span class='icon icon-warning'></span>
+Unconfirmed Account
+</a>
+<ul class='dropdown-menu no-close-on-click'>
+<div class='confirm-dropdown'>
+<div>
+Click on the confirmation link in the email that Quantopian sent to <strong class="confirm-email-address">
+</strong>.
+</div>
+<div class='margin_10t'>
+<button class='btn resend-confirmation' id='resend-confirmation-email-button'>Resend Confirmation Email</button>
+</div>
+</div>
+</ul>
+</li>
+<li>
+<a class='header' href='../../../fund.html'>Capital</a>
+</li>
+<li>
+<a class='header' href='../../../data.html'>Data</a>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='newest.html#'>
+My Code
+</a>
+<ul class='dropdown-menu quanto-dropdown-new'>
+<li>
+<a href='../../../research/survey.html'>Notebooks</a>
+</li>
+<li>
+<a href='../../../algorithms.html'>Algorithms</a>
+</li>
+</ul>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='newest.html#'>
+Community
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a class='active' href='../../../posts.html' id='community-header-link'>Forums</a>
+</li>
+<li>
+<a href='../../../open.html'>Contest</a>
+</li>
+<li>
+<a href='http://www.quantcon.com'>QuantCon</a>
+</li>
+</ul>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='newest.html#'>
+Learn & Support
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href='../../../learn.html'>Learn</a>
+</li>
+<li>
+<a class='open-feedback-link' href='newest.html#'>Contact Support</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="../../../signin.html" class="header unregistered-user-action">Log In</a>
+</li>
+<li>
+<a href="../../../users/sign_up.html" class="header unregistered-user-action">Sign Up</a>
+</li>
+
+</ul>
+</div>
+</div>
+</div>
+<script>
+  //<![CDATA[
+    $(document).ready(function () {
+      quanto.instances.fm = new quanto.FeedbackManager();
+      quanto.instances.hm = new quanto.headerManager();
+    })
+  //]]>
+</script>
+
+
+<div class='content content-area new-style'>
+<div class='mobile-tab-row visible-tablet-portrait visible-xs-block'>
+<div class='tab-container'>
+<div class='mobile-tab community-tab active'>Quantopian Community</div>
+<div class='mobile-tab tags-tab'>Tags</div>
+</div>
+</div>
+<div class='container page-container community-page'>
+<div class='row page-title-row hidden-tablet-portrait hidden-xs'>
+<div class='col-xs-14'>
+<div class='back-button back-to-community'>Back to Community</div>
+<div class='page-title' data-query='' data-tag='API'>Quantopian Community</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-xs-14'>
+<div class='row search-row hide-on-mobile-tag-tab'>
+<div class='col-xs-14 col-sm-9 search-input-area'>
+<div class='quanto-form'>
+<div class='form-group'>
+<span class='quanto-icon icon-search'></span>
+<a class='quanto-icon icon-close icon-close-wrapper'></a>
+<input class='form-control' id='search-box' placeholder='What are you looking for?' type='text'>
+</div>
+</div>
+<div class='advanced-seach-options-row visible-tablet-portrait visible-xs-block'>
+<div class='advanced-options-mobile-link'>More search options</div>
+</div>
+<div class='advanced-seach-options-row hidden-xs hidden-tablet-portrait hidden'>
+<div class='advanced-option all attachment-option selected' data-name='all'>All</div>
+<div class='advanced-option attachment-option backtests' data-name='backtests'>Backtests only</div>
+<div class='advanced-option attachment-option notebooks' data-name='notebooks'>Notebooks only</div>
+<div class='advanced-option select-tags'>Select and search within tags</div>
+<div class='clear'></div>
+</div>
+</div>
+<div class='col-sm-5 page-controls hidden-xs'>
+<a class='btn new-btn blue new-post' href='../../../signin.html'>New Post</a>
+</div>
+</div>
+</div>
+</div>
+<div class='row visible-tablet-portrait visible-xs-block'>
+<div class='col-xs-14'>
+<div class='mobile-see-all-tags hidden'>
+<div class='tags-description'>Click a tag to view posts with that tag.</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/101-Alphas-Project/newest'>101 Alphas Project</a>
+<div class='count-multiplier'></div>
+<div class='count'>1</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='newest.html'>API</a>
+<div class='count-multiplier'></div>
+<div class='count'>313</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/asset-allocation/newest'>asset allocation</a>
+<div class='count-multiplier'></div>
+<div class='count'>35</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/collaboration-request/newest'>collaboration request</a>
+<div class='count-multiplier'></div>
+<div class='count'>45</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/contest/newest'>contest</a>
+<div class='count-multiplier'></div>
+<div class='count'>88</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/ETFs/newest'>ETFs</a>
+<div class='count-multiplier'></div>
+<div class='count'>50</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/feature-request/newest'>feature request</a>
+<div class='count-multiplier'></div>
+<div class='count'>121</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/fetcher/newest'>fetcher</a>
+<div class='count-multiplier'></div>
+<div class='count'>65</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/finance-news/newest'>finance news</a>
+<div class='count-multiplier'></div>
+<div class='count'>24</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/finance-theory/newest'>finance theory</a>
+<div class='count-multiplier'></div>
+<div class='count'>97</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/getting-started/newest'>getting started</a>
+<div class='count-multiplier'></div>
+<div class='count'>331</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/hedge-fund/newest'>hedge fund</a>
+<div class='count-multiplier'></div>
+<div class='count'>39</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/live-trading/newest'>live trading</a>
+<div class='count-multiplier'></div>
+<div class='count'>109</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/machine-learning/newest'>machine learning</a>
+<div class='count-multiplier'></div>
+<div class='count'>31</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/market-neutral/newest'>market neutral</a>
+<div class='count-multiplier'></div>
+<div class='count'>43</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/mean-reversion/newest'>mean reversion</a>
+<div class='count-multiplier'></div>
+<div class='count'>57</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/momentum/newest'>momentum</a>
+<div class='count-multiplier'></div>
+<div class='count'>64</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/numpy-and-pandas/newest'>numpy/pandas</a>
+<div class='count-multiplier'></div>
+<div class='count'>20</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/pairs-trading/newest'>pairs trading</a>
+<div class='count-multiplier'></div>
+<div class='count'>45</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/papers/newest'>papers</a>
+<div class='count-multiplier'></div>
+<div class='count'>48</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/pipeline/newest'>pipeline</a>
+<div class='count-multiplier'></div>
+<div class='count'>148</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/portfolio-optimization/newest'>portfolio optimization</a>
+<div class='count-multiplier'></div>
+<div class='count'>49</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/Q-meta/newest'>Q meta</a>
+<div class='count-multiplier'></div>
+<div class='count'>62</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/Q-updates/newest'>Q updates</a>
+<div class='count-multiplier'></div>
+<div class='count'>80</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/research/newest'>research</a>
+<div class='count-multiplier'></div>
+<div class='count'>174</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/risk-management/newest'>risk management</a>
+<div class='count-multiplier'></div>
+<div class='count'>30</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/seasonal-trends/newest'>seasonal trends</a>
+<div class='count-multiplier'></div>
+<div class='count'>10</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/seeking-help/newest'>seeking help</a>
+<div class='count-multiplier'></div>
+<div class='count'>777</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/sentiment/newest'>sentiment</a>
+<div class='count-multiplier'></div>
+<div class='count'>34</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/Show-Q/newest'>Show Q</a>
+<div class='count-multiplier'></div>
+<div class='count'>148</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/stat-arb/newest'>stat arb</a>
+<div class='count-multiplier'></div>
+<div class='count'>39</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/statistics/newest'>statistics</a>
+<div class='count-multiplier'></div>
+<div class='count'>80</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/tools-and-tips/newest'>tools and tips</a>
+<div class='count-multiplier'></div>
+<div class='count'>163</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/using-data/newest'>using data</a>
+<div class='count-multiplier'></div>
+<div class='count'>310</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/value/newest'>value</a>
+<div class='count-multiplier'></div>
+<div class='count'>42</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable' href='https://www.quantopian.com/posts/tag/visualization/newest'>visualization</a>
+<div class='count-multiplier'></div>
+<div class='count'>8</div>
+</div>
+</div>
+<div class='mobile-advanced-search-options hidden'>
+<div class='close-advanced-search'>
+<div class='back-button'>Back</div>
+</div>
+<div class='advanced-search-description-mobile'>Filter posts by attachment</div>
+<div class='advanced-seach-options-row mobile'>
+<div class='advanced-option all attachment-option mobile selected' data-name='all'>All</div>
+<div class='advanced-option attachment-option backtests mobile' data-name='backtests'>Backtests only</div>
+<div class='advanced-option attachment-option mobile notebooks' data-name='notebooks'>Notebooks only</div>
+</div>
+<div class='advanced-search-description-mobile'>Select up to 5 tags to search within</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='56bce9c377666653bf000001'>101 Alphas Project</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e000001'>API</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55d33f4f3f6ba10061000001'>asset allocation</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e000016'>collaboration request</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e000006'>contest</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55d33f633f6ba10065000001'>ETFs</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e000015'>feature request</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e000005'>fetcher</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e00000a'>finance news</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e000002'>finance theory</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e000004'>getting started</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e000014'>hedge fund</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e000017'>live trading</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e00000b'>machine learning</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55d33f6e3f6ba10061000002'>market neutral</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e00000d'>mean reversion</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e00000c'>momentum</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='56d0b541f8f0e57992000002'>numpy/pandas</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e000009'>pairs trading</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e000007'>papers</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='561525bcf252a59171000001'>pipeline</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55d33f293f6ba10061000000'>portfolio optimization</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e000013'>Q meta</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e000012'>Q updates</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e000018'>research</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55d33f7b3f6ba10065000002'>risk management</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e00000e'>seasonal trends</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e000003'>seeking help</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e00000f'>sentiment</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e000010'>Show Q</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55d33f863f6ba10065000003'>stat arb</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55d33f923f6ba1005d000001'>statistics</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e000011'>tools and tips</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55c50e7d8d4710ec6e000008'>using data</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='55d33f023f6ba10065000000'>value</div>
+</div>
+<div class='tag-wrapper'>
+<div class='tag clickable addable' data-tag-id='56d0b532f8f0e57992000001'>visualization</div>
+</div>
+<div class='row'>
+<div class='col-xs-14'>
+<div class='btn new-btn blue mobile-advanced-search-button'>Search</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-xs-14 col-sm-9 left-col'>
+<div class='row sort-row hide-on-mobile-tag-tab'>
+<div class='col-xs-14'>
+<div class='tab-container'>
+<a class='sort-by sort-by-interesting' href='https://www.quantopian.com/posts/tag/API'>Interesting</a>
+<a class='active sort-by sort-by-newest' href='newest.html'>Newest</a>
+</div>
+</div>
+</div>
+<div class='row main-row hide-on-mobile-tag-tab'>
+<div class='col-xs-14 posts-feed'>
+<div class='posts-area fade in' id='search-results'>
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/8580492055a5eda00fb212fe3b5f836a?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/ml-library-version-update-and-new-library-request'>ML library version update and new library request</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<a class='user-link' href='https://www.quantopian.com/users/55d6180c1339ec0106000920'>Frank Vigilante</a>
+<span>replied</span>
+<span UTCms='1462411047000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>4</span>
+<span>Replies</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>251</span>
+<span>Views</span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='feature request' href='https://www.quantopian.com/posts/tag/feature-request/newest'>feature request</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/5028e3e4d8db7ddddd91988bda86194a?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/new-trading-guard-to-exclude-leveraged-etfs-from-algo-universe'>New Trading Guard to Exclude Leveraged ETFs from Algo Universe</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<a class='user-link' href='https://www.quantopian.com/users/56d233d9e408a6d654000284'>toan tran</a>
+<span>replied</span>
+<span UTCms='1462372967000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>7</span>
+<span>Replies</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>1.8k</span>
+<span>Views</span>
+</div>
+<div class='post-subtitle-element'>
+<span class='quanto-icon backtest-icon'></span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='live trading' href='https://www.quantopian.com/posts/tag/live-trading/newest'>live trading</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='Q updates' href='https://www.quantopian.com/posts/tag/Q-updates/newest'>Q updates</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/192fde5a5de866362a9e34c096cb8a9b?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/welcome-to-quantopian-2'>Welcome to Quantopian 2</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<a class='user-link' href='https://www.quantopian.com/users/55ed0ebaf7eced2820000138'>Minh Ngo</a>
+<span>replied</span>
+<span UTCms='1462307976000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>43</span>
+<span>Replies</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>1.9k</span>
+<span>Views</span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='Q updates' href='https://www.quantopian.com/posts/tag/Q-updates/newest'>Q updates</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='using data' href='https://www.quantopian.com/posts/tag/using-data/newest'>using data</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/03ce2b05f15809a7239dc5910a54abf5?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/data-dot-can-trade-error-1'>data.can_trade ERROR</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<a class='user-link' href='https://www.quantopian.com/users/4f005d1b5e32ee000b000001'>Grant Kiehne</a>
+<span>replied</span>
+<span UTCms='1462264214000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>4</span>
+<span>Replies</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>100</span>
+<span>Views</span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='seeking help' href='https://www.quantopian.com/posts/tag/seeking-help/newest'>seeking help</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='tools and tips' href='https://www.quantopian.com/posts/tag/tools-and-tips/newest'>tools and tips</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/e511e4eeb9334ef82f1caa7bd66c36dc?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/using-customfactors-in-customfactors-and-passing-in-numerical-values-in-customfactors'>Using CustomFactors in CustomFactors and passing in numerical values in CustomFactors</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<a class='user-link' href='https://www.quantopian.com/users/54460194d718f327fd000380'>Luca</a>
+<span>replied</span>
+<span UTCms='1462261486000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>1</span>
+<span>Reply</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>41</span>
+<span>Views</span>
+</div>
+<div class='post-subtitle-element'>
+<span class='quanto-icon notebook-icon'></span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='feature request' href='https://www.quantopian.com/posts/tag/feature-request/newest'>feature request</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='pipeline' href='https://www.quantopian.com/posts/tag/pipeline/newest'>pipeline</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/5e4524e5ee1573c7d19afb620781bf38?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/anyone-else-experiencing-really-poor-app-performance-with-q2'>Anyone else experiencing really poor app performance with Q2?</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<a class='user-link' href='https://www.quantopian.com/users/566f43a829ad3033880000a3'>Steve Hind</a>
+<span>replied</span>
+<span UTCms='1462062967000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>22</span>
+<span>Replies</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>194</span>
+<span>Views</span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='seeking help' href='https://www.quantopian.com/posts/tag/seeking-help/newest'>seeking help</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='tools and tips' href='https://www.quantopian.com/posts/tag/tools-and-tips/newest'>tools and tips</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/b613b399db2d8cd1ceb8f41638313aef?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/how-to-map-sid-into-symbol-in-the-research-environment'>How to map SID into Symbol in the Research environment?</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<a class='user-link' href='https://www.quantopian.com/users/5707d5edad186e24350000e3'>franky zhou</a>
+<span>replied</span>
+<span UTCms='1462036401000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>6</span>
+<span>Replies</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>273</span>
+<span>Views</span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/03ce2b05f15809a7239dc5910a54abf5?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/only-nasdaq-exchange'>only nasdaq exchange</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<a class='user-link' href='https://www.quantopian.com/users/4f005d1b5e32ee000b000001'>Grant Kiehne</a>
+<span>replied</span>
+<span UTCms='1462010342000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>5</span>
+<span>Replies</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>108</span>
+<span>Views</span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='ETFs' href='https://www.quantopian.com/posts/tag/ETFs/newest'>ETFs</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='pipeline' href='https://www.quantopian.com/posts/tag/pipeline/newest'>pipeline</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='seeking help' href='https://www.quantopian.com/posts/tag/seeking-help/newest'>seeking help</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/33e8ab98251bbebf6d46220381ccad71?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/converting-lists-to-dataframe'>Converting Lists to DataFrame</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<a class='user-link' href='https://www.quantopian.com/users/571cef372616ef2fd90000d4'>Hugh Donnelly</a>
+<span>posted</span>
+<span UTCms='1461983029000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>0</span>
+<span>Replies</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>68</span>
+<span>Views</span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='numpy/pandas' href='https://www.quantopian.com/posts/tag/numpy-and-pandas/newest'>numpy/pandas</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='seeking help' href='https://www.quantopian.com/posts/tag/seeking-help/newest'>seeking help</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='tools and tips' href='https://www.quantopian.com/posts/tag/tools-and-tips/newest'>tools and tips</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='using data' href='https://www.quantopian.com/posts/tag/using-data/newest'>using data</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/f5cf848811acb3d66ef40d12d24ba96d?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/good-til-canceled-gtc-orders'>Good-Til-Canceled (GTC) Orders</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<a class='user-link' href='https://www.quantopian.com/users/5668778d2cb06f347b0001ad'>John Scaife</a>
+<span>replied</span>
+<span UTCms='1461960168000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>2</span>
+<span>Replies</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>92</span>
+<span>Views</span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='live trading' href='https://www.quantopian.com/posts/tag/live-trading/newest'>live trading</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='seeking help' href='https://www.quantopian.com/posts/tag/seeking-help/newest'>seeking help</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/4c4280b8623216c702bf9bdf046983c3?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/pipeline-classifiers-are-here'>Pipeline Classifiers are Here!</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<a class='user-link' href='https://www.quantopian.com/users/5622a26f2b9a17dcbb0006fb'>Tar Xvzf</a>
+<span>replied</span>
+<span UTCms='1461905340000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>18</span>
+<span>Replies</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>1.4k</span>
+<span>Views</span>
+</div>
+<div class='post-subtitle-element'>
+<span class='quanto-icon notebook-icon'></span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='pipeline' href='https://www.quantopian.com/posts/tag/pipeline/newest'>pipeline</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='Q updates' href='https://www.quantopian.com/posts/tag/Q-updates/newest'>Q updates</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='research' href='https://www.quantopian.com/posts/tag/research/newest'>research</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/8580492055a5eda00fb212fe3b5f836a?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/data-dot-history-context-dot-my-stock-price-bar-count-equals-30-frequency-equals-1d'>data.history(context.my_stock, &quot;price&quot;, bar_count=30, frequency=&quot;1d&quot;)</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<a class='user-link' href='https://www.quantopian.com/users/55d6180c1339ec0106000920'>Frank Vigilante</a>
+<span>replied</span>
+<span UTCms='1461901771000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>1</span>
+<span>Reply</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>71</span>
+<span>Views</span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='seeking help' href='https://www.quantopian.com/posts/tag/seeking-help/newest'>seeking help</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='tools and tips' href='https://www.quantopian.com/posts/tag/tools-and-tips/newest'>tools and tips</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='using data' href='https://www.quantopian.com/posts/tag/using-data/newest'>using data</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/9fab4a5b4cd787c3f55eb2794c395616?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/recording-integers-displays-floats-bug'>recording integers displays floats (bug?)</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<a class='user-link' href='https://www.quantopian.com/users/5556658e3ff319beeb000095'>Scott Hounsell</a>
+<span>posted</span>
+<span UTCms='1461876788000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>0</span>
+<span>Replies</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>66</span>
+<span>Views</span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='seeking help' href='https://www.quantopian.com/posts/tag/seeking-help/newest'>seeking help</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='visualization' href='https://www.quantopian.com/posts/tag/visualization/newest'>visualization</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/8e79f0a4068783e7660427529d0106a3?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/zipline-problems-with-data-dot-history'>Zipline problems with data.history</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<a class='user-link' href='https://www.quantopian.com/users/53110c3dbce3c406db00002a'>John Hinnegan</a>
+<span>replied</span>
+<span UTCms='1461807449000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>2</span>
+<span>Replies</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>133</span>
+<span>Views</span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/ac9609181e2a852c602094f23f191ea8?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/ok-to-place-orders-in-before-trading-start'>o.k. to place orders in before_trading_start?</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<div class='quantopian-badge'></div>
+<a class='user-link' href='https://www.quantopian.com/users/4e4d0fc9a0b56a000a000003'>Jean Bredeche</a>
+<span>replied</span>
+<span UTCms='1461593915000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>1</span>
+<span>Reply</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>103</span>
+<span>Views</span>
+</div>
+<div class='post-subtitle-element'>
+<span class='quanto-icon backtest-icon'></span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='Show Q' href='https://www.quantopian.com/posts/tag/Show-Q/newest'>Show Q</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/e1beec49eab751776723d043b06935b8?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/use-data-dot-history-to-extract-price-for-certain-period-of-time'>Use data.history to extract price for certain period of time</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<a class='user-link' href='https://www.quantopian.com/users/55d045319b57dcb9f900048b'>see-choon oo</a>
+<span>posted</span>
+<span UTCms='1461590879000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>0</span>
+<span>Replies</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>79</span>
+<span>Views</span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='getting started' href='https://www.quantopian.com/posts/tag/getting-started/newest'>getting started</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='numpy/pandas' href='https://www.quantopian.com/posts/tag/numpy-and-pandas/newest'>numpy/pandas</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='seeking help' href='https://www.quantopian.com/posts/tag/seeking-help/newest'>seeking help</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/9fab4a5b4cd787c3f55eb2794c395616?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/how-to-exclude-leveraged-etfs-from-pipeline-results'>How to exclude leveraged ETFs from pipeline results?</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<a class='user-link' href='https://www.quantopian.com/users/5556658e3ff319beeb000095'>Scott Hounsell</a>
+<span>replied</span>
+<span UTCms='1461537758000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>8</span>
+<span>Replies</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>196</span>
+<span>Views</span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='ETFs' href='https://www.quantopian.com/posts/tag/ETFs/newest'>ETFs</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='pipeline' href='https://www.quantopian.com/posts/tag/pipeline/newest'>pipeline</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='seeking help' href='https://www.quantopian.com/posts/tag/seeking-help/newest'>seeking help</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='tools and tips' href='https://www.quantopian.com/posts/tag/tools-and-tips/newest'>tools and tips</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/8e79f0a4068783e7660427529d0106a3?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/can-i-delay-the-benchmark-start'>Can I &quot;delay&quot; the benchmark start?</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<a class='user-link' href='https://www.quantopian.com/users/53110c3dbce3c406db00002a'>John Hinnegan</a>
+<span>replied</span>
+<span UTCms='1461516655000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>10</span>
+<span>Replies</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>131</span>
+<span>Views</span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='seeking help' href='https://www.quantopian.com/posts/tag/seeking-help/newest'>seeking help</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/f8e40f4d99d91b5da766044ebbb4e482?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/data-dot-can-trade-assets-when-to-use-it'>data.can_trade(assets) - when to use it?</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<div class='quantopian-badge'></div>
+<a class='user-link' href='https://www.quantopian.com/users/53dfa27b197bbb2516000159'>Karen Rubin</a>
+<span>replied</span>
+<span UTCms='1461358908000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>2</span>
+<span>Replies</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>89</span>
+<span>Views</span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='seeking help' href='https://www.quantopian.com/posts/tag/seeking-help/newest'>seeking help</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row post-row fade'>
+<div class='col-xs-14 no-padding-large'>
+<div class='row'>
+<div class='avatar-container'>
+<img class='avatar' src='https://secure.gravatar.com/avatar/03ce2b05f15809a7239dc5910a54abf5?default=https%3A%2F%2Fs3.amazonaws.com%2Fquantopian-website-assets%2Fempty-profile.png'>
+</div>
+<div class='post-title'>
+<a href='https://www.quantopian.com/posts/q2-why-not-support-starting-algo-at-9-30-am-open'>Q2 - why not support starting algo at 9:30 am open?</a>
+</div>
+</div>
+<div class='row'>
+<div class='post-subtitle-area'>
+<div class='post-subtitle-element time'>
+<a class='user-link' href='https://www.quantopian.com/users/4f005d1b5e32ee000b000001'>Grant Kiehne</a>
+<span>posted</span>
+<span UTCms='1461321793000' class='quanto-date' data-lowercase='1'></span>
+</div>
+<div class='post-subtitle-element replies'>
+<span>0</span>
+<span>Replies</span>
+</div>
+<div class='post-subtitle-element views'>
+<span>65</span>
+<span>Views</span>
+</div>
+</div>
+</div>
+<div class='row tags-row'>
+<div class='tags'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='seeking help' href='https://www.quantopian.com/posts/tag/seeking-help/newest'>seeking help</a>
+</div>
+</div>
+</div>
+</div>
+
+<span class='row pagination-row regular'>
+<div class='col-xs-14'>
+<nav class='quanto-paginate'>
+<ul class='pagination prev-next'>
+<li class='disabled prev pull-left'>
+<a href="newest.html" rel="prev">Prev</a>
+</li>
+
+<li class='next_page pull-right'>
+<a href="https://www.quantopian.com/posts/tag/API/newest?page=2" rel="next">Next</a>
+</li>
+
+</ul>
+<div class='numbered-pages text-center'>
+<ul class='pagination'>
+<li class='active page'>
+<a href="newest.html">1</a>
+</li>
+
+<li class='page'>
+<a href="https://www.quantopian.com/posts/tag/API/newest?page=2" rel="next">2</a>
+</li>
+
+<li class='page'>
+<a href="https://www.quantopian.com/posts/tag/API/newest?page=3">3</a>
+</li>
+
+<li class='page gap disabled'>
+<a href='newest.html#' onclick='return false;'>&hellip;</a>
+</li>
+
+<li class='page'>
+<a href="https://www.quantopian.com/posts/tag/API/newest?page=16">16</a>
+</li>
+
+</ul>
+</div>
+</nav>
+
+</div>
+</span>
+<span class='row pagination-row mobile'>
+<div class='col-xs-14'>
+<nav class='quanto-paginate'>
+<ul class='pagination prev-next'>
+<li class='disabled prev pull-left'>
+<a href="newest.html" rel="prev">Prev</a>
+</li>
+
+<li class='next_page pull-right'>
+<a href="https://www.quantopian.com/posts/tag/API/newest?page=2" rel="next">Next</a>
+</li>
+
+</ul>
+<div class='numbered-pages text-center'>
+<ul class='pagination'>
+<div class='btn btn-default' disabled='disabled'>1</div>
+</ul>
+</div>
+</nav>
+
+</div>
+</span>
+
+
+</div>
+<div class='paging-placeholder fade'></div>
+<div class='show-while-paging fade'>
+<img class='loading' src='../../../assets/loader-gray.gif'>
+</div>
+<div class='show-while-searching fade' id='post-search-table'>
+<img class='loading' src='../../../assets/loader-gray.gif'>
+</div>
+</div>
+</div>
+</div>
+<div class='col-sm-5 side-panel hidden-xs hidden-tablet-portrait'>
+<div class='sidebar-item featured-events'>
+<div class='header'>The Quantopian Workshop in Sydney</div>
+<div class='body'>
+<p>Join us in Sydney, Australia on <strong>June 18th</strong> for a hands-on workshop. Developed in collaboration with top universities, the Quantopian Workshop will walk you through writing a quantitative trading algorithm.</p>
+<p></p>
+<div class='forum-sidebar-button' data-mixpanel='sydney_workshop_june_2016' data-url='https://thequantopianworkshopinsydney.splashthat.com/'>Read More</div>
+</div>
+</div>
+<div class='sidebar-item featured-events'>
+<div class='header'>Portland Meetup</div>
+<div class='body'>
+<p>Join us in Portland, OR on <strong>May 31st at 6pm</strong> where VP Product Karen Rubin will talk about building a quant trading strategy to beat the S&amp;P500.</p>
+<p></p>
+<div class='forum-sidebar-button' data-mixpanel='portland_meetup_may_2016' data-url='http://www.meetup.com/Quantopian-Portland-Algorithmic-Trading-Meetup/events/229813685/'>RSVP</div>
+</div>
+</div>
+<div class='sidebar-item popular-topics'>
+<div class='header'>Popular tags</div>
+<div class='topics'>
+<div class='tag-wrapper'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='seeking help' href='https://www.quantopian.com/posts/tag/seeking-help/newest'>seeking help</a>
+<div class='count-multiplier'></div>
+<div class='count'>777</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='getting started' href='https://www.quantopian.com/posts/tag/getting-started/newest'>getting started</a>
+<div class='count-multiplier'></div>
+<div class='count'>331</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='API' href='newest.html'>API</a>
+<div class='count-multiplier'></div>
+<div class='count'>313</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='using data' href='https://www.quantopian.com/posts/tag/using-data/newest'>using data</a>
+<div class='count-multiplier'></div>
+<div class='count'>310</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag mixpanel-button clickable' data-event='tag click' data-mixpanel='research' href='https://www.quantopian.com/posts/tag/research/newest'>research</a>
+<div class='count-multiplier'></div>
+<div class='count'>174</div>
+</div>
+</div>
+<div class='see-all-tags'>See all</div>
+</div>
+<div class='sidebar-item featured-events'>
+<div class='header'>Quantopian Overview</div>
+<div class='body'>Get started by <a class='clone-sample-algo-link' data-sampletype='sample_mean_reversion' href='newest.html#'>cloning the sample algorithm</a>.</div>
+</div>
+</div>
+</div>
+</div>
+<div class='modal hide video-overlay' id='intro-video-modal'>
+<div class='modal-header'>
+<h3>Quantopian Overview</h3>
+</div>
+<div class='modal-body'></div>
+<div class='modal-footer'>
+<a class='btn' data-dismiss='modal' href='newest.html#'>Close</a>
+</div>
+</div>
+<script>
+  //<![CDATA[
+    $(document).ready(function() {
+      $("#intro-video-modal").on("show", (function(e) {
+        if (window.location.href.indexOf("https") == 0) {
+          url_start = "https";
+        } else {
+          url_start = "http";
+        }
+    
+        var url = url_start + "://www.youtube.com/embed/5alCqwYR67U?version=3&rel=0&showinfo=0&theme=light&autoplay=1";
+        var $iframe = $("<iframe id='ytplayer' type='text/html' width='640' height='393' src='" + url + "' frameborder='0'></iframe>");
+        
+        $("#intro-video-modal").find(".modal-body").html($iframe);
+      }));
+    
+      $("#intro-video-modal").on("hide", (function() {
+        $("#intro-video-modal").find(".modal-body").html("");
+      }));
+    })
+  //]]>
+</script>
+
+
+<div class='modal hide video-overlay' id='live-trading-video-modal'>
+<div class='modal-header'>
+<h3>Live Trading Overview</h3>
+</div>
+<div class='modal-body'></div>
+<div class='modal-footer'>
+<a class='btn' data-dismiss='modal' href='newest.html#'>Close</a>
+</div>
+</div>
+<script>
+  //<![CDATA[
+    $(document).ready(function() {
+      $("#live-trading-video-modal").on("show", (function(e) {
+        if (window.location.href.indexOf("https") == 0) {
+          url_start = "https";
+        } else {
+          url_start = "http";
+        }
+    
+        var url = url_start + "://www.youtube.com/embed/hye1L86s43M?version=3&rel=0&showinfo=0&theme=light&autoplay=1";
+        var $iframe = $("<iframe id='ytplayer' type='text/html' width='640' height='393' src='" + url + "' frameborder='0'></iframe>");
+        
+        $("#live-trading-video-modal").find(".modal-body").html($iframe);
+      }));
+    
+      $("#live-trading-video-modal").on("hide", (function() {
+        $("#live-trading-video-modal").find(".modal-body").html("");
+      }));
+    })
+  //]]>
+</script>
+
+
+<script>
+  //<![CDATA[
+    $(document).ready(function() {
+      quanto.instances.forum_index_manager = new quanto.ForumIndexManager();
+    })
+  //]]>
+</script>
+<div class='fade modal quanto-modal' id='see-all-tags-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-x-out'></div>
+<div class='modal-content'>
+<div class='modal-header'>
+<span class='title'>Tags</span>
+<span class='subtitle'>Click a tag to view posts with that tag.</span>
+</div>
+<div class='modal-body'>
+<div class='row'>
+<div class='col'>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='101 Alphas Project' href='https://www.quantopian.com/posts/tag/101-Alphas-Project'>101 Alphas Project</a>
+<div class='count-multiplier'></div>
+<div class='count'>1</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='API' href='https://www.quantopian.com/posts/tag/API'>API</a>
+<div class='count-multiplier'></div>
+<div class='count'>313</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='asset allocation' href='https://www.quantopian.com/posts/tag/asset-allocation'>asset allocation</a>
+<div class='count-multiplier'></div>
+<div class='count'>35</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='collaboration request' href='https://www.quantopian.com/posts/tag/collaboration-request'>collaboration request</a>
+<div class='count-multiplier'></div>
+<div class='count'>45</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='contest' href='https://www.quantopian.com/posts/tag/contest'>contest</a>
+<div class='count-multiplier'></div>
+<div class='count'>88</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='ETFs' href='https://www.quantopian.com/posts/tag/ETFs'>ETFs</a>
+<div class='count-multiplier'></div>
+<div class='count'>50</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='feature request' href='https://www.quantopian.com/posts/tag/feature-request'>feature request</a>
+<div class='count-multiplier'></div>
+<div class='count'>121</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='fetcher' href='https://www.quantopian.com/posts/tag/fetcher'>fetcher</a>
+<div class='count-multiplier'></div>
+<div class='count'>65</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='finance news' href='https://www.quantopian.com/posts/tag/finance-news'>finance news</a>
+<div class='count-multiplier'></div>
+<div class='count'>24</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='finance theory' href='https://www.quantopian.com/posts/tag/finance-theory'>finance theory</a>
+<div class='count-multiplier'></div>
+<div class='count'>97</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='getting started' href='https://www.quantopian.com/posts/tag/getting-started'>getting started</a>
+<div class='count-multiplier'></div>
+<div class='count'>331</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='hedge fund' href='https://www.quantopian.com/posts/tag/hedge-fund'>hedge fund</a>
+<div class='count-multiplier'></div>
+<div class='count'>39</div>
+</div>
+</div>
+<div class='col'>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='live trading' href='https://www.quantopian.com/posts/tag/live-trading'>live trading</a>
+<div class='count-multiplier'></div>
+<div class='count'>109</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='machine learning' href='https://www.quantopian.com/posts/tag/machine-learning'>machine learning</a>
+<div class='count-multiplier'></div>
+<div class='count'>31</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='market neutral' href='https://www.quantopian.com/posts/tag/market-neutral'>market neutral</a>
+<div class='count-multiplier'></div>
+<div class='count'>43</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='mean reversion' href='https://www.quantopian.com/posts/tag/mean-reversion'>mean reversion</a>
+<div class='count-multiplier'></div>
+<div class='count'>57</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='momentum' href='https://www.quantopian.com/posts/tag/momentum'>momentum</a>
+<div class='count-multiplier'></div>
+<div class='count'>64</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='numpy/pandas' href='https://www.quantopian.com/posts/tag/numpy-and-pandas'>numpy/pandas</a>
+<div class='count-multiplier'></div>
+<div class='count'>20</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='pairs trading' href='https://www.quantopian.com/posts/tag/pairs-trading'>pairs trading</a>
+<div class='count-multiplier'></div>
+<div class='count'>45</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='papers' href='https://www.quantopian.com/posts/tag/papers'>papers</a>
+<div class='count-multiplier'></div>
+<div class='count'>48</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='pipeline' href='https://www.quantopian.com/posts/tag/pipeline'>pipeline</a>
+<div class='count-multiplier'></div>
+<div class='count'>148</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='portfolio optimization' href='https://www.quantopian.com/posts/tag/portfolio-optimization'>portfolio optimization</a>
+<div class='count-multiplier'></div>
+<div class='count'>49</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='Q meta' href='https://www.quantopian.com/posts/tag/Q-meta'>Q meta</a>
+<div class='count-multiplier'></div>
+<div class='count'>62</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='Q updates' href='https://www.quantopian.com/posts/tag/Q-updates'>Q updates</a>
+<div class='count-multiplier'></div>
+<div class='count'>80</div>
+</div>
+</div>
+<div class='col'>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='research' href='https://www.quantopian.com/posts/tag/research'>research</a>
+<div class='count-multiplier'></div>
+<div class='count'>174</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='risk management' href='https://www.quantopian.com/posts/tag/risk-management'>risk management</a>
+<div class='count-multiplier'></div>
+<div class='count'>30</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='seasonal trends' href='https://www.quantopian.com/posts/tag/seasonal-trends'>seasonal trends</a>
+<div class='count-multiplier'></div>
+<div class='count'>10</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='seeking help' href='https://www.quantopian.com/posts/tag/seeking-help'>seeking help</a>
+<div class='count-multiplier'></div>
+<div class='count'>777</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='sentiment' href='https://www.quantopian.com/posts/tag/sentiment'>sentiment</a>
+<div class='count-multiplier'></div>
+<div class='count'>34</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='Show Q' href='https://www.quantopian.com/posts/tag/Show-Q'>Show Q</a>
+<div class='count-multiplier'></div>
+<div class='count'>148</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='stat arb' href='https://www.quantopian.com/posts/tag/stat-arb'>stat arb</a>
+<div class='count-multiplier'></div>
+<div class='count'>39</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='statistics' href='https://www.quantopian.com/posts/tag/statistics'>statistics</a>
+<div class='count-multiplier'></div>
+<div class='count'>80</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='tools and tips' href='https://www.quantopian.com/posts/tag/tools-and-tips'>tools and tips</a>
+<div class='count-multiplier'></div>
+<div class='count'>163</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='using data' href='https://www.quantopian.com/posts/tag/using-data'>using data</a>
+<div class='count-multiplier'></div>
+<div class='count'>310</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='value' href='https://www.quantopian.com/posts/tag/value'>value</a>
+<div class='count-multiplier'></div>
+<div class='count'>42</div>
+</div>
+<div class='tag-wrapper'>
+<a class='tag clickable mixpanel-button' data-event='tag click' data-mixpanel='visualization' href='https://www.quantopian.com/posts/tag/visualization'>visualization</a>
+<div class='count-multiplier'></div>
+<div class='count'>8</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal quanto-modal' id='add-tags-to-post-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-x-out'></div>
+<div class='modal-content'>
+<div class='modal-header'>
+<span class='title'>Search within specific tag or tags:</span>
+<span class='subtitle'>Limit 5 tags</span>
+</div>
+<div class='modal-body add-topics-modal-body'>
+<div class='row'></div>
+<div class='row'>
+<div class='col'>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='56bce9c377666653bf000001'>101 Alphas Project</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e000001'>API</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55d33f4f3f6ba10061000001'>asset allocation</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e000016'>collaboration request</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e000006'>contest</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55d33f633f6ba10065000001'>ETFs</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e000015'>feature request</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e000005'>fetcher</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e00000a'>finance news</div>
+</div>
+</div>
+<div class='col'>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e000002'>finance theory</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e000004'>getting started</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e000014'>hedge fund</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e000017'>live trading</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e00000b'>machine learning</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55d33f6e3f6ba10061000002'>market neutral</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e00000d'>mean reversion</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e00000c'>momentum</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='56d0b541f8f0e57992000002'>numpy/pandas</div>
+</div>
+</div>
+<div class='col'>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e000009'>pairs trading</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e000007'>papers</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='561525bcf252a59171000001'>pipeline</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55d33f293f6ba10061000000'>portfolio optimization</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e000013'>Q meta</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e000012'>Q updates</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e000018'>research</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55d33f7b3f6ba10065000002'>risk management</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e00000e'>seasonal trends</div>
+</div>
+</div>
+<div class='col'>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e000003'>seeking help</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e00000f'>sentiment</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e000010'>Show Q</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55d33f863f6ba10065000003'>stat arb</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55d33f923f6ba1005d000001'>statistics</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e000011'>tools and tips</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55c50e7d8d4710ec6e000008'>using data</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='55d33f023f6ba10065000000'>value</div>
+</div>
+<div class='tag-wrapper'>
+<div class='addable clickable tag' data-tag-hidden='false' data-tag-id='56d0b532f8f0e57992000001'>visualization</div>
+</div>
+</div>
+</div>
+</div>
+<div class='modal-footer'>
+<div class='controls pull-right'>
+<button class='btn new-btn white-blue-border' data-dismiss='modal' id='save-tags-button'>Search</button>
+</div>
+<div class='clear'></div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<div class='fade modal' id='error-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title'>Error</h4>
+</div>
+<div class='modal-body body-content'>
+<p>Sorry, something went wrong.  Try again or contact us by <a class='feedback-link'>sending feedback</a>.</p>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-primary' data-dismiss='modal' href='#'>Close</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='confirmation-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title'></h4>
+</div>
+<div class='modal-body body-content'></div>
+<div class='modal-footer'>
+<button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+<button class='btn btn-primary action-button' data-dismiss='modal'></button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='feedback-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'>Send Feedback</h3>
+</div>
+<div class='modal-body'>
+<div class='controls'>
+<div class='from'>
+<span class='valign-top'>From: </span>
+<div class='feedback-inputs'>
+<div class='form-group'>
+<input autofocus class='form-control' id='feedback-email-box' placeholder='Email address' type='email'>
+</div>
+<div class='form-group'>
+<input class='form-control' id='feedback-name-box' placeholder='Name' type='text'>
+</div>
+</div>
+</div>
+<textarea class='form-control input-xxlarge width_100pct' id='feedback-box' rows='10'></textarea>
+<div class='feedback-checkbox'>
+<div class='checkbox'>
+<label>
+<input id='anonymous-feedback-checkbox' type='checkbox'>I understand I will not receive a reply without providing a valid email address.</input>
+</label>
+</div>
+</div>
+</div>
+<div class='success hidden'>
+<span>Thank you!  We will be in touch soon.</span>
+</div>
+</div>
+<div class='modal-footer'>
+<div class='controls'>
+<button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+<button class='btn btn-primary' id='send-feedback-button'>Send</button>
+</div>
+<div class='success hidden'>
+<a class='btn btn-primary' data-dismiss='modal' href='newest.html#'>Close</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='join-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'>Join Quantopian.  It's free!</h3>
+</div>
+<div class='modal-body'>
+<p class='large'>Once you join, you can:</p>
+<div class='margin_20t'>
+<div class='action'>
+<i class='icon icon-copy'></i>
+Create more algorithms
+</div>
+<div class='action'>
+<i class='icon icon-bar-chart'></i>
+Run full backtests, with detailed risk metrics and full transaction reports
+</div>
+<div class='action'>
+<i class='icon icon-comments-alt'></i>
+Post and share in our community
+</div>
+<div class='action'>
+<i class='icon icon-trophy'></i>
+Submit algorithms to the Quantopian Open
+</div>
+</div>
+<div class='margin_20t margin_20b large'>Don't worry, all your work is already saved.</div>
+</div>
+<div class='modal-footer'>
+<div class='pull-left'>
+<a class='btn btn-default btn-large' data-dismiss='modal' href='newest.html#'>Close</a>
+</div>
+<a class='btn btn-primary btn-large font-14' href='../../../users/sign_up.html'>Join Quantopian</a>
+<a class='btn btn-default btn-large font-14 login-button' href='../../../users/sign_in.html'>Log In</a>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='message-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'></h3>
+</div>
+<div class='modal-body'></div>
+<div class='modal-footer'>
+<button class='btn btn-primary' data-dismiss='modal' id='message-modal-close'>Close</button>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class='footer new-style' id='quanto-footer-container'>
+<div class='row-fluid main-footer container'>
+<div class='left-space span1'></div>
+<div class='footer-content span11'>
+<div class='row-fluid footer-inner row'>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Company</div>
+<div class='footer-row'>
+<a href='../../../about.html'>About</a>
+</div>
+<div class='footer-row'>
+<a href='../../../academia.html'>Academia</a>
+</div>
+<div class='footer-row'>
+<a href='../../../workshops.html'>Workshops</a>
+</div>
+<div class='footer-row'>
+<a href='../../../about.html'>Careers</a>
+</div>
+<div class='footer-row'>
+<a href='../../../posts.html'>Community</a>
+</div>
+<div class='footer-row'>
+<a href='../../../prospective_investors.html'>Prospective Investors</a>
+</div>
+</div>
+</div>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Learn &amp; Support</div>
+<div class='footer-row'>
+<a href='../../../tutorials/getting-started.html'>Getting Started</a>
+</div>
+<div class='footer-row'>
+<a href='../../../faq.html'>FAQs</a>
+</div>
+<div class='footer-row'>
+<a href='../../../help.html'>Help &amp; API docs</a>
+</div>
+<div class='footer-row'>
+<a href='../../../tutorials.html'>Tutorials</a>
+</div>
+<div class='footer-row'>
+<a href='../../../lectures.html'>Lectures</a>
+</div>
+<div class='footer-row'>
+<a href='http://status.quantopian.com'>Site Status</a>
+</div>
+<div class='footer-row'>
+<a href='../../../security.html'>Security</a>
+</div>
+</div>
+</div>
+
+<div class='col-sm-6'>
+<div class='feedback-email pull-right'>
+Need Help?
+<a class='open-feedback-link' href='newest.html#'>Contact Support</a>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Notices</div>
+<div class='footer-row'>
+<a href='../../../policies/terms.html'>Terms of Use</a>
+</div>
+<div class='footer-row'>
+<a href='../../../policies/privacy.html'>Privacy Policy</a>
+</div>
+<div class='footer-row'>
+<a href='../../../policies/risks.html'>Trading Risk</a>
+</div>
+<div class='footer-row'>
+<a href='../../../policies/live_trading.html'>Brokerage Terms</a>
+</div>
+</div>
+</div>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Follow Us</div>
+<div class='footer-row'>
+<a href='http://www.twitter.com/quantopian'>Twitter</a>
+</div>
+<div class='footer-row'>
+<a href='http://www.facebook.com/quantopian'>Facebook</a>
+</div>
+<div class='footer-row'>
+<a href='http://www.linkedin.com/company/quantopian'>LinkedIn</a>
+</div>
+<div class='footer-row'>
+<a href='http://blog.quantopian.com'>Blog</a>
+</div>
+</div>
+</div>
+
+</div>
+<div class='row'>
+<div class='col-sm-14'>
+<div class='pull-right copyright'>&copy; 2016 Quantopian, Inc.</div>
+</div>
+</div>
+</div>
+</div>
+<div class='mobile-footer'>
+<div class='mobile-nav-category main-links'>
+<div class='mobile-nav-row'>
+<a href='../../../about.html'>About Quantopian</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../../../about.html'>Careers</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../../../posts.html'>Community</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../../../help.html'>Help</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../../../academia.html'>Academia</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../../../lectures.html'>Lectures</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../../../workshops.html'>Workshops</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://status.quantopian.com'>Status</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.facebook.com/quantopian'>Facebook</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.twitter.com/quantopian'>Twitter</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.linkedin.com/company/quantopian'>LinkedIn</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://blog.quantopian.com'>Blog</a>
+</div>
+</div>
+<div class='mobile-nav-category secondary-links'>
+<div class='mobile-nav-row'>
+<p>&copy; 2016 Quantopian</p>
+</div>
+<div class='mobile-nav-row'>
+<a href='../../../policies/terms.html'>Terms of Use</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../../../policies/privacy.html'>Privacy Policy</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</body>
+</html>
+<script>
+  //<![CDATA[
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8519877-1']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_setDomainName', 'quantopian.com']);
+    _gaq.push(['_setCustomVar', 1, 'quanto_session_id', 'session_572d6deed42b61f8d200072e']);
+    
+    
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  //]]>
+</script>
+
+
+<input id="is_mac" name="is_mac" type="hidden" value="false" />
+<script>
+  //<![CDATA[
+    (function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js';
+    d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);
+    a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}
+    var g=a;"undefined"!==typeof f? g=a[f]=[]:f="mixpanel";g.people=g.people||[];
+    h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.identify people.set people.increment".split(" ");for(e=0;e<h.length;e++) d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1})(document,window.mixpanel||[]);mixpanel.init("75873953cd404bcc1da88a55ff51e3b4")
+  //]]>
+</script>
+
+<script>
+  //<![CDATA[
+    mixpanel.track("view page", {"page": window.location.pathname})
+  //]]>
+</script>
+<script type="text/javascript">if (typeof NREUMQ !== "undefined") { if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","bam.nr-data.net","59252e476d","984851","dAlXTUcKWFpQRBlHVkQSShZcC1BTTQ==",0,905,new Date().getTime(),"","","","",""]);}</script>

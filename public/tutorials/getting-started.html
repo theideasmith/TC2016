@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<link href="../assets/logos/favicon-q-9ba6cb893a620560ab734fe26a5bef5f.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<title>
+Quantopian Tutorials
+</title>
+<link href="../assets/quanto-base-bundle-b524a8864168203acdb8ea6f8202e97b.css" media="all" rel="stylesheet" type="text/css" />
+<link href="../assets/application_new-039c7fe7fe2730066a8dcb040084bc2f.css" media="all" rel="stylesheet" type="text/css" />
+<script src="../assets/quanto_global-44e85c6fa95d3651757ab8e426751f17.js" type="text/javascript"></script>
+<script src="../assets/learn_bundle-f42625830d122bff73c1591c7f81acd9.js" type="text/javascript"></script>
+<script src="https://use.typekit.com/uvj7txo.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+try{Typekit.load()}catch(e){}
+//]]>
+</script>
+<script src="https://js.stripe.com/v2/" type="text/javascript"></script>
+<meta content='pk_live_qyEzgiIO9PIT9AEbwiX8qw6g' name='stripe-key'>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="XIZmvJvBSDp8R371BFoxbTfU5NJRO3ZTtXciYR83l3c=" name="csrf-token" />
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+
+<input id="quanto-env" name="env" type="hidden" value="production" />
+</head>
+<body class='' ontouchstart=''>
+<div id='fb-root'></div>
+<div class='wrapper' id='learn-tutorial_getting_started'>
+<div class='navbar navbar-dark navbar-default navbar-static-top' id='app-navbar'>
+<div class='container-fluid'>
+<div class='navbar-header'>
+<button class='navbar-toggle collapsed' data-target='#app-navbar-collapse' data-toggle='collapse'>
+<span class='icon hamburger-menu'></span>
+</button>
+<a class='navbar-brand' href='../home.html'>
+<div class='logo-image'></div>
+</a>
+</div>
+<div class='collapse navbar-collapse' id='app-navbar-collapse'>
+<ul class='nav navbar-nav navbar-right'>
+<li class='dropdown hidden unconfirmed-user-header'>
+<a class='header' data-toggle='dropdown' href='getting-started.html#'>
+<span class='icon icon-warning'></span>
+Unconfirmed Account
+</a>
+<ul class='dropdown-menu no-close-on-click'>
+<div class='confirm-dropdown'>
+<div>
+Click on the confirmation link in the email that Quantopian sent to <strong class="confirm-email-address">
+</strong>.
+</div>
+<div class='margin_10t'>
+<button class='btn resend-confirmation' id='resend-confirmation-email-button'>Resend Confirmation Email</button>
+</div>
+</div>
+</ul>
+</li>
+<li>
+<a class='header' href='../fund.html'>Capital</a>
+</li>
+<li>
+<a class='header' href='../data.html'>Data</a>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='getting-started.html#'>
+My Code
+</a>
+<ul class='dropdown-menu quanto-dropdown-new'>
+<li>
+<a href='../research/survey.html'>Notebooks</a>
+</li>
+<li>
+<a href='../algorithms.html'>Algorithms</a>
+</li>
+</ul>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='getting-started.html#'>
+Community
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a class='' href='../posts.html' id='community-header-link'>Forums</a>
+</li>
+<li>
+<a href='../open.html'>Contest</a>
+</li>
+<li>
+<a href='http://www.quantcon.com'>QuantCon</a>
+</li>
+</ul>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='getting-started.html#'>
+Learn & Support
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href='../learn.html'>Learn</a>
+</li>
+<li>
+<a class='open-feedback-link' href='getting-started.html#'>Contact Support</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="../signin.html" class="header unregistered-user-action">Log In</a>
+</li>
+<li>
+<a href="../users/sign_up.html" class="header unregistered-user-action">Sign Up</a>
+</li>
+
+</ul>
+</div>
+</div>
+</div>
+<script>
+  //<![CDATA[
+    $(document).ready(function () {
+      quanto.instances.fm = new quanto.FeedbackManager();
+      quanto.instances.hm = new quanto.headerManager();
+    })
+  //]]>
+</script>
+
+
+<div class='content content-area new-style'>
+<div class='learn-nav'>
+<div class='pane no-border'>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-xs-14'>
+<div class='title'>Learn</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-14'>
+<div class='fixed-width-wrapper'>
+<div class='nav-container' id='wrapper'>
+<div id='scroller'>
+<a class='active help-tile-wrapper-small visible-title' href='getting-started.html'>
+<div class='help-tile'>
+<div class='help-tile-image' id='get-started-image'></div>
+<div class='help-tile-title'>Getting Started</div>
+</div>
+</a>
+<a class='help-tile-wrapper-small' href='../faq.html'>
+<div class='help-tile'>
+<div class='help-tile-image' id='answers-image'></div>
+<div class='help-tile-title hidden'>FAQ</div>
+</div>
+</a>
+<a class='help-tile-wrapper-small' href='../help.html'>
+<div class='help-tile'>
+<div class='help-tile-image' id='help-docs-image'></div>
+<div class='help-tile-title hidden'>API</div>
+</div>
+</a>
+<a class='help-tile-wrapper-small' href='../tutorials.html'>
+<div class='help-tile'>
+<div class='help-tile-image' id='tutorials-image'></div>
+<div class='help-tile-title hidden'>Tutorials</div>
+</div>
+</a>
+<a class='help-tile-wrapper-small' href='../lectures.html'>
+<div class='help-tile'>
+<div class='help-tile-image' id='lectures-image'></div>
+<div class='help-tile-title hidden'>Lectures</div>
+</div>
+</a>
+</div>
+<div class='clear'></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class='help-tutorial'>
+<div class='pane tutorials-pane no-border'>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-xs-14'>
+<a class='back-button back-to-tutorials' href='../tutorials.html'>All tutorials</a>
+</div>
+</div>
+<div class='content-wrapper'>
+<div class='row'>
+<div class='col-xs-14'>
+<div class='tutorial-header'>
+<div class='tutorial-tab read active'>
+<div class='img read-img'></div>
+<div class='text hidden-xs'>Read</div>
+</div>
+<div class='tutorial-tab watch'>
+<div class='img watch-img'></div>
+<div class='text hidden-xs'>Watch</div>
+</div>
+<div class='tutorial-title hidden-xs' data-tutorial-number='1'>Getting Started</div>
+<div class='clear'></div>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-xs-14'>
+<div class='quanto-content-with-nav collapse-nav-mobile collapse-nav-tablet'>
+<div class='navbar quanto-scroll-nav' id='lesson-nav'>
+<ul class='nav navbar-nav tutorial-nav'>
+<li class='dummy-mobile-nav-element visible-xs visible-sm' data-lesson='1'>
+<div class='tutorial-number'>Tutorial 1:</div>
+<div class='lesson-number'>Lesson 1</div>
+<div class='lesson-name'>Introduction</div>
+</li>
+<li class='active' data-lesson='1'>
+<a>
+<div class='tutorial-number'>Tutorial 1:</div>
+<div class='lesson-number'>Lesson 1</div>
+<div class='lesson-name'>Introduction</div>
+</a>
+</li>
+<li data-lesson='2'>
+<a>
+<div class='tutorial-number'>Tutorial 1:</div>
+<div class='lesson-number'>Lesson 2</div>
+<div class='lesson-name'>Core Functions</div>
+</a>
+</li>
+<li data-lesson='3'>
+<a>
+<div class='tutorial-number'>Tutorial 1:</div>
+<div class='lesson-number'>Lesson 3</div>
+<div class='lesson-name'>Referencing Securities</div>
+</a>
+</li>
+<li data-lesson='4'>
+<a>
+<div class='tutorial-number'>Tutorial 1:</div>
+<div class='lesson-number'>Lesson 4</div>
+<div class='lesson-name'>Ordering Securities</div>
+</a>
+</li>
+<li data-lesson='5'>
+<a>
+<div class='tutorial-number'>Tutorial 1:</div>
+<div class='lesson-number'>Lesson 5</div>
+<div class='lesson-name'>The 'data' Object</div>
+</a>
+</li>
+<li data-lesson='6'>
+<a>
+<div class='tutorial-number'>Tutorial 1:</div>
+<div class='lesson-number'>Lesson 6</div>
+<div class='lesson-name'>The history() Function</div>
+</a>
+</li>
+<li data-lesson='7'>
+<a>
+<div class='tutorial-number'>Tutorial 1:</div>
+<div class='lesson-number'>Lesson 7</div>
+<div class='lesson-name'>Scheduling Functions</div>
+</a>
+</li>
+<li data-lesson='8'>
+<a>
+<div class='tutorial-number'>Tutorial 1:</div>
+<div class='lesson-number'>Lesson 8</div>
+<div class='lesson-name'>Your Portfolio and Plotting Variables</div>
+</a>
+</li>
+<li data-lesson='9'>
+<a>
+<div class='tutorial-number'>Tutorial 1:</div>
+<div class='lesson-number'>Lesson 9</div>
+<div class='lesson-name'>Slippage and Commission</div>
+</a>
+</li>
+<li data-lesson='10'>
+<a>
+<div class='tutorial-number'>Tutorial 1:</div>
+<div class='lesson-number'>Lesson 10</div>
+<div class='lesson-name'>Managing Orders</div>
+</a>
+</li>
+<li data-lesson='11'>
+<a>
+<div class='tutorial-number'>Tutorial 1:</div>
+<div class='lesson-number'>Lesson 11</div>
+<div class='lesson-name'>Putting It All Together</div>
+</a>
+<div class='tutorial-dropdown'></div>
+</li>
+</ul>
+</div>
+<div class='content'>
+<div class='tutorial-content'>
+<div class='lesson display' id='lesson1'>
+<div class='text-content'>
+<div class='body end-section'>
+Welcome to Quantopian! The Getting Started Tutorial serves as an introduction to writing
+and backtesting an algorithm on Quantopian. This tutorial covers many of the basics of the
+Quantopian API, and is designed for those who are new to Quantopian. This tutorial is divided
+into a series of lessons, with each one focusing on a different part of the API.  By the end,
+we will work up to a simple mean reversion algorithm.  The video series also covers the same
+material.
+</div>
+<div class='header'>What is a Trading Algorithm?</div>
+<div class='body'>
+On Quantopian, a trading algorithm is a Python program that defines two special functions:
+<span class='code inline'>initialize()</span> and <span class='code inline'>handle_data()</span>.
+<span class='code inline'>initialize()</span> is called
+when the program is started, and <span class='code inline'>handle_data()</span> is called once per minute
+during simulation or live-trading in events that we'll refer to as 'bars'. The job of <span class='code inline'>initialize()</span> is to perform any
+one-time startup logic. The job of <span class='code inline'>handle_data()</span> is to decide what orders, if any,
+should be placed each minute.
+</div>
+<div class='body'>
+The following is an example of an algorithm that allocates 100% of its portfolio in AAPL:
+</div>
+<div class='code'>
+<div class='new-btn small light-grey clone-btn mixpanel-button clone-tutorial-algo-link' data-animation='true' data-content='Make a copy of this code so that you can explore it' data-event='lesson 1 clone algo button click' data-mixpanel='tutorial 1' data-placement='top' data-sampletype='tutorial1/getting_started_lesson_1' data-trigger='hover' rel='popover'>Clone</div>
+
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>initialize</span>(context):</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Reference to AAPL</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;context.aapl = sid(<span class='py-sid-val'>24</span>)</div>
+<br>
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>handle_data</span>(context, data):</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Position 100% of our portfolio to be long in AAPL</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>order_target_percent</span>(context.aapl, 1.00)</div>
+</div>
+<div class='body end-section'>
+To run this example algorithm, you click the "Clone" button which will create a copy for you to edit. You can then run a backtest by clicking "Build Algorithm" (top left) or "Run Full Algorithm" (top right).
+</div>
+<div class='header'>Datasets</div>
+<div class='body end-section'>
+When writing an algorithm on Quantopian, you have access to free minute bar historical
+pricing and volume data for US equities (covered in this tutorial) as well as free
+Morningstar fundamentals <a href='https://www.quantopian.com/tutorials/help#fundamental-data' target='_blank'>data</a>, and
+third-party <a href='../data.html' target='_blank'>datasets</a> such as news sentiment, and
+earnings calendars.
+</div>
+<div class='body end-content'>Continue on to lesson 2 to begin writing your first algorithm.</div>
+</div>
+<div class='video-content'>
+<div class='embed-container'>
+<!--<iframe allowfullscreen frameborder='0' height='349' id='lesson1-video' src='https://www.youtube.com/embed/IKofcJ0jXjA?list=PLRFLF1OxMm_WUX97SE1HwQQIpkcWLVCvB' width='560'></iframe>-->
+<video controls="" width="560" height="349">
+	<source src="http://r5---sn-8xgp1vo-xfge7.googlevideo.com/videoplayback?source=youtube&dur=117.191&ip=100.38.230.156&initcwndbps=2155000&ipbits=0&pl=24&mv=m&ms=au&mm=31&key=yt6&mn=sn-8xgp1vo-xfge7&id=o-AH3wZODCotL22Ssar_v6klX0Kk4Io6zHTuzFz5AKBEI0&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&sver=3&upn=8CFadhQNgfg&mime=video/mp4&itag=18&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&lmt=1461095976531208&expire=1462616656&mt=1462594973&ratebypass=yes&signature=84138D12E502DEA7830D89CDC3A624AB7F2EF459.173D5C779E5D3C564D08A73BDAB3BD4FB5559BD6&name=IKofcJ0jXjA" type="video/mp4">
+</video>
+
+</div>
+</div>
+</div>
+
+<div class='lesson' id='lesson2'>
+<div class='text-content'>
+<div class='header'>Core Functions</div>
+<div class='body end-section'>
+An algorithm on Quantopian has 3 core functions: <span class='code inline'>initialize()</span>,
+<span class='code inline'>handle_data()</span>, and <span class='code inline'>before_trading_start()</span>. The first one,
+<span class='code inline'>initialize()</span>, must be implemented in every
+algorithm while <span class='code inline'>handle_data()</span> and <span class='code inline'>before_trading_start()</span> are optional. These functions each have
+a different role:
+</div>
+<div class='header'>initialize()</div>
+<div class='body'>
+<span class='code inline'>initialize()</span> is called exactly once when our algorithm starts and requires
+<span class='code inline'>context</span> as input.
+</div>
+<div class='body end-section'>
+<span class='code inline'>context</span> is an augmented Python dictionary used for maintaining state during our backtest or live trading, and can be referenced in different parts of our algorithm. <span class='code inline'>context</span> should be used instead of global variables in the algorithm. Properties can be accessed using dot notation (<span class='code inline'>context.some_property</span>).
+</div>
+<div class='header'>handle_data()</div>
+<div class='body'>
+<span class='code inline'>handle_data()</span> is called once at the end of each minute and requires <span class='code inline'>context</span> and
+<span class='code inline'>data</span> as input. <span class='code inline'>context</span> is a reference to the same dictionary in
+<span class='code inline'>initialize()</span> and <span class='code inline'>data</span> is an object that stores several API
+functions which we will discuss in a <a href='getting-started.html#lesson5'>later lesson</a>.
+</div>
+<div class='body'>
+The following example stores a string variable with the value 'hello' in <span class='code inline'>context</span>, and prints
+it out each minute.
+</div>
+<div class='code end-section'>
+<div class='new-btn small light-grey clone-btn mixpanel-button clone-tutorial-algo-link' data-animation='true' data-content='Make a copy of this code so that you can explore it' data-event='lesson 2 clone algo button click' data-mixpanel='tutorial 1' data-placement='top' data-sampletype='tutorial1/getting_started_lesson_2' data-trigger='hover' rel='popover'>Clone</div>
+
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>initialize</span>(context):</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;context.message = <span class='py-string'>'hello'</span></div>
+<br>
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>handle_data</span>(context, data):</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-print'>print</span> context.message</div>
+</div>
+<div class='header'>before_trading_start()</div>
+<div class='body end-content'>
+<span class='code inline'>before_trading_start()</span> is called once per day before the market opens and
+requires <span class='code inline'>context</span> and <span class='code inline'>data</span> as input. It is frequently used when selecting securities to order. This will be explored in a later tutorial.
+</div>
+</div>
+<div class='video-content'>
+<div class='embed-container'>
+<!--<iframe allowfullscreen frameborder='0' height='349' id='lesson2-video' src='https://www.youtube.com/embed/_b9Wv0SfikI?list=PLRFLF1OxMm_WUX97SE1HwQQIpkcWLVCvB' width='560'></iframe>-->
+<video controls="" width="560" height="349">
+	<source src="http://r2---sn-8xgp1vo-xfgl.googlevideo.com/videoplayback?expire=1462616656&signature=63DA9882D6D171E3EFD99A2E005481CC894B8335.6C13573CB02333D1D377994BD64306BECF65C513&pcm2cms=yes&upn=Vov0aNNaPqE&itag=18&source=youtube&initcwndbps=2155000&dur=99.520&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&ipbits=0&mm=31&lmt=1461095981492681&ratebypass=yes&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pcm2cms,pl,ratebypass,source,upn,expire&mt=1462594973&mv=m&ms=au&sver=3&mime=video/mp4&id=o-AMIcTw8Rh93n8r-bG_QCJx3ztUnszrrO-H3i60vUoUij&pl=24&key=yt6&ip=100.38.230.156&mn=sn-8xgp1vo-xfgl&name=_b9Wv0SfikI" type="video/mp4">
+</video>
+
+</div>
+</div>
+</div>
+
+<div class='lesson' id='lesson3'>
+<div class='text-content'>
+<div class='header'>Referencing Securities</div>
+<div class='body end-section'>
+The best algorithms select securities to trade dynamically using
+<a href='../help.html#pipeline-title' target='_blank'>pipeline</a>.
+Pipeline is an advanced tool and will be covered in a later tutorial. To keep things simple,
+we'll start by manually referencing hand-picked securities. There are two ways to manually
+select securities on Quantopian: the <span class='code inline'>sid()</span> function, and
+the <span class='code inline'>symbol()</span> function.
+</div>
+<div class='header'>sid()</div>
+<div class='body'>
+The <a href='../help.html#ide-manual-lookup' target='_blank'>sid()</a> function returns a
+security given a unique integer security ID (SID). <span class='code inline'>sid()</span> is a robust way to refrence a
+security. The SID of a security remains constant despite ticker changes and as such, is a
+reliable way to reference a stock. <i>A security's SID never changes.</i>
+</div>
+<div class='body'>
+For example, if we want to reference AAPL, we can use <span class='code inline'>sid()</span>, which
+brings up a text prompt allowing us to fill in a ticker symbol and gives us the
+corresponding security ID.
+</div>
+<img alt="Help-sid" class="lesson-3-sid-img" src="../assets/help-sid-098ac8df95e2d6096f2c0834be1de766.png" />
+<div class='body'>
+We can store the reference to AAPL in a context variable:
+</div>
+<div class='code'>
+<div class='line'>context.aapl = sid(<span class='py-string'>24</span>)</div>
+</div>
+<div class='body'>
+To reference this later in our code, we can simply refer to <span class='code inline'>context.aapl</span>. For
+example, to print out the security reference each minute, we can add
+<span class='code inline'>print context.aapl</span> to <span class='code inline'>handle_data()</span>:
+</div>
+<div class='code'>
+<div class='new-btn small light-grey clone-btn mixpanel-button clone-tutorial-algo-link' data-animation='true' data-content='Make a copy of this code so that you can explore it' data-event='lesson 3 clone algo button click' data-mixpanel='tutorial 1' data-placement='top' data-sampletype='tutorial1/getting_started_lesson_3' data-trigger='hover' rel='popover'>Clone</div>
+
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>initialize</span>(context):</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;context.aapl = sid(<span class='py-string'>24</span>)</div>
+<br>
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>handle_data</span>(context, data):</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-print'>print</span> context.aapl</div>
+</div>
+<div class='header'>symbol()</div>
+<div class='body end-content'>
+Alternatively, the <a href='https://www.quantopian.com/tutorials/help#ide-manual-lookup' target='_blank'>symbol()</a> function
+returns a security given a ticker symbol. <span class='code inline'>symbol()</span> is not
+robust to ticker changes. If a security's ticker changes at some point during an algorithm's
+lifespan, and that security with a stale ticker is ordered, an exception will be raised.
+<span class='code inline'>sid()</span> is highly preferred, as it is designed to handle
+these types of events.
+</div>
+</div>
+<div class='video-content'>
+<div class='embed-container'>
+<!--<iframe allowfullscreen frameborder='0' height='349' id='lesson3-video' src='https://www.youtube.com/embed/kS5PbHuIv7I?list=PLRFLF1OxMm_WUX97SE1HwQQIpkcWLVCvB' width='560'></iframe>-->
+<video controls="" width="560" height="349">
+	<source src="http://r4---sn-8xgp1vo-xfge7.googlevideo.com/videoplayback?ratebypass=yes&mn=sn-8xgp1vo-xfge7&mm=31&mime=video/mp4&expire=1462616657&sver=3&dur=107.090&pl=24&source=youtube&ms=au&key=yt6&mv=m&mt=1462594973&ipbits=0&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&signature=64959E426CBEBD2D53B75C089F5355E4EC81B516.212DB22CBA3330C525594D756470A54308994F07&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&ip=100.38.230.156&lmt=1461402509789644&upn=MVATpczRFWI&id=o-AH-eIDcg2aQjlSgX9pCZsv99Oh1JEcWUj_BLkuW8v7hO&itag=18&initcwndbps=2155000&name=kS5PbHuIv7I" type="video/mp4">
+</video>
+
+</div>
+</div>
+</div>
+
+<div class='lesson' id='lesson4'>
+<div class='text-content'>
+<div class='header'>Ordering Securities</div>
+<div class='body'>
+There are <a href='../help.html#api-order-methods' target='_blank'>several functions</a> that can be used to order securities in the Quantopian API.
+In this tutorial, we are going to focus on the
+<a href='../help.html#api-order-target-percent' target='_blank'>order_target_percent()</a> function.
+<span class='code inline'>order_target_percent()</span> allows us to order securities to a target percent of
+our portfolio value (sum of open positions value + cash balance).
+</div>
+<div class='body'>
+<span class='code inline'>order_target_percent()</span> requires two
+arguments: the asset being ordered, and the target percent of the portfolio. For example, the
+following line would order 50% of our portfolio value worth of AAPL:
+</div>
+<div class='code'>
+<div class='line'><span class='py-method'>order_target_percent</span>(sid(<span class='py-sid-val'>24</span>), 0.50)</div>
+</div>
+<div class='body'>
+To open a <a href='http://www.investopedia.com/terms/s/short.asp#' target='_blank'>short position</a> (a position that profits when the security will drop in price), we can simply enter a negative target percent:
+</div>
+<div class='code'>
+<div class='line'><span class='py-method'>order_target_percent</span>(sid(<span class='py-sid-val'>24</span>), -0.50)</div>
+</div>
+<div class='body'>
+The following example takes a long position in Apple stock worth 60% of our portfolio value,
+and takes a short position in the SPY ETF worth 40% of our portfolio value:
+</div>
+<div class='code end-content'>
+<div class='new-btn small light-grey clone-btn mixpanel-button clone-tutorial-algo-link' data-animation='true' data-content='Make a copy of this code so that you can explore it' data-event='lesson 4 clone algo button click' data-mixpanel='tutorial 1' data-placement='top' data-sampletype='tutorial1/getting_started_lesson_4' data-trigger='hover' rel='popover'>Clone</div>
+
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>initialize</span>(context):</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;context.aapl = sid(<span class='py-string'>24</span>)</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;context.spy = sid(<span class='py-string'>8554</span>)</div>
+<br>
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>handle_data</span>(context, data):</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Note: data.can_trade() is explained in the next lesson</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>if</span> data.<span class='py-method'>can_trade</span>(context.aapl):</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>order_target_percent</span>(context.aapl, 0.60)</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>if</span> data.<span class='py-method'>can_trade</span>(context.spy):</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>order_target_percent</span>(context.spy, -0.40)</div>
+</div>
+</div>
+<div class='video-content'>
+<div class='embed-container'>
+<!--<iframe allowfullscreen frameborder='0' height='349' id='lesson4-video' src='https://www.youtube.com/embed/4I57xNAW4qA?list=PLRFLF1OxMm_WUX97SE1HwQQIpkcWLVCvB' width='560'></iframe>-->
+<video controls="" width="560" height="349">
+	<source src="http://r5---sn-8xgp1vo-xfgk.googlevideo.com/videoplayback?dur=170.852&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&lmt=1461096064366167&key=yt6&ms=au&mn=sn-8xgp1vo-xfgk&mt=1462594973&pl=24&itag=18&mm=31&expire=1462616657&upn=bJFoZ_m1xeM&mv=m&initcwndbps=2155000&ipbits=0&id=o-AHBKPsOAwHdFaODOBbWv8kMvsaXWfy3jtpKnSccXm-dK&mime=video/mp4&ratebypass=yes&sver=3&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&source=youtube&signature=77FFF113861A0E85A1476ED2E6506D4BC563C825.6CE76D1F3CD8468B2F1A38CF18D85988DFD4FF57&ip=100.38.230.156&name=4I57xNAW4qA" type="video/mp4">
+</video>
+
+</div>
+</div>
+</div>
+
+<div class='lesson' id='lesson5'>
+<div class='text-content'>
+<div class='header'>The <code class='inline'>data</code> Object</div>
+<div class='body end-section'>
+The <span class='code inline'>data</span> object contains functions that allow us to look up current or
+historical pricing and volume data for any security. <span class='code inline'>data</span> is available in
+<span class='code inline'>handle_data()</span> and <span class='code inline'>before_trading_start()</span>,
+as well as any <a href='https://www.quantopian.com/getting-started#lesson7'>scheduled functions</a>. Let's have a look at some of
+<span class='code inline'>data</span>'s functions:
+</div>
+<div class='header'><code class='inline'>data.current()</code></div>
+<div class='body'>
+<a href='../help.html#api-data-current' target='_blank'>data.current()</a> can be used to retrieve the most
+recent value of a given field(s) for a given asset(s). <span class='code inline'>data.current()</span>
+requires two arguments: the asset or list of assets, and the field or list of fields being queried.
+Possible fields include <span class='code inline'>'price'</span>, <span class='code inline'>'open'</span>,
+<span class='code inline'>'high'</span>, <span class='code inline'>'low'</span>,
+<span class='code inline'>'close'</span>, and <span class='code inline'>'volume'</span>.  The output type
+will depend on the input types. To get the most recent price of AAPL, we can use:
+</div>
+<div class='code'>
+<div class='line'>data.<span class='py-method'>current</span>(sid(<span class='py-sid-val'>24</span>), <span class='py-string'>'price'</span>)</div>
+</div>
+<div class='body'>
+The following line of code gets the most recent price of AAPL and SPY
+and returns a <a href='http://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.html' target='_blank'>pandas Series</a> indexed by asset:
+</div>
+<div class='code'>
+<div class='line'>data.<span class='py-method'>current</span>([sid(<span class='py-sid-val'>24</span>), sid(<span class='py-sid-val'>8554</span>)], <span class='py-string'>'price'</span>)</div>
+</div>
+<div class='body'>
+The following line will get the last known low and high prices of AAPL and MSFT from and returns a
+<a href='http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html' target='_blank'>pandas DataFrame</a>
+(indexed by assets, fields as columns):
+</div>
+<div class='code end-section'>
+<div class='line'>data.<span class='py-method'>current</span>([sid(<span class='py-sid-val'>24</span>), sid(<span class='py-sid-val'>8554</span>)], [<span class='py-string'>'low'</span>, <span class='py-string'>'high'</span>])</div>
+</div>
+<div class='header'><code class='inline'>data.can_trade()</code></div>
+<div class='body'>
+<a href='../help.html#api-data-can_trade' target='_blank'>data.can_trade()</a> is used to determine if an
+asset(s) is currently listed on a supported exchange and can be ordered. If <span class='code inline'>data.can_trade()</span> returns <span class='code inline'>True</span> for
+a particular asset in a given minute bar, we are able to place an order for that asset in that minute.
+This is an important guard to have in our algorithm if we hand-pick the securities that we want to trade. It requires a single argument: an asset or a list of assets. The following example checks if AAPL is
+currently listed on a major exchange:
+</div>
+<div class='code end-section'>
+<div class='line'>data.<span class='py-method'>can_trade</span>(sid(<span class='py-sid-val'>24</span>))</div>
+</div>
+<div class='header'><code class='inline'>data.history()</code></div>
+<div class='body end-content'>
+<span class='code inline'>data.history()</span> is covered in the <a href='getting-started.html#lesson6'>next lesson</a>.
+</div>
+</div>
+<div class='video-content'>
+<div class='embed-container'>
+<!--<iframe allowfullscreen frameborder='0' height='349' id='lesson5-video' src='https://www.youtube.com/embed/TFyNIhrzQA8?list=PLRFLF1OxMm_WUX97SE1HwQQIpkcWLVCvB' width='560'></iframe>-->
+<video controls="" width="560" height="349">
+	<source src="http://r2---sn-8xgp1vo-xfgk.googlevideo.com/videoplayback?ip=100.38.230.156&ipbits=0&lmt=1461096071442434&signature=DE09ECB75501E6210E8403D0853E5FC327BB0B13.3CD04938AADF6900DCD3D78A0D3BDFD394A43E39&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&id=o-ABnRCEcfa0cazyeLYixMPwFJl2z_tKb-aGgYzakFhTin&upn=q9DMN6zdpP0&itag=18&initcwndbps=2140000&mime=video/mp4&key=yt6&ratebypass=yes&mm=31&mn=sn-8xgp1vo-xfgk&ms=au&mt=1462594780&mv=m&dur=222.423&expire=1462616657&sver=3&source=youtube&pl=24&name=TFyNIhrzQA8" type="video/mp4">
+</video>
+
+</div>
+</div>
+</div>
+
+<div class='lesson' id='lesson6'>
+<div class='text-content'>
+<div class='header'>The <code class='inline'>history()</code> Function</div>
+<div class='body'>
+The <span class='code inline'>data</span> object has a function
+<a href='../help.html#api-data-history' target='_blank'>history()</a>
+that allows us to get trailing windows of historical pricing or volume data.
+<span class='code inline'>data.history()</span> requires 4 arguments: an asset or list of
+assets, a field or list of fields, an integer lookback window length, and a lookback
+frequency.  Possible fields include <span class='code inline'>'price'</span>, <span class='code inline'>'open'</span>,
+<span class='code inline'>'high'</span>, <span class='code inline'>'low'</span>,
+<span class='code inline'>'close'</span>, and <span class='code inline'>'volume'</span>. Possible
+frequencies are <span class='code inline'>'1d'</span> for daily and <span class='code inline'>'1m'</span> for minutely.
+The following example returns a <a href='http://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.html' target='_blank'>pandas Series</a>
+containing the price history of AAPL over the last 10 days and uses
+<a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.mean.html" target="_blank">pandas.Series.mean()</a>
+to calculate the mean.
+</div>
+<div class='code'>
+<div class='line py-comment'># Get the 10-day trailing price history of SPY in the form of a Series.</div>
+<div class='line'>hist = data.<span class='py-method'>history</span>(sid(<span class='py-sid-val'>24</span>), <span class='py-string'>'price'</span>, 10, <span class='py-string'>'1d'</span>)</div>
+<br>
+<div class='line py-comment'># Mean price over the last 10 minutes.</div>
+<div class='line'>mean_price = hist.mean()</div>
+</div>
+<div class='body'>
+Note: With <span class='code inline'>'1d'</span> frequency, the most recent value in the result
+from <span class='code inline'>data.history()</span> will include a value for the current date
+in the simulation, which can sometimes be a value for a partial day. For example, if
+<span class='code inline'>data.history()</span> is called in the first minute of the day,
+the last row of the returned DataFrame will represent values from 9:31AM, whereas the
+previous 9 rows will represent end-of-day values. To get the past 10 <i>complete</i> days of
+data, we can get an extra day of data, and drop the most recent row. The following example gets the trading volume of SPY from the last 10 complete days:
+</div>
+<div class='code'>
+<div class='line'>data.<span class='py-method'>history</span>(sid(<span class='py-sid-val'>8554</span>), <span class='py-string'>'volume'</span>, 11, <span class='py-string'>'1d'</span>)[:-1].mean()</div>
+</div>
+<div class='body'>
+Similar to the other <span class='code inline'>data</span> functions, the return type of
+<span class='code inline'>data.history()</span> depends on the input types. In the next example,
+the return type is a
+<a href='http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html' target='_blank'>pandas DataFrame</a> indexed by date, with assets as columns:
+</div>
+<div class='code'>
+<div class='line py-comment'># Get the last 5 minutes of volume data for each security in our list.</div>
+<div class='line'>hist = data.<span class='py-method'>history</span>([sid(<span class='py-sid-val'>24</span>), sid(<span class='py-sid-val'>8554</span>), sid(<span class='py-sid-val'>5061</span>)], <span class='py-string'>'volume'</span>, 5, <span class='py-string'>'1m'</span>)</div>
+<br>
+<div class='line py-comment'># Calculate the mean volume for each security in our DataFrame.</div>
+<div class='line'>mean_volumes = hist.mean(axis=0)</div>
+</div>
+<div class='body'>
+And if we pass a list of fields, we get a
+<a href='http://pandas.pydata.org/pandas-docs/stable/generated/pandas.Panel.html' target='_blank'>pandas Panel</a>
+indexed by field, having date as the major axis, and assets as the minor axis::
+</div>
+<div class='code'>
+<div class='line py-comment'># Low and high minute bar history for each of our securities.</div>
+<div class='line'>hist = data.<span class='py-method'>history</span>([sid(<span class='py-sid-val'>24</span>), sid(<span class='py-sid-val'>8554</span>), sid(<span class='py-sid-val'>5061</span>)], [<span class='py-string'>'low'</span>, <span class='py-string'>'high'</span>], 5, <span class='py-string'>'1m'</span>)</div>
+<br>
+<div class='line py-comment'># Calculate the mean low and high over the last 5 minutes</div>
+<div class='line'>means = hist.mean()</div>
+<div class='line'>mean_lows = means[<span class='py-string'>'low'</span>]</div>
+<div class='line'>mean_highs = means[<span class='py-string'>'high'</span>]</div>
+</div>
+<div class='body'>
+The following example is clonable and can be backtested in the IDE. It prints the mean
+trading volume of a list of securities over the last 10 minutes:
+</div>
+<div class='code end-section'>
+<div class='new-btn small light-grey clone-btn mixpanel-button clone-tutorial-algo-link' data-animation='true' data-content='Make a copy of this code so that you can explore it' data-event='lesson 6 clone algo button click' data-mixpanel='tutorial 1' data-placement='top' data-sampletype='tutorial1/getting_started_lesson_6' data-trigger='hover' rel='popover'>Clone</div>
+
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>initialize</span>(context):</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# AAPL, MSFT, SPY</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;context.security_list = [sid(<span class='py-sid-val'>24</span>), sid(<span class='py-sid-val'>8554</span>), sid(<span class='py-sid-val'>5061</span>)]</div>
+<br>
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>handle_data</span>(context, data):</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;hist = data.<span class='py-method'>history</span>(context.security_list, <span class='py-string'>'volume'</span>, 10, <span class='py-string'>'1m'</span>).mean()</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>print</span> hist.mean()</div>
+</div>
+</div>
+<div class='video-content'>
+<div class='embed-container'>
+<!--<iframe allowfullscreen frameborder='0' height='349' id='lesson6-video' src='https://www.youtube.com/embed/O42vJgBkUj4?list=PLRFLF1OxMm_WUX97SE1HwQQIpkcWLVCvB' width='560'></iframe>-->
+<video controls="" width="560" height="349">
+	<source src="http://r5---sn-8xgp1vo-xfge7.googlevideo.com/videoplayback?itag=18&pl=24&upn=y4PE9F1imeY&initcwndbps=2155000&mm=31&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&mt=1462594973&mv=m&id=o-AJow3Ku15pTOyJLacz7AjnN8KWFHh9NzJ4KrQBEI7vU4&ms=au&source=youtube&lmt=1461096289835744&dur=190.868&expire=1462616657&sver=3&ip=100.38.230.156&key=yt6&mime=video/mp4&signature=2613A4B88B1F4024709D4550A418AB340FF20200.46BB96F2C7399821EF6E4CFFA26C2B7DFE7119C7&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&mn=sn-8xgp1vo-xfge7&ipbits=0&ratebypass=yes&name=O42vJgBkUj4" type="video/mp4">
+</video>
+
+</div>
+</div>
+</div>
+
+<div class='lesson' id='lesson7'>
+<div class='text-content'>
+<div class='header'>Scheduling Functions</div>
+<div class='body'>
+So far we have seen that trade logic can exist in <span class='code inline'>handle_data()</span>
+which runs every minute.  But what if we want to trade at a different frequency like
+once per day, or once per month? <a href='../help.html#ide-schedulefunction' target'_blank'>schedule_function()</a>
+allows us to schedule custom functions at regular intervals and allows us to specify
+interday frequency as well as intraday timing.
+</div>
+<div class='body'>
+The following example schedules a function called <span class='code inline'>rebalance()</span>
+to run once per day, one hour after market open (usually 10:30AM ET).
+</div>
+<div class='code'>
+<div class='line'><span class='py-method'>schedule_function</span>(func=rebalance,</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date_rules=date_rules.every_day(),</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time_rules=time_rules.market_open(hours=1))</div>
+</div>
+<div class='body'>
+Note: <span class='code inline'>rebalance()</span> must be a function requiring
+<span class='code inline'>context</span> and <span class='code inline'>data</span> as
+arguments that we can define later in our algorithm.
+</div>
+<div class='body'>
+In another example, let's say we want to run a custom function
+<span class='code inline'>weekly_trades()</span>, on the last trading day of each week, 30 minutes
+before market close. We can use:
+</div>
+<div class='code'>
+<div class='line'><span class='py-method'>schedule_function</span>(weekly_trades, date_rules.week_end(), time_rules.market_close(minutes=30))</div>
+</div>
+<div class='body'>
+The following clonable example takes a long position in SPY at the start of the week, and
+closes out the position at 3:30pm on the last day of the week:
+</div>
+<div class='code'>
+<div class='new-btn small light-grey clone-btn mixpanel-button clone-tutorial-algo-link' data-animation='true' data-content='Make a copy of this code so that you can explore it' data-event='lesson 7 clone algo button click' data-mixpanel='tutorial 1' data-placement='top' data-sampletype='tutorial1/getting_started_lesson_7' data-trigger='hover' rel='popover'>Clone</div>
+
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>initialize</span>(context):</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;context.spy = sid(<span class='py-sid-val'>24</span>)</div>
+<br>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>schedule_function</span>(open_positions, date_rules.week_start(), time_rules.market_open())</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>schedule_function</span>(close_positions, date_rules.week_end(), time_rules.market_close(minutes=30))</div>
+<br>
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>open_positions</span>(context, data):</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>order_target_percent</span>(context.spy, 0.10)</div>
+<br>
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>close_positions</span>(context, data):</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>order_target_percent</span>(context.spy, 0)</div>
+<br>
+</div>
+<div class='body end-content'>
+<span class='code inline'>schedule_function()</span> uses relative times and dates to account
+for market holidays. A backtest or live algorithm only ever runs on
+<a href='https://en.wikipedia.org/wiki/Trading_day' target="_blank">trading days</a>. Market half-days can be
+skipped by passing <span class='code inline'>half_days=False</span> as a final
+keyword argument to <span class='code inline'>schedule_function()</span>. For more
+information, and a full list of <span class='code inline'>date_rules</span> and
+<span class='code inline'>time_rules</span>, check out the
+<a href='https://www.quantopian.com/tutorials/help#ide-schedulefunction' target='_blank'>documentation</a>.
+</div>
+</div>
+<div class='video-content'>
+<div class='embed-container'>
+<!--<iframe allowfullscreen frameborder='0' height='349' id='lesson7-video' src='https://www.youtube.com/embed/0g3vOeitcEA?list=PLRFLF1OxMm_WUX97SE1HwQQIpkcWLVCvB' width='560'></iframe>-->
+<video controls="" width="560" height="349">
+	<source src="http://r4---sn-8xgp1vo-xfg6.googlevideo.com/videoplayback?itag=18&mime=video/mp4&key=yt6&signature=6DC4A9AA1F960FE39A3725DAA95F9E0CDDF85F08.6009A855783B76CE5D694A299EE330CAF255276D&upn=kcJznwbM9JA&source=youtube&initcwndbps=2155000&id=o-AGZ-buhil1qkaPsXD8OpZqmpzxD5otgcXs5jhWt5RwTh&pl=24&mm=31&mn=sn-8xgp1vo-xfg6&lmt=1461096129357314&ms=au&mt=1462594973&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pcm2cms,pl,ratebypass,source,upn,expire&mv=m&ip=100.38.230.156&ratebypass=yes&expire=1462616657&sver=3&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&ipbits=0&dur=201.967&pcm2cms=yes&name=0g3vOeitcEA" type="video/mp4">
+</video>
+
+</div>
+</div>
+</div>
+
+<div class='lesson' id='lesson8'>
+<div class='text-content'>
+<div class='header'>Managing Your Portfolio and Plotting Variables</div>
+<div class='body end-section'>
+The <a href='../help.html#api-portfolio' target='_blank'>portfolio</a> object stores important information about
+our portfolio. The <span class='code inline'>portfolio</span> object is stored in
+<span class='code inline'>context</span>, and as such, is accessible in each of our
+core functions and our scheduled functions. In this lesson, we are going to focus
+on the <span class='code inline'>positions</span> attribute of the <span class='code inline'>portfolio</span> object.
+</div>
+<div class='header'>Positions</div>
+<div class='body'>
+Our current positions are stored in <span class='code inline'>context.portfolio.positions</span>.
+which is similar to a Python dictionary having assets as keys, and <span class='code inline'>position</span>
+objects (including information such as the number of shares and price paid) as values.
+</div>
+<div class='body'>
+One example of when it can be useful to reference our current positions, is if we want to close out
+all of our open positions. To do so, we can iterate over the keys in
+<span class='code inline'>context.portfolio.positions</span>, and close out each position:
+</div>
+<div class='code end-section'>
+<div class='line'><span class='py-def'>for</span> security <span class='py-def'>in</span> context.portfolio.positions:</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>order_target_percent</span>(security, 0)</div>
+</div>
+<div class='header'>Plotting Variables</div>
+<div class='body'>
+In the IDE, the <a href='../help.html#ide-record' target='_blank'>record()</a> function allows us to plot time series charts
+updated as frequently as daily in backtesting or as frequently as minutely in live trading.
+Up to 5 series can be recorded and plotted. To record a variable, we can pass it as a keyword
+argument to <span class='code inline'>record()</span>. The name of the argument will be the name of the series in the plot.
+Recorded time series are then displayed in a chart below the returns chart.
+</div>
+<div class='body'>
+The following example plots the number of long positions in our portfolio as a series
+called 'num_long', and the number of short positions as
+'num_short'.
+</div>
+<div class='code end-content'>
+<div class='new-btn small light-grey clone-btn mixpanel-button clone-tutorial-algo-link' data-animation='true' data-content='Make a copy of this code so that you can explore it' data-event='lesson 8 clone algo button click' data-mixpanel='tutorial 1' data-placement='top' data-sampletype='tutorial1/getting_started_lesson_8' data-trigger='hover' rel='popover'>Clone</div>
+
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>initialize</span>(context):</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;context.aapl = sid(<span class='py-sid-val'>24</span>)</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;context.spy = sid(<span class='py-sid-val'>8554</span>)</div>
+<br>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>schedule_function</span>(rebalance, date_rules.every_day(), time_rules.market_open())</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>schedule_function</span>(record_vars, date_rules.every_day(), time_rules.market_close())</div>
+<br>
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>rebalance</span>(context, data):</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>order_target_percent</span>(context.aapl, 0.50)</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>order_target_percent</span>(context.spy, -0.50)</div>
+<br>
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>record_vars</span>(context, data):</div>
+<br>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;long_count = 0</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;short_count = 0</div>
+<br>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>for</span> position <span class='py-def'>in</span> context.portfolio.positions.itervalues():</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>if</span> position.amount > 0:</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;long_count += 1</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>if</span> position.amount < 0:</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;short_count += 1</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Plot the counts</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>record</span>(num_long=long_count, num_short=short_count)</div>
+</div>
+</div>
+<div class='video-content'>
+<div class='embed-container'>
+<!--<iframe allowfullscreen frameborder='0' height='349' id='lesson8-video' src='https://www.youtube.com/embed/1SqpvfJ41OM?list=PLRFLF1OxMm_WUX97SE1HwQQIpkcWLVCvB' width='560'></iframe>-->
+<video controls="" width="560" height="349">
+	<source src="http://r8---sn-8xgp1vo-cvne.googlevideo.com/videoplayback?mime=video/mp4&sver=3&expire=1462616658&lmt=1461096384663772&ratebypass=yes&ip=100.38.230.156&pl=24&signature=14C47F30448B2F56588F22F3929E717BA400247B.CAD41875AB2636026C7A9424B03D4649AC3BA87E&mm=31&ipbits=0&mn=sn-8xgp1vo-cvne&key=yt6&mt=1462594973&id=o-AInACInT_5xTtPizFp-FY3jcGcnI3y1sdlacJ7dvxgcB&upn=wntr1Qg1wVI&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&initcwndbps=1978750&ms=au&itag=18&source=youtube&dur=171.061&mv=m&name=1SqpvfJ41OM" type="video/mp4">
+</video>
+
+</div>
+</div>
+</div>
+
+<div class='lesson' id='lesson9'>
+<div class='text-content'>
+<div class='header end-section'>Slippage and Commission</div>
+<div class='header'>Slippage</div>
+<div class='body'>
+Slippage is where a simulation estimates the impact of orders on the fill rate and execution
+price they receive. When an order is placed for a trade, the market is affected. Buy orders
+drive prices up, and sell orders drive prices down; this is generally referred to as the
+<span class='code inline'>price_impact</span> of a trade. Additionally, trade orders do not necessarily fill instantaneously.
+Fill rates are dependent on the order size and current trading volume of the ordered security. The <span class='code inline'>volume_limit</span> determines the fraction of a security's trading volume that can be used by your algorithm.
+</div>
+<div class='body'>
+In backtesting and non-brokerage paper trading (Quantopian <a href='../help.html#overview-papertrading' target='_blank'>paper trading</a>), a slippage model can be specified in <span class='code inline'>initialize()</span>
+using <a href='../help.html#ide-slippage' target='_blank'>set_slippage()</a>. There are different builtin slippage
+models that can be used, as well as the option to set a custom model. By default (if a
+slippage model is not specified), the following volume share slippage model is used:
+</div>
+<div class='code'>
+<div class='line'><span class='py-method'>set_slippage</span>(slippage.VolumeShareSlippage(volume_limit=0.025, price_impact=0.1))</div>
+</div>
+<div class='body'>
+Using the default model, if an order of 60 shares is placed for a given stock, then 1000
+shares of that stock trade in each of the next several minutes and the volume_limit is
+0.025, then our trade order will be split into three orders (25 shares, 25 shares, and 10
+shares) that execute over the next 3 minutes.
+</div>
+<div class='body end-section'>
+At the end of each day, all open orders are canceled, so trading
+<a href='../help.html#ide-dollar-volume' target='_blank'>liquid stocks</a> is generally a good idea. Additionally, orders placed exactly at market close will not have time to fill, and will be canceled.
+</div>
+<div class='header'>Commission</div>
+<div class='body'>
+To set the cost of trades, we can specify a commission model in
+<span class='code inline'>initialize()</span> using
+<a href='../help.html#ide-commission' target='_blank'>set_commission()</a>. By default (if a commission model is
+not specified), the following commission model is used:
+</div>
+<div class='code'>
+<div class='line'><span class='py-method'>set_commission</span>(commission.PerShare(cost=0.0075, min_trade_cost=1))</div>
+</div>
+<div class='body'>
+The default commission model charges $0.0075 per share, with a minimum trade cost of $1.
+</div>
+<div class='body end-content'>
+Slippage and commission models can have an impact on the performance of a backtest. The
+default models used by Quantopian are fairly realistic, and it is highly recommended that you
+use them.
+</div>
+</div>
+<div class='video-content'>
+<div class='embed-container'>
+<!--<iframe allowfullscreen frameborder='0' height='349' id='lesson9-video' src='https://www.youtube.com/embed/8yodOURXe9Q?list=PLRFLF1OxMm_WUX97SE1HwQQIpkcWLVCvB' width='560'></iframe>-->
+<video controls="" width="560" height="349">
+	<source src="http://r8---sn-8xgp1vo-xfgy.googlevideo.com/videoplayback?fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&ip=100.38.230.156&lmt=1461096131341722&itag=18&id=o-AKYHKhV7KnDdOoMeHwrTEEhb1cT6IWbpvYCHa9m_sWP3&sver=3&dur=132.493&source=youtube&upn=KrZpwBDnUhE&initcwndbps=2155000&mime=video/mp4&key=yt6&mn=sn-8xgp1vo-xfgy&mm=31&ms=au&ratebypass=yes&ipbits=0&pl=24&mv=m&mt=1462594973&expire=1462616658&signature=802C595B52A58C956B9484C951FC3493DFC4EB02.21D6DF612F359E3B834A0DAD476E2FF25517685F&name=8yodOURXe9Q" type="video/mp4">
+</video>
+
+</div>
+</div>
+</div>
+
+<div class='lesson' id='lesson10'>
+<div class='text-content'>
+<div class='header'>Managing Orders</div>
+<div class='body'>
+Orders do not always fill instantaneously. Large orders, or orders placed for illiquid
+securities can take some time to fill. On Quantopian, the time it takes for an order
+to fill is determined by the <a href='getting-started.html#lesson9'>slippage model</a> being used. If an order
+takes more than one minute to fill, it's considered open until it fills.
+When placing new orders, it's sometimes necessary to consider open orders.
+</div>
+<div class='body'>
+On Quantopian, there is no limit to the amount of money that can be invested by an algorithm, regardless of its starting capital,
+so controlling cash and leverage is necessary. At the end of each trading day, all open orders are canceled. However, when placing orders multiple times
+in the same day, open orders need to be taken into account each time a new order is placed.
+<span class='code inline'>order_target_percent()</span> doesn't consider open
+orders when calculating the number of shares to order. Placing a new order for a security that has an outstanding open order
+can lead to over-ordering (ordering past the target). This can lead to an
+algorithm spending more money than intended.
+</div>
+<div class='body'>
+To avoid over-ordering, we can look at open orders using
+<a href='../help.html#api-get-open-orders' target='_blank'>get_open_orders()</a> which returns a dictionary of open orders keyed by
+assets. We can use this to ensure that we don't have an open order for a security before
+we place a new order for it.
+</div>
+<div class='body'>
+The following example checks for open orders before opening new ones:
+</div>
+<div class='code'>
+<div class='new-btn small light-grey clone-btn mixpanel-button clone-tutorial-algo-link' data-animation='true' data-content='Make a copy of this code so that you can explore it' data-event='lesson 10 clone algo button click' data-mixpanel='tutorial 1' data-placement='top' data-sampletype='tutorial1/getting_started_lesson_10' data-trigger='hover' rel='popover'>Clone</div>
+
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>initialize</span>(context):</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Relatively illiquid stock.</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;context.xtl = sid(<span class='py-string'>40768</span>)</div>
+<br>
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>handle_data</span>(context, data):</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Get all open orders.</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;open_orders = <span class='py-def-method'>get_open_orders()</span></div>
+<br>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>if</span> context.xtl <span class='py-def'>not in</span> open_orders <span class='py-def'>and</span> data.can_trade(context.xtl):</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>order_target_percent</span>(context.xtl)</div>
+</div>
+</div>
+<div class='video-content'>
+<div class='embed-container'>
+<!--<iframe allowfullscreen frameborder='0' height='349' id='lesson10-video' src='https://www.youtube.com/embed/s-1FAsdM4Hw?list=PLRFLF1OxMm_WUX97SE1HwQQIpkcWLVCvB' width='560'></iframe>-->
+<video controls="" width="560" height="349">
+	<source src="http://r1---sn-8xgp1vo-xfgs.googlevideo.com/videoplayback?fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&ms=au&mv=m&mt=1462594973&itag=18&signature=DCED8B48E5B8135A53DD1EA93532A47B8854D3C2.2285C336AE4E5A4C355A02C66E00669CDBB16012&key=yt6&source=youtube&mime=video/mp4&ip=100.38.230.156&dur=147.400&id=o-AGzPC4m5yCl4AP2gKPasC7xLlfAPGEt_4qvOn21vlSZe&mn=sn-8xgp1vo-xfgs&pl=24&mm=31&expire=1462616658&ipbits=0&ratebypass=yes&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&upn=M42Ytw961aM&initcwndbps=2155000&sver=3&lmt=1461096141890248&name=s-1FAsdM4Hw" type="video/mp4">
+</video>
+
+</div>
+</div>
+</div>
+
+<div class='lesson' id='lesson11'>
+<div class='text-content'>
+<div class='header'>Putting It All Together</div>
+<div class='body end-section'>
+At this point, we have looked at different components of the Quantopian API individually. Now it's
+time to put them all together in a basic trading algorithm. In this lesson, we're going to
+use the functions that we've seen so far to construct a simple
+<a href= 'http://www.investopedia.com/terms/m/meanreversion.asp' target='_blank'>mean reversion strategy</a>.
+</div>
+<div class='header'>Planning the Strategy</div>
+<div class='body'>
+To start out, let's plan a strategy to implement.
+</div>
+<div class='body end-section'>
+<strong>Hypothesis:</strong> If the 10-day simple moving average (short SMA) of a security is higher than its
+30-day simple moving average (long SMA), the price of the security will drop. Conversely, if
+its short SMA is lower than its long SMA, the price will go up. This is referred to as mean
+reversion.
+</div>
+<div class='header'>Selecting Assets to Trade</div>
+<div class='body'>
+This type of strategy is usually implemented using a dynamic set of securities selected by
+<a href='../help.html#pipeline-title' target='_blank'>pipeline</a>, but since we haven't covered that yet, we're
+going to hand-pick a list of securities to trade:
+</div>
+<div class='code end-section'>
+<div class='line py-comment'># MSFT, UNH, CTAS, JNS, COG</div>
+<div class='line'>context.security_list = [sid(<span class='py-string'>5061)</span>, sid(<span class='py-string'>7792)</span>, sid(<span class='py-string'>1941)</span>, sid(<span class='py-string'>24556)</span>, sid(<span class='py-string'>1746)</span>]</div>
+</div>
+<p>
+<i>Note: The securities selected have no significance to the strategy. They were chosen arbitrarily.</i>
+</p>
+<br>
+<div class='header'>Setting a Rebalance Schedule</div>
+<div class='body'>
+In this implementation, we will rebalance once at the start of each week at market open. To do this,
+we can schedule a rebalance function in <span class='code inline'>initialize()</span>.
+</div>
+<div class='code end-section'>
+<div class='line'><span class='py-method'>schedule_function</span>(rebalance,</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date_rules.week_start(days_offset=0),</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time_rules.market_open())</div>
+</div>
+<div class='header'>Computing Weights</div>
+<div class='body'>
+Next, we want to decide how much of our portfolio we want to allocate to each security in our
+list and whether we want to open long or short positions for each of them. In this example,
+determining whether we want to open a long or short position is simple. If the 10-day SMA is
+below the 30-day SMA, we take a long position, predicting that the price will go back up.
+If the 10-day SMA is above the 30-day SMA, we take a short position, predicting the price will
+drop.
+</div>
+<div class='body'>
+Let's also assume that the greater the relative difference between a security's 10-day and 30-day SMA, the more likely it is to revert. Under this hypothesis, we want to take a bigger
+position in securities that have a greater relative difference between their short and long
+SMAs.
+</div>
+<div class='body'>
+Let's define this in a function:
+</div>
+<div class='code'>
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>compute_weights</span>(context, data):</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Get the 30-day price history for each security in our list.</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;hist = data.<span class='py-method'>history</span>(context.security_list, <span class='py-string'>'price'</span>, 30, <span class='py-string'>'1d'</span>)</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Create 10-day and 30-day trailing windows.</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;prices_10 = hist[-10:]</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;prices_30 = hist</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# 10-day and 30-day simple moving average (SMA)</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;sma_10 = prices_10.mean()</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;sma_30 = prices_30.mean()</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Weights are based on the relative difference between the short and long SMAs</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;raw_weights = (sma_10 - sma_30) / sma_30</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Normalize our weights</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;normalized_weights = raw_weights / raw_weights.abs().sum()</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Return our normalized weights. These will be used when placing orders later.</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>return</span> normalized_weights</div>
+</div>
+<div class='body end-section'>
+Note that we also normalized our weights to ensure that they add up to 100%. We then
+return normalized_weights which is a <span class='code inline'>Series</span> indexed by our securities.
+</div>
+<div class='header'>Order Execution</div>
+<div class='body'>
+The next step is to define how we want to order our securities. Earlier, we decided to rebalance once per week at market open using a function called
+<span class='code inline'>rebalance()</span>. Now, let's define
+<span class='code inline'>rebalance()</span> to place an order for each of our securities to
+the target weight that we calculated in <span class='code inline'>compute_weights()</span>:
+</div>
+<div class='code'>
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>rebalance</span>(context, data):</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Calculate our target weights.</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;weights = compute_weights(context, data)</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Place orders for each of our securities.</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>for</span> security <span class='py-def'>in</span> context.security_list:</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>if</span> data.<span class='py-method'>can_trade</span>(security):</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>order_target_percent</span>(security, weights[security])</div>
+</div>
+<div class='body end-section'>
+Note that we use <span class='code inline'>order_target_percent()</span> to order to our
+target weights. We also use <span class='code inline'>data.can_trade()</span> to guard against
+ordering delisted securities since we hard-coded a static list of securities.
+</div>
+<div class='header'>Recording and Plotting</div>
+<div class='body'>
+To learn more about what our algorithm is actually doing, let's track some variables that we
+might be interested in.
+Let's first schedule another function in <span class='code inline'>initialize()</span> called
+<span class='code inline'>record_vars()</span> to run at the end of each day:
+</div>
+<div class='code end-section'>
+<div class='line'><span class='py-method'>schedule_function</span>(record_vars,</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date_rules.every_day(),</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time_rules.market_close())</div>
+</div>
+<div class='body'>
+And then we'll define <span class='code inline'>record_vars()</span> to track our
+<a href='../help.html#api-account' target='_blank'>leverage</a>, as well as the number of long and short positions
+we are holding. We can count the number of long and short positions each day using the
+<span class='code inline'>context.portfolio.positions</span> object:
+</div>
+<div class='code end-section'>
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>record_vars</span>(context, data):</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Check how many long and short positions we have.</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;longs = shorts = 0</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>for</span> position <span class='py-def'>in</span> context.portfolio.positions.itervalues():</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>if</span> position.amount > 0:</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;longs += 1</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>elif</span> position.amount < 0:</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shorts += 1</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Record our variables.</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>record</span>(leverage=context.account.leverage, long_count=longs, short_count=shorts)</div>
+</div>
+<div class='header'>Putting It Together</div>
+<div class='body'>
+Since there's nothing that we want to do every minute, nor anything that we want to do before the market opens, we don't need to implement either <span class='code inline'>handle_data()</span> or <span class='code inline'>before_trading_start()</span>. The final algorithm looks like this
+(note that some comments, as well as two print statements in <span class='code inline'>compute_weights()</span> were added):
+</div>
+<div class='code'>
+<div class='new-btn small light-grey clone-btn mixpanel-button clone-tutorial-algo-link' data-animation='true' data-content='Make a copy of this code so that you can explore it' data-event='lesson 11 clone algo button click' data-mixpanel='tutorial 1' data-placement='top' data-sampletype='tutorial1/getting_started_lesson_11' data-trigger='hover' rel='popover'>Clone</div>
+
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>initialize</span>(context):</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;"""</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;initialize() is called once at the start of the program. Any one-time</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;startup logic goes here.</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;"""</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# An assortment of securities from different sectors:</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# MSFT, UNH, CTAS, JNS, COG</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;context.security_list = [sid(<span class='py-string'>5061)</span>, sid(<span class='py-string'>7792)</span>, sid(<span class='py-string'>1941)</span>, sid(<span class='py-string'>24556)</span>, sid(<span class='py-string'>1746)</span>]</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Rebalance every Monday (or the first trading day if it's a holiday)</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# at market open.</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>schedule_function</span>(rebalance,</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date_rules.week_start(days_offset=0),</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time_rules.market_open())</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Record variables at the end of each day.</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>schedule_function</span>(record_vars,</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date_rules.every_day(),</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time_rules.market_close())</div>
+<br>
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>compute_weights</span>(context, data):</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;"""</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;Compute weights for each security that we want to order.</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;"""</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Get the 30-day price history for each security in our list.</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;hist = data.<span class='py-method'>history</span>(context.security_list, <span class='py-string'>'price'</span>, 30, <span class='py-string'>'1d'</span>)</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Create 10-day and 30-day trailing windows.</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;prices_10 = hist[-10:]</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;prices_30 = hist</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# 10-day and 30-day simple moving average (SMA)</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;sma_10 = prices_10.mean()</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;sma_30 = prices_30.mean()</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Weights are based on the relative difference between the short and long SMAs</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;raw_weights = (sma_10 - sma_30) / sma_30</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Normalize our weights</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;normalized_weights = raw_weights / raw_weights.abs().sum()</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Determine and log our long and short positions.</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;short_secs = normalized_weights.index[normalized_weights < 0]</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;long_secs = normalized_weights.index[normalized_weights > 0]</div>
+<br>
+<div class='line'>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>print</span> "This week's longs: " + ", ".join([long_.symbol for long_ in long_secs])
+</div>
+<div class='line'>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>print</span> "This week's shorts: " + ", ".join([short_.symbol for short_ in short_secs])
+</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Return our normalized weights. These will be used when placing orders later.</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>return</span> normalized_weights</div>
+<br>
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>rebalance</span>(context, data):</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;"""</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;This function is called according to our schedule_function settings and calls</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;order_target_percent() on every security in weights.</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;"""</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Calculate our target weights.</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;weights = compute_weights(context, data)</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Place orders for each of our securities.</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>for</span> security <span class='py-def'>in</span> context.security_list:</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>if</span> data.<span class='py-method'>can_trade</span>(security):</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>order_target_percent</span>(security, weights[security])</div>
+<br>
+<div class='line'><span class='py-def'>def</span> <span class='py-def-method'>record_vars</span>(context, data):</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;"""</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;This function is called at the end of each day and plots our leverage as well</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;as the number of long and short positions we are holding.</div>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;"""</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Check how many long and short positions we have.</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;longs = shorts = 0</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>for</span> position <span class='py-def'>in</span> context.portfolio.positions.itervalues():</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>if</span> position.amount > 0:</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;longs += 1</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-def'>elif</span> position.amount < 0:</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shorts += 1</div>
+<br>
+<div class='line py-comment'>&nbsp;&nbsp;&nbsp;&nbsp;# Record our variables.</div>
+<div class='line'>&nbsp;&nbsp;&nbsp;&nbsp;<span class='py-method'>record</span>(leverage=context.account.leverage, long_count=longs, short_count=shorts)</div>
+</div>
+<div class='body'>
+Congratulations on completing the first Quantopian tutorial! Try coming up with your own
+strategy and implementing it yourself.
+</div>
+<div class='body end-content'>
+The next tutorial will cover the Pipeline API and teach you how to select securities dynamically.
+</div>
+</div>
+<div class='video-content'>
+<div class='embed-container'>
+<!--<iframe allowfullscreen frameborder='0' height='349' id='lesson11-video' src='https://www.youtube.com/embed/vmK35Va-XsQ?list=PLRFLF1OxMm_WUX97SE1HwQQIpkcWLVCvB' width='560'></iframe>-->
+<video controls="" width="560" height="349">
+	<source src="http://r6---sn-8xgp1vo-xfgz.googlevideo.com/videoplayback?mime=video/mp4&initcwndbps=2155000&id=o-AKMMdIESMxoStbsKQZKiCCluIj6FaVsKwicJFAqoDr9O&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&mm=31&mn=sn-8xgp1vo-xfgz&ratebypass=yes&ms=au&source=youtube&mv=m&dur=348.786&itag=18&pl=24&ip=100.38.230.156&lmt=1461096389606564&upn=t_yablnTeDI&expire=1462616658&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&ipbits=0&sver=3&mt=1462594973&signature=88C0082613D354902D0A186F3DB81769EED95CC7.E27F23C6421F257AEFCDEE8F4409F05A5014DBD6&key=yt6&name=vmK35Va-XsQ" type="video/mp4">
+</video>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class='tutorial-pagination'>
+<div class='button-wrapper'>
+<div class='new-btn light-grey small pagination-button prev-button' data-lesson=''>PREVIOUS</div>
+<div class='lesson-title prev-text hidden-xs hidden-sm'></div>
+</div>
+<div class='button-wrapper right'>
+<div class='lesson-title next-text hidden-xs hidden-sm'>Lesson 2: Parameters</div>
+<div class='new-btn blue small2 pagination-button next-button' data-lesson='2'>NEXT</div>
+</div>
+<div class='clear'></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  //<![CDATA[
+    $(document).ready(function() {
+      quanto.instances.tm = new quanto.TutorialManager();
+      quanto.instances.gstm = new quanto.GettingStartedTutorialManager();
+    })
+  //]]>
+</script>
+
+<div class='fade modal' id='error-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title'>Error</h4>
+</div>
+<div class='modal-body body-content'>
+<p>Sorry, something went wrong.  Try again or contact us by <a class='feedback-link'>sending feedback</a>.</p>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-primary' data-dismiss='modal' href='#'>Close</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='confirmation-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title'></h4>
+</div>
+<div class='modal-body body-content'></div>
+<div class='modal-footer'>
+<button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+<button class='btn btn-primary action-button' data-dismiss='modal'></button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='feedback-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'>Send Feedback</h3>
+</div>
+<div class='modal-body'>
+<div class='controls'>
+<div class='from'>
+<span class='valign-top'>From: </span>
+<div class='feedback-inputs'>
+<div class='form-group'>
+<input autofocus class='form-control' id='feedback-email-box' placeholder='Email address' type='email'>
+</div>
+<div class='form-group'>
+<input class='form-control' id='feedback-name-box' placeholder='Name' type='text'>
+</div>
+</div>
+</div>
+<textarea class='form-control input-xxlarge width_100pct' id='feedback-box' rows='10'></textarea>
+<div class='feedback-checkbox'>
+<div class='checkbox'>
+<label>
+<input id='anonymous-feedback-checkbox' type='checkbox'>I understand I will not receive a reply without providing a valid email address.</input>
+</label>
+</div>
+</div>
+</div>
+<div class='success hidden'>
+<span>Thank you!  We will be in touch soon.</span>
+</div>
+</div>
+<div class='modal-footer'>
+<div class='controls'>
+<button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+<button class='btn btn-primary' id='send-feedback-button'>Send</button>
+</div>
+<div class='success hidden'>
+<a class='btn btn-primary' data-dismiss='modal' href='getting-started.html#'>Close</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='join-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'>Join Quantopian.  It's free!</h3>
+</div>
+<div class='modal-body'>
+<p class='large'>Once you join, you can:</p>
+<div class='margin_20t'>
+<div class='action'>
+<i class='icon icon-copy'></i>
+Create more algorithms
+</div>
+<div class='action'>
+<i class='icon icon-bar-chart'></i>
+Run full backtests, with detailed risk metrics and full transaction reports
+</div>
+<div class='action'>
+<i class='icon icon-comments-alt'></i>
+Post and share in our community
+</div>
+<div class='action'>
+<i class='icon icon-trophy'></i>
+Submit algorithms to the Quantopian Open
+</div>
+</div>
+<div class='margin_20t margin_20b large'>Don't worry, all your work is already saved.</div>
+</div>
+<div class='modal-footer'>
+<div class='pull-left'>
+<a class='btn btn-default btn-large' data-dismiss='modal' href='getting-started.html#'>Close</a>
+</div>
+<a class='btn btn-primary btn-large font-14' href='../users/sign_up.html'>Join Quantopian</a>
+<a class='btn btn-default btn-large font-14 login-button' href='../users/sign_in.html'>Log In</a>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='message-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'></h3>
+</div>
+<div class='modal-body'></div>
+<div class='modal-footer'>
+<button class='btn btn-primary' data-dismiss='modal' id='message-modal-close'>Close</button>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class='footer new-style' id='quanto-footer-container'>
+<div class='row-fluid main-footer container'>
+<div class='left-space span1'></div>
+<div class='footer-content span11'>
+<div class='row-fluid footer-inner row'>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Company</div>
+<div class='footer-row'>
+<a href='../about.html'>About</a>
+</div>
+<div class='footer-row'>
+<a href='../academia.html'>Academia</a>
+</div>
+<div class='footer-row'>
+<a href='../workshops.html'>Workshops</a>
+</div>
+<div class='footer-row'>
+<a href='../about.html'>Careers</a>
+</div>
+<div class='footer-row'>
+<a href='../posts.html'>Community</a>
+</div>
+<div class='footer-row'>
+<a href='../prospective_investors.html'>Prospective Investors</a>
+</div>
+</div>
+</div>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Learn &amp; Support</div>
+<div class='footer-row'>
+<a href='getting-started.html'>Getting Started</a>
+</div>
+<div class='footer-row'>
+<a href='../faq.html'>FAQs</a>
+</div>
+<div class='footer-row'>
+<a href='../help.html'>Help &amp; API docs</a>
+</div>
+<div class='footer-row'>
+<a href='../tutorials.html'>Tutorials</a>
+</div>
+<div class='footer-row'>
+<a href='../lectures.html'>Lectures</a>
+</div>
+<div class='footer-row'>
+<a href='http://status.quantopian.com'>Site Status</a>
+</div>
+<div class='footer-row'>
+<a href='../security.html'>Security</a>
+</div>
+</div>
+</div>
+
+<div class='col-sm-6'>
+<div class='feedback-email pull-right'>
+Need Help?
+<a class='open-feedback-link' href='getting-started.html#'>Contact Support</a>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Notices</div>
+<div class='footer-row'>
+<a href='../policies/terms.html'>Terms of Use</a>
+</div>
+<div class='footer-row'>
+<a href='../policies/privacy.html'>Privacy Policy</a>
+</div>
+<div class='footer-row'>
+<a href='../policies/risks.html'>Trading Risk</a>
+</div>
+<div class='footer-row'>
+<a href='../policies/live_trading.html'>Brokerage Terms</a>
+</div>
+</div>
+</div>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Follow Us</div>
+<div class='footer-row'>
+<a href='http://www.twitter.com/quantopian'>Twitter</a>
+</div>
+<div class='footer-row'>
+<a href='http://www.facebook.com/quantopian'>Facebook</a>
+</div>
+<div class='footer-row'>
+<a href='http://www.linkedin.com/company/quantopian'>LinkedIn</a>
+</div>
+<div class='footer-row'>
+<a href='http://blog.quantopian.com'>Blog</a>
+</div>
+</div>
+</div>
+
+</div>
+<div class='row'>
+<div class='col-sm-14'>
+<div class='pull-right copyright'>&copy; 2016 Quantopian, Inc.</div>
+</div>
+</div>
+</div>
+</div>
+<div class='mobile-footer'>
+<div class='mobile-nav-category main-links'>
+<div class='mobile-nav-row'>
+<a href='../about.html'>About Quantopian</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../about.html'>Careers</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../posts.html'>Community</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../help.html'>Help</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../academia.html'>Academia</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../lectures.html'>Lectures</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../workshops.html'>Workshops</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://status.quantopian.com'>Status</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.facebook.com/quantopian'>Facebook</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.twitter.com/quantopian'>Twitter</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.linkedin.com/company/quantopian'>LinkedIn</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://blog.quantopian.com'>Blog</a>
+</div>
+</div>
+<div class='mobile-nav-category secondary-links'>
+<div class='mobile-nav-row'>
+<p>&copy; 2016 Quantopian</p>
+</div>
+<div class='mobile-nav-row'>
+<a href='../policies/terms.html'>Terms of Use</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../policies/privacy.html'>Privacy Policy</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</body>
+</html>
+<script>
+  //<![CDATA[
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8519877-1']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_setDomainName', 'quantopian.com']);
+    _gaq.push(['_setCustomVar', 1, 'quanto_session_id', 'session_572d6deed42b61f8d200072e']);
+    
+    
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  //]]>
+</script>
+
+
+<input id="is_mac" name="is_mac" type="hidden" value="false" />
+<script>
+  //<![CDATA[
+    (function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js';
+    d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);
+    a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}
+    var g=a;"undefined"!==typeof f? g=a[f]=[]:f="mixpanel";g.people=g.people||[];
+    h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.identify people.set people.increment".split(" ");for(e=0;e<h.length;e++) d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1})(document,window.mixpanel||[]);mixpanel.init("75873953cd404bcc1da88a55ff51e3b4")
+  //]]>
+</script>
+
+<script>
+  //<![CDATA[
+    mixpanel.track("view page", {"page": window.location.pathname})
+  //]]>
+</script>
+<script type="text/javascript">if (typeof NREUMQ !== "undefined") { if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","bam.nr-data.net","59252e476d","984851","dAlXTUcKWFpQRBlbXFYUVxZBEEBZR19XW2ZQA01NXAtTaUZCV0VNUgI=",6,46,new Date().getTime(),"","","","",""]);}</script>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<link href="assets/logos/favicon-q-9ba6cb893a620560ab734fe26a5bef5f.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<title>
+Quantopian Security
+</title>
+<link href="assets/application-d001ce6de06ac687a73896481c43ddda.css" media="all" rel="stylesheet" type="text/css" />
+<script src="assets/application-269bf65687954fcb4ed430e74a738c6f.js" type="text/javascript"></script>
+<script src="https://use.typekit.com/uvj7txo.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+try{Typekit.load()}catch(e){}
+//]]>
+</script>
+<script src="https://js.stripe.com/v2/" type="text/javascript"></script>
+<meta content='pk_live_qyEzgiIO9PIT9AEbwiX8qw6g' name='stripe-key'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:300,400,' rel='stylesheet' type='text/css'>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="XIZmvJvBSDp8R371BFoxbTfU5NJRO3ZTtXciYR83l3c=" name="csrf-token" />
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+
+<input id="quanto-env" name="env" type="hidden" value="production" />
+</head>
+<body class='' ontouchstart=''>
+<div id='fb-root'></div>
+<div class='wrapper' id='about-security'>
+<div class='app-navbar navbar navbar-default old-style'>
+<div class='app-header navbar-inner'>
+<div class='navbar-brand inline-block'>
+<a class='logo-image' href='home.html'></a>
+</div>
+<div class='navbar-mobile navbar-mobile-trigger'>
+<div class='pull-right'>
+<a class='navbar-menu-anchor' id='navbar-menu-anchor'></a>
+</div>
+</div>
+<div class='navbar-fullscreen navbar-right'>
+<ul class='nav navbar-nav'>
+<li class='dropdown hidden unconfirmed-user-header'>
+<a class='header' data-toggle='dropdown' href='security.html#'>
+<span class='icon icon-warning'></span>
+Unconfirmed Account
+</a>
+<ul class='dropdown-menu no-close-on-click'>
+<div class='confirm-dropdown'>
+<div>
+Click on the confirmation link in the email that Quantopian sent to <strong class="confirm-email-address">
+</strong>.
+</div>
+<div class='margin_10t'>
+<button class='btn resend-confirmation' id='resend-confirmation-email-button'>Resend Confirmation Email</button>
+</div>
+</div>
+</ul>
+</li>
+<li>
+<a class='header' href='fund.html'>Capital</a>
+</li>
+<li>
+<a class='header' href='data.html'>Data</a>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='security.html#'>
+My Code
+</a>
+<ul class='dropdown-menu quanto-dropdown-new'>
+<li>
+<a href='research/survey.html'>Notebooks</a>
+</li>
+<li>
+<a href='algorithms.html'>Algorithms</a>
+</li>
+</ul>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='security.html#'>
+Community
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a class='' href='posts.html' id='community-header-link'>Forums</a>
+</li>
+<li>
+<a href='open.html'>Contest</a>
+</li>
+<li>
+<a href='http://www.quantcon.com'>QuantCon</a>
+</li>
+</ul>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='security.html#'>
+Learn & Support
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href='learn.html'>Learn</a>
+</li>
+<li>
+<a class='open-feedback-link' href='security.html#'>Contact Support</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="signin.html" class="header unregistered-user-action">Log In</a>
+</li>
+<li>
+<a href="users/sign_up.html" class="header unregistered-user-action">Sign Up</a>
+</li>
+
+</ul>
+</div>
+<div class='clear-fix'></div>
+</div>
+<div id='mobile-navbar-menu'>
+<div class='mobile-nav-category-title no-arrow'>
+<a href='fund.html'>Capital</a>
+</div>
+<div class='mobile-nav-category-title no-arrow'>
+<a href='data.html'>Data</a>
+</div>
+<div class='mobile-nav-category'>
+<div class='mobile-nav-category-title'>My Code</div>
+<div class='mobile-nav-rows'>
+<div class='mobile-nav-row'>
+<a href='research/survey.html'>Notebooks</a>
+<a href='algorithms.html'>Algorithms</a>
+</div>
+</div>
+</div>
+<div class='mobile-nav-category'>
+<div class='mobile-nav-category-title'>Community</div>
+<div class='mobile-nav-rows'>
+<div class='mobile-nav-row'>
+<a class='' href='posts.html' id='community-header-link'>Forums</a>
+<a href='open.html'>Contest</a>
+<a href='http://www.quantcon.com'>QuantCon</a>
+</div>
+</div>
+</div>
+<div class='mobile-nav-category'>
+<div class='mobile-nav-category-title'>Learn &amp; Support</div>
+<div class='mobile-nav-rows'>
+<div class='mobile-nav-row'>
+<a href='learn.html'>Learn</a>
+<a class='open-feedback-link' href='security.html#'>Contact Support</a>
+</div>
+</div>
+</div>
+<div class='mobile-nav-category-title no-arrow'>
+<a href='users/sign_in.html'>Log In</a>
+</div>
+<div class='mobile-nav-category-title no-arrow sign-up-btn'>
+<a href='users/sign_up.html'>Sign Up</a>
+</div>
+</div>
+</div>
+<script>
+  //<![CDATA[
+    $(document).ready(function () {
+      quanto.instances.fm = new quanto.FeedbackManager();
+      quanto.instances.hm = new quanto.headerManager();
+    })
+  //]]>
+</script>
+
+
+<div class='content content-area old-style'>
+<div class='white-container'>
+<div class='container security'>
+<div class='row-fluid'>
+<div class='span2'></div>
+<div class='span8'>
+<h2>Quantopian Security</h2>
+<p>The protection of our members' intellectual property is one of our core promises. Our success and the success of our members hinge on us keeping that promise. Our members have run millions of years worth of backtests and directed millions of dollars in assets through Quantopian live-trading algorithms, and we have never suffered a security breach which compromised their algorithms. We intend to keep it that way.</p>
+<p>We always appreciate your input and feedback on our security practices. To report any possible security issues or other questions, please email us at <a href='cdn-cgi/l/email-protection.html#483b2d2b3d3a213c3108393d29263c2738212926662b2725'><span class="__cf_email__" data-cfemail="e99a8c8a9c9b809d90a9989c88879d8699808887c78a8684">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a>. Please see <a href='security.html#disclosure'>below</a> for additional information about vulnerability reporting.</p>
+<h3>Our approach to security</h3>
+<p>Here's how we think about and maintain the security of our application.</p>
+<h4>Layers of security</h4>
+<p>There's no one trick that makes a web site secure, no wall one can erect that will completely keep out the bad guys. Effective security requires multiple layers of controls and precautions, so that even if one layer is compromised, overall security remains intact. For example, the environment in which we execute each trading algorithm is isolated from the rest of our application, and from all the other executing algorithms, in at least three different, independent ways. Even if there were a flaw in one of those isolation strategies which allowed it to be compromised, the others would remain intact.</p>
+<h4>Best practices</h4>
+<p>We employ many industry best practices to maintain our application's security. For example:</p>
+<ul>
+<li>We are protected by CloudFlare, the industry leader in detecting and preventing DDoS and similar attacks.</li>
+<li>We support <a href='users/sign_up.html#twofactor'>two-factor authentication</a> and strongly encourage members trading real money through Quantopian to use it.</li>
+<li>Sensitive data in our databases are protected with strong encryption.</li>
+<li>Member passwords are stored securely as salted, one-way hashes.</li>
+<li>All application network traffic is encrypted in transit, including not only the traffic between your browser and Quantopian, but also all the data that travels between our internal application components.</li>
+<li>We use the principles of separation of privileges and least privileges to minimize the potential impact of compromises.</li>
+<li>We employ automated triggers to detect and block attempts to compromise our application.</li>
+</ul>
+<p>Members of our team maintain their security expertise by attending cyber-security conferences, subscribing to industry security periodicals and email lists, and participating in various security forums.</p>
+<h4>Constant vigilance</h4>
+<p>Keeping our application secure is a continuous effort. Our ongoing security activities include:</p>
+<ul>
+<li>We periodically engage external security-industry professionals to perform active white-hat penetration testing of our application, and to review our architecture and implementation in depth to look for potential security concerns.</li>
+<li>Between those professional security audits, we perform regular automated security scans.</li>
+<li>We subscribe to relevant security notices and alerts, and act quickly to secure our site from any newly announced vulnerabilities that might impact it.</li>
+<li>Virtually every line of code added to our application is reviewed in depth by a developer other than its author.</li>
+<li>We employ extensive, real-time, 24x7 monitoring of our application's performance and of anomalous application behavior.</li>
+<li>We have engineers on-call 24x7 to respond to alerts about potential security issues.</li>
+</ul>
+<h4>Maximum transparency</h4>
+<p>We value transparency in all we do, and we think it is particularly important when it comes to security. We have been always been, and will continue to be, <a href='http://blog.quantopian.com/on-trust/' target='_blank'>honest</a> <a href='https://www.quantopian.com/posts/were-back' target='_blank'>and</a> <a href='http://blog.quantopian.com/post-mortem-of-121212-attack-on-quantopian/%20target='_blank''>forthcoming</a> <a href='http://blog.quantopian.com/2013-the-road-ahead-at-quantopian/' target='_blank'>about</a> <a href='http://blog.quantopian.com/quantopian-security-issue/' target='_blank'>the</a> <a href='http://blog.quantopian.com/security-incident-november-15-2013/' target='_blank'>security</a> <a href='http://blog.quantopian.com/were-back/' target='_blank'>of</a> <a href='http://blog.quantopian.com/post-mortem-of-2013-11-15-security-breach/' target='_blank'>our</a> <a href='http://blog.quantopian.com/heartbleed-bug/' target='_blank'>application</a>. When it comes to the security of your data, we don't expect you to take us at our word; we know we need to earn your trust.</p>
+<h3 id='disclosure'>Vulnerability disclosure</h3>
+<p>We appreciate help from our community in responsibly identifying security vulnerabilities in our application. Though we do not have a formal "bug bounty" program, we evaluate on a case-by-case basis the severity and scope of vulnerabilities disclosed to us and provide compensation when appropriate. To be eligible for such compensation, reporters should provide details of the vulnerabilities in private correspondence to <a href="cdn-cgi/l/email-protection.html#f88b9d9b8d8a918c81b8898d99968c9788919996d69b9795"><span class="__cf_email__" data-cfemail="98ebfdfbedeaf1ece1d8e9edf9f6ecf7e8f1f9f6b6fbf7f5">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a> or <a href="cdn-cgi/l/email-protection.html#77111212131516141c37060216190318071e16195914181a"><span class="__cf_email__" data-cfemail="bfd9dadadbdddedcd4ffcecaded1cbd0cfd6ded191dcd0d2">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a>.</p>
+<h4>Contributors</h4>
+<p>We are grateful to the following individuals for helping us to make Quantopian better by identifying and reporting issues to us.</p>
+<ul>
+<li><a href="https://twitter.com/adeelimtiaz90" target="_blank">Adeel Imtiaz</a></li>
+<li><a href="http://www.evanricafort.com/" target="_blank">Evan Ricafort</a></li>
+<li><a href="https://twitter.com/hvboppana" target="_blank">Harsha Boppana</a></li>
+<li><a href="https://twitter.com/The_Pr0ph3t" target="_blank">Juan Broull&#243;n</a></li>
+<li><a href="https://www.facebook.com/profile.php?id=100001183774319" target="_blank">Muhammad Osama</a></li>
+</ul>
+</div>
+<div class='span2'></div>
+</div>
+</div>
+</div>
+
+<div class='modal hide' id='error-modal'>
+<div class='modal-header'>
+<h4 class='modal-title'>Error</h4>
+</div>
+<div class='modal-body body-content'>
+<p>Sorry, something went wrong.  Try again or contact us by <a class='feedback-link'>sending feedback</a>.</p>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-primary' data-dismiss='modal' href='#'>Close</button>
+</div>
+
+</div>
+
+<div class='modal hide' id='confirmation-modal'>
+<div class='modal-header'>
+<h4 class='modal-title'></h4>
+</div>
+<div class='modal-body body-content'></div>
+<div class='modal-footer'>
+<button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+<button class='btn btn-primary action-button' data-dismiss='modal'></button>
+</div>
+
+</div>
+
+<div class='modal hide' id='feedback-modal'>
+<div class='modal-header'>
+<h3 class='modal-title'>Send Feedback</h3>
+</div>
+<div class='modal-body'>
+<div class='controls'>
+<div class='from'>
+<span class='valign-top'>From: </span>
+<div class='feedback-inputs'>
+<div class='form-group'>
+<input autofocus class='form-control' id='feedback-email-box' placeholder='Email address' type='email'>
+</div>
+<div class='form-group'>
+<input class='form-control' id='feedback-name-box' placeholder='Name' type='text'>
+</div>
+</div>
+</div>
+<textarea class='form-control input-xxlarge width_100pct' id='feedback-box' rows='10'></textarea>
+<div class='feedback-checkbox'>
+<div class='checkbox'>
+<label>
+<input id='anonymous-feedback-checkbox' type='checkbox'>I understand I will not receive a reply without providing a valid email address.</input>
+</label>
+</div>
+</div>
+</div>
+<div class='success hidden'>
+<span>Thank you!  We will be in touch soon.</span>
+</div>
+</div>
+<div class='modal-footer'>
+<div class='controls'>
+<button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+<button class='btn btn-primary' id='send-feedback-button'>Send</button>
+</div>
+<div class='success hidden'>
+<a class='btn btn-primary' data-dismiss='modal' href='security.html#'>Close</a>
+</div>
+</div>
+
+</div>
+
+<div class='modal hide' id='join-modal'>
+<div class='modal-header'>
+<h3 class='modal-title'>Join Quantopian.  It's free!</h3>
+</div>
+<div class='modal-body'>
+<p class='large'>Once you join, you can:</p>
+<div class='margin_20t'>
+<div class='action'>
+<i class='icon icon-copy'></i>
+Create more algorithms
+</div>
+<div class='action'>
+<i class='icon icon-bar-chart'></i>
+Run full backtests, with detailed risk metrics and full transaction reports
+</div>
+<div class='action'>
+<i class='icon icon-comments-alt'></i>
+Post and share in our community
+</div>
+<div class='action'>
+<i class='icon icon-trophy'></i>
+Submit algorithms to the Quantopian Open
+</div>
+</div>
+<div class='margin_20t margin_20b large'>Don't worry, all your work is already saved.</div>
+</div>
+<div class='modal-footer'>
+<div class='pull-left'>
+<a class='btn btn-default btn-large' data-dismiss='modal' href='security.html#'>Close</a>
+</div>
+<a class='btn btn-primary btn-large font-14' href='users/sign_up.html'>Join Quantopian</a>
+<a class='btn btn-default btn-large font-14 login-button' href='users/sign_in.html'>Log In</a>
+</div>
+
+</div>
+
+<div class='modal hide' id='message-modal'>
+<div class='modal-header'>
+<h3 class='modal-title'></h3>
+</div>
+<div class='modal-body'></div>
+<div class='modal-footer'>
+<button class='btn btn-primary' data-dismiss='modal' id='message-modal-close'>Close</button>
+</div>
+
+</div>
+
+</div>
+<div class='footer old-style' id='quanto-footer-container'>
+<div class='container'>
+<div class='row main-footer'>
+<div class='row footer-inner'>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Company</div>
+<div class='footer-row'>
+<a href='about.html'>About</a>
+</div>
+<div class='footer-row'>
+<a href='academia.html'>Academia</a>
+</div>
+<div class='footer-row'>
+<a href='workshops.html'>Workshops</a>
+</div>
+<div class='footer-row'>
+<a href='about.html'>Careers</a>
+</div>
+<div class='footer-row'>
+<a href='posts.html'>Community</a>
+</div>
+<div class='footer-row'>
+<a href='prospective_investors.html'>Prospective Investors</a>
+</div>
+</div>
+</div>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Learn &amp; Support</div>
+<div class='footer-row'>
+<a href='tutorials/getting-started.html'>Getting Started</a>
+</div>
+<div class='footer-row'>
+<a href='faq.html'>FAQs</a>
+</div>
+<div class='footer-row'>
+<a href='help.html'>Help &amp; API docs</a>
+</div>
+<div class='footer-row'>
+<a href='tutorials.html'>Tutorials</a>
+</div>
+<div class='footer-row'>
+<a href='lectures.html'>Lectures</a>
+</div>
+<div class='footer-row'>
+<a href='http://status.quantopian.com'>Site Status</a>
+</div>
+<div class='footer-row'>
+<a href='security.html'>Security</a>
+</div>
+</div>
+</div>
+
+<div class='span6'>
+<div class='feedback-email pull-right'>
+Need Help?
+<a class='open-feedback-link' href='security.html#'>Contact Support</a>
+</div>
+</div>
+</div>
+<div class='row footer-inner'>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Notices</div>
+<div class='footer-row'>
+<a href='policies/terms.html'>Terms of Use</a>
+</div>
+<div class='footer-row'>
+<a href='policies/privacy.html'>Privacy Policy</a>
+</div>
+<div class='footer-row'>
+<a href='policies/risks.html'>Trading Risk</a>
+</div>
+<div class='footer-row'>
+<a href='policies/live_trading.html'>Brokerage Terms</a>
+</div>
+</div>
+</div>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Follow Us</div>
+<div class='footer-row'>
+<a href='http://www.twitter.com/quantopian'>Twitter</a>
+</div>
+<div class='footer-row'>
+<a href='http://www.facebook.com/quantopian'>Facebook</a>
+</div>
+<div class='footer-row'>
+<a href='http://www.linkedin.com/company/quantopian'>LinkedIn</a>
+</div>
+<div class='footer-row'>
+<a href='http://blog.quantopian.com'>Blog</a>
+</div>
+</div>
+</div>
+
+</div>
+<div class='row'>
+<div class='span12 copyright'>&copy; 2016 Quantopian, Inc.</div>
+</div>
+</div>
+</div>
+<div class='mobile-footer'>
+<div class='mobile-nav-category main-links'>
+<div class='mobile-nav-row'>
+<a href='about.html'>About Quantopian</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='about.html'>Careers</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='posts.html'>Community</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='help.html'>Help</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='academia.html'>Academia</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='lectures.html'>Lectures</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='workshops.html'>Workshops</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://status.quantopian.com'>Status</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.facebook.com/quantopian'>Facebook</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.twitter.com/quantopian'>Twitter</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.linkedin.com/company/quantopian'>LinkedIn</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://blog.quantopian.com'>Blog</a>
+</div>
+</div>
+<div class='mobile-nav-category secondary-links'>
+<div class='mobile-nav-row'>
+<p>&copy; 2016 Quantopian</p>
+</div>
+<div class='mobile-nav-row'>
+<a href='policies/terms.html'>Terms of Use</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='policies/privacy.html'>Privacy Policy</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+<script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
+<script>
+  //<![CDATA[
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8519877-1']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_setDomainName', 'quantopian.com']);
+    _gaq.push(['_setCustomVar', 1, 'quanto_session_id', 'session_572d6deed42b61f8d200072e']);
+    
+    
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  //]]>
+</script>
+
+
+<input id="is_mac" name="is_mac" type="hidden" value="false" />
+<script>
+  //<![CDATA[
+    (function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js';
+    d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);
+    a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}
+    var g=a;"undefined"!==typeof f? g=a[f]=[]:f="mixpanel";g.people=g.people||[];
+    h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.identify people.set people.increment".split(" ");for(e=0;e<h.length;e++) d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1})(document,window.mixpanel||[]);mixpanel.init("75873953cd404bcc1da88a55ff51e3b4")
+  //]]>
+</script>
+
+<script>
+  //<![CDATA[
+    mixpanel.track("view page", {"page": window.location.pathname})
+  //]]>
+</script>
+<script type="text/javascript">if (typeof NREUMQ !== "undefined") { if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","bam.nr-data.net","59252e476d","984851","dAlXTUcKWFpQRBlWW1gTTRZGAFdDR19CTg==",16,44,new Date().getTime(),"","","","",""]);}</script>

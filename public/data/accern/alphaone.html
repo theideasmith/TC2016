@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<link href="../../assets/logos/favicon-q-9ba6cb893a620560ab734fe26a5bef5f.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<title>
+Accern Alphaone News Sentiment Data
+</title>
+<link href="../../assets/quanto-base-bundle-b524a8864168203acdb8ea6f8202e97b.css" media="all" rel="stylesheet" type="text/css" />
+<link href="../../assets/application_new-039c7fe7fe2730066a8dcb040084bc2f.css" media="all" rel="stylesheet" type="text/css" />
+<script src="../../assets/quanto_global-44e85c6fa95d3651757ab8e426751f17.js" type="text/javascript"></script>
+<script src="../../assets/store_bundle-6edd3e97ebb290c002394162570c2c23.js" type="text/javascript"></script>
+<script src="https://use.typekit.com/uvj7txo.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+try{Typekit.load()}catch(e){}
+//]]>
+</script>
+<script src="https://js.stripe.com/v2/" type="text/javascript"></script>
+<meta content='pk_live_qyEzgiIO9PIT9AEbwiX8qw6g' name='stripe-key'>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="XIZmvJvBSDp8R371BFoxbTfU5NJRO3ZTtXciYR83l3c=" name="csrf-token" />
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+
+<input id="quanto-env" name="env" type="hidden" value="production" />
+</head>
+<body class='' ontouchstart=''>
+<div id='fb-root'></div>
+<div class='wrapper' id='store-feature'>
+<div class='navbar navbar-default navbar-static-top' id='app-navbar'>
+<div class='container-fluid'>
+<div class='navbar-header'>
+<button class='navbar-toggle collapsed' data-target='#app-navbar-collapse' data-toggle='collapse'>
+<span class='icon hamburger-menu'></span>
+</button>
+<a class='navbar-brand' href='../../home.html'>
+<div class='logo-image'></div>
+</a>
+</div>
+<div class='collapse navbar-collapse' id='app-navbar-collapse'>
+<ul class='nav navbar-nav navbar-right'>
+<li class='dropdown hidden unconfirmed-user-header'>
+<a class='header' data-toggle='dropdown' href='alphaone.html#'>
+<span class='icon icon-warning'></span>
+Unconfirmed Account
+</a>
+<ul class='dropdown-menu no-close-on-click'>
+<div class='confirm-dropdown'>
+<div>
+Click on the confirmation link in the email that Quantopian sent to <strong class="confirm-email-address">
+</strong>.
+</div>
+<div class='margin_10t'>
+<button class='btn resend-confirmation' id='resend-confirmation-email-button'>Resend Confirmation Email</button>
+</div>
+</div>
+</ul>
+</li>
+<li>
+<a class='header' href='../../fund.html'>Capital</a>
+</li>
+<li>
+<a class='header' href='../../data.html'>Data</a>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='alphaone.html#'>
+My Code
+</a>
+<ul class='dropdown-menu quanto-dropdown-new'>
+<li>
+<a href='../../research/survey.html'>Notebooks</a>
+</li>
+<li>
+<a href='../../algorithms.html'>Algorithms</a>
+</li>
+</ul>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='alphaone.html#'>
+Community
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a class='' href='../../posts.html' id='community-header-link'>Forums</a>
+</li>
+<li>
+<a href='../../open.html'>Contest</a>
+</li>
+<li>
+<a href='http://www.quantcon.com'>QuantCon</a>
+</li>
+</ul>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='alphaone.html#'>
+Learn & Support
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href='../../learn.html'>Learn</a>
+</li>
+<li>
+<a class='open-feedback-link' href='alphaone.html#'>Contact Support</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="../../signin.html" class="header unregistered-user-action">Log In</a>
+</li>
+<li>
+<a href="../../users/sign_up.html" class="header unregistered-user-action">Sign Up</a>
+</li>
+
+</ul>
+</div>
+</div>
+</div>
+<script>
+  //<![CDATA[
+    $(document).ready(function () {
+      quanto.instances.fm = new quanto.FeedbackManager();
+      quanto.instances.hm = new quanto.headerManager();
+    })
+  //]]>
+</script>
+
+
+<div class='content content-area new-style'>
+<div class='preview-and-buy mobile hidden'>
+<!-- Show only one button on mobile. If it's a paid feature, show the paid button, but not the free sample button. -->
+<button class='blue-style-button btn cta-button main-cta-button' data-internal-name='data.accern.alphaone' data-purchase-status='Get' data-user-saved-card='false' data-vendor-internal-name='accern'>Get</button>
+</div>
+<div class='container feature-container'>
+<div class='row feature-header-row'>
+<div class='col-md-7 no-padding-both-sides-col left-feature-col'>
+<a class='back-button back-to-store' href='../../data.html'>Back to Data</a>
+</div>
+<div class='col-md-7 no-padding-right-col right-feature-col'>
+<div class='preview-and-buy pull-right nomobile'>
+<a class='preview-cta store-clone-algo-btn clone-sample-algo-link' data-internal-name='data.accern.alphaone' data-location='details' data-sampletype='data_accern_alphaone'>Example algorithm</a>
+<button class='blue-style-button btn cta-button main-cta-button' data-internal-name='data.accern.alphaone' data-purchase-status='Get' data-user-saved-card='false' data-vendor-internal-name='accern'>Get <small>Full Set</small></button>
+</div>
+</div>
+</div>
+<div class='row pane-break-row'>
+<div class='line'></div>
+</div>
+<div class='row feature-hero-row'>
+<div class='feature-title'>Accern Alphaone News Sentiment</div>
+<div class='feature-detailed-description'>Actionable sentiment scores derived from 20 million public news and blog sources.</div>
+</div>
+<div class='row pane-break-row'>
+<div class='line'></div>
+</div>
+<div class='freedata-enabled hidden'>
+<div class='row feature-attr-row'>
+<div class='col-md-4 no-padding-left-col both'>
+<div class='feature-attr-title'>Access Status</div>
+</div>
+<div class='col-md-10 no-padding-left-col smallscreen'>
+<div class='feature-attr-value'></div>
+</div>
+</div>
+<div class='row pane-break-row'>
+<div class='line'></div>
+</div>
+</div>
+<!-- Load these only if the appropriate data exists in feature_definition. -->
+<div class='row feature-attr-row'>
+<div class='col-md-4 no-padding-left-col both'>
+<div class='feature-attr-title'>Description</div>
+</div>
+<div class='col-md-10 no-padding-left-col smallscreen'>
+<div class='feature-attr-value'>Accern Alpha One offers the most comprehensive coverage of actionable trading analytics such as sentiment and impact scores derived from over 20 million public news and blog sources. With advanced natural language processing algorithms such as entity extraction, event detection, and spam filters, we are able to cancel out 99% of the noise on the web and run analysis on clean actionable articles to be used for trading.</div>
+</div>
+</div>
+<div class='row pane-break-row'>
+<div class='line'></div>
+</div>
+<div class='row feature-attr-row'>
+<div class='col-md-4 no-padding-left-col both'>
+<div class='feature-attr-title'>How to use</div>
+</div>
+<div class='col-md-10 no-padding-left-col smallscreen'>
+<div class='feature-attr-value codeblock'><span class='py-comment'># For use in your algorithms</span><br><span class='py-comment'># Using the full paid dataset in your pipeline algo</span><br><span class='py-import'>from</span> quantopian.pipeline.data.accern <span class='py-import'>import</span> alphaone<br><br><span class='py-comment'># Using the free sample in your pipeline algo</span><br><span class='py-import'>from</span> quantopian.pipeline.data.accern <span class='py-import'>import</span> alphaone_free<br><br><span class='py-comment'># For use in Quantopian Research</span><br><span class='py-comment'># Using the full paid version in research</span><br><span class='py-import'>from</span> quantopian.interactive.data.accern <span class='py-import'>import</span> alphaone<br><br><span class='py-comment'># Using the free sample in research</span><br><span class='py-import'>from</span> quantopian.interactive.data.accern <span class='py-import'>import</span> alphaone_free</div>
+</div>
+</div>
+<div class='row pane-break-row'>
+<div class='line'></div>
+</div>
+<div class='row feature-attr-row'>
+<div class='col-md-4 no-padding-left-col both'>
+<div class='feature-attr-title'>Key Metrics</div>
+</div>
+<div class='col-md-10 no-padding-left-col smallscreen'>
+<div class='feature-attr-value'>
+<div class='ul'>
+<div class='li'><strong>article_sentiment</strong> - a score in [-1,1] reflecting the sentiment of articles written about the company in the last day. The higher score, the more positive the outlook</div>
+<div class='li'><strong>impact_score</strong> - on [0,100], this is the probability that the stock price will change by more than 1% (given by: close - open / open) on the next trading day</div>
+</div>
+</div>
+</div>
+</div>
+<div class='row pane-break-row'>
+<div class='line'></div>
+</div>
+<div class='row feature-attr-row'>
+<div class='col-md-4 no-padding-left-col both'>
+<div class='feature-attr-title'>Example Usage</div>
+</div>
+<div class='col-md-10 no-padding-left-col smallscreen'>
+<div class='feature-attr-value'>
+<div class='community-disclaimer'>Various notebooks, algorithms, and posts that use this data.</div>
+<br>
+<div class='padded-feature-section'>
+<a class='preview-nb' href='https://www.quantopian.com/clone_notebook?id=56bcefbde4929f86ba0001af'>Quantopian Example Notebook</a>
+</div>
+<div class='padded-feature-section'>
+<a href='https://www.quantopian.com/posts/using-accern-and-quandl-data-in-your-algorithms'>Getting started with Alphaone in your algorithms</a>
+</div>
+<div class='padded-feature-section'>
+<a href='https://www.quantopian.com/posts/accern-alphaone-long-short'>Market neutral, long-short example using impact_score</a>
+</div>
+<div class='padded-feature-section'>
+<a href='http://r4---sn-8xgp1vo-xfgl.googlevideo.com/videoplayback?lmt=1452829786622027&mime=video/mp4&key=yt6&itag=18&sver=3&fexp=9416126,9416891,9422596,9427767,9428398,9429379,9431012,9433096,9433457,9433653,9433946,9434085,9434593,9434833,9435534,9435685,9436083&expire=1462616661&initcwndbps=2155000&ipbits=0&signature=B6518FA94A90DD6A085A7347ABC78F54E146ED87.BD7308B0944944547DDD2311F9146DA10D8B05BA&upn=TTx1BDfu4GU&id=o-AHuCyYVYCcg7YWQ9R1Gajs3Gl4hs9XYRkYeAtGGQwKob&dur=3325.167&source=youtube&ratebypass=yes&mt=1462594973&pl=24&mv=m&ms=au&mm=31&ip=100.38.230.156&mn=sn-8xgp1vo-xfgl&sparams=dur,id,initcwndbps,ip,ipbits,itag,lmt,mime,mm,mn,ms,mv,pl,ratebypass,source,upn,expire&name=0aNpsZgSHTk'>Webinar on using this data set in Quantopian</a>
+</div>
+</div>
+</div>
+</div>
+<div class='row pane-break-row'>
+<div class='line'></div>
+</div>
+<div class='row feature-attr-row'>
+<div class='col-md-4 no-padding-left-col both'>
+<div class='feature-attr-title'>Vendor</div>
+</div>
+<div class='col-md-10 no-padding-left-col smallscreen'>
+<div class='feature-attr-value'><a href="http://www.accern.com">Accern</a></div>
+<div class='feature-attr-value padded-feature-section'>The premier leader in distributing comprehensive news and social analytics for the buy-side and sell-side.</div>
+</div>
+</div>
+<div class='row pane-break-row'>
+<div class='line'></div>
+</div>
+<div class='row feature-attr-row'>
+<div class='col-md-4 no-padding-left-col both'>
+<div class='feature-attr-title'>Price</div>
+</div>
+<div class='col-md-10 no-padding-left-col smallscreen'>
+<div class='feature-attr-value'>$50/month</div>
+</div>
+</div>
+<div class='row pane-break-row'>
+<div class='line'></div>
+</div>
+<div class='row feature-attr-row'>
+<div class='col-md-4 no-padding-left-col both'>
+<div class='feature-attr-title'>Timespan of data</div>
+</div>
+<div class='col-md-10 no-padding-left-col smallscreen'>
+<div class='feature-attr-value'>26 Aug 2012  -  Ongoing</div>
+</div>
+</div>
+<div class='row pane-break-row'>
+<div class='line'></div>
+</div>
+<!-- If no explicit free data start date, then just use the data start date for this row -->
+<div class='row feature-attr-row'>
+<div class='col-md-4 no-padding-left-col both'>
+<div class='feature-attr-title'>Free data availability</div>
+</div>
+<div class='col-md-10 no-padding-left-col smallscreen'>
+<div class='feature-attr-value'>26 Aug 2012  -  07 May 2014</div>
+</div>
+</div>
+<div class='row pane-break-row'>
+<div class='line'></div>
+</div>
+<div class='row last-row'></div>
+</div>
+<div class='mid-page-modal fade fast-fade modal' id='purchase-feature-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='cancel-img' data-dismiss='modal'></div>
+<div class='modal-content'>
+<div class='modal-header'>
+<div class='row modal-header-row'>
+<div class='col-md-4'>
+<div class='modal-price' data-monthly-price='50.0'><span class='dollars'>$</span><span class='price'>50</span><span class='interval-big'>/mo</span></div>
+</div>
+<div class='col-md-10'>
+<div class='modal-vendor pull-right'>Accern Alphaone News Sentiment from <a href="https://www.quantopian.com/data/accern/www.accern.com">Accern</a></div>
+</div>
+</div>
+</div>
+<div class='modal-body purchase-feature'>
+<div class='body-content'></div>
+<div class='billing-ui hidden'>
+<div class='billing-details'>
+<div class='card-number-title'>
+<div class='card-number'>Card Number</div>
+<div class='secure-icon'></div>
+</div>
+<div class='card-number-input'>
+<div class='input-prepend credit-card-input'>
+<input id='card-number' placeholder='' type='text'>
+<div class='card-image unknown'></div>
+</div>
+</div>
+<div class='card-other-input'>
+<div class='input-prepend third'>
+<div class='input-header'>Expiration Date</div>
+<input id='card-date' placeholder='MM / YY' type='text'>
+</div>
+<div class='input-prepend third'>
+<div class='input-header'>Security Code</div>
+<input id='card-cvc' placeholder='CVC' type='text'>
+</div>
+<div class='input-prepend region'>
+<div class='input-header'>Region/State</div>
+<select class='form-control' data-tax-rates='{"California":7.5,"New York":8.88,"New Jersey":7.0}' id='region'>
+<option class='disabled selected'>Select</option>
+<option>Non-US</option>
+<option>Alabama</option>
+<option>Alaska</option>
+<option>American Samoa</option>
+<option>Arizona</option>
+<option>Arkansas</option>
+<option>California</option>
+<option>Colorado</option>
+<option>Connecticut</option>
+<option>Delaware</option>
+<option>D.C.</option>
+<option>Florida</option>
+<option>Georgia</option>
+<option>Guam</option>
+<option>Hawaii</option>
+<option>Idaho</option>
+<option>Illinois</option>
+<option>Indiana</option>
+<option>Iowa</option>
+<option>Kansas</option>
+<option>Kentucky</option>
+<option>Louisiana</option>
+<option>Maine</option>
+<option>Maryland</option>
+<option>Massachusetts</option>
+<option>Michigan</option>
+<option>Minnesota</option>
+<option>Mississippi</option>
+<option>Missouri</option>
+<option>Montana</option>
+<option>Nebraska</option>
+<option>Nevada</option>
+<option>New Hampshire</option>
+<option>New Jersey</option>
+<option>New Mexico</option>
+<option>New York</option>
+<option>North Carolina</option>
+<option>North Dakota</option>
+<option>Northern Mar. Isl.</option>
+<option>Ohio</option>
+<option>Oklahoma</option>
+<option>Oregon</option>
+<option>Pennsylvania</option>
+<option>Puerto Rico</option>
+<option>Rhode Island</option>
+<option>South Carolina</option>
+<option>South Dakota</option>
+<option>Tennessee</option>
+<option>Texas</option>
+<option>Utah</option>
+<option>Vermont</option>
+<option>Virginia</option>
+<option>Virgin Islands</option>
+<option>Washington</option>
+<option>West Virginia</option>
+<option>Wisconsin</option>
+<option>Wyoming</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class='saved-card-ui hidden'>
+<div class='saved-card-text'>Your saved <strong></strong> card ending in <strong></strong> will be used to make this purchase.</div>
+</div>
+<div class='result-display hidden'>
+<div class='failure hidden'>
+<div class='noretry hidden'>There was a problem enabling your Quantopian account for this subscription. Quantopian has been notified and will enable your account as soon as possible. Your credit card will be credited for any missed days of access. <br></br> <strong>Until then, please don't retry the payment.</strong></div>
+<div class='internal hidden'>Something went wrong with the transaction. Your card wasn't charged, so you can try again or contact us by <a class='open-feedback-link'>sending feedback</a>.</div>
+<div class='card hidden'>There was a problem billing your credit card on file. Go to your <a href='../../users/sign_up.html#billing'>billing page</a> to check your credit card information, or contact Quantopian for more help.</div>
+</div>
+</div>
+<div class='salestax-info hidden'></div>
+<div class='row pane-break-row'>
+<div class='line'></div>
+</div>
+</div>
+<div class='modal-footer'>
+<div class='default-buttons'>
+<button class='btn btn-primary action-button'>
+<div class='content'>Subscribe</div>
+<div class='loading hidden'>
+<i class='icon icon-refresh icon-spin icon-large'></i>
+</div>
+</button>
+</div>
+<div class='tos-check'>
+<label class='bigcheck'>
+<input class='quanto-checkbox bigcheck' id='tos-checkbox' name='tos-box' type='checkbox' value='tos-checkbox'>
+<span class='bigcheck-target'></span>
+I agree to the <a href='https://www.quantopian.com/policies/store_terms' target="_blank">supplement to the Quantopian Terms of Service</a> and <a href= 'https://www.quantopian.com/policies/data_license' target="_blank">agreement with the data vendor</a> for this data set. Clicking 'Buy Now' begins a monthly subscription for the selected item.
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  //<![CDATA[
+    $(document).ready(function() {
+      quanto.instances.store_manager = new quanto.StoreManager();
+      if ("PaidFeatureDefinition" == "PaidFeatureDefinition") {
+        quanto.instances.billmodalmgr = new quanto.BillingModalManager();
+      }
+    })
+  //]]>
+</script>
+
+
+<div class='fade modal' id='error-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title'>Error</h4>
+</div>
+<div class='modal-body body-content'>
+<p>Sorry, something went wrong.  Try again or contact us by <a class='feedback-link'>sending feedback</a>.</p>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-primary' data-dismiss='modal' href='#'>Close</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='confirmation-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title'></h4>
+</div>
+<div class='modal-body body-content'></div>
+<div class='modal-footer'>
+<button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+<button class='btn btn-primary action-button' data-dismiss='modal'></button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='feedback-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'>Send Feedback</h3>
+</div>
+<div class='modal-body'>
+<div class='controls'>
+<div class='from'>
+<span class='valign-top'>From: </span>
+<div class='feedback-inputs'>
+<div class='form-group'>
+<input autofocus class='form-control' id='feedback-email-box' placeholder='Email address' type='email'>
+</div>
+<div class='form-group'>
+<input class='form-control' id='feedback-name-box' placeholder='Name' type='text'>
+</div>
+</div>
+</div>
+<textarea class='form-control input-xxlarge width_100pct' id='feedback-box' rows='10'></textarea>
+<div class='feedback-checkbox'>
+<div class='checkbox'>
+<label>
+<input id='anonymous-feedback-checkbox' type='checkbox'>I understand I will not receive a reply without providing a valid email address.</input>
+</label>
+</div>
+</div>
+</div>
+<div class='success hidden'>
+<span>Thank you!  We will be in touch soon.</span>
+</div>
+</div>
+<div class='modal-footer'>
+<div class='controls'>
+<button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+<button class='btn btn-primary' id='send-feedback-button'>Send</button>
+</div>
+<div class='success hidden'>
+<a class='btn btn-primary' data-dismiss='modal' href='alphaone.html#'>Close</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='join-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'>Join Quantopian.  It's free!</h3>
+</div>
+<div class='modal-body'>
+<p class='large'>Once you join, you can:</p>
+<div class='margin_20t'>
+<div class='action'>
+<i class='icon icon-copy'></i>
+Create more algorithms
+</div>
+<div class='action'>
+<i class='icon icon-bar-chart'></i>
+Run full backtests, with detailed risk metrics and full transaction reports
+</div>
+<div class='action'>
+<i class='icon icon-comments-alt'></i>
+Post and share in our community
+</div>
+<div class='action'>
+<i class='icon icon-trophy'></i>
+Submit algorithms to the Quantopian Open
+</div>
+</div>
+<div class='margin_20t margin_20b large'>Don't worry, all your work is already saved.</div>
+</div>
+<div class='modal-footer'>
+<div class='pull-left'>
+<a class='btn btn-default btn-large' data-dismiss='modal' href='alphaone.html#'>Close</a>
+</div>
+<a class='btn btn-primary btn-large font-14' href='../../users/sign_up.html'>Join Quantopian</a>
+<a class='btn btn-default btn-large font-14 login-button' href='../../users/sign_in.html'>Log In</a>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='message-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'></h3>
+</div>
+<div class='modal-body'></div>
+<div class='modal-footer'>
+<button class='btn btn-primary' data-dismiss='modal' id='message-modal-close'>Close</button>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class='footer new-style' id='quanto-footer-container'>
+<div class='row-fluid main-footer container'>
+<div class='left-space span1'></div>
+<div class='footer-content span11'>
+<div class='row-fluid footer-inner row'>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Company</div>
+<div class='footer-row'>
+<a href='../../about.html'>About</a>
+</div>
+<div class='footer-row'>
+<a href='../../academia.html'>Academia</a>
+</div>
+<div class='footer-row'>
+<a href='../../workshops.html'>Workshops</a>
+</div>
+<div class='footer-row'>
+<a href='../../about.html'>Careers</a>
+</div>
+<div class='footer-row'>
+<a href='../../posts.html'>Community</a>
+</div>
+<div class='footer-row'>
+<a href='../../prospective_investors.html'>Prospective Investors</a>
+</div>
+</div>
+</div>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Learn &amp; Support</div>
+<div class='footer-row'>
+<a href='../../tutorials/getting-started.html'>Getting Started</a>
+</div>
+<div class='footer-row'>
+<a href='../../faq.html'>FAQs</a>
+</div>
+<div class='footer-row'>
+<a href='../../help.html'>Help &amp; API docs</a>
+</div>
+<div class='footer-row'>
+<a href='../../tutorials.html'>Tutorials</a>
+</div>
+<div class='footer-row'>
+<a href='../../lectures.html'>Lectures</a>
+</div>
+<div class='footer-row'>
+<a href='http://status.quantopian.com'>Site Status</a>
+</div>
+<div class='footer-row'>
+<a href='../../security.html'>Security</a>
+</div>
+</div>
+</div>
+
+<div class='col-sm-6'>
+<div class='feedback-email pull-right'>
+Need Help?
+<a class='open-feedback-link' href='alphaone.html#'>Contact Support</a>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Notices</div>
+<div class='footer-row'>
+<a href='../../policies/terms.html'>Terms of Use</a>
+</div>
+<div class='footer-row'>
+<a href='../../policies/privacy.html'>Privacy Policy</a>
+</div>
+<div class='footer-row'>
+<a href='../../policies/risks.html'>Trading Risk</a>
+</div>
+<div class='footer-row'>
+<a href='../../policies/live_trading.html'>Brokerage Terms</a>
+</div>
+</div>
+</div>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Follow Us</div>
+<div class='footer-row'>
+<a href='http://www.twitter.com/quantopian'>Twitter</a>
+</div>
+<div class='footer-row'>
+<a href='http://www.facebook.com/quantopian'>Facebook</a>
+</div>
+<div class='footer-row'>
+<a href='http://www.linkedin.com/company/quantopian'>LinkedIn</a>
+</div>
+<div class='footer-row'>
+<a href='http://blog.quantopian.com'>Blog</a>
+</div>
+</div>
+</div>
+
+</div>
+<div class='row'>
+<div class='col-sm-14'>
+<div class='pull-right copyright'>&copy; 2016 Quantopian, Inc.</div>
+</div>
+</div>
+</div>
+</div>
+<div class='mobile-footer'>
+<div class='mobile-nav-category main-links'>
+<div class='mobile-nav-row'>
+<a href='../../about.html'>About Quantopian</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../../about.html'>Careers</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../../posts.html'>Community</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../../help.html'>Help</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../../academia.html'>Academia</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../../lectures.html'>Lectures</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../../workshops.html'>Workshops</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://status.quantopian.com'>Status</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.facebook.com/quantopian'>Facebook</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.twitter.com/quantopian'>Twitter</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.linkedin.com/company/quantopian'>LinkedIn</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://blog.quantopian.com'>Blog</a>
+</div>
+</div>
+<div class='mobile-nav-category secondary-links'>
+<div class='mobile-nav-row'>
+<p>&copy; 2016 Quantopian</p>
+</div>
+<div class='mobile-nav-row'>
+<a href='../../policies/terms.html'>Terms of Use</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../../policies/privacy.html'>Privacy Policy</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</body>
+</html>
+<script>
+  //<![CDATA[
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8519877-1']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_setDomainName', 'quantopian.com']);
+    _gaq.push(['_setCustomVar', 1, 'quanto_session_id', 'session_572d6deed42b61f8d200072e']);
+    
+    
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  //]]>
+</script>
+
+
+<input id="is_mac" name="is_mac" type="hidden" value="false" />
+<script>
+  //<![CDATA[
+    (function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js';
+    d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);
+    a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}
+    var g=a;"undefined"!==typeof f? g=a[f]=[]:f="mixpanel";g.people=g.people||[];
+    h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.identify people.set people.increment".split(" ");for(e=0;e<h.length;e++) d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1})(document,window.mixpanel||[]);mixpanel.init("75873953cd404bcc1da88a55ff51e3b4")
+  //]]>
+</script>
+
+<script>
+  //<![CDATA[
+    mixpanel.track("view page", {"page": window.location.pathname})
+  //]]>
+</script>
+<script type="text/javascript">if (typeof NREUMQ !== "undefined") { if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","bam.nr-data.net","59252e476d","984851","dAlXTUcKWFpQRBlETVgUXBZTAFVCQERT",38,343,new Date().getTime(),"","","","",""]);}</script>

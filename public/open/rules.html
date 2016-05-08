@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<link href="../assets/logos/favicon-q-9ba6cb893a620560ab734fe26a5bef5f.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<title>
+Quantopian Open
+</title>
+<link href="../assets/quanto-base-bundle-b524a8864168203acdb8ea6f8202e97b.css" media="all" rel="stylesheet" type="text/css" />
+<link href="../assets/application_new-039c7fe7fe2730066a8dcb040084bc2f.css" media="all" rel="stylesheet" type="text/css" />
+<script src="../assets/quanto_global-44e85c6fa95d3651757ab8e426751f17.js" type="text/javascript"></script>
+<script src="https://use.typekit.com/uvj7txo.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+try{Typekit.load()}catch(e){}
+//]]>
+</script>
+<script src="https://js.stripe.com/v2/" type="text/javascript"></script>
+<meta content='pk_live_qyEzgiIO9PIT9AEbwiX8qw6g' name='stripe-key'>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="XIZmvJvBSDp8R371BFoxbTfU5NJRO3ZTtXciYR83l3c=" name="csrf-token" />
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+
+<input id="quanto-env" name="env" type="hidden" value="production" />
+</head>
+<body class='' ontouchstart=''>
+<div id='fb-root'></div>
+<div class='wrapper' id='contest_submissions-contest_rules'>
+<div class='navbar navbar-default navbar-static-top' id='app-navbar'>
+<div class='container-fluid'>
+<div class='navbar-header'>
+<button class='navbar-toggle collapsed' data-target='#app-navbar-collapse' data-toggle='collapse'>
+<span class='icon hamburger-menu'></span>
+</button>
+<a class='navbar-brand' href='../home.html'>
+<div class='logo-image'></div>
+</a>
+</div>
+<div class='collapse navbar-collapse' id='app-navbar-collapse'>
+<ul class='nav navbar-nav navbar-right'>
+<li class='dropdown hidden unconfirmed-user-header'>
+<a class='header' data-toggle='dropdown' href='rules.html#'>
+<span class='icon icon-warning'></span>
+Unconfirmed Account
+</a>
+<ul class='dropdown-menu no-close-on-click'>
+<div class='confirm-dropdown'>
+<div>
+Click on the confirmation link in the email that Quantopian sent to <strong class="confirm-email-address">
+</strong>.
+</div>
+<div class='margin_10t'>
+<button class='btn resend-confirmation' id='resend-confirmation-email-button'>Resend Confirmation Email</button>
+</div>
+</div>
+</ul>
+</li>
+<li>
+<a class='header' href='../fund.html'>Capital</a>
+</li>
+<li>
+<a class='header' href='../data.html'>Data</a>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='rules.html#'>
+My Code
+</a>
+<ul class='dropdown-menu quanto-dropdown-new'>
+<li>
+<a href='../research/survey.html'>Notebooks</a>
+</li>
+<li>
+<a href='../algorithms.html'>Algorithms</a>
+</li>
+</ul>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='rules.html#'>
+Community
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a class='' href='../posts.html' id='community-header-link'>Forums</a>
+</li>
+<li>
+<a href='../open.html'>Contest</a>
+</li>
+<li>
+<a href='http://www.quantcon.com'>QuantCon</a>
+</li>
+</ul>
+</li>
+<li class='dropdown quanto-dropdown-new'>
+<a class='header' data-toggle='dropdown' href='rules.html#'>
+Learn & Support
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href='../learn.html'>Learn</a>
+</li>
+<li>
+<a class='open-feedback-link' href='rules.html#'>Contact Support</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="../signin.html" class="header unregistered-user-action">Log In</a>
+</li>
+<li>
+<a href="../users/sign_up.html" class="header unregistered-user-action">Sign Up</a>
+</li>
+
+</ul>
+</div>
+</div>
+</div>
+<script>
+  //<![CDATA[
+    $(document).ready(function () {
+      quanto.instances.fm = new quanto.FeedbackManager();
+      quanto.instances.hm = new quanto.headerManager();
+    })
+  //]]>
+</script>
+
+
+<div class='content content-area new-style'>
+<div class='contest-rules'>
+<div class='row-fluid max_width_1120'>
+<div class='span1'></div>
+<div class='span10'>
+<div class='rules-title'>Rules</div>
+<div class='rules-header'>Duration</div>
+<div class='rules-body'>
+<p>Quantopian Inc. (&quot;Quantopian&quot;, &quot;us&quot; or &quot;we&quot;) will run rolling 6-month long contests at the beginning of every month to identify and award the best trading algorithms (collectively, the &quot;Competition&quot;).</p>
+<p>The upcoming 6-Month Contest will begin on June 1, 2016 at 9:30 AM Eastern Time and end on November 30, 2016 at 4:00 PM Eastern Time (the &quot;Contest Period&quot;).  The winner will be announced on December 1, 2016, or as soon as reasonably possible.</p>
+<p>Another 6-Month Contest will begin on  at 9:30 AM Eastern Time and end on  at 4:00 PM Eastern Time. Subsequently, a new 6-Month Contest will begin at the start of each month. Exact dates as well as any necessary rule changes will be announced prior to the start of each new contest.</p>
+</div>
+<div class='rules-header'>Eligibility</div>
+<div class='rules-body'>
+<p>1. To be eligible to take part in the Competition, Participants must have a registered Quantopian account. If a Participant doesn’t have an account yet, the Participant can sign up <a href='../users/sign_up.html'>here</a>.  Quantopian accounts are free.</p>
+<p>2. Participants must be at least 18 years old or older at the time of entry.  Age may be verified prior to prize distribution.</p>
+<p>3. Participants may be from any country or region where their entry is not prohibited or restricted by law.</p>
+<p>4. There is no fee for entry and no purchase is necessary.</p>
+</div>
+<div class='rules-header'>Rules</div>
+<div class='rules-body'>
+<p>1. Algorithms submitted to the competition must use the default commission and slippage settings provided in the Quantopian platform. The details of the default <a href='../help.html#ide-commission'>commission</a> and <a href='../help.html#ide-slippage'>slippage</a> models are provided in our help documentation.</p>
+<p>2. The Quantopian platform tracks the amount of leverage used by the algorithm. Algorithms must maintain a leverage of 3 or lower at all times. The help documentation explains how <a href='../help.html#api-account'>leverage</a> is calculated and used.</p>
+<p>3. The Participant's algorithm must not trade in leveraged ETFs, such as the Ultra S&P500 or Ultra Dow30. To avoid these securities use the <a href= '../help.html#ide-trading-guards'>set_do_not_order()</a> trading guard</p>
+<p>4. The Participant's algorithm must not use the <a href= '../help.html#overview-fetcher'>fetch_csv()</a> feature.</p>
+<p>5. Each Participant may have only one Quantopian account. If the Participant submits entries from more than one account, all entries may be disqualified.</p>
+<p>6. Collaboration on an algorithm is permitted, but Quantopian will not manage the collaboration or prize division. The contest submission is made by, and is the responsibility of, the registered account holder of the account submitting the algorithm.</p>
+</div>
+<div class='rules-header'>Submission</div>
+<div class='rules-body'>
+<p>1. Algorithms must be submitted before 9:30AM Eastern Time on June 1, 2016 (the market open).</p>
+<p>2. To submit Participant's algorithm, go to the algorithm's development environment and click the &quot;Enter Contest&quot; button.  When Participant submits his/her entry, Quantopian will run a two (2)-year backtest with Participant's algorithm and start paper trading Participant's algorithm using live data. The backtest performance and live data trading performance are the items by which Participant's algorithm will be scored and judged (see &quot;Judging&quot; section below).</p>
+<p>3. If the backtest fails to complete for any reason, the entry is disqualified. If this occurs we will attempt to contact the Participant via email. The Participant may adjust the code and re-submit.</p>
+<p>4. If the paper trading algorithm is halted the entry may be disqualified.  In some cases, such as a temporary Quantopian server error, the algorithm may be restarted and re-qualified.  If the algorithm cannot be restarted, regardless of the root cause of the problem, the algorithm will remain disqualified.  If this occurs we will attempt to notify the Participant via email. The Participant may adjust the code and re-submit.</p>
+<p>5. Any submitted algorithm will remain running indefinitely and will be automatically entered into subsequent contests.  For example, a submission made on January 30th will be entered in the contest that starts on February 2nd, and will automatically be entered in the contest starting March 2nd, and so on.</p>
+<p>6. Each Participant may submit up to 3 algorithms to the contest.</p>
+<p>7. Odds of winning depend on the total number of eligible entries.</p>
+<p>8. To remove an algorithm from the contest, navigate to the contest entry's live algorithm dashboard and press the “Stop Algorithm” button.</p>
+<p>9. Participant's entry must not violate or infringe on any applicable law or regulation or third-party rights.</p>
+<p>10. On a nightly basis all entries will be scored.  The rank and scoring metrics will be displayed on a leaderboard.</p>
+<p>11. As always on Quantopian, Participant owns his/her algorithm. Participant's intellectual property will remain Participant's secret; we will not look at Participant's code.  See our <a href='../policies/privacy.html'>Privacy Statement</a> and <a href='../policies/terms.html'>Terms of Use</a> for more information.</p>
+</div>
+<div class='rules-header'>Judging</div>
+<div class='rules-body'>
+<p>Just like our <a href='../fund.html'>fund selection method</a>, the Participant's algorithm will be judged on a combination of backtest performance and paper trading performance. All scoring will be performed electronically.</p>
+<p>First, the Participant's algorithm will be filtered based on its correlation to the market. The correlation is measured as the beta-to-SPY ratio, and the algorithm must have a beta value between 0.3 and -0.3 to be in the top rank. It is calculated over a trailing 1-year period at the end of each month for a year, and then averaging those results. In practice, this means computing your beta-to-SPY for the year ending April 30, 2015, for the year ending March 31, 2015, for the year ending February 28, 2015, etc. until we have 12 computations, and then averaging them. To do this manually yourself, follow these three steps. First, run a full minute-mode backtest from 04/01/2014 to 05/06/2016. Second, click into the ‘beta’ tab on the left side of your full backtest screen. And third, take the mean of the twelve most recent values for twelve month rolling beta (the rightmost column).</p>
+<p>Your algorithm must be hedged to the market. It should hold both long and short positions simultaneously, or be entirely in cash. Hedged strategies reduce their market risk and correlation risk to individual positions.</p>
+<p>Your algorithm must must have positive returns. It must make trades in both paper trading and backtesting. You can analyze your algorithm's performance by using our <a href='https://www.quantopian.com/posts/tearsheet-analysis-of-algo-performance-in-our-research-envirionment'>tearsheet</a> to examine the trades, risk metrics, and cash management.</p>
+<p>After these filters are applied, the Participant's algorithm will be ranked against all of the other entries using the 7 (seven) criteria listed below. We will calculate an overall rank by averaging the Participant's rank in each criterion in paper trading.</p>
+<p>
+<span class='bold'>Sharpe Ratio: </span>
+The gold standard of performance metrics. Penalizes an algorithm if it takes excessive risk to achieve its return. Higher Sharpe is better.
+</p>
+<p>
+<span class='bold'>Annualized volatility: </span>
+Lower volatility is better.
+</p>
+<p>
+<span class='bold'>Annualized returns: </span>
+The algorithm has to make money.
+</p>
+<p>
+<span class='bold'>Max Drawdown: </span>
+The greatest loss suffered from a peak in equity to its subsequent trough. By minimizing drawdown, Participant's algorithm can better compound gains.
+</p>
+<p>
+<span class='bold'>Stability of Return: </span>
+This measures how consistently an algorithm generates its profits over time. (Mathematically, the R-squared of the linear regression line drawn through the algorithm's equity curve based on log-returns).
+</p>
+<p>
+<span class='bold'>Sortino Ratio: </span>
+Annual Return / standard deviation of negative returns. This is a quick way to compare across algorithms how long it might take to get back above its high-water mark after suffering a loss equal to its historical max drawdown. A large Sortino ratio indicates a low probability of a large loss.
+</p>
+<p>
+<span class='bold'>Beta-to-SPY: </span>
+How connected your algorithm is to swings in the value of SPY.
+</p>
+<p>A leaderboard will be published daily, to the best of our ability.</p>
+<p>Additionally, we reserve the right to disqualify any entry at our sole discretion.  For instance, if we believe that an entry is made in bad faith with the intent to &quot;game&quot; the contest, or if we conclude that the algorithm is not suitable or financially prudent to trade with real money, we would disqualify the entry.</p>
+</div>
+<div class='rules-header'>Reward</div>
+<div class='rules-body'>
+<p>The top-ranked submission will receive $5000.  2nd place will receive $1000.  3rd place will receive $500.</p>
+<p>An individual may only win one prize per month. If an individual qualifies for more than one prize, the higher prize will be awarded to the individual, and the lower prize will go to the next-ranked contestant.</p>
+<p>The winner of the first prize will not be eligible for cash prizes for the subsequent three months.</p>
+<p>In the event of an exact tie, the prize will be split evenly among all Winners.  Note that there is no advantage to submitting the same algorithm more than once; the Generated Profits will be split evenly among all Winners, not among the entries.  A Participant who enters the same algorithm more than once will receive only one share of the Generated Profits.</p>
+<p>The overall performance of the Winner's algorithm will be public during the prize period.  No one, including Quantopian, will see the Winner's algorithm.</p>
+</div>
+<div class='rules-header'>General Conditions</div>
+<div class='rules-body'>
+<p>1. Prizes are non-transferable to other users or accounts.</p>
+<p>2. Quantopian reserves the right at its sole discretion to alter, amend, modify, suspend or terminate this Competition, or any aspect of it, including but not limited to changing the contest duration, at any time and without prior notice. In such event Quantopian will make reasonable efforts to notify all Participants by email.</p>
+<p>3. Quantopian will make all reasonable efforts to support the acceptance of entries and the execution of backtests and paper trading.  Entries may not be successfully processed or executed because of errors or failures.  Those errors or failures may be caused by Quantopian, the Participant, third parties, or a combination of parties.  Quantopian will not be liable or otherwise responsible for any entry that cannot be processed or executed, regardless of the cause of the problem.</p>
+<p>4. Quantopian will make all reasonable efforts to execute the Winner's algorithm.  The algorithm may not be successfully processed or executed because of errors or failures.  Those errors or failures may be caused by Quantopian, the Winner, third parties, or a combination of parties.  Quantopian will not be liable or otherwise responsible for any failure of the algorithm to be processed or executed, regardless of the cause of the problem.  Furthermore, Quantopian is explicitly not liable for any delays in the acceptance or transmission of orders due to a breakdown, failure of transmission, communication facilities or for any other technical error or cause. If the Winner's algorithm cannot be executed as planned as a result of errors, Quantopian shall incur no liability and the prize will not be awarded.</p>
+<p>5. Quantopian will have complete discretion over interpretation of the Open Competition Rules, administration of the Competition and selection of the Winners.  Decisions of Quantopian as to the administration of the Competition, interpretation of the Open Competition Rules and the selection of the Winners will be binding and final.</p>
+<p>6. Participant agrees and give his/her express consent for Quantopian to use or publish without additional compensation in any medium (including, without limitation, in print, via television, via the internet, via email and or/other electronic form) and/or share with its agents, business partners and successors during and after the Competition period, information for publicity purposes including photographs, videotape or digital recordings that Quantopian takes of Participant, Participant's Quantopian username, public written statements, and algorithm performance for all or part of the Competition, without compensation. Participant hereby waives any rights, claims or interests that Participant may have to control the use of any or all of the publicity material in whatever medium used.</p>
+<p>7. All former and current employees, interns and contractors of Quantopian; and their immediate family members; and their household members are prohibited from participating in the Competition.</p>
+<p>8. This Competition is void where prohibited by law.</p>
+<p>9. If any provision(s) of these Open Competition Rules is held to be invalid or unenforceable, all remaining provisions hereof will remain in full force and effect.</p>
+<p>10. The Winner is solely responsible for the payment of any and all taxes, including but not limited to federal, state and local taxes that may apply on their Generated Profits. Quantopian shall have the right, but not the obligation, to make any deductions and withholdings that Quantopian deems necessary or desirable under applicable federal, and local tax laws, rules, regulations, codes or ordinances.</p>
+<p>11. Quantopian is not responsible for the actions of Participants in connection with the Competition, including Participants’ attempts to circumvent the Open Competition Rules or otherwise interfere with the administration, security, fairness, integrity or proper conduct of the Competition.  Persons found tampering with or abusing any aspect of this Competition, or who Quantopian believes to be causing or attempting to cause malfunction, error, disruption or damage will be disqualified. Additionally, any attempt to cheat the Competition, as determined at the sole discretion of Quantopian, may result in immediate disqualification of the Participant, as well as other possible consequences, including disqualification from any and all existing and future Competitions. Quantopian reserves the right, at its sole and absolute discretion, to disqualify any individual who is found to be, or suspected of, acting in violation of these Open Competition Rules, or to be acting in an un-sportsmanlike, obscene, immoral or disruptive manner, or with the intent to annoy, abuse, threaten or harass any other person.</p>
+<p>12. These Open Competition Rules shall be governed by the same jurisdictional and dispute processes as specified in the Quantopian <a href='../policies/terms.html'>Terms of Use</a>.</p>
+</div>
+<div class='rules-header'>Binding Agreement</div>
+<div class='rules-body'>
+<p>Participant agrees that by participating in the Competition that Participant will be bound by these Open Competition Rules (which may be amended or varied at any time by Quantopian with or without notice) as well as the <a href='../policies/terms.html'>terms and conditions</a> that apply to Participant's use of the Quantopian website.</p>
+</div>
+<div class='rules-header'>Liability</div>
+<div class='rules-body'>
+<p>1. To the maximum extent permitted by law, Participant agrees to release, discharge and hold harmless Quantopian and each of its parents, subsidiaries, affiliates, prize providers/suppliers, agents, representatives, retailers, and advertising and promotion agencies, and each of their respective directors, officers, employees, agents, successors and assigns (collectively, the &quot;Released Parties&quot;), from any and all liability, claims, losses, injuries, demands, damages, actions, and/or causes of actions whether direct or indirect, which may be due to or arise out of or in connection with the participation in the Competition or any portion thereof, or the awarding, acceptance, receipt, use or misuse or possession of the prizes or while preparing for or participating in any Competition-related activity (including, without limitation, liability for any property loss, damage, personal injury or death, violation of rights of publicity or privacy, or claims of defamation or portrayal in a false light; or based on any claim of infringement of intellectual property). Participants agree that the Released Parties shall have no responsibility or liability for discontinued Prizes; human error; incorrect or inaccurate transcription of information; any technical malfunctions of the telephone network, computer equipment or systems, software, or Internet service provider utilized by Quantopian; interruption or inability to access the Competition website or any online service via the Internet due to hardware or software compatibility problems; any damage to participant’s (or any third person’s) computer and/or its contents related to or resulting from any part of the Competition; any lost/delayed data transmissions, omissions, interruptions, defects; and/or any other errors or malfunctions, even if caused by the negligence of the Released Parties. Each participant further agrees to indemnify and hold harmless Released Parties from and against any and all liability resulting or arising from the Competition and to release all rights to bring any claim, action or proceeding against Released Parties and hereby acknowledges that Released Parties have neither made nor are in any manner responsible or liable for any warranty, representation or guarantee, express or implied, in fact or in law, relative to a prize, including express warranties provided exclusively by a prize supplier that may be sent along with a prize. The releases hereunder are intended to apply to all claims not known or suspected to exist with the intent of waiving the effect of laws requiring the intent to release future unknown claims.</p>
+<p>2. PARTICIPANT AGREES THAT: (1) ANY AND ALL DISPUTES, CLAIMS AND CAUSES OF ACTION ARISING OUT OF OR CONNECTED WITH THE CONTEST, OR ANY PRIZE AWARDED, WILL BE RESOLVED INDIVIDUALLY, WITHOUT RESORT TO ANY FORM OF CLASS ACTION; (2) ANY AND ALL CLAIMS, JUDGMENTS AND AWARDS WILL BE LIMITED TO ACTUAL THIRD-PARTY, OUT-OF-POCKET COSTS INCURRED, (IF ANY), NOT TO EXCEED TWO HUNDRED FIFTY DOLLARS ($250.00), BUT IN NO EVENT WILL ATTORNEYS’ FEES BE AWARDED OR RECOVERABLE; (3) UNDER NO CIRCUMSTANCES WILL ANY PARTICIPANT BE PERMITTED TO OBTAIN ANY AWARD FOR, AND PARTICIPANT HEREBY KNOWINGLY AND EXPRESSLY WAIVES ALL RIGHTS TO SEEK, PUNITIVE, INCIDENTAL, CONSEQUENTIAL OR SPECIAL DAMAGES, LOST PROFITS AND/OR ANY OTHER DAMAGES, OTHER THAN ACTUAL OUT-OF-POCKET EXPENSES NOT TO EXCEED TWO HUNDRED FIFTY DOLLARS ($250.00), AND/OR ANY RIGHTS TO HAVE DAMAGES MULTIPLIED OR OTHERWISE INCREASED; AND (4) PARTICIPANT’S REMEDIES ARE LIMITED TO A CLAIM FOR MONEY DAMAGES (IF ANY) AND PARTICIPANT IRREVOCABLY WAIVES ANY RIGHT TO SEEK INJUNCTIVE OR EQUITABLE RELIEF. SOME JURISDICTIONS DO NOT ALLOW THE LIMITATIONS OR EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE MAY NOT APPLY TO THE PARTICIPANT.</p>
+<p>Last revised: September 18, 2015</p>
+</div>
+</div>
+<div class='span1'></div>
+</div>
+</div>
+
+<div class='fade modal' id='error-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title'>Error</h4>
+</div>
+<div class='modal-body body-content'>
+<p>Sorry, something went wrong.  Try again or contact us by <a class='feedback-link'>sending feedback</a>.</p>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-primary' data-dismiss='modal' href='#'>Close</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='confirmation-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title'></h4>
+</div>
+<div class='modal-body body-content'></div>
+<div class='modal-footer'>
+<button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+<button class='btn btn-primary action-button' data-dismiss='modal'></button>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='feedback-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'>Send Feedback</h3>
+</div>
+<div class='modal-body'>
+<div class='controls'>
+<div class='from'>
+<span class='valign-top'>From: </span>
+<div class='feedback-inputs'>
+<div class='form-group'>
+<input autofocus class='form-control' id='feedback-email-box' placeholder='Email address' type='email'>
+</div>
+<div class='form-group'>
+<input class='form-control' id='feedback-name-box' placeholder='Name' type='text'>
+</div>
+</div>
+</div>
+<textarea class='form-control input-xxlarge width_100pct' id='feedback-box' rows='10'></textarea>
+<div class='feedback-checkbox'>
+<div class='checkbox'>
+<label>
+<input id='anonymous-feedback-checkbox' type='checkbox'>I understand I will not receive a reply without providing a valid email address.</input>
+</label>
+</div>
+</div>
+</div>
+<div class='success hidden'>
+<span>Thank you!  We will be in touch soon.</span>
+</div>
+</div>
+<div class='modal-footer'>
+<div class='controls'>
+<button class='btn btn-default' data-dismiss='modal'>Cancel</button>
+<button class='btn btn-primary' id='send-feedback-button'>Send</button>
+</div>
+<div class='success hidden'>
+<a class='btn btn-primary' data-dismiss='modal' href='rules.html#'>Close</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='join-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'>Join Quantopian.  It's free!</h3>
+</div>
+<div class='modal-body'>
+<p class='large'>Once you join, you can:</p>
+<div class='margin_20t'>
+<div class='action'>
+<i class='icon icon-copy'></i>
+Create more algorithms
+</div>
+<div class='action'>
+<i class='icon icon-bar-chart'></i>
+Run full backtests, with detailed risk metrics and full transaction reports
+</div>
+<div class='action'>
+<i class='icon icon-comments-alt'></i>
+Post and share in our community
+</div>
+<div class='action'>
+<i class='icon icon-trophy'></i>
+Submit algorithms to the Quantopian Open
+</div>
+</div>
+<div class='margin_20t margin_20b large'>Don't worry, all your work is already saved.</div>
+</div>
+<div class='modal-footer'>
+<div class='pull-left'>
+<a class='btn btn-default btn-large' data-dismiss='modal' href='rules.html#'>Close</a>
+</div>
+<a class='btn btn-primary btn-large font-14' href='../users/sign_up.html'>Join Quantopian</a>
+<a class='btn btn-default btn-large font-14 login-button' href='../users/sign_in.html'>Log In</a>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='fade modal' id='message-modal' role='dialog'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'></h3>
+</div>
+<div class='modal-body'></div>
+<div class='modal-footer'>
+<button class='btn btn-primary' data-dismiss='modal' id='message-modal-close'>Close</button>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class='footer new-style' id='quanto-footer-container'>
+<div class='row-fluid main-footer container'>
+<div class='left-space span1'></div>
+<div class='footer-content span11'>
+<div class='row-fluid footer-inner row'>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Company</div>
+<div class='footer-row'>
+<a href='../about.html'>About</a>
+</div>
+<div class='footer-row'>
+<a href='../academia.html'>Academia</a>
+</div>
+<div class='footer-row'>
+<a href='../workshops.html'>Workshops</a>
+</div>
+<div class='footer-row'>
+<a href='../about.html'>Careers</a>
+</div>
+<div class='footer-row'>
+<a href='../posts.html'>Community</a>
+</div>
+<div class='footer-row'>
+<a href='../prospective_investors.html'>Prospective Investors</a>
+</div>
+</div>
+</div>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Learn &amp; Support</div>
+<div class='footer-row'>
+<a href='../tutorials/getting-started.html'>Getting Started</a>
+</div>
+<div class='footer-row'>
+<a href='../faq.html'>FAQs</a>
+</div>
+<div class='footer-row'>
+<a href='../help.html'>Help &amp; API docs</a>
+</div>
+<div class='footer-row'>
+<a href='../tutorials.html'>Tutorials</a>
+</div>
+<div class='footer-row'>
+<a href='../lectures.html'>Lectures</a>
+</div>
+<div class='footer-row'>
+<a href='http://status.quantopian.com'>Site Status</a>
+</div>
+<div class='footer-row'>
+<a href='../security.html'>Security</a>
+</div>
+</div>
+</div>
+
+<div class='col-sm-6'>
+<div class='feedback-email pull-right'>
+Need Help?
+<a class='open-feedback-link' href='rules.html#'>Contact Support</a>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Notices</div>
+<div class='footer-row'>
+<a href='../policies/terms.html'>Terms of Use</a>
+</div>
+<div class='footer-row'>
+<a href='../policies/privacy.html'>Privacy Policy</a>
+</div>
+<div class='footer-row'>
+<a href='../policies/risks.html'>Trading Risk</a>
+</div>
+<div class='footer-row'>
+<a href='../policies/live_trading.html'>Brokerage Terms</a>
+</div>
+</div>
+</div>
+<div class='span3 col-sm-4'>
+<div class='footer-item'>
+<div class='title h2'>Follow Us</div>
+<div class='footer-row'>
+<a href='http://www.twitter.com/quantopian'>Twitter</a>
+</div>
+<div class='footer-row'>
+<a href='http://www.facebook.com/quantopian'>Facebook</a>
+</div>
+<div class='footer-row'>
+<a href='http://www.linkedin.com/company/quantopian'>LinkedIn</a>
+</div>
+<div class='footer-row'>
+<a href='http://blog.quantopian.com'>Blog</a>
+</div>
+</div>
+</div>
+
+</div>
+<div class='row'>
+<div class='col-sm-14'>
+<div class='pull-right copyright'>&copy; 2016 Quantopian, Inc.</div>
+</div>
+</div>
+</div>
+</div>
+<div class='mobile-footer'>
+<div class='mobile-nav-category main-links'>
+<div class='mobile-nav-row'>
+<a href='../about.html'>About Quantopian</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../about.html'>Careers</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../posts.html'>Community</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../help.html'>Help</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../academia.html'>Academia</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../lectures.html'>Lectures</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../workshops.html'>Workshops</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://status.quantopian.com'>Status</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.facebook.com/quantopian'>Facebook</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.twitter.com/quantopian'>Twitter</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://www.linkedin.com/company/quantopian'>LinkedIn</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='http://blog.quantopian.com'>Blog</a>
+</div>
+</div>
+<div class='mobile-nav-category secondary-links'>
+<div class='mobile-nav-row'>
+<p>&copy; 2016 Quantopian</p>
+</div>
+<div class='mobile-nav-row'>
+<a href='../policies/terms.html'>Terms of Use</a>
+</div>
+<div class='mobile-nav-row'>
+<a href='../policies/privacy.html'>Privacy Policy</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</body>
+</html>
+<script>
+  //<![CDATA[
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8519877-1']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_setDomainName', 'quantopian.com']);
+    _gaq.push(['_setCustomVar', 1, 'quanto_session_id', 'session_572d6deed42b61f8d200072e']);
+    
+    
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  //]]>
+</script>
+
+
+<input id="is_mac" name="is_mac" type="hidden" value="false" />
+<script>
+  //<![CDATA[
+    (function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js';
+    d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);
+    a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}
+    var g=a;"undefined"!==typeof f? g=a[f]=[]:f="mixpanel";g.people=g.people||[];
+    h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.identify people.set people.increment".split(" ");for(e=0;e<h.length;e++) d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1})(document,window.mixpanel||[]);mixpanel.init("75873953cd404bcc1da88a55ff51e3b4")
+  //]]>
+</script>
+
+<script>
+  //<![CDATA[
+    mixpanel.track("view page", {"page": window.location.pathname})
+  //]]>
+</script>
+<script type="text/javascript">if (typeof NREUMQ !== "undefined") { if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","bam.nr-data.net","59252e476d","984851","dAlXTUcKWFpQRBlUVlkSXEpBOkdDV1tfREpeCVdKGgZbWEFTRUNmRRNVXEY=",10,1919,new Date().getTime(),"","","","",""]);}</script>

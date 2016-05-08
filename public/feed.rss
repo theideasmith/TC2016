@@ -1,0 +1,1167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
+  <id>tag:www.quantopian.com,2005:/feed</id>
+  <link rel="alternate" type="text/html" href="https://www.quantopian.com"/>
+  <link rel="self" type="application/atom+xml" href="https://www.quantopian.com/feed"/>
+  <title>Quantopian Posts</title>
+  <updated>2016-05-07T03:33:43Z</updated>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572d6217f73136c1c700042e</id>
+    <published>2016-05-07T03:33:43Z</published>
+    <updated>2016-05-07T03:33:43Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/asset-allocation-portfolio"/>
+    <url>https://www.quantopian.com/posts/asset-allocation-portfolio</url>
+    <title>Asset Allocation portfolio!</title>
+    <content type="html">&lt;p&gt;Hi, &lt;/p&gt;
+
+&lt;p&gt;I am a new user of Quantopian, and having trouble to construct an located portfolio consisting of stocks (eg IBM &amp;amp; APPL) and 10 years bond&lt;br&gt;
+(IEF), Does anyone can help me on that? or refer some codes so I can start with? (it doesn&amp;#39;t matter which strategy is used)
+Another thing that I want to do is to find a method to check the optimal allocation for my portfolio? Can I implement the moving average to such a portfolio? &lt;/p&gt;
+
+&lt;p&gt;Thanx in advanced!  &lt;/p&gt;
+</content>
+    <author>
+      <name>Nadia</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572d590f0c5e1682740006a8</id>
+    <published>2016-05-07T02:55:11Z</published>
+    <updated>2016-05-07T02:55:11Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/fundamentals-key-error-0"/>
+    <url>https://www.quantopian.com/posts/fundamentals-key-error-0</url>
+    <title>FUNDAMENTALS - KEY ERROR 0</title>
+    <content type="html">&lt;p&gt;&lt;strong&gt;This is the error I get:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;KeyError: 0&lt;br&gt;
+There was a runtime error on line 246.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Here is the code I added that is giving me there error:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;def before_trading_start(context, data):  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;fundamental_df = get_fundamentals(  
+    query(  
+        fundamentals.share_class_reference.exchange_id  
+    )  
+    .filter(fundamentals.share_class_reference.exchange_id == &amp;quot;NAS&amp;quot;)  
+)  
+
+context.stocks = (fundamental_df)  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;What do?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I am trying to generate a df of stocks that are only from the NASDAQ.  &lt;/p&gt;
+</content>
+    <author>
+      <name>Dante Migale</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572d2ff6d42b61f8d20004e5</id>
+    <published>2016-05-06T23:59:50Z</published>
+    <updated>2016-05-06T23:59:50Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/cloned-an-old-algo-trying-to-migrate-it"/>
+    <url>https://www.quantopian.com/posts/cloned-an-old-algo-trying-to-migrate-it</url>
+    <title>Cloned an old algo, trying to migrate it</title>
+    <content type="html">&lt;p&gt;Took this thread and the example algo from Seong Lee here:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.quantopian.com/posts/looping-to-compare-all-stocks-to-pick-highest-gainer"&gt;https://www.quantopian.com/posts/looping-to-compare-all-stocks-to-pick-highest-gainer&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And I&amp;#39;ve gotten through updating the &amp;quot;set universe&amp;quot; to a pipeline but needing some help with the syntax error on line 106:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; 104       for stock in data:  
+ 105           context.daily_stocks[stock] = (data.current([stock],price)/(context.daily_stocks[stock])  
+ 106       winner = max(context.daily_stocks.values())  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I was thinking that this would have to become:&lt;br&gt;
+&lt;code&gt;
+        winner = max(data.current(context.daily_stocks,price)  
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;but that is not working. I would appreciate the help as I feel I&amp;#39;m misinterpreting how the &amp;quot;context.&amp;quot; is used.&lt;/p&gt;
+
+&lt;p&gt;Thanks in advance!  &lt;/p&gt;
+</content>
+    <author>
+      <name>Scott Goley</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572d138ad42b61f4c3000444</id>
+    <published>2016-05-06T21:58:34Z</published>
+    <updated>2016-05-06T21:58:34Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/technical-questions-regarding-loading-of-data-and-ram-limit-on-backtests"/>
+    <url>https://www.quantopian.com/posts/technical-questions-regarding-loading-of-data-and-ram-limit-on-backtests</url>
+    <title>technical questions regarding loading of data and ram limit on backtests.</title>
+    <content type="html">&lt;p&gt;Hello everyone. I have 10 -20 machine learning models that are about 35 Mb each. I would like to load them, is there a way?&lt;/p&gt;
+
+&lt;p&gt;Tech support, what is our ram limit?  &lt;/p&gt;
+</content>
+    <author>
+      <name>toan tran</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572cf724f73136fae3000355</id>
+    <published>2016-05-06T19:57:24Z</published>
+    <updated>2016-05-06T19:57:24Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/iterating-over-a-list-of-securities-having-trouble-with-sid-id"/>
+    <url>https://www.quantopian.com/posts/iterating-over-a-list-of-securities-having-trouble-with-sid-id</url>
+    <title>Iterating over a list of securities, having trouble with sid(id)</title>
+    <content type="html">&lt;p&gt;I have a few lines which are variations on follow:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    for index in range(len(seclist)):  
+        curr_price[index] = data.current(sid(seclist[index]),&amp;#39;price&amp;#39;)  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Where seclist is a constant array of the id numbers of the securities I am looking at.&lt;/p&gt;
+
+&lt;p&gt;I am getting a build error &amp;quot;The sid(id) method takes one parameter.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;What am I doing wrong?  &lt;/p&gt;
+</content>
+    <author>
+      <name>Aryeh Baruch</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572cd687f73136fae30001d7</id>
+    <published>2016-05-06T17:38:15Z</published>
+    <updated>2016-05-06T17:38:15Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/quantopian-lecture-series-draft-hypothesis-testing"/>
+    <url>https://www.quantopian.com/posts/quantopian-lecture-series-draft-hypothesis-testing</url>
+    <title>Quantopian Lecture Series DRAFT: Hypothesis Testing</title>
+    <content type="html">&lt;p&gt;This is a pre-release draft, please let me know if you have any comments or feedback.&lt;/p&gt;
+
+&lt;p&gt;Hypothesis testing provides us with a concrete statistical way to test a claim or an idea about parameters in data.&lt;br&gt;
+It can provide a measure of certainty about whether certain actions were good or bad or it can inform decisions&lt;br&gt;
+for the future. This notebook is a primer on hypothesis testing and stars the t-test: a statistician&amp;#39;s best friend.&lt;/p&gt;
+
+&lt;p&gt;All lectures can be found here.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.quantopian.com/lectures"&gt;https://www.quantopian.com/lectures&lt;/a&gt;  &lt;/p&gt;
+</content>
+    <author>
+      <name>Maxwell Margenot</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572ca911b042eb75db000a05</id>
+    <published>2016-05-06T14:24:17Z</published>
+    <updated>2016-05-06T14:24:17Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/feature-request-allow-adding-note-to-backtest"/>
+    <url>https://www.quantopian.com/posts/feature-request-allow-adding-note-to-backtest</url>
+    <title>Feature request: allow adding note to backtest</title>
+    <content type="html">&lt;p&gt;It would be great if we can add a note to our backtests, which will be displayed in the &amp;quot;All backtests&amp;quot; page, so later on we can look and quickly remember which changes that backtest was for.&lt;/p&gt;
+
+&lt;p&gt;Best,  &lt;/p&gt;
+</content>
+    <author>
+      <name>Anh Nguyen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572c80eb499bb2f2b3000876</id>
+    <published>2016-05-06T11:32:59Z</published>
+    <updated>2016-05-06T11:32:59Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/pyfolio-tear-sheet-expectancy-cone-projection"/>
+    <url>https://www.quantopian.com/posts/pyfolio-tear-sheet-expectancy-cone-projection</url>
+    <title>Pyfolio tear sheet - Expectancy Cone projection</title>
+    <content type="html">&lt;p&gt;Hi,&lt;/p&gt;
+
+&lt;p&gt;I found the expectancy cone feature very useful.  Here is what I want to do:&lt;/p&gt;
+
+&lt;p&gt;a) I pick up a symbol say &amp;#39;IBM&amp;#39; and take daily data from 2002 till 2016&lt;br&gt;
+b) I want to check that if I buy IBM today, what is the expectancy cone likely to be for the next 5 years.&lt;/p&gt;
+
+&lt;p&gt;Is this possible?  Thanks  &lt;/p&gt;
+</content>
+    <author>
+      <name>Vivek Gadodia</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572c555b86af382ddd00072b</id>
+    <published>2016-05-06T08:27:07Z</published>
+    <updated>2016-05-06T08:27:07Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/hmmlearn-package"/>
+    <url>https://www.quantopian.com/posts/hmmlearn-package</url>
+    <title>hmmlearn package</title>
+    <content type="html">&lt;p&gt;It seems the old hmm package from sklearn has deprecated. the new version hmmlearn is seperate from sklearn.  Can somebody from Quantopian tell me when the hmmlearn will be added? Thanks!  &lt;/p&gt;
+</content>
+    <author>
+      <name>Denzel Shu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572c0f66b042ebbcbd0004b3</id>
+    <published>2016-05-06T03:28:38Z</published>
+    <updated>2016-05-06T03:28:38Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/nan-values-in-stock-data"/>
+    <url>https://www.quantopian.com/posts/nan-values-in-stock-data</url>
+    <title>NaN values in stock data</title>
+    <content type="html">&lt;p&gt;I am trying to backtest an algorithm with data from 2014 and on March 17, 2014 I get values of NaN. See attached algorithm, when back test is set to run in minute mode from March 18, 2014. This particular example uses XOM stock, but the same happens with other NYSE stocks (I also tried GE). At the end of InitFeatures, the array stockPrices has &amp;quot;nan&amp;quot; values. &lt;/p&gt;
+
+&lt;p&gt;Any ideas of what is going on and how to fix it?&lt;/p&gt;
+
+&lt;p&gt;Thanks!  &lt;/p&gt;
+</content>
+    <author>
+      <name>Pavlin Entchev</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572bdebcb91d3511c3000355</id>
+    <published>2016-05-06T00:01:00Z</published>
+    <updated>2016-05-06T00:01:00Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/deleted-1"/>
+    <url>https://www.quantopian.com/posts/deleted-1</url>
+    <title>[deleted]</title>
+    <content type="html">&lt;p&gt;[deleted]&lt;/p&gt;
+</content>
+    <author>
+      <name>Zachary Metz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572bb2b77b1af6a76600015a</id>
+    <published>2016-05-05T20:53:11Z</published>
+    <updated>2016-05-05T20:53:11Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/cfd"/>
+    <url>https://www.quantopian.com/posts/cfd</url>
+    <title>CFD</title>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;Is there a way to chose CFD instead of stocks for live trading ?&lt;br&gt;
+I usualy trade CFD with IB.&lt;/p&gt;
+
+&lt;p&gt;Thanks.&lt;br&gt;
+Chris  &lt;/p&gt;
+</content>
+    <author>
+      <name>D. Chris</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572b664a0532667101000ad2</id>
+    <published>2016-05-05T15:27:06Z</published>
+    <updated>2016-05-05T15:27:06Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/masking-pipeline-factors-new-feature"/>
+    <url>https://www.quantopian.com/posts/masking-pipeline-factors-new-feature</url>
+    <title>Masking Pipeline Factors - New Feature!</title>
+    <content type="html">&lt;p&gt;The power of the pipeline API is that you can compute factors across 8000 securities on any given day. However, you often don&amp;#39;t need to actually compute your factors over all 8000 securities, which can cause your backtest to be unnecessarily slow. &lt;/p&gt;
+
+&lt;p&gt;We have just launched masking of pipeline factors which allows you to limit the securities for which factor is computed, speeding up your pipeline algorithms. &lt;a href="https://www.quantopian.com/help#masking-factors"&gt;You can learn more about this feature here&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;Attached is an example where we pass a high dollar volume filter to the returns factor. This lets the return factor get calculated for far fewer securities, dramatically speeding up the backtest.&lt;/p&gt;
+
+&lt;p&gt;We will continue to work on performance improvements to the data ingestion of pipeline algorithms.  In the mean time, I hope this helps speed up your algorithms.  &lt;/p&gt;
+</content>
+    <author>
+      <name>Karen Rubin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572b5565e3fe11ed9d000a04</id>
+    <published>2016-05-05T14:15:01Z</published>
+    <updated>2016-05-05T14:15:01Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/enhancement-requests"/>
+    <url>https://www.quantopian.com/posts/enhancement-requests</url>
+    <title>Enhancement Requests</title>
+    <content type="html">&lt;p&gt;TYVM for your hard work! A really enjoyable platform.&lt;/p&gt;
+
+&lt;p&gt;I have some suggestions, maybe you find some time to implement them:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Alpha&lt;/strong&gt; , &lt;strong&gt;Sharpe Ratio&lt;/strong&gt;, &lt;strong&gt;Sortino Ratio&lt;/strong&gt;, &lt;strong&gt;InfoRatio&lt;/strong&gt; are calculated incorrectly both on main sim tab and detailed report. Are used &lt;em&gt;TotalReturnForThePeriod&lt;/em&gt; instead of &lt;em&gt;AnnualReturn&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The Return on &lt;strong&gt;Return Tab&lt;/strong&gt; should be possible to be viewed as compounded annually too.  &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Annual Return&lt;/strong&gt; is an important information and should be reported on main (&lt;strong&gt;Results Overview&lt;/strong&gt;) simulation too.  &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Maybe a choice to &lt;strong&gt;see it as %&lt;/strong&gt; will help too at least for Alpha, Volatility, Return, MaxDD with one decimal.  &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Please use the &lt;strong&gt;same number of decimals&lt;/strong&gt; for output. No more than 3..4 digits in a number.  &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Drawing in the &lt;strong&gt;gradient Green-White-Red background&lt;/strong&gt; would be very nice for detailed tables.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Dan  &lt;/p&gt;
+</content>
+    <author>
+      <name>Dan Micsa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572b52facc43cf4c99000992</id>
+    <published>2016-05-05T14:04:42Z</published>
+    <updated>2016-05-05T14:04:42Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/need-help-with-creating-a-ema-crossover-algorithm"/>
+    <url>https://www.quantopian.com/posts/need-help-with-creating-a-ema-crossover-algorithm</url>
+    <title>Need help with creating a EMA crossover algorithm</title>
+    <content type="html">&lt;p&gt;Hi there, I&amp;#39;m trying to get a basic algorithm for EMA crossovers. &lt;/p&gt;
+
+&lt;p&gt;Basically, I want to have 3 data series:&lt;br&gt;
+- 10-Day Exponential Moving Average&lt;br&gt;
+- 20-Day Exponential Moving Average&lt;br&gt;
+- 30-Day Exponential Moving Average&lt;/p&gt;
+
+&lt;p&gt;Orders for short/long should be based on the 10-day being above/below the 20-day AND 30-day moving average.&lt;br&gt;
+I.e. if the 10-day EMA crosses the 20-day and 30-day EMAs, then order 100 shares of TCK.A (teck resources class A). &lt;/p&gt;
+
+&lt;p&gt;Can anyone help?&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve attached someone else&amp;#39;s previous EMA build but I cannot work my way through it to even backtest!&lt;/p&gt;
+
+&lt;p&gt;import talib&lt;/p&gt;
+
+&lt;p&gt;def initialize(context):&lt;br&gt;
+    set_symbol_lookup_date(&amp;#39;2003-01-01&amp;#39;)&lt;br&gt;
+    context.stocks = symbols(&amp;#39;fb&amp;#39;,&amp;#39;tsla&amp;#39;,&amp;#39;aapl&amp;#39;,&amp;#39;gild&amp;#39;,&amp;#39;uri&amp;#39;,&amp;#39;tck.a&amp;#39;,&amp;#39;scty&amp;#39;,&amp;#39;intc&amp;#39;,&amp;#39;msft&amp;#39;,&amp;#39;nvda&amp;#39;,&amp;#39;cog&amp;#39;, &amp;#39;bp&amp;#39;, &amp;#39;ste&amp;#39;, &amp;#39;xom&amp;#39;)&lt;br&gt;
+    set_benchmark(symbol(&amp;#39;qqq&amp;#39;))&lt;br&gt;
+    set_commission(commission.PerTrade(cost=4.95))&lt;br&gt;
+    context.dayCount = 0&lt;br&gt;
+    context.date = None&lt;br&gt;
+    context.shorts = 0&lt;br&gt;
+    context.cancelCounter=0  &lt;/p&gt;
+
+&lt;p&gt;def handle_data(context, data):  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;todays_date = get_datetime().date()  
+
+if todays_date==context.date:  
+    return  
+
+if todays_date!=context.date:  
+    context.dayCount+=1  
+    context.cancelCounter+=1  
+    context.date = todays_date  
+
+if context.cancelCounter==5:  
+    end_of_day(context, data)  
+    context.cancelCounter=0  
+
+if has_orders(context,data) and context.dayCount&amp;gt;1:  
+    print(&amp;#39;has open orders - doing nothing!&amp;#39;)  
+    return  
+
+if context.dayCount == 1:  
+    buyAll(context,data)  
+
+for stock in context.stocks:  
+
+    hist30 = history(bar_count=30, frequency=&amp;#39;1d&amp;#39;, field=&amp;#39;price&amp;#39;)  
+    series30 = hist30[stock]  
+    ema_result30 = talib.EMA(series30, timeperiod=30)  
+    ema_result10 = talib.EMA(series30, timeperiod=10)  
+    ema30 = ema_result30[-1]  
+    ema10 = ema_result10[-1]  
+
+    getCash(context,data)  
+
+    if ema30 &amp;gt; ema10 and context.portfolio.positions[stock].amount &amp;gt; 0 and context.dayCount&amp;gt;2:  
+        log.info(&amp;#39;{0}:  Selling {1} shares, EMA10:  {2}, EMA30:  {3}&amp;#39;.format(stock.symbol,context.portfolio.positions[stock].amount,ema10,ema30))  
+        order_target(stock, 0, style=LimitOrder(ema10))  
+
+    if has_orders(context,data) and context.dayCount&amp;gt;7:  
+        print(&amp;#39;has open orders - doing nothing!&amp;#39;)  
+        return  
+
+    elif ema30 &amp;lt; ema10 and context.portfolio.positions[stock].amount == 0 and context.dayCount&amp;gt;2 and data[stock].price&amp;lt;context.freeCash:  
+        getCash(context,data)  
+        shares = round((context.freeCash*0.95)/data[stock].price,0)  
+        log.info(&amp;#39;{0}:  Buying {1} shares, EMA10:  {2}, EMA30:  {3}&amp;#39;.format(stock.symbol,shares,ema10,ema30))  
+        order_target(stock, shares, style=LimitOrder(ema10))  
+
+    getCash(context,data)  
+
+    if context.portfolio.positions[stock].amount &amp;lt; 0:  
+        context.shorts+=1  
+
+getCash(context,data)  
+record(Cash=context.freeCash)  
+record(Shorts=context.shorts)  
+context.shorts=0  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;def has_orders(context,data):&lt;br&gt;
+    # Return true if there are pending orders.&lt;br&gt;
+    has_orders = False&lt;br&gt;
+    for sec in data:&lt;br&gt;
+        orders = get_open_orders(sec)&lt;br&gt;
+        if orders:&lt;br&gt;
+            for oo in orders:&lt;br&gt;
+                message = &amp;#39;Open order for {amount} shares in {stock}&amp;#39;&lt;br&gt;
+                message = message.format(amount=oo.amount, stock=sec)&lt;br&gt;
+                log.info(message)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;        has_orders = True  
+return has_orders  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;def getCash(context,data):&lt;br&gt;
+    if context.portfolio.cash &amp;lt; (context.portfolio.portfolio_value-context.portfolio.positions_value):&lt;br&gt;
+        context.freeCash = context.portfolio.cash-5&lt;br&gt;
+    else:&lt;br&gt;
+        context.freeCash = (context.portfolio.portfolio_value-context.portfolio.positions_value)-5  &lt;/p&gt;
+
+&lt;p&gt;def end_of_day(context, data):&lt;br&gt;
+    #cancle any order at the end of day. Do it ourselves so we can see slow moving stocks.&lt;br&gt;
+    open_orders = get_open_orders()  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if open_orders:  
+
+    log.info(&amp;quot;&amp;quot;)  
+    log.info(&amp;quot;* EOD: Stoping Orders *&amp;quot;)  
+    log.info(&amp;quot;&amp;quot;)  
+
+if open_orders:  
+
+    for security, orders in open_orders.iteritems():  
+        for oo in orders:  
+            log.info(&amp;quot;X CANCLED {0:s} with {1:,d} / {2:,d} filled&amp;quot;\  
+                                 .format(security.symbol,  
+                                         oo.filled,  
+                                         oo.amount))  
+            cancel_order(oo)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;def buyAll(context,data):&lt;br&gt;
+    for stock in context.stocks:&lt;br&gt;
+        order_value(stock, 1000)&lt;br&gt;
+        log.info(&amp;#39;{0}:  Buying {1}shares&amp;#39;.format(stock.symbol,round(1000/data[stock].price,0)))  &lt;/p&gt;
+</content>
+    <author>
+      <name>ishtar chandaria</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572a8990e3fe113cf900034b</id>
+    <published>2016-05-04T23:45:20Z</published>
+    <updated>2016-05-04T23:45:20Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/handle-data-context-data-to-fetch-hourly-data-dot-dot-dot"/>
+    <url>https://www.quantopian.com/posts/handle-data-context-data-to-fetch-hourly-data-dot-dot-dot</url>
+    <title>handle_data(context, data) to fetch hourly data....</title>
+    <content type="html">&lt;p&gt;Hi, currently I have an algorithm to monitor a pipeline every minute.... how would I modify this&lt;/p&gt;
+
+&lt;p&gt;def handle_data(context, data):&lt;br&gt;
+    today_dt = get_datetime(&amp;#39;US/Eastern&amp;#39;);&lt;br&gt;
+    now = today_dt.time();&lt;/p&gt;
+
+&lt;p&gt;to have it monitor a pipeline/universe every hour?  &lt;/p&gt;
+</content>
+    <author>
+      <name>Spicy Kale</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572a5c5c92fccb2ded000199</id>
+    <published>2016-05-04T20:32:28Z</published>
+    <updated>2016-05-04T20:32:28Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/creating-a-new-strategy-with-pipeline-factors-quantcon-presentation"/>
+    <url>https://www.quantopian.com/posts/creating-a-new-strategy-with-pipeline-factors-quantcon-presentation</url>
+    <title>Creating a new strategy with pipeline factors [QuantCon presentation]</title>
+    <content type="html">&lt;p&gt;&lt;em&gt;As part of QuantCon, I gave a presentation introducing the typical workflow of a quant researcher. My posts in this thread provide a slimmed down narrative from that presentation. &lt;a href="https://www.quantopian.com/users/557bd955ed001022f30003e8"&gt;James Christopher&lt;/a&gt; did the vast majority of work creating the supporting notebooks and algorithm.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The purpose of the talk was to show how a quant approaches creating and iterating on an idea. We start with a naive theory based on the presence of three sentiment vendors in the &lt;a href="http://quantopian.com/data"&gt;Quantopian data program&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Our naive hypothesis is that negative sentiment with regards to a stock will lead to a drop in price over the course of the days that follow. Conversely, positive sentiment on a particular day will lead to a positive price movement for a stock in the following days.&lt;/p&gt;
+
+&lt;p&gt;First, we simply explore the data to validate that it has reasonable quality. We assure ourselves that the data has reasonable quality, at the surface level (notebook not shown). Once that is done, to test out our simple hypothesis with the three sentiment vendor data sets, we create three pipeline factors: one for each data vendor in question.&lt;/p&gt;
+
+&lt;p&gt;We use the &lt;a href="https://www.quantopian.com/posts/factor-tear-sheet"&gt;factor tear sheet notebook&lt;/a&gt; created by Andrew Campbell to assess the quality of these factors. To use the notebook, we code up the simple, naive factors within this notebook. Then, by running the analyses in this notebook we can take the first steps in answering the basic question: “Do these factors predict price movement?&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;Digging into the analysis below, we find that indeed, there is some potential. Though the &lt;a href="https://www.quantopian.com/data/sentdex/sentiment"&gt;Sentdex&lt;/a&gt; data set likely wouldn’t work across all stocks, we see that for a particular sector code — “Basic Materials” — we have a clue that might show that the sentiment score from Sentdex has predictive power. The bottom 20% of a particular day’s sentiment correlates to a negative price movement. And similarly, the top 20% of the sentiment score correlates to a positive price movement.&lt;/p&gt;
+</content>
+    <author>
+      <name>Josh Payne</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572a4440e3fe11ed9d0000b1</id>
+    <published>2016-05-04T18:49:36Z</published>
+    <updated>2016-05-04T18:49:36Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/fetch-csv-doesnt-work-for-my-file-no-date-column-any-alternatives"/>
+    <url>https://www.quantopian.com/posts/fetch-csv-doesnt-work-for-my-file-no-date-column-any-alternatives</url>
+    <title>Fetch_csv doesn't work for my file (no Date column) - any alternatives?</title>
+    <content type="html">&lt;p&gt;I have a file that has the following data:&lt;/p&gt;
+
+&lt;p&gt;Symbol  SettlementPrice&lt;br&gt;
+VX18 05/4/2016  15.45&lt;br&gt;
+VX19 05/11/2016 15.925&lt;br&gt;
+VX 05/18/2016   16.625&lt;br&gt;
+VX21 05/25/2016 17.7&lt;br&gt;
+VX22 06/1/2016  18.375&lt;br&gt;
+VX23 06/8/2016  18.475&lt;br&gt;
+VX 06/15/2016   18.925&lt;br&gt;
+VX 07/20/2016   19.825&lt;br&gt;
+VX 08/17/2016   20.125&lt;br&gt;
+VX 09/21/2016   20.625&lt;br&gt;
+VX 10/19/2016   20.875&lt;br&gt;
+VX 11/16/2016   20.975&lt;br&gt;
+VX 12/21/2016   20.775&lt;br&gt;
+VX 01/18/2017   21.125&lt;/p&gt;
+
+&lt;p&gt;Obviously, fetch_csv won&amp;#39;t work. But is there any way to import this into Quantopian? I will loop through the rows and get the rows that I need.  &lt;/p&gt;
+</content>
+    <author>
+      <name>Macro Investor</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572a4368cc43cf4c99000097</id>
+    <published>2016-05-04T18:46:00Z</published>
+    <updated>2016-05-04T18:46:00Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/error-with-talib"/>
+    <url>https://www.quantopian.com/posts/error-with-talib</url>
+    <title>Error with talib</title>
+    <content type="html">&lt;p&gt;Dear Community,&lt;/p&gt;
+
+&lt;p&gt;my first post :) I am new to python, and I am stuck on an error from the usage of TALIB. I am trying to aggregate the minutely data specifically the open price at 5 minutes level with the following statement:  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;opens = data.history(context.stocks, &amp;quot;open&amp;quot;, 5000, &amp;#39;1m&amp;#39;).groupby(lambda d: d.date()).resample(&amp;#39;5min&amp;#39;,how=&amp;#39;first&amp;#39;)  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;then I wish to take the moving average of the aggregated data with the following:&lt;br&gt;
+&lt;code&gt;
+ema_result = talib.SMA(opens, timeperiod=12)  
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;however I get the following error:&lt;br&gt;
+&lt;strong&gt;AssertionError: real has wrong dimensions&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I checked the data in &lt;strong&gt;opens&lt;/strong&gt;, it has the date and time in 5 minutes chunks and the correct first open price of the first 5 minutes. But I guess it is not in the right format for TALIB. How can I format my set of open prices to have the right dimension for TALIB?  &lt;/p&gt;
+</content>
+    <author>
+      <name>John Esposito</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572a1ab2db0e93d1e2000820</id>
+    <published>2016-05-04T15:52:18Z</published>
+    <updated>2016-05-04T15:52:18Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/sydney-quantopian-workshop-on-june-18th-1"/>
+    <url>https://www.quantopian.com/posts/sydney-quantopian-workshop-on-june-18th-1</url>
+    <title>Sydney Quantopian Workshop on June 18th</title>
+    <content type="html">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;We would like to invite you to attend our hands-on &lt;a href="https://thequantopianworkshopinsydney.splashthat.com/"&gt;algorithmic trading workshop&lt;/a&gt; happening on June 18th. We hope you can come out and join us!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The Workshop: An Introduction to Algorithmic Trading&lt;/strong&gt;&lt;br&gt;
+The Workshop will give you a strong foundation to craft a trading strategy. It will:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Give you the ability to create and backtest your own basic trading strategies.&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Show you how to use algorithmic trading tools that will help you craft your strategies.&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Teach you how to correct for some statistical biases that can disrupt analysis. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Attendees should have a beginner&amp;#39;s knowledge of Python and college level math experience. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The Lecturers&lt;/strong&gt;&lt;br&gt;
+The Workshop will be led by Delaney Granizo-Mackenzie, engineer and academic lead at Quantopian, and Dr. Tom Starke, quant analyst and developer at Vivienne Court. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Reserve Your Spot Today&lt;/strong&gt;&lt;br&gt;
+We have set up different ticket levels in order to give everyone who wants to a chance to attend.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Corporate Rate $699.00: If your company is paying for you to attend, please select the Corporate option.&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Individual Rate $399.00: If you are paying for yourself to attend, please select this rate.&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Student Rate $199.00: This rate is only for students and academics. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Space is limited. If you would like to attend, please RSVP &lt;a href="https://thequantopianworkshopinsydney.splashthat.com/"&gt;here&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;We hope you can join us!&lt;/p&gt;
+
+&lt;p&gt;Connor&lt;/p&gt;
+</content>
+    <author>
+      <name>Connor Frol</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572a11d5acf561c954000b54</id>
+    <published>2016-05-04T15:14:29Z</published>
+    <updated>2016-05-04T15:14:29Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/bug-specifics"/>
+    <url>https://www.quantopian.com/posts/bug-specifics</url>
+    <title>Bug Specifics</title>
+    <content type="html">&lt;p&gt;Anyone have specifics on the recent bug.  I am trying to figure out how this would have affected an algo which is heavily dependent on minute level data? &lt;/p&gt;
+
+&lt;p&gt;&amp;quot;We&amp;#39;ve found a bug in our live data. Incorrect data is returned when a history call of granularity one minute (&amp;#39;1m&amp;#39;) is made on a lookback window that falls entirely within today. We are stopping real-money trading in several algorithms that might potentially be impacted.&lt;/p&gt;
+
+&lt;p&gt;Paper trading algorithms are also impacted by this bug but they are not being stopped; the impact of the bug for paper trading is relatively minor.&lt;/p&gt;
+
+&lt;p&gt;We anticipate we will be able to make a fix tonight and resume trading normally tomorrow. &amp;quot;  &lt;/p&gt;
+</content>
+    <author>
+      <name>Dan Hill</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572a1182b82b46097a000b07</id>
+    <published>2016-05-04T15:13:06Z</published>
+    <updated>2016-05-04T15:13:06Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/understanding-the-slippage-model"/>
+    <url>https://www.quantopian.com/posts/understanding-the-slippage-model</url>
+    <title>understanding the slippage model</title>
+    <content type="html">&lt;p&gt;Hi, Let&amp;#39;s say I place an order for 100 shares of some security, and the presumed minutely data says that i can only fill 30 shares per minute and consequently, my order is broken into 4 orders, {30, 30, 30, 10}. Does that imply that under default commission model, i will be paying $3 for this transaction in commission?  &lt;/p&gt;
+</content>
+    <author>
+      <name>toan tran</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572a0a5a12217c06fe000b7d</id>
+    <published>2016-05-04T14:42:34Z</published>
+    <updated>2016-05-04T14:42:34Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/how-to-buy-on-specific-time-of-day-dot"/>
+    <url>https://www.quantopian.com/posts/how-to-buy-on-specific-time-of-day-dot</url>
+    <title>How To Buy on specific time of day.?</title>
+    <content type="html">&lt;p&gt;Hello All,&lt;/p&gt;
+
+&lt;p&gt;How to Check Price of security on specific time let&amp;#39;s say 9.35? &lt;/p&gt;
+
+&lt;p&gt;Thank You.  &lt;/p&gt;
+</content>
+    <author>
+      <name>Marwan Zabrodin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/57299facfbee3c72ad000072</id>
+    <published>2016-05-04T07:07:24Z</published>
+    <updated>2016-05-04T07:07:24Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/quantopian-2-help"/>
+    <url>https://www.quantopian.com/posts/quantopian-2-help</url>
+    <title>Quantopian 2 :( Help!!!</title>
+    <content type="html">&lt;p&gt;Hey I was using quantopian for my Thesis, and all of a sudden they changed the coding requirements. I can&amp;#39;t place an order to test my data. Could some one help me :(&lt;/p&gt;
+
+&lt;p&gt;All I need is for this to work again. I was using the data command a lot earlier and it was working so well :( . The Algo is pretty small, I would appreciate if someone could fix this for me.  &lt;/p&gt;
+</content>
+    <author>
+      <name>Ankit Shah</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/57296628b82b466a9f0005f3</id>
+    <published>2016-05-04T03:02:00Z</published>
+    <updated>2016-05-04T03:02:00Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/help-getting-print-list-of-stocks-that-were-queried-by-get-fundamentals"/>
+    <url>https://www.quantopian.com/posts/help-getting-print-list-of-stocks-that-were-queried-by-get-fundamentals</url>
+    <title>Help getting print list of stocks that were queried by get_fundamentals</title>
+    <content type="html">&lt;p&gt;As seen in the title, Im trying to isolate part of my code that wasn&amp;#39;t work. I want to used get_fundamentals to populate a list of queried stocks into my universe and then print all the companies it contains to ensure it is working.&lt;/p&gt;
+
+&lt;p&gt;As seen when I try this, it generates no text in the logs when I print..&lt;/p&gt;
+
+&lt;p&gt;Thanks,&lt;br&gt;
+Mike  &lt;/p&gt;
+</content>
+    <author>
+      <name>Mike Wait</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/5728fecf12217cf7ec000267</id>
+    <published>2016-05-03T19:41:03Z</published>
+    <updated>2016-05-03T19:41:03Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/possible-recurring-bug-in-backtest-20-percent-loss"/>
+    <url>https://www.quantopian.com/posts/possible-recurring-bug-in-backtest-20-percent-loss</url>
+    <title>Possible recurring bug in backtest. 20% loss.</title>
+    <content type="html">&lt;p&gt;Can someone please help me explain this. Previously, i had a bug with brk-a, losing 80% of the portfolio. Here i was able to reproduce the possible bug with security ATRO.&lt;br&gt;
+What&amp;#39;s going on? Please help. Thank you.  &lt;/p&gt;
+</content>
+    <author>
+      <name>toan tran</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/5728e900b82b46097a00017f</id>
+    <published>2016-05-03T18:08:00Z</published>
+    <updated>2016-05-03T18:08:00Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/fetch-program-not-working-for-paper-trading-help-please"/>
+    <url>https://www.quantopian.com/posts/fetch-program-not-working-for-paper-trading-help-please</url>
+    <title>Fetch program not working for paper trading - help please!</title>
+    <content type="html">&lt;p&gt;This is my code&lt;/p&gt;
+
+&lt;p&gt;def rename_col0(df0):&lt;br&gt;
+    df0 = df0.rename(columns={&amp;#39;Close&amp;#39;: &amp;#39;price&amp;#39;})&lt;br&gt;
+    df0 = df0.fillna(method=&amp;#39;ffill&amp;#39;)&lt;br&gt;
+    df0 = df0[[&amp;#39;price&amp;#39;, &amp;#39;Adjusted Close&amp;#39;,&amp;#39;sid&amp;#39;]]&lt;br&gt;
+    # Do not shift as this will be used live&lt;br&gt;
+    return df0.shift(0)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;fetch_csv(&amp;#39;https://www.quandl.com/api/v3/datasets/YAHOO/INDEX_VIX.csv&amp;#39;,  
+    date_column=&amp;#39;Date&amp;#39;,  
+    date_format=&amp;#39;%Y-%m-%d&amp;#39;,  
+    symbol=&amp;#39;v&amp;#39;,  
+    post_func=rename_col0)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;log.info(&amp;quot;Vix %.2f&amp;quot; %data.current(&amp;#39;v&amp;#39;,&amp;#39;Adjusted Close&amp;#39;))&lt;/p&gt;
+
+&lt;p&gt;This is giving the error&lt;/p&gt;
+
+&lt;p&gt;2016-05-03 08:31 my_rebalance:95 INFO Vix nan&lt;/p&gt;
+
+&lt;p&gt;It works fine in backtesting (where I shift by 1 to avoid look ahead bias)&lt;/p&gt;
+
+&lt;p&gt;Help! Please!!  &lt;/p&gt;
+</content>
+    <author>
+      <name>Macro Investor</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/5728e520acf561c954000137</id>
+    <published>2016-05-03T17:51:28Z</published>
+    <updated>2016-05-03T17:51:28Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/problems-with-new-fetcher-and-lack-of-universe-in-quantopian-2-dot-0"/>
+    <url>https://www.quantopian.com/posts/problems-with-new-fetcher-and-lack-of-universe-in-quantopian-2-dot-0</url>
+    <title>Problems with new fetcher and lack of universe in quantopian 2.0</title>
+    <content type="html">&lt;p&gt;I am currently experiencing some difficulties adapting our old universe/fetcher setup to quantopian 2.0.&lt;/p&gt;
+
+&lt;p&gt;I have a csv that I fetch with two columns: date, symbol.&lt;/p&gt;
+
+&lt;p&gt;This represents a list of symbols to trade on a particular date. Signals are inferred from other market sources directly in quantopian. &lt;/p&gt;
+
+&lt;p&gt;My problem is that the data.fetcher_assets contains way too much information as old securities also seem to be in the list; i.e. for a particular date where we only have 74 symbols listed we get back more than 3000 symbols which roughly corresponds to the complete list.&lt;/p&gt;
+
+&lt;p&gt;How do I most easily make this work? It worked perfectly before the upgrade.  &lt;/p&gt;
+</content>
+    <author>
+      <name>Erik Asbjørn Arvid</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/5728bf9e3e8ccc8db20000a6</id>
+    <published>2016-05-03T15:11:26Z</published>
+    <updated>2016-05-03T15:11:26Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/using-multiple-fundamental-screens-in-notebook"/>
+    <url>https://www.quantopian.com/posts/using-multiple-fundamental-screens-in-notebook</url>
+    <title>Using multiple fundamental screens in notebook</title>
+    <content type="html">&lt;p&gt;Hey All:&lt;/p&gt;
+
+&lt;p&gt;Using notebook I am trying to build out a portfolio that utilizes different fundamentals screens for different market caps of stocks. As an example let&amp;#39;s say  I want  my portfolio to have 25% large cap, 25% mid cap, 25% small cap &amp;amp; 25% microcap (this isn&amp;#39;t the mix, just an example). The way I screen for stocks in each one of these universes is very different - I wouldn&amp;#39;t apply the same screen for deep value on a large cap as I would a small cap and I wouldn&amp;#39;t apply the same logic to avoid buying garbage in a small cap as I would a mid cap. So a 1 size fits all approach wouldn&amp;#39;t work.&lt;/p&gt;
+
+&lt;p&gt;What I would like to know, is will Q allow me to utilize multiple fundamental screens (say fundamentals1_df...fundamentals5_df), take the top n ideas from each screen and then pass them into a weighing mechanism in order to build the portfolio out the way I want it to look, say using the weights above? The goal obviously is to grab a tear sheet and look to optimize both weighing and screening changes.&lt;/p&gt;
+
+&lt;p&gt;Hope I made this clear enough &amp;amp; thanks in advance.  &lt;/p&gt;
+</content>
+    <author>
+      <name>Jason Lieberman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572885fafbe57a4d21000af8</id>
+    <published>2016-05-03T11:05:30Z</published>
+    <updated>2016-05-03T11:05:30Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/how-to-pipeline-your-current-positions"/>
+    <url>https://www.quantopian.com/posts/how-to-pipeline-your-current-positions</url>
+    <title>How to pipeline your current positions?</title>
+    <content type="html">&lt;p&gt;In addition to whatever factors I&amp;#39;ve set up, I&amp;#39;d like the assets in my context.portfolio.positions to pass the screening process as well, so I can monitor for changes in their factors too.&lt;/p&gt;
+
+&lt;p&gt;If I were to not screen anything (to make sure not accidentally filtering our assets away) and then grab them in &lt;em&gt;before_trading_start&lt;/em&gt;, for example:  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;def before_trading_start(context, data):  
+    context.output = pipeline_output(&amp;#39;pipeline&amp;#39;)  
+    currentPositions = context.output.loc[context.portfolio.positions]  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I would indeed be able to monitor the same factors, but without a screen we&amp;#39;ll run into memory issues almost immediately.&lt;/p&gt;
+
+&lt;p&gt;I might be able to do something with &lt;em&gt;fundamentals.company_reference.primary_symbol&lt;/em&gt;, but I&amp;#39;m not sure how to go about implementing that.  &lt;/p&gt;
+</content>
+    <author>
+      <name>Markus Lundell</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/57287fe3922b37bdaf000a34</id>
+    <published>2016-05-03T10:39:31Z</published>
+    <updated>2016-05-03T10:39:31Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/master-thesis-ideas"/>
+    <url>https://www.quantopian.com/posts/master-thesis-ideas</url>
+    <title>Master thesis ideas</title>
+    <content type="html">&lt;p&gt;I&amp;#39;m a CS major with my specialisation in AI, and I&amp;#39;m looking for topics for my thesis.&lt;/p&gt;
+
+&lt;p&gt;I am absolutely in love with automated trading, and the mathematics/machine learning behind it. However, my knowledge in the domain of trading/finance is not sufficient enough to come up with &amp;#39;novel&amp;#39; ideas.That&amp;#39;s why I&amp;#39;m reaching out to this community and every type of suggestion is very much appreciated!&lt;/p&gt;
+
+&lt;p&gt;Do you have any interesting ideas? Anything you want to investigate, want to see proved/tested? It can be absolutely anything, as long as it can be used to trade/generate signals. I get to spend 720 hours on this next year.&lt;/p&gt;
+
+&lt;p&gt;How about trying to predict a firm&amp;#39;s success by analysing social media/impact of change in staff/profiling CEOs?  &lt;/p&gt;
+</content>
+    <author>
+      <name>Thomas Dierckx</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/57286cbafbe57a7ab0000a47</id>
+    <published>2016-05-03T09:17:46Z</published>
+    <updated>2016-05-03T09:17:46Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/18-dot-5-returns"/>
+    <url>https://www.quantopian.com/posts/18-dot-5-returns</url>
+    <title>18.5 returns</title>
+    <content type="html">&lt;p&gt;where do i collect my bitcoins  &lt;/p&gt;
+</content>
+    <author>
+      <name>ee ethree</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/5728632f03191c02250009f6</id>
+    <published>2016-05-03T08:37:03Z</published>
+    <updated>2016-05-03T08:37:03Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/can-i-backtest-my-own-csv-symbols"/>
+    <url>https://www.quantopian.com/posts/can-i-backtest-my-own-csv-symbols</url>
+    <title>Can I backtest my own CSV symbols?</title>
+    <content type="html">&lt;p&gt;Hi,&lt;br&gt;
+I have general question: Is it possible to use Quantopian / Zipline for backtasting my own symbols, which are not part of Universe?&lt;/p&gt;
+
+&lt;p&gt;I am trying to import CSV prices history of some emerging markets using fetch_csv function.&lt;/p&gt;
+
+&lt;p&gt;Thanks for info&lt;br&gt;
+Peter  &lt;/p&gt;
+</content>
+    <author>
+      <name>Peter Cherry</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572845a043d39a9eab00054d</id>
+    <published>2016-05-03T06:30:56Z</published>
+    <updated>2016-05-03T06:30:56Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/using-customfactors-in-customfactors-and-passing-in-numerical-values-in-customfactors"/>
+    <url>https://www.quantopian.com/posts/using-customfactors-in-customfactors-and-passing-in-numerical-values-in-customfactors</url>
+    <title>Using CustomFactors in CustomFactors and passing in numerical values in CustomFactors</title>
+    <content type="html">&lt;p&gt;I would like to be able to use &lt;strong&gt;CustomFactors inside other CustomFactors&lt;/strong&gt;. It allows for code reuse, high cohesion and low coupling. No copy paste is needed.  &lt;/p&gt;
+
+&lt;p&gt;I prepared a notebook with some code examples. For me it makes sense to work with CustomFactors as I explain in the notebook.&lt;br&gt;
+Is this the way you look at it, now or for the future. I am correct in assuming that you can not:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Use CustomFactors within other CustomFactors?&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Pass in numerical arguments into the CustomFactor&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Thanks Rene  &lt;/p&gt;
+</content>
+    <author>
+      <name>Rene Luijk</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/57282aa6cb007a2e4d00073e</id>
+    <published>2016-05-03T04:35:50Z</published>
+    <updated>2016-05-03T04:35:50Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/dont-know-how-to-record-data-frame"/>
+    <url>https://www.quantopian.com/posts/dont-know-how-to-record-data-frame</url>
+    <title>Don't know how to "record" data frame</title>
+    <content type="html">&lt;p&gt;I&amp;#39;ve created my own MACD (without using ta-lib).&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m very confused how to get the algo to record the results to graphically display my MACD along my backtest.&lt;br&gt;
+I believe it&amp;#39;s a data frame, but don&amp;#39;t know how to take this any further.&lt;/p&gt;
+
+&lt;p&gt;Could anyone assist me?&lt;br&gt;
+(to see my algo, you will have to click clone, since there is an error)&lt;/p&gt;
+
+&lt;p&gt;Thanks,&lt;br&gt;
+Mike  &lt;/p&gt;
+</content>
+    <author>
+      <name>Mike Wait</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/57281e9903191c0225000739</id>
+    <published>2016-05-03T03:44:25Z</published>
+    <updated>2016-05-03T03:44:25Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/rotating-sector-etfs-based-on-15-day-or-1-month-performace"/>
+    <url>https://www.quantopian.com/posts/rotating-sector-etfs-based-on-15-day-or-1-month-performace</url>
+    <title>Rotating Sector ETFs Based On 15 Day or 1 Month Performace</title>
+    <content type="html">&lt;p&gt;I&amp;#39;ve been doing my research, and messing around with some of the various backtests and algorithm examples already posted on here, but seem to be stumped on getting everything working together and playing nicely.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m attempting to build a simple (or rather, should be simple) algorithm that tracks a pre-defined (and expandable/shrinkable) number of ETF holdings, ranks them based on their 30 day or 15 day % change, and invests in them at a 10%, 20%, 30%, 40% balance and rebalances monthly without using an leverage.&lt;/p&gt;
+
+&lt;p&gt;My target is to use this for Robinhood so that ideally I no longer have to manage my portfolio by hand. Can anyone point me in the right direction on where to get started since the updated tutorials aren&amp;#39;t complete yet?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Delman&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <author>
+      <name>Delman Woodrum</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572818a603191c6e590006d2</id>
+    <published>2016-05-03T03:19:02Z</published>
+    <updated>2016-05-03T03:19:02Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/brainstorming-macd-analysis-conditions-and-need-your-ideas"/>
+    <url>https://www.quantopian.com/posts/brainstorming-macd-analysis-conditions-and-need-your-ideas</url>
+    <title>Brainstorming MACD analysis conditions and need your ideas!</title>
+    <content type="html">&lt;p&gt;I&amp;#39;m brainstorming and would value your input. Currently, I&amp;#39;m trying to design an algo that would recognize a specific condition to determine when to buys/sells a stock, regarding what the MACD histogram is doing. (of course there are many ways to interpret the MACD, I&amp;#39;m just having trouble getting the code to replicate the conditions below):&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;br&gt;
+&lt;em&gt;-if the histogram reaches a certain height (similar to the past peaks)&lt;br&gt;
+-if the histogram remains at a certain height (for a certain period)&lt;br&gt;
+-if the slope of the histogram is x amount over a range of say T minutes.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Im not even entirely sure what unit the Y-axis of the MACD histogram is in.&lt;br&gt;
+But, ideally I&amp;#39;m looking for some idea to develop the building blocks for a formula to recognize the above conditions.&lt;/p&gt;
+
+&lt;p&gt;Side note: Im sure the sort of slope or height analysis could be used on many other technical indicators, which is where i plan to venture onto afterwards. &lt;/p&gt;
+
+&lt;p&gt;Anyways, any help at all would be much appreciated!&lt;/p&gt;
+
+&lt;p&gt;Mike  &lt;/p&gt;
+</content>
+    <author>
+      <name>Mike Wait</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/5727ed7443d39a8cee0007c2</id>
+    <published>2016-05-03T00:14:44Z</published>
+    <updated>2016-05-03T00:14:44Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/how-to-pick-top-n-and-bottom-n-using-pipeline"/>
+    <url>https://www.quantopian.com/posts/how-to-pick-top-n-and-bottom-n-using-pipeline</url>
+    <title>how to pick top N &amp; bottom N using pipeline?</title>
+    <content type="html">&lt;p&gt;How would I find the top N stocks, by gap?  And the bottom N?  Thought I might continue to try to learn this pipeline thingy.  &lt;/p&gt;
+</content>
+    <author>
+      <name>Grant Kiehne</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/57271ca4b6a4c080a5000669</id>
+    <published>2016-05-02T09:23:48Z</published>
+    <updated>2016-05-02T09:23:48Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/hello"/>
+    <url>https://www.quantopian.com/posts/hello</url>
+    <title>hello</title>
+    <content type="html">&lt;p&gt;If the value of my sharpe is -200, can i reverse the sign of it ?  &lt;/p&gt;
+</content>
+    <author>
+      <name>steph belsuz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572692a48536ace7340004cf</id>
+    <published>2016-05-01T23:35:00Z</published>
+    <updated>2016-05-01T23:35:00Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/rsi-strategy-1"/>
+    <url>https://www.quantopian.com/posts/rsi-strategy-1</url>
+    <title>RSI Strategy</title>
+    <content type="html">&lt;p&gt;Hi All,&lt;/p&gt;
+
+&lt;p&gt;I have been playing around with a strategy of buying a stock if rsi meets the following criteria - rsi(14)&amp;lt;30, rsi(5)&amp;lt;20, rsi(3)&amp;lt;10 and rsi(2)&amp;lt;5 and then selling when rsi(2) crosses back over 30-40. The reverse is true also.&lt;/p&gt;
+
+&lt;p&gt;I am trying to see if I can backtest this with Quantopian to see how it performs historically. Does anyone know the easiest place to get started with this?&lt;/p&gt;
+
+&lt;p&gt;Thanks.  &lt;/p&gt;
+</content>
+    <author>
+      <name>Tom Boxer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/5726679f0a624ef52700027d</id>
+    <published>2016-05-01T20:31:27Z</published>
+    <updated>2016-05-01T20:31:27Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/vix-trading-algorithm-return-150-percent-a-year-over-past-5-years-but-has-50-percent-drawdown-from-2015-meltdown"/>
+    <url>https://www.quantopian.com/posts/vix-trading-algorithm-return-150-percent-a-year-over-past-5-years-but-has-50-percent-drawdown-from-2015-meltdown</url>
+    <title>VIX trading algorithm return 150% a year over past 5 years but has 50% drawdown from 2015 meltdown</title>
+    <content type="html">&lt;p&gt;The algorithm switches between XIV, UVXY, and UPRO depending on the VIX level and the term structure of the first two month VIX futures.&lt;/p&gt;
+
+&lt;p&gt;Any comments on how to make this algorithm better?  &lt;/p&gt;
+</content>
+    <author>
+      <name>Macro Investor</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572647e13198d535c4000171</id>
+    <published>2016-05-01T18:16:01Z</published>
+    <updated>2016-05-01T18:16:01Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/native-code-to-get-vix-and-vix-futures-data"/>
+    <url>https://www.quantopian.com/posts/native-code-to-get-vix-and-vix-futures-data</url>
+    <title>Native code to get vix and vix futures data?</title>
+    <content type="html">&lt;p&gt;Hi,&lt;/p&gt;
+
+&lt;p&gt;Is there any way to get the last day&amp;#39;s VIX, first month VIX futures, and second month VIX futures at close other than the code below? Thanks!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;fetch_csv(&amp;#39;https://www.quandl.com/api/v3/datasets/YAHOO/INDEX_VIX.csv&amp;#39;,  
+    date_column=&amp;#39;Date&amp;#39;,  
+    date_format=&amp;#39;%Y-%m-%d&amp;#39;,  
+    symbol=&amp;#39;v&amp;#39;,  
+    post_func=rename_col0)  
+# Pulling front month VIX futures data  
+fetch_csv(&amp;#39;https://www.quandl.com/api/v1/datasets/CHRIS/CBOE_VX1.csv&amp;#39;,  
+    date_column=&amp;#39;Trade Date&amp;#39;,  
+    date_format=&amp;#39;%Y-%m-%d&amp;#39;,  
+    symbol=&amp;#39;v1&amp;#39;,  
+    post_func=rename_col1)  
+# Pulling second month VIX futures data  
+fetch_csv(&amp;#39;https://www.quandl.com/api/v1/datasets/CHRIS/CBOE_VX2.csv&amp;#39;,  
+    date_column=&amp;#39;Trade Date&amp;#39;,  
+    date_format=&amp;#39;%Y-%m-%d&amp;#39;,  
+    symbol=&amp;#39;v2&amp;#39;,  
+    post_func=rename_col1)  
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+    <author>
+      <name>Macro Investor</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/57260ae25383ee5d3f000697</id>
+    <published>2016-05-01T13:55:46Z</published>
+    <updated>2016-05-01T13:55:46Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/what-am-i-missing-when-comparing-backtest-data-against-yahoo-finance"/>
+    <url>https://www.quantopian.com/posts/what-am-i-missing-when-comparing-backtest-data-against-yahoo-finance</url>
+    <title>What am I missing when comparing backtest data against Yahoo Finance?</title>
+    <content type="html">&lt;p&gt;I wrote a routine that picked an overall loser, but a big winner on a particular day. I decided to research the asset on Yahoo to see if I could find a way of picking more big winners. The equity is UWTI. &lt;/p&gt;
+
+&lt;p&gt;Unfortunately the numbers don&amp;#39;t seem to add up. My first thought is that I must be mistaken, so rather than tell Quantopian they got it wrong, I thought I would check here to see if anyone knows why the numbers look so different?&lt;/p&gt;
+
+&lt;p&gt;The Yahoo page I am looking at is;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://finance.yahoo.com/echarts?s=UWTI+Interactive#%7B%22allowChartStacking%22:true%7D"&gt;http://finance.yahoo.com/echarts?s=UWTI+Interactive#{&amp;quot;allowChartStacking&amp;quot;:true}&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A simple algo that does a buy &amp;amp; hold of UWTI is below.  &lt;/p&gt;
+</content>
+    <author>
+      <name>Paul Stearns</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/57252286f981287943000254</id>
+    <published>2016-04-30T21:24:22Z</published>
+    <updated>2016-04-30T21:24:22Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/trying-to-tame-the-memory-error-beast"/>
+    <url>https://www.quantopian.com/posts/trying-to-tame-the-memory-error-beast</url>
+    <title>Trying to tame the memory error beast.</title>
+    <content type="html">&lt;p&gt;I am trying to resolve an issue where I get a memory error while running a 5 year backtest on a rebalance daily routine.&lt;/p&gt;
+
+&lt;p&gt;I have tried one of my other language (non python) tricks of setting variables to none when done using them, as well as limiting the number of stocks owned to 10, with no luck.&lt;/p&gt;
+
+&lt;p&gt;The  algo is great for losing money, but it has the feature of killing itself by running out of memory before you go too broke. If anyone has ideas of what I might be doing wrong, I sure would like to know.  &lt;/p&gt;
+</content>
+    <author>
+      <name>Paul Stearns</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/5725031f5383ee5d3f0001bc</id>
+    <published>2016-04-30T19:10:23Z</published>
+    <updated>2016-04-30T19:10:23Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/seeking-help-to-write-a-short-trading-algorithm-for-vix-etfs"/>
+    <url>https://www.quantopian.com/posts/seeking-help-to-write-a-short-trading-algorithm-for-vix-etfs</url>
+    <title>Seeking help to write a short trading algorithm for VIX ETFs</title>
+    <content type="html">&lt;p&gt;Hi,&lt;/p&gt;
+
+&lt;p&gt;I have an algorithm backtested in Excel that returns significantly higher returns than buy and hold with much lower drawdowns. I am a novice in Python programming, and believe that it will take an experienced Quantopian developer no more than a few hours to create it.&lt;/p&gt;
+
+&lt;p&gt;Any takers that want to collaborate to implement this algorithm?&lt;/p&gt;
+
+&lt;p&gt;Thanks much in advance.  &lt;/p&gt;
+</content>
+    <author>
+      <name>Macro Investor</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/57247d82d970561ade0006d6</id>
+    <published>2016-04-30T09:40:18Z</published>
+    <updated>2016-04-30T09:40:18Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/loading-static-data-without-fetch-csv"/>
+    <url>https://www.quantopian.com/posts/loading-static-data-without-fetch-csv</url>
+    <title>loading static data without fetch_csv</title>
+    <content type="html">&lt;p&gt;I understand that there is a fetch_csv method but i was hoping for something a little bit nicer and something that would not disqualify me from the Quantopian contest.&lt;/p&gt;
+
+&lt;p&gt;I have some precomputed look-up-tables that i would like to load and test. they were built on data before 2013, so running them on a back test for 2013 to 2016 should not represent any data leakage. the tables are not really a time-series, and in that regard, i don&amp;#39;t think it fits well into the fetch_csv method.  and they are pretty big (20 MB each as CSV, and 7 MB each as pickle file), but they only need to be loaded once, and updated maybe once every few years.&lt;/p&gt;
+
+&lt;p&gt;I cannot build the data table using the Q platform because building the table requires all historical data and takes a few hours to run.&lt;/p&gt;
+
+&lt;p&gt;I would like to load a few user-defined csv files that are about 20 MB each. How would I do that without fetch_csv?&lt;/p&gt;
+
+&lt;p&gt;any help would be greatly appreciated. Thank you.  &lt;/p&gt;
+</content>
+    <author>
+      <name>toan tran</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/57247b59b31f773a220006b9</id>
+    <published>2016-04-30T09:31:05Z</published>
+    <updated>2016-04-30T09:31:05Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/long-short-pair-trading"/>
+    <url>https://www.quantopian.com/posts/long-short-pair-trading</url>
+    <title>Long short pair trading</title>
+    <content type="html">&lt;p&gt;Just test  &lt;/p&gt;
+</content>
+    <author>
+      <name>Shawn Young</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572436a28532a73db5000555</id>
+    <published>2016-04-30T04:37:54Z</published>
+    <updated>2016-04-30T04:37:54Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/shorting-vxx-based-on-vix-futures-contango"/>
+    <url>https://www.quantopian.com/posts/shorting-vxx-based-on-vix-futures-contango</url>
+    <title>Shorting VXX based on VIX Future's contango</title>
+    <content type="html">&lt;p&gt;The code and idea is quite simple, the algorithm pulls daily settlement prices for VIX front month and second month futures and calculates the ratio of the Front Month/Second Month. If this ratio is below a certain threshold, in my case I chose 0.90, short VXX, otherwise close out all positions and move to cash. I&amp;#39;m testing this strategy and the results look really nice, but I&amp;#39;m hoping for input to help reduce the drawdown. Also, if anyone has spotted errors in my code or any biases, please let me know!  &lt;/p&gt;
+</content>
+    <author>
+      <name>Fang Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/572413d0085063f4000004f4</id>
+    <published>2016-04-30T02:09:20Z</published>
+    <updated>2016-04-30T02:09:20Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/data-dot-can-trade-error-1"/>
+    <url>https://www.quantopian.com/posts/data-dot-can-trade-error-1</url>
+    <title>data.can_trade ERROR</title>
+    <content type="html">&lt;p&gt;I keep getting this error even though I added&lt;/p&gt;
+
+&lt;p&gt;data.can_trade(context.assets)&lt;/p&gt;
+
+&lt;p&gt;to my code.Why won&amp;#39;t this work? Anyone?&lt;/p&gt;
+
+&lt;p&gt;Cannot order MVIR on 2016-01-04 14:35:00+00:00 as there is no last price for the security. Try using data.can_trade to check whether an asset is delisted.&lt;br&gt;
+There was a runtime error on line 297.  &lt;/p&gt;
+</content>
+    <author>
+      <name>Dante Migale</name>
+    </author>
+  </entry>
+  <entry>
+    <id>tag:www.quantopian.com,2005:Post/5723dda66ee76e799b0003a2</id>
+    <published>2016-04-29T22:18:14Z</published>
+    <updated>2016-04-29T22:18:14Z</updated>
+    <link rel="alternate" type="text/html" href="https://www.quantopian.com/posts/algorithm-tips-slash-gotchas-thread"/>
+    <url>https://www.quantopian.com/posts/algorithm-tips-slash-gotchas-thread</url>
+    <title>Algorithm tips/gotchas thread</title>
+    <content type="html">&lt;p&gt;Hi all,&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve been on and off Quantopian for a while now and I still find myself writing algorithms that do things I don&amp;#39;t expect. The two main things that seem to occur are: the leverage goes above 1x and the number of positions is lower than expected.&lt;/p&gt;
+
+&lt;p&gt;So, I thought maybe the best way to solve this is to start a thread where we list all the tips for how to write algorithms that don&amp;#39;t have these problems.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ll start with three I&amp;#39;ve seen:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In the initialize() function, you can add a trading guard to avoid leveraged ETFs: set_do_not_order_list(security_lists.leveraged_etf_list). BTW, does anybody know how to exclude all ETFs?&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;To avoid over-ordering, we can look at open orders using get_open_orders() which returns a dictionary of open orders keyed by assets. We can use this to ensure that we don&amp;#39;t have an open order for a security before we place a new order for it. Also the data.can_trade() method can be used to check if a security can be traded (see: &lt;a href="https://www.quantopian.com/tutorials/getting-started?utm_source=All+Active+Members&amp;amp;utm_campaign=0968811043-April_2016_Quantopian2&amp;amp;utm_medium=email&amp;amp;utm_term=0_7cca55778a-0968811043-108631197"&gt;https://www.quantopian.com/tutorials/getting-started?utm_source=All+Active+Members&amp;amp;utm_campaign=0968811043-April_2016_Quantopian2&amp;amp;utm_medium=email&amp;amp;utm_term=0_7cca55778a-0968811043-108631197&lt;/a&gt; )&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Securities have an &amp;quot;end_date&amp;quot; property that defines when the security is delisted. I&amp;#39;ve had problems in the past where the security just disappears, so I set a guard against this by selling anything that comes within say 10 days of that date. I&amp;#39;m not sure if this is really what happens in the real world, so if anybody has some commentary on the most realistic way to deal with this then that&amp;#39;d be welcome.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please let me know if you have any other tips and tricks. I&amp;#39;d love to know more about how to avoid extremely illiquid securities, if there are any ways of screening out undesirable securities (like leveraged ETFs) and just in general ways to keep myself fully invested without using any leverage.  &lt;/p&gt;
+</content>
+    <author>
+      <name>Rudiger Lippert</name>
+    </author>
+  </entry>
+</feed>

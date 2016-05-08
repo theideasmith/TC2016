@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://accusafe.in/quantopian/market_pla.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1">    <meta name="description" content="">    <meta name="author" content="">    <title>Market - QuantConnect</title>    <!-- Bootstrap Core CSS -->    <link href="./quantconnect_files/bootstrap.min.css" rel="stylesheet">    <!-- Custom CSS -->    <link href="./quantconnect_files/sb-admin.css" rel="stylesheet">    <!-- Morris Charts CSS -->    <link href="./quantconnect_files/morris.css" rel="stylesheet">    <!-- Custom Fonts -->    <link href="./quantconnect_files/font-awesome.min.css" rel="stylesheet" type="text/css">    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->    <!--[if lt IE 9]>        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>    <![endif]-->    <style>        .btn_inv button        {            width:100%;        }        .mar_info        {            margin-bottom: 10px;            border-bottom: 1px solid #ccc;            height: 200px;        }        .mar_amt        {                text-align: center;                margin-top: 50px;        }        .btn-success1        {            background-color:#000;            color:#fff;        }        .btn-warning1        {            background-color:#000;            color:#fff;        }        .btn-danger1        {            background-color:#000;            color:#fff;        }        </style></head><body>    <div id="wrapper">        <!-- Navigation -->        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">            <!-- Brand and toggle get grouped for better mobile display -->            <div class="navbar-header">                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">                    <span class="sr-only">Toggle navigation</span>                    <span class="icon-bar"></span>                    <span class="icon-bar"></span>                    <span class="icon-bar"></span>                </button>                <a class="navbar-brand" href="http://accusafe.in/quantopian/market_pla.php#">QuantConnect</a>            </div>            <!-- Top Menu Items -->            <ul class="nav navbar-right top-nav">                <li class="dropdown"><!--                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>-->                    <ul class="dropdown-menu message-dropdown">                        <li class="message-preview">                            <a href="http://accusafe.in/quantopian/market_pla.php#">                                <div class="media">                                    <span class="pull-left">                                        <img class="media-object" src="./quantconnect_files/50x50" alt="">                                    </span>                                    <div class="media-body">                                        <h5 class="media-heading"><strong>John Smith</strong>                                        </h5>                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>                                    </div>                                </div>                            </a>                        </li>                        <li class="message-preview">                            <a href="http://accusafe.in/quantopian/market_pla.php#">                                <div class="media">                                    <span class="pull-left">                                        <img class="media-object" src="./quantconnect_files/50x50" alt="">                                    </span>                                    <div class="media-body">                                        <h5 class="media-heading"><strong>John Smith</strong>                                        </h5>                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>                                    </div>                                </div>                            </a>                        </li>                        <li class="message-preview">                            <a href="http://accusafe.in/quantopian/market_pla.php#">                                <div class="media">                                    <span class="pull-left">                                        <img class="media-object" src="./quantconnect_files/50x50" alt="">                                    </span>                                    <div class="media-body">                                        <h5 class="media-heading"><strong>John Smith</strong>                                        </h5>                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>                                    </div>                                </div>                            </a>                        </li>                        <li class="message-footer">                            <a href="http://accusafe.in/quantopian/market_pla.php#">Read All New Messages</a>                        </li>                    </ul>                </li><!--                <li class="dropdown">                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>                    <ul class="dropdown-menu alert-dropdown">                        <li>                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>                        </li>                        <li>                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>                        </li>                        <li>                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>                        </li>                        <li>                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>                        </li>                        <li>                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>                        </li>                        <li>                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>                        </li>                        <li class="divider"></li>                        <li>                            <a href="#">View All</a>                        </li>                    </ul>                </li>-->                <li class="dropdown">                    <a href="http://accusafe.in/quantopian/market_pla.php#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> qwd@g.com <b class="caret"></b></a>                    <ul class="dropdown-menu">                        <li>                            <a href="http://accusafe.in/quantopian/market_pla.php#"><i class="fa fa-fw fa-user"></i> Profile</a>                        </li>                        <li>                            <a href="http://accusafe.in/quantopian/market_pla.php#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>                        </li>                        <li>                            <a href="http://accusafe.in/quantopian/market_pla.php#"><i class="fa fa-fw fa-gear"></i> Settings</a>                        </li>                        <li class="divider"></li>                        <li>                            <a href="http://accusafe.in/quantopian/market_pla.php#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>                        </li>                    </ul>                </li>            </ul>            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->            <div class="collapse navbar-collapse navbar-ex1-collapse">                 <ul class="nav navbar-nav side-nav">                    <li class="active">                        <a href="http://accusafe.in/quantopian/dashboard.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>                    </li>                    <li>                        <a href="http://accusafe.in/quantopian/profile.php"><i class="fa fa-user"></i> Profile</a>                    </li><!---->                                         <li>                        <a href="http://accusafe.in/quantopian/algo.php"><i class="fa fa-fw fa-bar-chart-o"></i>Algorithm</a>                    <!--</li>                    <li>                        <a href="investor.php"><i class="fa fa-fw fa-table"></i> Investor Platform</a>                    </li>-->                 </li><li>                        <a href="http://accusafe.in/quantopian/Dev_platform.php"><i class="fa fa-fw fa-desktop"></i> Dev Platform</a>                    </li>                    <li>                        <a href="http://accusafe.in/quantopian/market_pla.php"><i class="fa fa-fw fa-file"></i> Market Platform</a>                    </li>                </ul>            </div>            <!-- /.navbar-collapse -->        </nav>        <div id="page-wrapper">
+
+<svg width="1280px" height="1073px" viewBox="0 0 1280 1073" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="50" y="146" width="1180" height="915"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feoffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feoffset>
+            <fegaussianblur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></fegaussianblur>
+            <fecolormatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"></fecolormatrix>
+        </filter>
+        <rect id="path-3" x="0" y="0" width="1180" height="515"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-4">
+            <feoffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feoffset>
+            <fecolormatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowOffsetOuter1"></fecolormatrix>
+        </filter>
+        <rect id="path-5" x="0" y="0" width="235" height="370" rx="3"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-6">
+            <feoffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feoffset>
+            <fegaussianblur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></fegaussianblur>
+            <fecomposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></fecomposite>
+            <fecolormatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></fecolormatrix>
+        </filter>
+        <mask id="mask-7" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="235" height="370" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <lineargradient x1="-1.11022302e-14%" y1="50%" x2="100%" y2="50%" id="linearGradient-8">
+            <stop stop-color="#FE9400" offset="0%"></stop>
+            <stop stop-color="#FF5E3A" offset="100%"></stop>
+        </lineargradient>
+        <rect id="path-9" x="0" y="0" width="235" height="370" rx="3"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-10">
+            <feoffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feoffset>
+            <fegaussianblur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></fegaussianblur>
+            <fecomposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></fecomposite>
+            <fecolormatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></fecolormatrix>
+        </filter>
+        <mask id="mask-11" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="235" height="370" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+        <rect id="path-12" x="0" y="0" width="235" height="370" rx="3"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-13">
+            <feoffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feoffset>
+            <fegaussianblur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></fegaussianblur>
+            <fecomposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></fecomposite>
+            <fecolormatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></fecolormatrix>
+        </filter>
+        <mask id="mask-14" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="235" height="370" fill="white">
+            <use xlink:href="#path-12"></use>
+        </mask>
+        <rect id="path-15" x="0" y="0" width="235" height="370" rx="3"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-16">
+            <feoffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feoffset>
+            <fegaussianblur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></fegaussianblur>
+            <fecomposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></fecomposite>
+            <fecolormatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></fecolormatrix>
+        </filter>
+        <mask id="mask-17" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="235" height="370" fill="white">
+            <use xlink:href="#path-15"></use>
+        </mask>
+        <rect id="path-18" x="0" y="0" width="1180" height="400"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-19">
+            <feoffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feoffset>
+            <fecolormatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowOffsetOuter1"></fecolormatrix>
+        </filter>
+        <ellipse id="path-20" cx="5.56462585" cy="196.814549" rx="5.56462585" ry="4.76164233"></ellipse>
+        <mask id="mask-21" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="15.1292517" height="13.5232847">
+            <rect x="-2" y="190.052907" width="15.1292517" height="13.5232847" fill="white"></rect>
+            <use xlink:href="#path-20" fill="black"></use>
+        </mask>
+        <ellipse id="path-22" cx="76.0498866" cy="134.913199" rx="5.56462585" ry="4.76164233"></ellipse>
+        <mask id="mask-23" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="15.1292517" height="13.5232847">
+            <rect x="68.4852608" y="128.151557" width="15.1292517" height="13.5232847" fill="white"></rect>
+            <use xlink:href="#path-22" fill="black"></use>
+        </mask>
+        <ellipse id="path-24" cx="142.825397" cy="195.227335" rx="5.56462585" ry="4.76164233"></ellipse>
+        <mask id="mask-25" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="15.1292517" height="13.5232847">
+            <rect x="135.260771" y="188.465693" width="15.1292517" height="13.5232847" fill="white"></rect>
+            <use xlink:href="#path-24" fill="black"></use>
+        </mask>
+        <ellipse id="path-26" cx="209.600907" cy="177.76798" rx="5.56462585" ry="4.76164233"></ellipse>
+        <mask id="mask-27" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="15.1292517" height="13.5232847">
+            <rect x="202.036281" y="171.006338" width="15.1292517" height="13.5232847" fill="white"></rect>
+            <use xlink:href="#path-26" fill="black"></use>
+        </mask>
+        <ellipse id="path-28" cx="276.376417" cy="139.674842" rx="5.56462585" ry="4.76164233"></ellipse>
+        <mask id="mask-29" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="15.1292517" height="13.5232847">
+            <rect x="268.811791" y="132.913199" width="15.1292517" height="13.5232847" fill="white"></rect>
+            <use xlink:href="#path-28" fill="black"></use>
+        </mask>
+        <ellipse id="path-30" cx="348.716553" cy="4.76164233" rx="5.56462585" ry="4.76164233"></ellipse>
+        <mask id="mask-31" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="15.1292517" height="13.5232847">
+            <rect x="341.151927" y="-2" width="15.1292517" height="13.5232847" fill="white"></rect>
+            <use xlink:href="#path-30" fill="black"></use>
+        </mask>
+        <ellipse id="path-32" cx="409.927438" cy="52.3780656" rx="5.56462585" ry="4.76164233"></ellipse>
+        <mask id="mask-33" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="15.1292517" height="13.5232847">
+            <rect x="402.362812" y="45.6164233" width="15.1292517" height="13.5232847" fill="white"></rect>
+            <use xlink:href="#path-32" fill="black"></use>
+        </mask>
+        <ellipse id="path-34" cx="472.993197" cy="69.8374208" rx="5.56462585" ry="4.76164233"></ellipse>
+        <mask id="mask-35" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="15.1292517" height="13.5232847">
+            <rect x="465.428571" y="63.0757785" width="15.1292517" height="13.5232847" fill="white"></rect>
+            <use xlink:href="#path-34" fill="black"></use>
+        </mask>
+        <ellipse id="path-36" cx="541.623583" cy="63.4885643" rx="5.56462585" ry="4.76164233"></ellipse>
+        <mask id="mask-37" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="15.1292517" height="13.5232847">
+            <rect x="534.058957" y="56.726922" width="15.1292517" height="13.5232847" fill="white"></rect>
+            <use xlink:href="#path-36" fill="black"></use>
+        </mask>
+        <ellipse id="path-38" cx="610.253968" cy="87.296776" rx="5.56462585" ry="4.76164233"></ellipse>
+        <mask id="mask-39" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="15.1292517" height="13.5232847">
+            <rect x="602.689342" y="80.5351336" width="15.1292517" height="13.5232847" fill="white"></rect>
+            <use xlink:href="#path-38" fill="black"></use>
+        </mask>
+        <ellipse id="path-40" cx="678.884354" cy="119.041058" rx="5.56462585" ry="4.76164233"></ellipse>
+        <mask id="mask-41" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="15.1292517" height="13.5232847">
+            <rect x="671.319728" y="112.279416" width="15.1292517" height="13.5232847" fill="white"></rect>
+            <use xlink:href="#path-40" fill="black"></use>
+        </mask>
+        <ellipse id="path-42" cx="751.22449" cy="98.4072747" rx="5.56462585" ry="4.76164233"></ellipse>
+        <mask id="mask-43" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="15.1292517" height="13.5232847">
+            <rect x="743.659864" y="91.6456324" width="15.1292517" height="13.5232847" fill="white"></rect>
+            <use xlink:href="#path-42" fill="black"></use>
+        </mask>
+        <ellipse id="path-44" cx="812.435374" cy="71.4246349" rx="5.56462585" ry="4.76164233"></ellipse>
+        <mask id="mask-45" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="15.1292517" height="13.5232847">
+            <rect x="804.870748" y="64.6629926" width="15.1292517" height="13.5232847" fill="white"></rect>
+            <use xlink:href="#path-44" fill="black"></use>
+        </mask>
+        <path d="M6.92893219,69 L6.92893219,145.992036 C6.92893219,147.112153 7.82210931,148 8.92389913,148 L111.933965,148 C113.03605,148 113.928932,147.101004 113.928932,145.992036 L113.928932,2.00796389 C113.928932,0.887847251 113.035755,0 111.933965,0 L8.92389913,0 C7.82181475,0 6.92893219,0.898996054 6.92893219,2.00796389 L6.92893219,57 L0.928932188,63 L6.92893219,69 Z" id="path-46"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-47">
+            <feoffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feoffset>
+            <fegaussianblur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></fegaussianblur>
+            <fecolormatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"></fecolormatrix>
+        </filter>
+        <rect id="path-48" x="0" y="0" width="1280" height="100"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-49">
+            <feoffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feoffset>
+            <fecolormatrix values="0 0 0 0 0.95   0 0 0 0 0.95   0 0 0 0 0.95  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></fecolormatrix>
+        </filter>
+        <rect id="path-50" x="677" y="651" width="144" height="38"></rect>
+        <mask id="mask-51" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="144" height="38" fill="white">
+            <use xlink:href="#path-50"></use>
+        </mask>
+    </defs>
+    <g id="Base" stroke="none" fill="none">
+        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+    </g>
+    <g id="Courses-Progress" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(50.000000, 546.000000)">
+        <g id="Base">
+            <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+        </g>
+        <g id="Course-Card" transform="translate(902.000000, 90.000000)">
+            <g id="Base">
+                <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                <use stroke="#D9D9D9" mask="url(#mask-7)" stroke-width="2" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+            </g>
+            <path d="M117.5,281.5 L117.5,332.5" id="Line" stroke="#D9D9D9" stroke-linecap="square"></path>
+            <g id="Label" transform="translate(26.000000, 269.000000)" font-family=".AppleSystemUIFont" font-weight="normal">
+                <text id="$" font-size="36" fill="#53C34A">
+                    <tspan x="14.4169922" y="35">$</tspan>
+                </text>
+                <text id="Amount" font-size="14" fill="#9FACB3">
+                    <tspan x="0.292480469" y="55">Amount</tspan>
+                    <tspan x="0.159179688" y="72">Needed</tspan>
+                </text>
+            </g>
+            <g id="Label" transform="translate(145.000000, 269.000000)" font-family=".AppleSystemUIFont" font-weight="normal">
+                <text id="0:00" font-size="36" fill="#C62522">
+                    <tspan x="0.408203125" y="35">0:00</tspan>
+                </text>
+                <text id="TIme" font-size="14" fill="#9FACB3">
+                    <tspan x="22.4013672" y="55">TIme</tspan>
+                    <tspan x="25.921875" y="72">Left</tspan>
+                </text>
+            </g>
+            <g id="Chart" transform="translate(40.000000, 88.000000)">
+                <g id="Pie-Chart" stroke="url(#linearGradient-8)" stroke-width="10" stroke-linecap="round">
+                    <circle id="Oval-32" stroke-dasharray="491,766.1599731445312" opacity="0.2" transform="translate(78.000000, 78.000000) scale(1, -1) translate(-78.000000, -78.000000) " cx="78" cy="78" r="78"></circle>
+                    <circle id="Oval-32" stroke-linejoin="round" stroke-dasharray="451,766.1599731445312" transform="translate(78.000000, 78.000000) scale(1, -1) translate(-78.000000, -78.000000) " cx="78" cy="78" r="78"></circle>
+                </g>
+                <g id="Label" transform="translate(42.000000, 49.000000)" font-family=".AppleSystemUIFont" font-weight="normal">
+                    <text id="94%" font-size="36" fill="#3C4144">
+                        <tspan x="0.500976562" y="35">94%</tspan>
+                    </text>
+                    <text id="Invested" font-size="14" fill="#9FACB3">
+                        <tspan x="8.70410156" y="55">Invested</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="More" transform="translate(211.000000, 23.000000)" fill="#9FACB3">
+                <path d="M2,4 C3.1,4 4,3.1 4,2 C4,0.9 3.1,0 2,0 C0.9,0 0,0.9 0,2 C0,3.1 0.9,4 2,4 L2,4 Z M2,6 C0.9,6 0,6.9 0,8 C0,9.1 0.9,10 2,10 C3.1,10 4,9.1 4,8 C4,6.9 3.1,6 2,6 L2,6 Z M2,12 C0.9,12 0,12.9 0,14 C0,15.1 0.9,16 2,16 C3.1,16 4,15.1 4,14 C4,12.9 3.1,12 2,12 L2,12 Z" id="Shape"></path>
+            </g>
+            <g id="Course-Title" transform="translate(15.000000, 18.000000)">
+                <text id="Algorithm-Name" font-family=".AppleSystemUIFont" font-size="16" font-weight="normal" fill="#3C4144">
+                    <tspan x="0" y="15">Cobra java</tspan>
+                </text>
+                <rect id="Rectangle-175" fill="#D9D9D9" x="0" y="48" width="50" height="2"></rect>
+            </g>
+        </g>
+        <g id="Course-Card" transform="translate(615.000000, 90.000000)">
+            <g id="Base">
+                <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
+                <use stroke="#EB8C01" mask="url(#mask-11)" stroke-width="2" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-9"></use>
+            </g>
+            <path d="M117.5,281.5 L117.5,332.5" id="Line" stroke="#D9D9D9" stroke-linecap="square"></path>
+            <g id="Label" transform="translate(16.000000, 269.000000)" font-family=".AppleSystemUIFont" font-weight="normal">
+                <text id="$" font-size="36" fill="#53C34A">
+                    <tspan x="24.4169922" y="35">$</tspan>
+                </text>
+                <text id="Chapter" font-size="14" fill="#9FACB3">
+                    <tspan x="9.57470703" y="55">Chapter</tspan>
+                    <tspan x="0.120605469" y="72">Completed</tspan>
+                </text>
+            </g>
+            <g id="Label" transform="translate(164.000000, 269.000000)" font-family=".AppleSystemUIFont" font-weight="normal">
+                <text id="21" font-size="36" fill="#C62522">
+                    <tspan x="0.946289062" y="35">21</tspan>
+                </text>
+                <text id="Time" font-size="14" fill="#9FACB3">
+                    <tspan x="3.55175781" y="55">Time</tspan>
+                    <tspan x="6.921875" y="72">Left</tspan>
+                </text>
+            </g>
+            <g id="Chart" transform="translate(40.000000, 88.000000)">
+                <g id="Pie-Chart" stroke="url(#linearGradient-8)" stroke-width="10" stroke-linecap="round">
+                    <circle id="Oval-32" stroke-dasharray="491,766.1599731445312" opacity="0.2" transform="translate(78.000000, 78.000000) scale(1, -1) translate(-78.000000, -78.000000) " cx="78" cy="78" r="78"></circle>
+                    <circle id="Oval-32" stroke-linejoin="round" stroke-dasharray="31,766.1599731445312" transform="translate(78.000000, 78.000000) scale(1, -1) translate(-78.000000, -78.000000) " cx="78" cy="78" r="78"></circle>
+                </g>
+                <g id="Label" transform="translate(47.000000, 49.000000)" font-family=".AppleSystemUIFont" font-weight="normal">
+                    <text id="5%" font-size="36" fill="#3C4144">
+                        <tspan x="6.83007812" y="35">5%</tspan>
+                    </text>
+                    <text id="Complete" font-size="14" fill="#9FACB3">
+                        <tspan x="-0.154785156" y="55">Complete</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="More" transform="translate(211.000000, 23.000000)" fill="#9FACB3">
+                <path d="M2,4 C3.1,4 4,3.1 4,2 C4,0.9 3.1,0 2,0 C0.9,0 0,0.9 0,2 C0,3.1 0.9,4 2,4 L2,4 Z M2,6 C0.9,6 0,6.9 0,8 C0,9.1 0.9,10 2,10 C3.1,10 4,9.1 4,8 C4,6.9 3.1,6 2,6 L2,6 Z M2,12 C0.9,12 0,12.9 0,14 C0,15.1 0.9,16 2,16 C3.1,16 4,15.1 4,14 C4,12.9 3.1,12 2,12 L2,12 Z" id="Shape"></path>
+            </g>
+            <g id="Course-Title" transform="translate(15.000000, 18.000000)">
+                <text id="3D-PRINTING-THE-FUTU" font-family=".AppleSystemUIFont" font-size="16" font-weight="normal" fill="#3C4144">
+                    <tspan x="0" y="15">3D PRINTING THE </tspan>
+                    <tspan x="0" y="33">FUTURE</tspan>
+                </text>
+                <rect id="Rectangle-175" fill="#D9D9D9" x="0" y="48" width="50" height="2"></rect>
+            </g>
+        </g>
+        <g id="Course-Card" transform="translate(329.000000, 90.000000)">
+            <g id="Base">
+                <use fill="black" fill-opacity="1" filter="url(#filter-13)" xlink:href="#path-12"></use>
+                <use stroke="#D9D9D9" mask="url(#mask-14)" stroke-width="2" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-12"></use>
+            </g>
+            <path d="M117.5,281.5 L117.5,332.5" id="Line" stroke="#D9D9D9" stroke-linecap="square"></path>
+            <g id="Label" transform="translate(16.000000, 269.000000)" font-family=".AppleSystemUIFont" font-weight="normal">
+                <text id="$" font-size="36" fill="#53C34A">
+                    <tspan x="24.4169922" y="35">$</tspan>
+                </text>
+                <text id="Chapter" font-size="14" fill="#9FACB3">
+                    <tspan x="9.57470703" y="55">Chapter</tspan>
+                    <tspan x="0.120605469" y="72">Completed</tspan>
+                </text>
+            </g>
+            <g id="Chart" transform="translate(40.000000, 88.000000)">
+                <g id="Pie-Chart" stroke="url(#linearGradient-8)" stroke-width="10" stroke-linecap="round">
+                    <circle id="Oval-32" stroke-dasharray="491,766.1599731445312" opacity="0.2" transform="translate(78.000000, 78.000000) scale(1, -1) translate(-78.000000, -78.000000) " cx="78" cy="78" r="78"></circle>
+                    <circle id="Oval-32" stroke-linejoin="round" stroke-dasharray="141,766.1599731445312" transform="translate(78.000000, 78.000000) scale(1, -1) translate(-78.000000, -78.000000) " cx="78" cy="78" r="78"></circle>
+                </g>
+                <g id="Label" transform="translate(45.000000, 49.000000)" font-family=".AppleSystemUIFont" font-weight="normal">
+                    <text id="33%" font-size="36" fill="#3C4144">
+                        <tspan x="-2.13867188" y="35">33%</tspan>
+                    </text>
+                    <text id="Complete" font-size="14" fill="#9FACB3">
+                        <tspan x="1.84521484" y="55">Complete</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="More" transform="translate(211.000000, 23.000000)" fill="#9FACB3">
+                <path d="M2,4 C3.1,4 4,3.1 4,2 C4,0.9 3.1,0 2,0 C0.9,0 0,0.9 0,2 C0,3.1 0.9,4 2,4 L2,4 Z M2,6 C0.9,6 0,6.9 0,8 C0,9.1 0.9,10 2,10 C3.1,10 4,9.1 4,8 C4,6.9 3.1,6 2,6 L2,6 Z M2,12 C0.9,12 0,12.9 0,14 C0,15.1 0.9,16 2,16 C3.1,16 4,15.1 4,14 C4,12.9 3.1,12 2,12 L2,12 Z" id="Shape"></path>
+            </g>
+            <g id="Course-Title" transform="translate(15.000000, 18.000000)">
+                <text id="-Algorithm-Name" font-family=".AppleSystemUIFont" font-size="16" font-weight="normal" fill="#3C4144">
+                    <tspan x="0" y="15"> Kraken bb2 Py</tspan>
+                </text>
+                <rect id="Rectangle-175" fill="#D9D9D9" x="0" y="48" width="50" height="2"></rect>
+            </g>
+        </g>
+        <g id="Course-Card" transform="translate(43.000000, 90.000000)">
+            <g id="Base">
+                <use fill="black" fill-opacity="1" filter="url(#filter-16)" xlink:href="#path-15"></use>
+                <use stroke="#D9D9D9" mask="url(#mask-17)" stroke-width="2" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-15"></use>
+            </g>
+            <path d="M117.5,281.5 L117.5,332.5" id="Line" stroke="#D9D9D9" stroke-linecap="square"></path>
+            <g id="Label" transform="translate(16.000000, 269.000000)" font-family=".AppleSystemUIFont" font-weight="normal">
+                <text id="$" font-size="36" fill="#53C34A">
+                    <tspan x="24.4169922" y="35">$</tspan>
+                </text>
+                <text id="Chapter" font-size="14" fill="#9FACB3">
+                    <tspan x="9.57470703" y="55">Chapter</tspan>
+                    <tspan x="0.120605469" y="72">Completed</tspan>
+                </text>
+            </g>
+            <g id="Label" transform="translate(155.000000, 269.000000)" font-family=".AppleSystemUIFont" font-weight="normal">
+                <text id="7" font-size="36" fill="#C62522">
+                    <tspan x="18.4628906" y="35">7</tspan>
+                </text>
+                <text id="Chapters" font-size="14" fill="#9FACB3">
+                    <tspan x="-0.945800781" y="55">Chapters</tspan>
+                    <tspan x="15.921875" y="72">Left</tspan>
+                </text>
+            </g>
+            <g id="Chart" transform="translate(40.000000, 88.000000)">
+                <g id="Pie-Chart" stroke="url(#linearGradient-8)" stroke-width="10" stroke-linecap="round">
+                    <circle id="Oval-32" stroke-dasharray="491,766.1599731445312" opacity="0.2" transform="translate(78.000000, 78.000000) scale(1, -1) translate(-78.000000, -78.000000) " cx="78" cy="78" r="78"></circle>
+                    <circle id="Oval-32" stroke-linejoin="round" stroke-dasharray="401,766.1599731445312" transform="translate(78.000000, 78.000000) scale(1, -1) translate(-78.000000, -78.000000) " cx="78" cy="78" r="78"></circle>
+                </g>
+                <g id="Label" transform="translate(46.000000, 49.000000)" font-family=".AppleSystemUIFont" font-weight="normal">
+                    <text id="73%" font-size="36" fill="#3C4144">
+                        <tspan x="-2.33007812" y="35">73%</tspan>
+                    </text>
+                    <text id="Complete" font-size="14" fill="#9FACB3">
+                        <tspan x="0.845214844" y="55">Complete</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="More" transform="translate(211.000000, 23.000000)" fill="#9FACB3">
+                <path d="M2,4 C3.1,4 4,3.1 4,2 C4,0.9 3.1,0 2,0 C0.9,0 0,0.9 0,2 C0,3.1 0.9,4 2,4 L2,4 Z M2,6 C0.9,6 0,6.9 0,8 C0,9.1 0.9,10 2,10 C3.1,10 4,9.1 4,8 C4,6.9 3.1,6 2,6 L2,6 Z M2,12 C0.9,12 0,12.9 0,14 C0,15.1 0.9,16 2,16 C3.1,16 4,15.1 4,14 C4,12.9 3.1,12 2,12 L2,12 Z" id="Shape"></path>
+            </g>
+            <g id="Course-Title" transform="translate(15.000000, 18.000000)">
+                <text id="Algorithm-Name" font-family=".AppleSystemUIFont" font-size="16" font-weight="normal" fill="#3C4144">
+                    <tspan x="0" y="15">Multi exchange arb</tspan>
+                </text>
+                <rect id="Rectangle-175" fill="#D9D9D9" x="0" y="48" width="50" height="2"></rect>
+            </g>
+        </g>
+        <g id="Label" transform="translate(43.000000, 20.000000)" font-size="18" font-family=".AppleSystemUIFont" fill="#3C4144" font-weight="normal">
+            <text id="My-Algorithms-in-the">
+                <tspan x="0" y="17">My Algorithms in the Market Place</tspan>
+            </text>
+        </g>
+    </g>
+    <g id="Completed-Chapter-and-Point-Gained-per-Day" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(50.000000, 152.000000)">
+        <g id="Base">
+            <use fill="black" fill-opacity="1" filter="url(#filter-19)" xlink:href="#path-18"></use>
+            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-18"></use>
+        </g>
+        <text id="Time" font-family=".AppleSystemUIFontUltraLight, .AppleSystemUIFont" font-size="20" font-weight="200" fill="#000000">
+            <tspan x="568" y="380">Time</tspan>
+        </text>
+        <text id="$" font-family=".AppleSystemUIFont" font-size="12" font-weight="normal" fill="#3C4144">
+            <tspan x="511" y="227">$</tspan>
+        </text>
+        <g id="Bar" transform="translate(43.000000, 77.000000)">
+            <rect fill="#FFFFFF" x="0" y="200" width="1094" height="40"></rect>
+            <rect fill="#FAFBFC" x="0" y="160" width="1094" height="40"></rect>
+            <rect fill="#FFFFFF" x="0" y="120" width="1094" height="40"></rect>
+            <rect fill="#FAFBFC" x="0" y="80" width="1094" height="40"></rect>
+            <rect fill="#FFFFFF" x="0" y="40" width="1094" height="40"></rect>
+            <rect fill="#FAFBFC" x="0" y="0" width="1094" height="40"></rect>
+        </g>
+        <g id="Label" transform="translate(43.000000, 3.000000)" font-family=".AppleSystemUIFont" font-weight="normal">
+            <text id="Year/Year-$-Gain" font-size="18" fill="#3C4144">
+                <tspan x="0" y="17">Year/Year $ Gain</tspan>
+            </text>
+            <text id="Today,-May-7.-2016" font-size="14" fill="#8F9EA6">
+                <tspan x="0" y="41">Today, May 7. 2016</tspan>
+            </text>
+        </g>
+        <g id="Label" transform="translate(1012.000000, 2.000000)" font-family=".AppleSystemUIFont" font-weight="normal">
+            <text id="Investment" font-size="18" fill="#EB8C01">
+                <tspan x="35.7910156" y="17">Investment</tspan>
+            </text>
+            <text id="Total-this-month-:-$" font-size="14" fill="#8F9EA6">
+                <tspan x="0.387695312" y="41">Total this month : $</tspan>
+            </text>
+        </g>
+        <g id="Label" transform="translate(820.000000, 2.000000)" font-family=".AppleSystemUIFont" font-weight="normal">
+            <text id="Algorithms-Pushed" font-size="18" fill="#EB8C01">
+                <tspan x="0.806640625" y="17">Algorithms Pushed</tspan>
+            </text>
+            <text id="Total-this-month-:-$" font-size="14" fill="#8F9EA6">
+                <tspan x="29.3876953" y="41">Total this month : $</tspan>
+            </text>
+        </g>
+        <g id="Chart" transform="translate(102.000000, 95.000000)">
+            <path id="Path-345" stroke="#979797"></path>
+            <polyline id="Path-346" stroke="#3ACA60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="6.49206349 196.020942 76.0498866 133.325985 142.825397 196.814549 210.528345 177.76798 276.376417 138.881234 349.643991 4.76164233 408.072562 52.3780656 471.138322 70.6310278 541.623583 63.4885643 610.253968 88.090383 677.029478 119.041058 750.297052 98.4072747 813.362812 70.6310278"></polyline>
+            <g id="Point">
+                <g id="Oval-19">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-20"></use>
+                    <use stroke="#3ACA60" mask="url(#mask-21)" stroke-width="4" xlink:href="#path-20"></use>
+                </g>
+                <g id="Oval-19">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-22"></use>
+                    <use stroke="#3ACA60" mask="url(#mask-23)" stroke-width="4" xlink:href="#path-22"></use>
+                </g>
+                <g id="Oval-19">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-24"></use>
+                    <use stroke="#3ACA60" mask="url(#mask-25)" stroke-width="4" xlink:href="#path-24"></use>
+                </g>
+                <g id="Oval-19">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-26"></use>
+                    <use stroke="#3ACA60" mask="url(#mask-27)" stroke-width="4" xlink:href="#path-26"></use>
+                </g>
+                <g id="Oval-19">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-28"></use>
+                    <use stroke="#3ACA60" mask="url(#mask-29)" stroke-width="4" xlink:href="#path-28"></use>
+                </g>
+                <g id="Oval-19">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-30"></use>
+                    <use stroke="#3ACA60" mask="url(#mask-31)" stroke-width="4" xlink:href="#path-30"></use>
+                </g>
+                <g id="Oval-19">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-32"></use>
+                    <use stroke="#3ACA60" mask="url(#mask-33)" stroke-width="4" xlink:href="#path-32"></use>
+                </g>
+                <g id="Oval-19">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-34"></use>
+                    <use stroke="#3ACA60" mask="url(#mask-35)" stroke-width="4" xlink:href="#path-34"></use>
+                </g>
+                <g id="Oval-19">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-36"></use>
+                    <use stroke="#3ACA60" mask="url(#mask-37)" stroke-width="4" xlink:href="#path-36"></use>
+                </g>
+                <g id="Oval-19">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-38"></use>
+                    <use stroke="#3ACA60" mask="url(#mask-39)" stroke-width="4" xlink:href="#path-38"></use>
+                </g>
+                <g id="Oval-19">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-40"></use>
+                    <use stroke="#3ACA60" mask="url(#mask-41)" stroke-width="4" xlink:href="#path-40"></use>
+                </g>
+                <g id="Oval-19">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-42"></use>
+                    <use stroke="#3ACA60" mask="url(#mask-43)" stroke-width="4" xlink:href="#path-42"></use>
+                </g>
+                <g id="Oval-19">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-44"></use>
+                    <use stroke="#3ACA60" mask="url(#mask-45)" stroke-width="4" xlink:href="#path-44"></use>
+                </g>
+            </g>
+        </g>
+        <g id="Preview" transform="translate(936.000000, 95.000000)">
+            <g id="base">
+                <use fill="black" fill-opacity="1" filter="url(#filter-47)" xlink:href="#path-46"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-46"></use>
+            </g>
+            <g id="Content" transform="translate(34.000000, 10.000000)" font-size="12" font-family=".AppleSystemUIFont" font-weight="normal">
+                <text id="May-7.-2016" fill="#3C4144">
+                    <tspan x="0" y="12">May 7. 2016</tspan>
+                </text>
+                <g id="Label" transform="translate(0.000000, 29.000000)" fill="#EB8C01">
+                    <text id="Metrix-Counts">
+                        <tspan x="0" y="12">Metrix Counts</tspan>
+                    </text>
+                </g>
+                <g id="Label" transform="translate(0.000000, 81.000000)">
+                    <text id="Money" fill="#EB8C01">
+                        <tspan x="0" y="12">Money</tspan>
+                        <tspan x="0" y="27">Invested</tspan>
+                    </text>
+                    <text id="$" fill="#3C4144">
+                        <tspan x="0" y="45">$</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+    <text id="$464.92" stroke="none" fill="none" font-family="AvenirNext-DemiBold, Avenir Next" font-size="18" font-weight="500">
+        <tspan x="57" y="236" fill="#000000">$464.92</tspan>
+    </text>
+    <text id="Price/B" stroke="none" fill="none" transform="translate(72.295683, 341.387333) rotate(-91.000000) translate(-72.295683, -341.387333) " font-family=".AppleSystemUIFontUltraLight, .AppleSystemUIFont" font-size="20" font-weight="200">
+        <tspan x="42.2956829" y="348.887333" fill="#000000">Price/B</tspan>
+    </text>
+    <g id="Nav-Header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Base-Nav">
+            <use fill="black" fill-opacity="1" filter="url(#filter-49)" xlink:href="#path-48"></use>
+            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-48"></use>
+        </g>
+        <path d="M914,25 L914,75" id="Devider" stroke="#AEBDC1" stroke-linecap="square"></path>
+        <g id="User-Action" transform="translate(964.000000, 20.000000)">
+            <text id="USER" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" fill="#3C4144">
+                <tspan x="109" y="35">USER</tspan>
+            </text>
+            <circle id="Oval-1" fill="#EEEEEE" cx="211" cy="30" r="30"></circle>
+            <path d="M264.306144,22.6938556 C265.241635,21.758365 266,22.0649199 266,23.399538 L266,30.600462 C266,31.9256903 264.93508,33 263.600462,33 L256.399538,33 C255.07431,33 254.759757,32.2402426 255.693856,31.3061444 L264.306144,22.6938556 Z" id="Rectangle-39" fill="#AEBDC1" transform="translate(260.000000, 27.000000) rotate(-315.000000) translate(-260.000000, -27.000000) "></path>
+            <g id="Notification" transform="translate(0.000000, 14.000000)">
+                <path d="M21.7932308,24.7651665 L0.358153846,24.7651665 L0,24.7651665 C0.204307692,24.4542356 0.512,24.0388318 0.718769231,23.7279009 C1.89907692,22.1222534 3.84615385,19.8922567 3.84615385,17.2493436 L3.84615385,10.8777466 C3.84615385,6.52471325 6.92307692,3 10.9735385,3 C15.024,3 18.1538462,6.52471325 18.1538462,10.8777466 L18.1538462,17.251831 C18.1538462,19.9992169 19.9495385,22.2777189 21.2812308,23.8858538 C21.4855385,24.1457921 21.7932308,24.5077157 22,24.767654 C21.9470769,24.7651665 21.8461538,24.7651665 21.7932308,24.7651665 Z M11.024,30 C9.28123077,30 7.89661538,28.6008107 7.89661538,26.8396978 L14.1009231,26.8396978 C14.1009231,28.549818 12.7163077,30 11.024,30 Z" id="Path" fill="#AEBDC1"></path>
+                <circle id="Oval-2" fill="#D22B27" cx="18" cy="5" r="5"></circle>
+            </g>
+            <g id="Message" transform="translate(53.000000, 18.000000)">
+                <path d="M6.09723636,23.7167059 C6.02727273,23.7167059 5.9904,23.7167059 5.91996364,23.6818824 C5.81312727,23.6122353 5.74269091,23.5054118 5.74269091,23.3637647 L5.74269091,19.4117647 L3.43814545,19.4117647 C1.59545455,19.4117647 0.0699636364,17.8931765 0.0699636364,16.0588235 L0.0699636364,3.77552941 C0.0699636364,1.94117647 1.59545455,0.422588235 3.43814545,0.422588235 L22.5136364,0.422588235 C24.3563273,0.422588235 25.8818182,1.94117647 25.8818182,3.77552941 L25.8818182,16.0936471 C25.8818182,17.9284706 24.3563273,19.4465882 22.5136364,19.4465882 L13.8972364,19.4465882 L6.27450909,23.6818824 C6.23952727,23.7167059 6.16956364,23.7167059 6.09723636,23.7167059 L6.09723636,23.7167059 Z" id="Path" fill="#AEBDC1"></path>
+                <path d="M8.08458182,10.6950588 C8.08458182,12.5294118 5.31818182,12.5294118 5.31818182,10.6950588 C5.31818182,8.85835294 8.08458182,8.85835294 8.08458182,10.6950588" id="Fill-3" fill="#FFFFFF"></path>
+                <path d="M14.3590909,10.6950588 C14.3590909,12.5294118 11.5926909,12.5294118 11.5926909,10.6950588 C11.5926909,8.85835294 14.3590909,8.85835294 14.3590909,10.6950588" id="Fill-4" fill="#FFFFFF"></path>
+                <path d="M18.0118545,10.6950588 C18.0118545,8.85835294 20.7758909,8.85835294 20.7758909,10.6950588 C20.7758909,12.5294118 18.0118545,12.5294118 18.0118545,10.6950588 Z" id="Fill-5" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+    <g id="Text" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(51.000000, 31.000000)" font-size="28" font-family="AvenirNext-Regular, Avenir Next" font-weight="normal">
+        <text id="Developer-Platform" fill="#3C4144">
+            <tspan x="0" y="28">Developer Platform</tspan>
+        </text>
+    </g>
+    <g id="Label" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(521.000000, 909.000000)" font-weight="normal">
+        <text id="0:00" font-family=".SFNSDisplay-Regular, .SF NS Display" font-size="36" fill="#C62522">
+            <tspan x="0.408203125" y="35">0:00</tspan>
+        </text>
+        <text id="TIme" font-family=".SFNSText-Regular, .SF NS Text" font-size="14" fill="#9FACB3">
+            <tspan x="22.4013672" y="55">TIme</tspan>
+            <tspan x="25.921875" y="72">Left</tspan>
+        </text>
+    </g>
+    <use id="Rectangle-30" stroke="#FFFFFF" mask="url(#mask-51)" stroke-width="2" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-50"></use>
+    <text id="Algorithm-Name" stroke="none" fill="none" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal">
+        <tspan x="689" y="671" fill="#3C4144">Btc HFT 808</tspan>
+    </text>
+    <text id="10-AM---------------" stroke="none" fill="none" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal">
+        <tspan x="133" y="499" fill="#8F9EA6">10 AM                                12 AM                      2 PM                       4PM                         6PM                         8 PM                             10 PM                              12 AM</tspan>
+    </text>
+    <text id="1-DAY---------------" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="20" font-weight="300">
+        <tspan x="102" y="130" fill="#000000">1 DAY                    3 DAY                   1 MONTH                  3 MONTH              1 YEAR              5 YEAR               MAX</tspan>
+    </text>
+    <text id="$398.78" stroke="none" fill="none" font-family="AvenirNext-DemiBold, Avenir Next" font-size="18" font-weight="500">
+        <tspan x="54" y="509" fill="#000000">$398.78</tspan>
+    </text>
+</svg>
+ 
+</div>        <!-- /#page-wrapper -->    </div>    <!-- /#wrapper -->    <!-- jQuery -->    <script src="./quantconnect_files/jquery.js"></script>    <!-- Bootstrap Core JavaScript -->    <script src="./quantconnect_files/bootstrap.min.js"></script>    <!-- Morris Charts JavaScript -->    <script src="./quantconnect_files/raphael.min.js"></script>    <script src="./quantconnect_files/morris.min.js"></script>    <script src="./quantconnect_files/morris-data.js"></script></body><iframe src="./quantconnect_files/commandbox.html" id="vichrome-commandframe" seamless="" style="display: none;"></iframe></html>

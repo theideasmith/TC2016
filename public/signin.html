@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+            Quantopian Login
+        </title>
+        <link rel="stylesheet" href="assets/bootstrap.css"/>
+        <script src="assets/jquery.js"></script>
+        <script src="assets/jquery.validate.min.js"></script>
+    </head>
+    <style>.gray-color{
+                   background: #F1F1F1;
+        }
+        .img-logo{
+             width: 200px;
+             margin-top: 80px;
+        }
+        .field-width{
+    width: 350px;
+    padding: 10px;
+    background: #FAFFBD;
+    margin: 5px;
+        }
+        .black-bg-btn{
+                padding: 10px;
+    width: 120px;
+    color: white;
+    background: black;
+    margin-top: 10px;
+        }
+
+    </style>
+    <body class="gray-color">
+        <div class="container">
+            <div class="row text-center center-md">
+                <img class="img-logo" src="assets/Infinitylogo.jpg">
+                <form method="post" action="" class="mailform" id="contactform">
+                    <input type="hidden" name="form-type" value="contact">
+                    <h4>Login Form</h4>
+                    <div id="response12"></div>
+
+                    <fieldset>
+                        <label class="col-xs-12">
+                            <input class="field-width"  type="text" id="email" name="email" placeholder="Enter Email" data-constraints="@LettersOnly @NotEmpty" required>
+                        </label>
+                        <label class="col-xs-12">
+                            <input class="field-width" type="password" id="password" name="password" placeholder="Enter password" data-constraints="@Email @NotEmpty" required>
+                        </label>
+                        <label class="col-xs-12">
+                            <input class="field-width" type="password" id="cpassword" name="cpassword" placeholder="Enter Confirm password" data-constraints="@Email @NotEmpty" required>
+                        </label>
+
+                        <div class="mfControls1 col-xs-12">
+                            <button type="button" class="black-bg-btn" name="developer" class="btn" id="developer">developer</button>
+                            <button type="button" class="black-bg-btn" name="investor" class="btn" id="investor">investor</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function() {
+
+            var v = $("#contactform").validate({
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                    },
+                    cpassword: {
+                        equalTo: "#password"
+                    }
+                }
+            });
+            $("#developer").click(function() {
+
+                if (!v.form()) {
+                    return false;
+                }
+                email = $('#email').val();
+                password = $('#password').val();
+                $.ajax({
+                    type: "POST",
+                    url: "login.php",
+                    data: {'email': email, 'password': password, 'type': 'developer'},
+                    //  cache: false,
+                    success: function(data) {
+                        //               alert(data);                           
+                        if (data == "yes")
+                        {
+                            location.href = "http://accusafe.in/quantopian/profile.php" 
+                        }
+                        else
+                        {
+                            document.getElementById("response12").innerHTML = '<span style="color:red;">' + data + '</span>';
+
+                        }
+                    }
+
+
+                });
+
+            });
+            $("#investor").click(function() {
+
+                if (!v.form()) {
+                    return false;
+                }
+                email = $('#email').val();
+                password = $('#password').val();
+                $.ajax({
+                    type: "POST",
+                    url: "login.php",
+                    data: {'email': email, 'password': password, 'type': 'investor'},
+                    //  cache: false,
+                    success: function(data) {
+                        //              alert(data);                           
+                        if (data == "yes")
+                        {
+                            location.href = "http://accusafe.in/quantopian/"
+                        }
+                        else
+                        {
+                            document.getElementById("response12").innerHTML = '<span style="color:red;">' + data + '</span>';
+
+                        }
+                    }
+
+
+                });
+
+            });
+        });
+    </script>
+
+</html>
