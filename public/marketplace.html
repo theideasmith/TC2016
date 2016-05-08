@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://accusafe.in/quantopian/market_pla.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1">    <meta name="description" content="">    <meta name="author" content="">    <title>Market - QuantConnect</title>    <!-- Bootstrap Core CSS -->    <link href="./marketplace_files/bootstrap.min.css" rel="stylesheet">    <!-- Custom CSS -->    <link href="./marketplace_files/sb-admin.css" rel="stylesheet">    <!-- Morris Charts CSS -->    <link href="./marketplace_files/morris.css" rel="stylesheet">    <!-- Custom Fonts -->    <link href="./marketplace_files/font-awesome.min.css" rel="stylesheet" type="text/css">    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->    <!--[if lt IE 9]>        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>    <![endif]-->    <style>        .btn_inv button        {            width:100%;        }        .mar_info        {            margin-bottom: 10px;            border-bottom: 1px solid #ccc;            height: 200px;        }        .mar_amt        {                text-align: center;                margin-top: 50px;        }        .btn-success1        {            background-color:#000;            color:#fff;        }        .btn-warning1        {            background-color:#000;            color:#fff;        }        .btn-danger1        {            background-color:#000;            color:#fff;        }        </style></head><body>    <div id="wrapper">        <!-- Navigation -->        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">            <!-- Brand and toggle get grouped for better mobile display -->            <div class="navbar-header">                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">                    <span class="sr-only">Toggle navigation</span>                    <span class="icon-bar"></span>                    <span class="icon-bar"></span>                    <span class="icon-bar"></span>                </button>                <a class="navbar-brand" href="http://accusafe.in/quantopian/market_pla.php#">QuantConnect</a>            </div>            <!-- Top Menu Items -->            <ul class="nav navbar-right top-nav">                <li class="dropdown"><!--                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>-->                    <ul class="dropdown-menu message-dropdown">                        <li class="message-preview">                            <a href="http://accusafe.in/quantopian/market_pla.php#">                                <div class="media">                                    <span class="pull-left">                                        <img class="media-object" src="./marketplace_files/50x50" alt="">                                    </span>                                    <div class="media-body">                                        <h5 class="media-heading"><strong>John Smith</strong>                                        </h5>                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>                                    </div>                                </div>                            </a>                        </li>                        <li class="message-preview">                            <a href="http://accusafe.in/quantopian/market_pla.php#">                                <div class="media">                                    <span class="pull-left">                                        <img class="media-object" src="./marketplace_files/50x50" alt="">                                    </span>                                    <div class="media-body">                                        <h5 class="media-heading"><strong>John Smith</strong>                                        </h5>                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>                                    </div>                                </div>                            </a>                        </li>                        <li class="message-preview">                            <a href="http://accusafe.in/quantopian/market_pla.php#">                                <div class="media">                                    <span class="pull-left">                                        <img class="media-object" src="./marketplace_files/50x50" alt="">                                    </span>                                    <div class="media-body">                                        <h5 class="media-heading"><strong>John Smith</strong>                                        </h5>                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>                                    </div>                                </div>                            </a>                        </li>                        <li class="message-footer">                            <a href="http://accusafe.in/quantopian/market_pla.php#">Read All New Messages</a>                        </li>                    </ul>                </li><!--                <li class="dropdown">                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>                    <ul class="dropdown-menu alert-dropdown">                        <li>                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>                        </li>                        <li>                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>                        </li>                        <li>                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>                        </li>                        <li>                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>                        </li>                        <li>                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>                        </li>                        <li>                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>                        </li>                        <li class="divider"></li>                        <li>                            <a href="#">View All</a>                        </li>                    </ul>                </li>-->                <li class="dropdown">                    <a href="http://accusafe.in/quantopian/market_pla.php#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> qwd@g.com <b class="caret"></b></a>                    <ul class="dropdown-menu">                        <li>                            <a href="http://accusafe.in/quantopian/market_pla.php#"><i class="fa fa-fw fa-user"></i> Profile</a>                        </li>                        <li>                            <a href="http://accusafe.in/quantopian/market_pla.php#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>                        </li>                        <li>                            <a href="http://accusafe.in/quantopian/market_pla.php#"><i class="fa fa-fw fa-gear"></i> Settings</a>                        </li>                        <li class="divider"></li>                        <li>                            <a href="http://accusafe.in/quantopian/market_pla.php#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>                        </li>                    </ul>                </li>            </ul>            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->            <div class="collapse navbar-collapse navbar-ex1-collapse">                 <ul class="nav navbar-nav side-nav">                    <li class="active">                        <a href="http://accusafe.in/quantopian/dashboard.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>                    </li>                    <li>                        <a href="http://accusafe.in/quantopian/profile.php"><i class="fa fa-user"></i> Profile</a>                    </li><!---->                                         <li>                        <a href="http://accusafe.in/quantopian/algo.php"><i class="fa fa-fw fa-bar-chart-o"></i>Algorithm</a>                    <!--</li>                    <li>                        <a href="investor.php"><i class="fa fa-fw fa-table"></i> Investor Platform</a>                    </li>-->                 </li><li>                        <a href="./algorithms/dashboard.html"><i class="fa fa-fw fa-desktop"></i> Dev Platform</a>                    </li>                    <li>                        <a href="http://accusafe.in/quantopian/market_pla.php"><i class="fa fa-fw fa-file"></i> Market Platform</a>                    </li>                </ul>            </div>            <!-- /.navbar-collapse -->        </nav>        <div id="page-wrapper">            <div class="container-fluid">                <!-- Page Heading -->                <div class="row">                    <div class="col-lg-12">                        <h1 class="page-header">                            Market Place                         </h1>                         <ol class="breadcrumb">                            <li>                                <i class="fa fa-dashboard"></i>  <a href="http://accusafe.in/quantopian/dashboard.php">Dashboard</a>                            </li>                            <li class="active">                                <i class="fa fa-fw fa-file"></i> Market Place                            </li>                        </ol>                    </div>                </div>                <div> 
+<svg width="1049px" height="876px" viewBox="196 87 1049 876" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="274.536047" height="421.955081" rx="3"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feoffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feoffset>
+            <fegaussianblur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></fegaussianblur>
+            <fecomposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></fecomposite>
+            <fecolormatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></fecolormatrix>
+        </filter>
+        <mask id="mask-3" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="274.536047" height="421.955081" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-4" x="0" y="0" width="274.536047" height="421.955081" rx="3"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-5">
+            <feoffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feoffset>
+            <fegaussianblur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></fegaussianblur>
+            <fecomposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></fecomposite>
+            <fecolormatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></fecolormatrix>
+        </filter>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="274.536047" height="421.955081" fill="white">
+            <use xlink:href="#path-4"></use>
+        </mask>
+        <rect id="path-7" x="374" y="0" width="274.536047" height="421.955081" rx="3"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-8">
+            <feoffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feoffset>
+            <fegaussianblur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></fegaussianblur>
+            <fecomposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></fecomposite>
+            <fecolormatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></fecolormatrix>
+        </filter>
+        <mask id="mask-9" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="274.536047" height="421.955081" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <rect id="path-10" x="0" y="0" width="274.536047" height="421.955081" rx="3"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-11">
+            <feoffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feoffset>
+            <fegaussianblur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></fegaussianblur>
+            <fecomposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></fecomposite>
+            <fecolormatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></fecolormatrix>
+        </filter>
+        <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="274.536047" height="421.955081" fill="white">
+            <use xlink:href="#path-10"></use>
+        </mask>
+        <rect id="path-13" x="0" y="0" width="274.536047" height="421.955081" rx="3"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-14">
+            <feoffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feoffset>
+            <fegaussianblur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></fegaussianblur>
+            <fecomposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></fecomposite>
+            <fecolormatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></fecolormatrix>
+        </filter>
+        <mask id="mask-15" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="274.536047" height="421.955081" fill="white">
+            <use xlink:href="#path-13"></use>
+        </mask>
+        <rect id="path-16" x="0" y="0" width="274.536047" height="421.955081" rx="3"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-17">
+            <feoffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feoffset>
+            <fegaussianblur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></fegaussianblur>
+            <fecomposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></fecomposite>
+            <fecolormatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></fecolormatrix>
+        </filter>
+        <mask id="mask-18" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="274.536047" height="421.955081" fill="white">
+            <use xlink:href="#path-16"></use>
+        </mask>
+        <rect id="path-19" x="583" y="462" width="275" height="50" rx="8"></rect>
+        <mask id="mask-20" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="275" height="50" fill="white">
+            <use xlink:href="#path-19"></use>
+        </mask>
+        <radialgradient cx="50%" cy="0%" fx="50%" fy="0%" r="100%" id="radialGradient-21">
+            <stop stop-color="#FDBF7C" offset="0%"></stop>
+            <stop stop-color="#FFB54B" offset="100%"></stop>
+        </radialgradient>
+        <rect id="path-22" x="967" y="462" width="275" height="50" rx="8"></rect>
+        <mask id="mask-23" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="275" height="50" fill="white">
+            <use xlink:href="#path-22"></use>
+        </mask>
+        <radialgradient cx="50%" cy="99.9780772%" fx="50%" fy="99.9780772%" r="0.0219228316%" id="radialGradient-24">
+            <stop stop-color="#000000" offset="0%"></stop>
+            <stop stop-color="#FFB54B" offset="100%"></stop>
+        </radialgradient>
+        <rect id="path-25" x="199" y="462" width="275" height="50" rx="8"></rect>
+        <mask id="mask-26" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="275" height="50" fill="white">
+            <use xlink:href="#path-25"></use>
+        </mask>
+        <rect id="path-27" x="582" y="904" width="275" height="50" rx="8"></rect>
+        <mask id="mask-28" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="275" height="50" fill="white">
+            <use xlink:href="#path-27"></use>
+        </mask>
+        <rect id="path-29" x="200" y="462" width="275" height="50" rx="8"></rect>
+        <mask id="mask-30" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="275" height="50" fill="white">
+            <use xlink:href="#path-29"></use>
+        </mask>
+        <rect id="path-31" x="966" y="462" width="275" height="50" rx="8"></rect>
+        <mask id="mask-32" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="275" height="50" fill="white">
+            <use xlink:href="#path-31"></use>
+        </mask>
+        <rect id="path-33" x="197" y="904" width="275" height="50" rx="8"></rect>
+        <mask id="mask-34" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="275" height="50" fill="white">
+            <use xlink:href="#path-33"></use>
+        </mask>
+        <rect id="path-35" x="583" y="904" width="275" height="50" rx="8"></rect>
+        <mask id="mask-36" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="275" height="50" fill="white">
+            <use xlink:href="#path-35"></use>
+        </mask>
+        <rect id="path-37" x="583" y="904" width="275" height="50" rx="8"></rect>
+        <mask id="mask-38" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="275" height="50" fill="white">
+            <use xlink:href="#path-37"></use>
+        </mask>
+        <rect id="path-39" x="966" y="907" width="275" height="50" rx="8"></rect>
+        <mask id="mask-40" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="275" height="50" fill="white">
+            <use xlink:href="#path-39"></use>
+        </mask>
+        <lineargradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-41">
+            <stop stop-color="#F2E9E9" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </lineargradient>
+        <rect id="path-42" x="210" y="850" width="200" height="32" rx="8"></rect>
+        <mask id="mask-43" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="200" height="32" fill="white">
+            <use xlink:href="#path-42"></use>
+        </mask>
+        <radialgradient cx="50%" cy="3.47177934%" fx="50%" fy="3.47177934%" r="96.5282207%" id="radialGradient-44">
+            <stop stop-color="#EDA05C" offset="0%"></stop>
+            <stop stop-color="#F2963B" offset="100%"></stop>
+        </radialgradient>
+        <rect id="path-45" x="210" y="850" width="77" height="32" rx="8"></rect>
+        <mask id="mask-46" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="77" height="32" fill="white">
+            <use xlink:href="#path-45"></use>
+        </mask>
+        <rect id="path-47" x="207" y="408" width="200" height="32" rx="8"></rect>
+        <mask id="mask-48" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="200" height="32" fill="white">
+            <use xlink:href="#path-47"></use>
+        </mask>
+        <rect id="path-49" x="207" y="408" width="160" height="32" rx="8"></rect>
+        <mask id="mask-50" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="160" height="32" fill="white">
+            <use xlink:href="#path-49"></use>
+        </mask>
+        <rect id="path-51" x="590" y="850" width="200" height="32" rx="8"></rect>
+        <mask id="mask-52" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="200" height="32" fill="white">
+            <use xlink:href="#path-51"></use>
+        </mask>
+        <rect id="path-53" x="590" y="850" width="184" height="32" rx="8"></rect>
+        <mask id="mask-54" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="184" height="32" fill="white">
+            <use xlink:href="#path-53"></use>
+        </mask>
+        <rect id="path-55" x="975" y="857" width="200" height="32" rx="8"></rect>
+        <mask id="mask-56" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="200" height="32" fill="white">
+            <use xlink:href="#path-55"></use>
+        </mask>
+        <rect id="path-57" x="975" y="857" width="142" height="32" rx="8"></rect>
+        <mask id="mask-58" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="142" height="32" fill="white">
+            <use xlink:href="#path-57"></use>
+        </mask>
+        <rect id="path-59" x="590" y="415" width="200" height="32" rx="8"></rect>
+        <mask id="mask-60" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="200" height="32" fill="white">
+            <use xlink:href="#path-59"></use>
+        </mask>
+        <rect id="path-61" x="590" y="415" width="167" height="32" rx="8"></rect>
+        <mask id="mask-62" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="167" height="32" fill="white">
+            <use xlink:href="#path-61"></use>
+        </mask>
+        <rect id="path-63" x="973" y="415" width="200" height="32" rx="8"></rect>
+        <mask id="mask-64" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="200" height="32" fill="white">
+            <use xlink:href="#path-63"></use>
+        </mask>
+        <rect id="path-65" x="973" y="415" width="100" height="32" rx="8"></rect>
+        <mask id="mask-66" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="100" height="32" fill="white">
+            <use xlink:href="#path-65"></use>
+        </mask>
+    </defs>
+    <g id="Course-Card" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(200.000000, 90.000000)">
+        <g id="Base">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use stroke="#D9D9D9" mask="url(#mask-3)" stroke-width="2" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+        <g id="Chart" transform="translate(14.000000, 243.000000)" font-size="41.0477175" font-family="AvenirNext-UltraLight, Avenir Next" fill="#3C4144" font-weight="300">
+            <g id="Label">
+                <text id="YoY-Avg:-19%">
+                    <tspan x="0.114561374" y="41">YoY Avg: 19%</tspan>
+                </text>
+            </g>
+        </g>
+        <g id="More" transform="translate(246.498323, 26.229640)" fill="#9FACB3">
+            <path d="M2.336477,4.56167655 C3.62153935,4.56167655 4.672954,3.53529933 4.672954,2.28083828 C4.672954,1.02637722 3.62153935,0 2.336477,0 C1.05141465,0 0,1.02637722 0,2.28083828 C0,3.53529933 1.05141465,4.56167655 2.336477,4.56167655 L2.336477,4.56167655 Z M2.336477,6.84251483 C1.05141465,6.84251483 0,7.86889205 0,9.1233531 C0,10.3778142 1.05141465,11.4041914 2.336477,11.4041914 C3.62153935,11.4041914 4.672954,10.3778142 4.672954,9.1233531 C4.672954,7.86889205 3.62153935,6.84251483 2.336477,6.84251483 L2.336477,6.84251483 Z M2.336477,13.6850297 C1.05141465,13.6850297 0,14.7114069 0,15.9658679 C0,17.220329 1.05141465,18.2467062 2.336477,18.2467062 C3.62153935,18.2467062 4.672954,17.220329 4.672954,15.9658679 C4.672954,14.7114069 3.62153935,13.6850297 2.336477,13.6850297 L2.336477,13.6850297 Z" id="Shape"></path>
+        </g>
+        <g id="Course-Title" transform="translate(17.523577, 20.527544)">
+            <text id="Kraken-bb2-py" font-family=".SFNSText-Regular, .SF NS Text" font-size="18.24343" font-weight="normal" fill="#3C4144">
+                <tspan x="0" y="18">Kraken bb2 py</tspan>
+                <tspan x="0" y="40">By </tspan>
+                <tspan x="27.0444597" y="40" text-decoration="underline">Shwinky789</tspan>
+            </text>
+            <rect id="Rectangle-175" fill="#D9D9D9" x="0" y="54.7401186" width="58.411925" height="2.28083828"></rect>
+            <rect id="Rectangle-175" fill="#D9D9D9" x="0" y="219" width="58.411925" height="2.28083828"></rect>
+        </g>
+        <g id="Course-Title" transform="translate(17.523577, 74.527544)" fill="#D9D9D9">
+            <rect id="Rectangle-175" x="0" y="0.740118614" width="58.411925" height="2.28083828"></rect>
+        </g>
+    </g>
+    <g id="Course-Card" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(583.000000, 90.000000)">
+        <g id="Base">
+            <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+            <use stroke="#D9D9D9" mask="url(#mask-6)" stroke-width="2" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-4"></use>
+        </g>
+        <g id="More" transform="translate(246.498323, 26.229640)" fill="#9FACB3">
+            <path d="M2.336477,4.56167655 C3.62153935,4.56167655 4.672954,3.53529933 4.672954,2.28083828 C4.672954,1.02637722 3.62153935,0 2.336477,0 C1.05141465,0 0,1.02637722 0,2.28083828 C0,3.53529933 1.05141465,4.56167655 2.336477,4.56167655 L2.336477,4.56167655 Z M2.336477,6.84251483 C1.05141465,6.84251483 0,7.86889205 0,9.1233531 C0,10.3778142 1.05141465,11.4041914 2.336477,11.4041914 C3.62153935,11.4041914 4.672954,10.3778142 4.672954,9.1233531 C4.672954,7.86889205 3.62153935,6.84251483 2.336477,6.84251483 L2.336477,6.84251483 Z M2.336477,13.6850297 C1.05141465,13.6850297 0,14.7114069 0,15.9658679 C0,17.220329 1.05141465,18.2467062 2.336477,18.2467062 C3.62153935,18.2467062 4.672954,17.220329 4.672954,15.9658679 C4.672954,14.7114069 3.62153935,13.6850297 2.336477,13.6850297 L2.336477,13.6850297 Z" id="Shape"></path>
+        </g>
+        <g id="Course-Title" transform="translate(17.523577, 20.527544)">
+            <text id="Cobra-java" font-family=".SFNSText-Regular, .SF NS Text" font-size="18.24343" font-weight="normal" fill="#3C4144">
+                <tspan x="0" y="18">Cobra java</tspan>
+                <tspan x="0" y="40">By </tspan>
+                <tspan x="27.0444597" y="40" text-decoration="underline">bhq23</tspan>
+            </text>
+            <rect id="Rectangle-175" fill="#D9D9D9" x="0" y="54.7401186" width="58.411925" height="2.28083828"></rect>
+        </g>
+    </g>
+    <g id="Course-Card" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(590.000000, 90.000000)">
+        <text id="YoY-Avg:-21%" font-family="AvenirNext-UltraLight, Avenir Next" font-size="41.0499992" font-weight="300" fill="#3C4144">
+            <tspan x="0.22921753" y="285">Y</tspan>
+            <tspan x="22.3141171" y="285" font-size="41.0477175">o</tspan>
+            <tspan x="47.1479862" y="285">Y Avg: 21%</tspan>
+        </text>
+        <g id="Base">
+            <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+            <use stroke="#D9D9D9" mask="url(#mask-9)" stroke-width="2" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-7"></use>
+        </g>
+        <g id="Chart" transform="translate(401.000000, 239.000000)" font-size="41.048" font-family="AvenirNext-UltraLight, Avenir Next" fill="#3C4144" font-weight="300">
+            <g id="Label">
+                <text id="YoY-Avg:-7%">
+                    <tspan x="0.60735046" y="41">YoY Avg: </tspan>
+                    <tspan x="166.810702" y="41" font-size="41.0477175">7%</tspan>
+                </text>
+            </g>
+        </g>
+        <g id="More" transform="translate(620.498323, 26.229640)" fill="#9FACB3">
+            <path d="M2.336477,4.56167655 C3.62153935,4.56167655 4.672954,3.53529933 4.672954,2.28083828 C4.672954,1.02637722 3.62153935,0 2.336477,0 C1.05141465,0 0,1.02637722 0,2.28083828 C0,3.53529933 1.05141465,4.56167655 2.336477,4.56167655 L2.336477,4.56167655 Z M2.336477,6.84251483 C1.05141465,6.84251483 0,7.86889205 0,9.1233531 C0,10.3778142 1.05141465,11.4041914 2.336477,11.4041914 C3.62153935,11.4041914 4.672954,10.3778142 4.672954,9.1233531 C4.672954,7.86889205 3.62153935,6.84251483 2.336477,6.84251483 L2.336477,6.84251483 Z M2.336477,13.6850297 C1.05141465,13.6850297 0,14.7114069 0,15.9658679 C0,17.220329 1.05141465,18.2467062 2.336477,18.2467062 C3.62153935,18.2467062 4.672954,17.220329 4.672954,15.9658679 C4.672954,14.7114069 3.62153935,13.6850297 2.336477,13.6850297 L2.336477,13.6850297 Z" id="Shape"></path>
+        </g>
+        <g id="Course-Title" transform="translate(391.523577, 20.527544)">
+            <text id="Multi-exchange-arb" font-family=".SFNSText-Regular, .SF NS Text" font-size="18.24343" font-weight="normal" fill="#3C4144">
+                <tspan x="0" y="18">Multi exchange arb</tspan>
+                <tspan x="0" y="40">By </tspan>
+                <tspan x="27.0444597" y="40" text-decoration="underline">aclscientist</tspan>
+            </text>
+            <rect id="Rectangle-175" fill="#D9D9D9" x="0" y="54.7401186" width="58.411925" height="2.28083828"></rect>
+        </g>
+    </g>
+    <g id="Course-Card" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(199.000000, 532.000000)">
+        <g id="Base">
+            <use fill="black" fill-opacity="1" filter="url(#filter-11)" xlink:href="#path-10"></use>
+            <use stroke="#D9D9D9" mask="url(#mask-12)" stroke-width="2" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-10"></use>
+        </g>
+        <g id="Chart" transform="translate(24.000000, 254.000000)" font-size="41.048" font-family="AvenirNext-UltraLight, Avenir Next" fill="#3C4144" font-weight="300">
+            <g id="Label" transform="translate(0.090651, 0.880538)">
+                <text id="YoY-Avg:-3%">
+                    <tspan x="0.60735046" y="41">YoY Avg: </tspan>
+                    <tspan x="166.810702" y="41" font-size="41.0477175">3%</tspan>
+                </text>
+            </g>
+        </g>
+        <g id="More" transform="translate(246.498323, 26.229640)" fill="#9FACB3">
+            <path d="M2.336477,4.56167655 C3.62153935,4.56167655 4.672954,3.53529933 4.672954,2.28083828 C4.672954,1.02637722 3.62153935,0 2.336477,0 C1.05141465,0 0,1.02637722 0,2.28083828 C0,3.53529933 1.05141465,4.56167655 2.336477,4.56167655 L2.336477,4.56167655 Z M2.336477,6.84251483 C1.05141465,6.84251483 0,7.86889205 0,9.1233531 C0,10.3778142 1.05141465,11.4041914 2.336477,11.4041914 C3.62153935,11.4041914 4.672954,10.3778142 4.672954,9.1233531 C4.672954,7.86889205 3.62153935,6.84251483 2.336477,6.84251483 L2.336477,6.84251483 Z M2.336477,13.6850297 C1.05141465,13.6850297 0,14.7114069 0,15.9658679 C0,17.220329 1.05141465,18.2467062 2.336477,18.2467062 C3.62153935,18.2467062 4.672954,17.220329 4.672954,15.9658679 C4.672954,14.7114069 3.62153935,13.6850297 2.336477,13.6850297 L2.336477,13.6850297 Z" id="Shape"></path>
+        </g>
+        <g id="Course-Title" transform="translate(17.523577, 20.527544)">
+            <text id="tiger-matlab-m250" font-family=".SFNSText-Regular, .SF NS Text" font-size="18.24343" font-weight="normal" fill="#3C4144">
+                <tspan x="0" y="18">tiger matlab m250</tspan>
+                <tspan x="0" y="40">By </tspan>
+                <tspan x="27.0444597" y="40" text-decoration="underline">huillermo02</tspan>
+            </text>
+            <rect id="Rectangle-175" fill="#D9D9D9" x="0" y="54.7401186" width="58.411925" height="2.28083828"></rect>
+        </g>
+    </g>
+    <g id="Course-Card" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(583.000000, 532.000000)">
+        <g id="Base">
+            <use fill="black" fill-opacity="1" filter="url(#filter-14)" xlink:href="#path-13"></use>
+            <use stroke="#D9D9D9" mask="url(#mask-15)" stroke-width="2" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-13"></use>
+        </g>
+        <g id="Chart" transform="translate(14.000000, 254.000000)" font-size="41.048" font-family="AvenirNext-UltraLight, Avenir Next" fill="#3C4144" font-weight="300">
+            <g id="Label">
+                <text id="YoY-Avg:-27%">
+                    <tspan x="0.113989547" y="41">YoY Avg: </tspan>
+                    <tspan x="166.317342" y="41" font-size="41.0477175">27%</tspan>
+                </text>
+            </g>
+        </g>
+        <g id="More" transform="translate(246.498323, 26.229640)" fill="#9FACB3">
+            <path d="M2.336477,4.56167655 C3.62153935,4.56167655 4.672954,3.53529933 4.672954,2.28083828 C4.672954,1.02637722 3.62153935,0 2.336477,0 C1.05141465,0 0,1.02637722 0,2.28083828 C0,3.53529933 1.05141465,4.56167655 2.336477,4.56167655 L2.336477,4.56167655 Z M2.336477,6.84251483 C1.05141465,6.84251483 0,7.86889205 0,9.1233531 C0,10.3778142 1.05141465,11.4041914 2.336477,11.4041914 C3.62153935,11.4041914 4.672954,10.3778142 4.672954,9.1233531 C4.672954,7.86889205 3.62153935,6.84251483 2.336477,6.84251483 L2.336477,6.84251483 Z M2.336477,13.6850297 C1.05141465,13.6850297 0,14.7114069 0,15.9658679 C0,17.220329 1.05141465,18.2467062 2.336477,18.2467062 C3.62153935,18.2467062 4.672954,17.220329 4.672954,15.9658679 C4.672954,14.7114069 3.62153935,13.6850297 2.336477,13.6850297 L2.336477,13.6850297 Z" id="Shape"></path>
+        </g>
+        <g id="Course-Title" transform="translate(17.523577, 20.527544)">
+            <text id="Btc-HFT-808" font-family=".SFNSText-Regular, .SF NS Text" font-size="18.24343" font-weight="normal" fill="#3C4144">
+                <tspan x="0" y="18">Btc HFT 808</tspan>
+                <tspan x="0" y="40">By </tspan>
+                <tspan x="27.0444597" y="40" text-decoration="underline">gelt18</tspan>
+            </text>
+            <rect id="Rectangle-175" fill="#D9D9D9" x="0" y="54.7401186" width="58.411925" height="2.28083828"></rect>
+        </g>
+    </g>
+    <g id="Course-Card" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(967.000000, 538.000000)">
+        <g id="Base">
+            <use fill="black" fill-opacity="1" filter="url(#filter-17)" xlink:href="#path-16"></use>
+            <use stroke="#D9D9D9" mask="url(#mask-18)" stroke-width="2" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-16"></use>
+        </g>
+        <g id="Chart-Copy" transform="translate(13.000000, 254.000000)" font-size="41.048" font-family="AvenirNext-UltraLight, Avenir Next" fill="#3C4144" font-weight="300">
+            <g id="Label">
+                <text id="YoY-Avg:-5.6%">
+                    <tspan x="0.188263442" y="41">YoY Avg: </tspan>
+                    <tspan x="166.391615" y="41" font-size="41.0477175">5.6%</tspan>
+                </text>
+            </g>
+        </g>
+        <g id="More" transform="translate(246.498323, 26.229640)" fill="#9FACB3">
+            <path d="M2.336477,4.56167655 C3.62153935,4.56167655 4.672954,3.53529933 4.672954,2.28083828 C4.672954,1.02637722 3.62153935,0 2.336477,0 C1.05141465,0 0,1.02637722 0,2.28083828 C0,3.53529933 1.05141465,4.56167655 2.336477,4.56167655 L2.336477,4.56167655 Z M2.336477,6.84251483 C1.05141465,6.84251483 0,7.86889205 0,9.1233531 C0,10.3778142 1.05141465,11.4041914 2.336477,11.4041914 C3.62153935,11.4041914 4.672954,10.3778142 4.672954,9.1233531 C4.672954,7.86889205 3.62153935,6.84251483 2.336477,6.84251483 L2.336477,6.84251483 Z M2.336477,13.6850297 C1.05141465,13.6850297 0,14.7114069 0,15.9658679 C0,17.220329 1.05141465,18.2467062 2.336477,18.2467062 C3.62153935,18.2467062 4.672954,17.220329 4.672954,15.9658679 C4.672954,14.7114069 3.62153935,13.6850297 2.336477,13.6850297 L2.336477,13.6850297 Z" id="Shape"></path>
+        </g>
+        <g id="Course-Title" transform="translate(17.523577, 20.527544)">
+            <text id="Market-Maker-Py" font-family=".SFNSText-Regular, .SF NS Text" font-size="18.24343" font-weight="normal" fill="#3C4144">
+                <tspan x="0" y="18">Market Maker Py</tspan>
+                <tspan x="0" y="40">By </tspan>
+                <tspan x="27.0444597" y="40" text-decoration="underline">ALGOGODx212</tspan>
+            </text>
+            <rect id="Rectangle-175" fill="#D9D9D9" x="0" y="54.7401186" width="58.411925" height="2.28083828"></rect>
+        </g>
+    </g>
+    <use id="Rectangle-13" stroke="#979797" mask="url(#mask-20)" stroke-width="2" fill="#0F0F0F" fill-rule="evenodd" xlink:href="#path-19"></use>
+    <use id="Rectangle-13" stroke="#979797" mask="url(#mask-23)" stroke-width="2" fill="url(#radialGradient-21)" fill-rule="evenodd" xlink:href="#path-22"></use>
+    <use id="Rectangle-13" stroke="#979797" mask="url(#mask-26)" stroke-width="2" fill="url(#radialGradient-24)" fill-rule="evenodd" xlink:href="#path-25"></use>
+    <use id="Rectangle-13" stroke="#979797" mask="url(#mask-28)" stroke-width="2" fill="url(#radialGradient-21)" fill-rule="evenodd" xlink:href="#path-27"></use>
+    <text id="Invest" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="40" font-weight="300">
+        <tspan x="286.7" y="944" fill="#FFFFFF">Invest</tspan>
+    </text>
+    <text id="Invest" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="40" font-weight="300">
+        <tspan x="670.7" y="944" fill="#FFFFFF">Invest</tspan>
+    </text>
+    <text id="Invest" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="40" font-weight="300">
+        <tspan x="1054.7" y="947" fill="#FFFFFF">Invest</tspan>
+    </text>
+    <text id="Invest" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="40" font-weight="300">
+        <tspan x="286.7" y="502" fill="#FFFFFF">Invest</tspan>
+    </text>
+    <text id="Invest" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="24" font-weight="300">
+        <tspan x="690.82" y="495" fill="#FFFFFF">Invest</tspan>
+    </text>
+    <use id="Rectangle-13" stroke="#979797" mask="url(#mask-30)" stroke-width="2" fill="#0F0F0F" fill-rule="evenodd" xlink:href="#path-29"></use>
+    <text id="Invest" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="24" font-weight="300">
+        <tspan x="307.82" y="495" fill="#FFFFFF">Invest</tspan>
+    </text>
+    <use id="Rectangle-13" stroke="#979797" mask="url(#mask-32)" stroke-width="2" fill="#0F0F0F" fill-rule="evenodd" xlink:href="#path-31"></use>
+    <text id="Invest" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="24" font-weight="300">
+        <tspan x="1073.82" y="495" fill="#FFFFFF">Invest</tspan>
+    </text>
+    <use id="Rectangle-13" stroke="#979797" mask="url(#mask-34)" stroke-width="2" fill="#0F0F0F" fill-rule="evenodd" xlink:href="#path-33"></use>
+    <text id="Invest" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="24" font-weight="300">
+        <tspan x="308.82" y="937" fill="#FFFFFF">Invest</tspan>
+    </text>
+    <use id="Rectangle-13" stroke="#979797" mask="url(#mask-36)" stroke-width="2" fill="#0F0F0F" fill-rule="evenodd" xlink:href="#path-35"></use>
+    <use id="Rectangle-13" stroke="#979797" mask="url(#mask-38)" stroke-width="2" fill="#0F0F0F" fill-rule="evenodd" xlink:href="#path-37"></use>
+    <use id="Rectangle-13" stroke="#979797" mask="url(#mask-40)" stroke-width="2" fill="#0F0F0F" fill-rule="evenodd" xlink:href="#path-39"></use>
+    <text id="Invest" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="24" font-weight="300">
+        <tspan x="690.82" y="937" fill="#FFFFFF">Invest</tspan>
+    </text>
+    <text id="Invest" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="24" font-weight="300">
+        <tspan x="1073.82" y="937" fill="#FFFFFF">Invest</tspan>
+    </text>
+    <text id="I’m-essentially-taki" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="17" font-weight="300">
+        <tspan x="218" y="203" fill="#353536">I’m essentially taking </tspan>
+        <tspan x="218" y="226" fill="#353536">liquidity from a market </tspan>
+        <tspan x="218" y="249" fill="#353536">where there is some and </tspan>
+        <tspan x="218" y="272" fill="#353536">injecting it into a market </tspan>
+        <tspan x="218" y="295" fill="#353536">where there isn’t. </tspan>
+        <tspan x="218" y="318" fill="#353536">Developed in python.</tspan>
+    </text>
+    <rect id="Rectangle-175" stroke="none" fill="#D9D9D9" fill-rule="evenodd" x="595" y="328" width="58.411925" height="2.28083828"></rect>
+    <text id="is-a-simple-Java-alg" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="16" font-weight="300">
+        <tspan x="598" y="199.4" fill="#333333">is a simple Java algorithmic </tspan>
+        <tspan x="598" y="225" fill="#333333">trading bot for trading </tspan>
+        <tspan x="598" y="250.6" fill="#333333">Bitcoin on cryptocurrency </tspan>
+        <tspan x="598" y="276.200001" fill="#333333">exchanges. It used a </tspan>
+        <tspan x="598" y="301.800001" fill="#333333">scalping strategy.</tspan>
+    </text>
+    <rect id="Rectangle-175" stroke="none" fill="#D9D9D9" fill-rule="evenodd" x="986" y="326" width="58.411925" height="2.28083828"></rect>
+    <text id="Traders-generally-fl" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="16" font-weight="300">
+        <tspan x="986" y="201" fill="#585858">Traders generally flock </tspan>
+        <tspan x="986" y="223" fill="#585858">towards the most common </tspan>
+        <tspan x="986" y="245" fill="#585858">exchanges because they’re </tspan>
+        <tspan x="986" y="267" fill="#585858">easier to use. This algo </tspan>
+        <tspan x="986" y="289" fill="#585858">capitalizes on price </tspan>
+        <tspan x="986" y="311" fill="#585858">disparancy btwn exchanges.</tspan>
+    </text>
+    <rect id="Rectangle-175" stroke="none" fill="#D9D9D9" fill-rule="evenodd" x="218" y="781" width="58.411925" height="2.28083828"></rect>
+    <text id="Programmed-in-matlab" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="18" font-weight="300">
+        <tspan x="218" y="646" fill="#000000">Programmed in matlab </tspan>
+        <tspan x="218" y="671" fill="#000000">to capitalize on short </tspan>
+        <tspan x="218" y="696" fill="#000000">term volatility. </tspan>
+        <tspan x="218" y="721" fill="#000000">Specifically on coinbase.</tspan>
+    </text>
+    <rect id="Rectangle-175" stroke="none" fill="#D9D9D9" fill-rule="evenodd" x="600" y="780" width="58.411925" height="2.28083828"></rect>
+    <text id="This-algorithm-is-bu" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="15" font-weight="300">
+        <tspan x="600" y="643.5714" fill="#0D0D0B">This algorithm is built to </tspan>
+        <tspan x="600" y="665" fill="#0D0D0B">automatically trade </tspan>
+        <tspan x="600" y="686.4286" fill="#0D0D0B">cryptocurrency on various </tspan>
+        <tspan x="600" y="707.857201" fill="#0D0D0B">exchanges. The software </tspan>
+        <tspan x="600" y="729.285801" fill="#0D0D0B">exists</tspan>
+        <tspan x="635.52" y="729.285801" fill="#0D0D0B"> to work with Coinbase’s </tspan>
+        <tspan x="600" y="750.714401" fill="#0D0D0B">HFT.</tspan>
+    </text>
+    <rect id="Rectangle-175" stroke="none" fill="#D9D9D9" fill-rule="evenodd" x="986" y="783" width="58.411925" height="2.28083828"></rect>
+    <text id="Provides-liquidity-o" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="18" font-weight="300">
+        <tspan x="986" y="645" fill="#000000">Provides liquidity on </tspan>
+        <tspan x="986" y="670" fill="#000000">multiple exchanges and </tspan>
+        <tspan x="986" y="695" fill="#000000">profits from the bid and </tspan>
+        <tspan x="986" y="720" fill="#000000">ask spread.</tspan>
+    </text>
+    <use id="Rectangle-31" stroke="#979797" mask="url(#mask-43)" stroke-width="2" fill="url(#linearGradient-41)" fill-rule="evenodd" xlink:href="#path-42"></use>
+    <use id="Rectangle-32" stroke="#979797" mask="url(#mask-46)" stroke-width="2" fill="url(#radialGradient-44)" fill-rule="evenodd" xlink:href="#path-45"></use>
+    <text id="10-btc" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="18" font-weight="300">
+        <tspan x="415.48" y="875" fill="#3C4144">10 btc</tspan>
+    </text>
+    <text id="3-btc" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="18" font-weight="300">
+        <tspan x="229.02" y="875" fill="#3C4144">3 btc</tspan>
+    </text>
+    <use id="Rectangle-31" stroke="#979797" mask="url(#mask-48)" stroke-width="2" fill="url(#linearGradient-41)" fill-rule="evenodd" xlink:href="#path-47"></use>
+    <use id="Rectangle-32" stroke="#979797" mask="url(#mask-50)" stroke-width="2" fill="url(#radialGradient-44)" fill-rule="evenodd" xlink:href="#path-49"></use>
+    <text id="100-btc" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="18" font-weight="300">
+        <tspan x="407.44" y="433" fill="#3C4144">100 btc</tspan>
+    </text>
+    <text id="77-btc" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="18" font-weight="300">
+        <tspan x="256.48" y="433" fill="#3C4144">77 btc</tspan>
+    </text>
+    <use id="Rectangle-31" stroke="#979797" mask="url(#mask-52)" stroke-width="2" fill="url(#linearGradient-41)" fill-rule="evenodd" xlink:href="#path-51"></use>
+    <use id="Rectangle-32" stroke="#979797" mask="url(#mask-54)" stroke-width="2" fill="url(#radialGradient-44)" fill-rule="evenodd" xlink:href="#path-53"></use>
+    <text id="500-btc" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="18" font-weight="300">
+        <tspan x="792.44" y="875" fill="#3C4144">500 btc</tspan>
+    </text>
+    <text id="473-btc" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="18" font-weight="300">
+        <tspan x="634.44" y="875" fill="#3C4144">473 btc</tspan>
+    </text>
+    <use id="Rectangle-31" stroke="#979797" mask="url(#mask-56)" stroke-width="2" fill="url(#linearGradient-41)" fill-rule="evenodd" xlink:href="#path-55"></use>
+    <use id="Rectangle-32" stroke="#979797" mask="url(#mask-58)" stroke-width="2" fill="url(#radialGradient-44)" fill-rule="evenodd" xlink:href="#path-57"></use>
+    <text id="40-btc" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="18" font-weight="300">
+        <tspan x="1180.48" y="882" fill="#3C4144">40 btc</tspan>
+    </text>
+    <text id="23-btc" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="18" font-weight="300">
+        <tspan x="1024.48" y="882" fill="#3C4144">23 btc</tspan>
+    </text>
+    <use id="Rectangle-31" stroke="#979797" mask="url(#mask-60)" stroke-width="2" fill="url(#linearGradient-41)" fill-rule="evenodd" xlink:href="#path-59"></use>
+    <use id="Rectangle-32" stroke="#979797" mask="url(#mask-62)" stroke-width="2" fill="url(#radialGradient-44)" fill-rule="evenodd" xlink:href="#path-61"></use>
+    <text id="150-btc" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="18" font-weight="300">
+        <tspan x="790.44" y="440" fill="#3C4144">150 btc</tspan>
+    </text>
+    <text id="122-btc" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="18" font-weight="300">
+        <tspan x="634.44" y="440" fill="#3C4144">122 btc</tspan>
+    </text>
+    <use id="Rectangle-31" stroke="#979797" mask="url(#mask-64)" stroke-width="2" fill="url(#linearGradient-41)" fill-rule="evenodd" xlink:href="#path-63"></use>
+    <use id="Rectangle-32" stroke="#979797" mask="url(#mask-66)" stroke-width="2" fill="url(#radialGradient-44)" fill-rule="evenodd" xlink:href="#path-65"></use>
+    <text id="25-btc" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="18" font-weight="300">
+        <tspan x="1178.48" y="440" fill="#3C4144">25 btc</tspan>
+    </text>
+    <text id="11-btc" stroke="none" fill="none" font-family="AvenirNext-UltraLight, Avenir Next" font-size="18" font-weight="300">
+        <tspan x="1015.48" y="440" fill="#3C4144">11 btc</tspan>
+    </text>
+  </svg></div>
+<!--                <div class="row">                    <div class="col-lg-12">                        <div class="alert alert-info alert-dismissable">                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>                            <i class="fa fa-info-circle"></i>  <strong>Like SB Admin?</strong> Try out <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">SB Admin 2</a> for additional features!                        </div>                    </div>                </div>-->                <!-- /.row -->                                <!-- /.row -->                                <!-- /.row -->                <div class="row">                                       <div class="col-lg-4">                        <div class="panel panel-default">                            <div class="panel-heading">                                <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Market Platform</h3>                              </div>                            <div class="panel-body">                                                                <div class="mar_info">                                                                        <p><b>NAME OF ALGO :</b> John Smith </p>                                        <p><b>Description :</b> Lorem Ipsum duore. </p>                                        <p><b>Yr/yr avg :</b> Lorem Ipsum </p>                                        <p class="mar_amt"><b>AMOUNT</b></p>                                </div>                                <div class="btn_inv">                                        <button type="button" class="btn btn-success1">INVEST</button>                                   </div>                                                            </div>                        </div>                    </div>                   <div class="col-lg-4">                        <div class="panel panel-default">                            <div class="panel-heading">                                <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Market Platform</h3>                              </div>                            <div class="panel-body">                                                                <div class="mar_info">                                                                        <p><b>NAME OF ALGO :</b> John Smith </p>                                        <p><b>Description :</b> Lorem Ipsum duore. </p>                                        <p><b>Yr/yr avg :</b> Lorem Ipsum </p>                                        <p class="mar_amt"><b>AMOUNT</b></p>                                </div>                                <div class="btn_inv">                                        <button type="button" class="btn btn-warning1">INVEST</button>                                   </div>                                                            </div>                        </div>                    </div>                   <div class="col-lg-4">                        <div class="panel panel-default">                            <div class="panel-heading">                                <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Market Platform</h3>                              </div>                            <div class="panel-body">                                                                <div class="mar_info">                                                                        <p><b>NAME OF ALGO :</b> John Smith </p>                                        <p><b>Description :</b> Lorem Ipsum duore. </p>                                        <p><b>Yr/yr avg :</b> Lorem Ipsum </p>                                        <p class="mar_amt"><b>AMOUNT</b></p>                                </div>                                <div class="btn_inv">                                        <button type="button" class="btn btn-danger1">INVEST</button>                                   </div>                                                            </div>                        </div>                    </div>                </div>                 <div class="row">                                       <div class="col-lg-4">                        <div class="panel panel-default">                            <div class="panel-heading">                                <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Market Platform</h3>                              </div>                            <div class="panel-body">                                                                <div class="mar_info">                                                                        <p><b>NAME OF ALGO :</b> John Smith </p>                                        <p><b>Description :</b> Lorem Ipsum duore. </p>                                        <p><b>Yr/yr avg :</b> Lorem Ipsum </p>                                        <p class="mar_amt"><b>AMOUNT</b></p>                                </div>                                <div class="btn_inv">                                        <button type="button" class="btn btn-success1">INVEST</button>                                   </div>                                                            </div>                        </div>                    </div>                   <div class="col-lg-4">                        <div class="panel panel-default">                            <div class="panel-heading">                                <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Market Platform</h3>                              </div>                            <div class="panel-body">                                                                <div class="mar_info">                                                                        <p><b>NAME OF ALGO :</b> John Smith </p>                                        <p><b>Description :</b> Lorem Ipsum duore. </p>                                        <p><b>Yr/yr avg :</b> Lorem Ipsum </p>                                        <p class="mar_amt"><b>AMOUNT</b></p>                                </div>                                <div class="btn_inv">                                        <button type="button" class="btn btn-warning1">INVEST</button>                                   </div>                                                            </div>                        </div>                    </div>                   <div class="col-lg-4">                        <div class="panel panel-default">                            <div class="panel-heading">                                <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Market Platform</h3>                              </div>                            <div class="panel-body">                                                                <div class="mar_info">                                                                        <p><b>NAME OF ALGO :</b> John Smith </p>                                        <p><b>Description :</b> Lorem Ipsum duore. </p>                                        <p><b>Yr/yr avg :</b> Lorem Ipsum </p>                                        <p class="mar_amt"><b>AMOUNT</b></p>                                </div>                                <div class="btn_inv">                                        <button type="button" class="btn btn-danger1">INVEST</button>                                   </div>                                                            </div>                        </div>                    </div>                </div>                <!-- /.row -->            </div>            <!-- /.container-fluid -->        </div>        <!-- /#page-wrapper -->    </div>    <!-- /#wrapper -->    <!-- jQuery -->    <script src="./marketplace_files/jquery.js"></script>    <!-- Bootstrap Core JavaScript -->    <script src="./marketplace_files/bootstrap.min.js"></script>    <!-- Morris Charts JavaScript -->    <script src="./marketplace_files/raphael.min.js"></script>    <script src="./marketplace_files/morris.min.js"></script>    <script src="./marketplace_files/morris-data.js"></script></body><iframe src="./marketplace_files/commandbox.html" id="vichrome-commandframe" seamless="" style="display: none;"></iframe></html>
